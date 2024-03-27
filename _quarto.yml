@@ -4,6 +4,7 @@ project:
 
 website:
   title: "Uriah Daugaard"
+  site-url: https://uriahdaugaard.github.io
   navbar:
     left:
       - href: index.qmd
@@ -12,9 +13,12 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme:
+      light: flatly
+      dark: darkly
     css: styles.css
     toc: true
-
+    
+    
 editor: visual
 
