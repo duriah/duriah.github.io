@@ -12,11 +12,12 @@ about:
         - icon: github
           text: Github
           url: https://github.com/duriah
-        - text: "{{< fa envelope >}} Email"
+        - icon: envelope-at-fill
+          text: Email
           url: mailto:uriah.daugaard@outlook.com
-        - text: "{{< ai orcid >}} ORCID"
+        - text: <img src="files/orcid.svg"; width="14"/> ORCID
           url: https://orcid.org/0000-0003-4092-717X
-        - text: "{{< ai google-scholar >}} Google Scholar"
+        - text: <img src="files/google-scholar.svg" width="14"/> Google Scholar
           url: https://scholar.google.ch/citations?user=JI10T7QAAAAJ&hl=de
 image: files/WApic_cropped.png
 ---
@@ -25,7 +26,7 @@ image: files/WApic_cropped.png
 
 something something
 
-# Research interestets
+# Research interests
 
 something something
 

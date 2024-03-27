@@ -1,17 +1,17 @@
 [
   {
+    "objectID": "teach.html",
+    "href": "teach.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "something something"
+  },
+  {
     "objectID": "pubs.html",
     "href": "pubs.html",
     "title": "Publications",
     "section": "",
     "text": "something something"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Uriah Daugaard",
-    "section": "",
-    "text": "About me\nsomething something\n\n\nResearch interestets\nsomething something\n\n\nSelected publications\nsomething something"
   },
   {
     "objectID": "contact.html",
@@ -21,17 +21,17 @@
     "text": "contact"
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Uriah Daugaard",
+    "section": "",
+    "text": "About me\nsomething something\n\n\nResearch interests\nsomething something\n\n\nSelected publications\nsomething something"
+  },
+  {
     "objectID": "talks.html",
     "href": "talks.html",
     "title": "Talks",
     "section": "",
     "text": "talks and posters"
-  },
-  {
-    "objectID": "teach.html",
-    "href": "teach.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "something something"
   }
 ]
