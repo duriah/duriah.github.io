@@ -4,18 +4,24 @@ project:
 
 website:
   title: "Uriah Daugaard"
-  site-url: https://uriahdaugaard.github.io
   navbar:
-    left:
+    right:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: pubs.qmd
+        text: Publications
+      - href: teach.qmd
+        text: Teaching
+      - href: talks.qmd
+        text: Talks
+      - href: contact.qmd
+        text: Contact
 
 format:
   html:
     theme:
-      light: flatly
-      dark: darkly
+      light: [sandstone, _variables_light.scss]
+      dark: [sandstone, _variables_dark.scss]
     css: styles.css
     toc: true
     
