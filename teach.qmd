@@ -2,4 +2,3 @@
 title: "Teaching"
 ---
 
-something something

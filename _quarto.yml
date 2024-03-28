@@ -20,11 +20,12 @@ website:
 format:
   html:
     theme:
-      light: [sandstone, _variables_light.scss]
-      dark: [sandstone, _variables_dark.scss]
+      light: [flatly, _variables_flatly.scss]
+      dark: [darkly, _variables_darkly.scss]
     css: styles.css
     toc: true
     
     
 editor: visual
+
 

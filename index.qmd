@@ -15,13 +15,14 @@ about:
         - icon: envelope-at-fill
           text: Email
           url: mailto:uriah.daugaard@outlook.com
-        - text: <img src="files/orcid.svg"; width="14"/> ORCID
+        - text: "{{< ai orcid >}} ORCID"
           url: https://orcid.org/0000-0003-4092-717X
-        - text: <img src="files/google-scholar.svg" width="14"/> Google Scholar
+        - text: "{{< ai google-scholar >}} Google Scholar"
           url: https://scholar.google.ch/citations?user=JI10T7QAAAAJ&hl=de
 image: files/WApic_cropped.png
 ---
 
+:::{.column width="100%"}
 # About me
 
 something something
@@ -33,3 +34,5 @@ something something
 # Selected publications
 
 something something
+
+:::

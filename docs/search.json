@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "teach.html",
-    "href": "teach.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "something something"
-  },
-  {
     "objectID": "pubs.html",
     "href": "pubs.html",
     "title": "Publications",
@@ -14,18 +7,18 @@
     "text": "something something"
   },
   {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact",
-    "section": "",
-    "text": "contact"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Uriah Daugaard",
     "section": "",
     "text": "About me\nsomething something\n\n\nResearch interests\nsomething something\n\n\nSelected publications\nsomething something"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "contact"
   },
   {
     "objectID": "talks.html",

@@ -7,7 +7,7 @@ $theme: "sandstone" !default;
 // Color system
 //
 
-$white:    #fff !default;
+$white:    #fff !default; // controls colour of background
 $gray-100: #f8f9fa !default;
 $gray-200: #f8f5f0 !default;
 $gray-300: #dfd7ca !default;
@@ -30,24 +30,32 @@ $green:   #93c54b !default;
 $teal:    #20c997 !default;
 $cyan:    #29abe0 !default;
 
-$primary:       $blue !default;
-$secondary:     $gray-600 !default;
+$darkgreen: #2c3120 !default;
+
+$primary:       $blue !default; // don't know
+$secondary:     $gray-600 !default; // don't know
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $orange !default;
 $danger:        $red !default;
-$light:         $gray-200 !default;
-$dark:          $gray-800 !default;
+$light:         $gray-200 !default; // don't know
+$dark:          $darkgreen !default; // controls colour of nav bar (other things?)
 
 $min-contrast-ratio:   2 !default;
 
+
+// Background
+
+$background-color:                $gray-300 !default; // no idea
+
+
 // Body
 
-$body-color:                $gray-800 !default;
+$body-color:                $gray-800 !default; // col of text (not in nav)
 
 // Links
 
-$link-color:                $success !default;
+$link-color:                $success !default; // col of links
 
 // Fonts
 
@@ -55,7 +63,7 @@ $link-color:                $success !default;
 $font-family-sans-serif:      Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $headings-font-weight:        400 !default;
 
-// Dropdowns
+// Dropdowns - none at the moment 20240328
 
 $dropdown-link-color:               $gray-600 !default;
 $dropdown-link-hover-color:         $dropdown-link-color !default;
@@ -70,7 +78,7 @@ $nav-link-disabled-color:           $gray-300 !default;
 $nav-tabs-border-color:             $gray-300 !default;
 $nav-tabs-link-hover-border-color:  $gray-300 !default;
 $nav-tabs-link-active-bg:           $white !default;
-$nav-pills-link-active-color:       $gray-600 !default;
+$nav-pills-link-active-color:       $gray-600 !default; // I think pills are buttons
 $nav-pills-link-active-bg:          $gray-200 !default;
 
 // Navbar
@@ -80,7 +88,7 @@ $navbar-light-hover-color:          $black !default;
 $navbar-light-active-color:         $black !default;
 
 
-// Pagination
+// Pagination = look of 1,2,3,4 etc.
 
 $pagination-color:                  $gray-600 !default;
 $pagination-bg:                     $gray-200 !default;
