@@ -2,4 +2,9 @@
 title: "Contact"
 ---
 
-contact
+<button type="button" class="btn btn-secondary btn-sm"><a href="mailto:uriah.daugaard@outlook.com" class="link-light text-decoration-none">{{< fa envelope >}} EMAIL</a></button>
+
+
+----
+
+<!-- alternative button <button type="button" class="btn btn-primary btn-sm"><a href="https://orcid.org/0000-0003-4092-717X" class="link-light text-decoration-none">{{< ai orcid >}} ORCID</a></button> -->

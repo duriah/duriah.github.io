@@ -12,20 +12,19 @@ about:
         - icon: github
           text: Github
           url: https://github.com/duriah
-        - icon: envelope-at-fill
-          text: Email
-          url: mailto:uriah.daugaard@outlook.com
         - text: "{{< ai orcid >}} ORCID"
           url: https://orcid.org/0000-0003-4092-717X
         - text: "{{< ai google-scholar >}} Google Scholar"
-          url: https://scholar.google.ch/citations?user=JI10T7QAAAAJ&hl=de
+          url: https://scholar.google.ch/citations?user=JI10T7QAAAAJ&hl
 image: files/WApic_cropped.png
 ---
 
-:::{.column width="100%"}
+
+
 # About me
 
-something something
+Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+
 
 # Research interests
 
@@ -34,5 +33,3 @@ something something
 # Selected publications
 
 something something
-
-:::

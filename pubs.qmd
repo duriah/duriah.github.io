@@ -1,5 +1,15 @@
 ---
-title: "Publications"
+title: "Publications & Reviewing"
 ---
 
-something something
+### Publications
+
+<button type="button" class="btn btn-secondary btn-sm"><a href="https://scholar.google.ch/citations?user=JI10T7QAAAAJ&hl" class="link-light text-decoration-none">{{< ai google-scholar >}} Google Scholar profile</a></button>
+
+<p>List to be added</p>
+
+### Reviewing
+
+<button type="button" class="btn btn-secondary btn-sm"><a href="https://www.webofscience.com/wos/author/record/AFC-9360-2022" class="link-light text-decoration-none">{{< ai publons >}} Publons profile</a></button>
+
+<p>List to be added</p>

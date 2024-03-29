@@ -9,11 +9,13 @@ website:
       - href: index.qmd
         text: Home
       - href: pubs.qmd
-        text: Publications
-      - href: teach.qmd
-        text: Teaching
+        text: Publications & Reviewing
       - href: talks.qmd
         text: Talks
+      - href: teach.qmd
+        text: Teaching
+      # - href: cv.qmd
+      #   text: CV      "{{< ai cv >}} to be added"  
       - href: contact.qmd
         text: Contact
 
@@ -24,7 +26,9 @@ format:
       dark: [darkly, _variables_darkly.scss]
     css: styles.css
     toc: true
-    
+    grid:
+      body-width: 900px
+
     
 editor: visual
 

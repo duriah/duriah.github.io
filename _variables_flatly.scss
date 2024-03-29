@@ -30,16 +30,19 @@ $green:   #93c54b !default;
 $teal:    #20c997 !default;
 $cyan:    #3498db !default;
 
-$darkishgreen: #617e40 !default;
+$flatlygreen: #617e40 !default;
+$darklygreen: #3a4b26 !default;
 
-$primary:       $darkishgreen !default; // controls colour of nav bar (other things?)
-$secondary:     $gray-600 !default;
+$primary:       $flatlygreen !default; // controls colour of nav bar (other things?)
+// $secondary:     $gray-600 !default;
+$secondary:     $flatlygreen !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
-$light:         $gray-200 !default;
- $dark:          $gray-700 !default; 
+// $light:         $gray-200 !default;
+$light:         $white !default;
+$dark:          $gray-700 !default; 
 
 $min-contrast-ratio:   2.05 !default;
 
@@ -51,9 +54,9 @@ $link-color:                $success !default; // col of links
 
 // stylelint-disable-next-line value-keyword-case
 $font-family-sans-serif:      Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$h1-font-size:                3rem !default;
-$h2-font-size:                2.5rem !default;
-$h3-font-size:                2rem !default;
+$h1-font-size:                2.5rem !default;
+$h2-font-size:                2rem !default;
+$h3-font-size:                1.5rem !default;
 
 // Tables
 
