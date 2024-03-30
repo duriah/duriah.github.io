@@ -2,9 +2,42 @@
 title: "Contact"
 ---
 
-<button type="button" class="btn btn-secondary btn-sm"><a href="mailto:uriah.daugaard@outlook.com" class="link-light text-decoration-none">{{< fa envelope >}} EMAIL</a></button>
 
+::: columns
+::: {.column width="70%"}
+### Email 
 
-----
+uriah.daugaard@outlook.com&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-secondary btn-sm"><a href="mailto:uriah.daugaard@outlook.com" class="link-light text-decoration-none">{{< fa envelope >}} Send email</a></button>
 
 <!-- alternative button <button type="button" class="btn btn-primary btn-sm"><a href="https://orcid.org/0000-0003-4092-717X" class="link-light text-decoration-none">{{< ai orcid >}} ORCID</a></button> -->
+
+### Address
+
+Department of Evolutionary Biology and Environmental Studies<br>
+University of Zurich<br>
+Winterthurerstrasse 190<br>
+8057 Zurich
+
+Office: Y19-M-47<br>
+<br>
+:::
+::: {.column width="30%"}
+<center>
+<img src="files/Chlamygreen.svg" width="300">
+</center>
+:::
+:::
+
+
+
+---------------
+
+<strong>Additional links:&nbsp;</strong> 
+<button type="button" class="btn btn-secondary btn-sm"><a href="https://www.linkedin.com/in/uriah-daugaard-8280681b1/" class="link-light text-decoration-none">{{< fa brands linkedin >}} LinkedIn</a></button>
+<button type="button" class="btn btn-secondary btn-sm"><a href="https://twitter.com/DaugaardUriah" class="link-light text-decoration-none">{{< fa brands twitter >}} Twitter </a></button>
+<button type="button" class="btn btn-secondary btn-sm"><a href="https://orcid.org/0000-0003-4092-717X" class="link-light text-decoration-none">{{< ai orcid >}} ORCID </a></button>
+<button type="button" class="btn btn-secondary btn-sm"><a href="https://github.com/duriah" class="link-light text-decoration-none">{{< fa brands github >}} GitHub </a></button>
+<button type="button" class="btn btn-secondary btn-sm"><a href="https://scholar.google.ch/citations?user=JI10T7QAAAAJ&hl" class="link-light text-decoration-none">{{< ai google-scholar >}} Google Scholar </a></button>
+<button type="button" class="btn btn-secondary btn-sm"><a href="https://www.webofscience.com/wos/author/record/AFC-9360-2022" class="link-light text-decoration-none">{{< ai publons >}} Publons </a></button>
+
+

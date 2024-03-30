@@ -9,7 +9,7 @@ website:
       - href: index.qmd
         text: Home
       - href: pubs.qmd
-        text: Publications & Reviewing
+        text: Publications & Peer Review
       - href: talks.qmd
         text: Talks
       - href: teach.qmd
@@ -27,7 +27,7 @@ format:
     css: styles.css
     toc: true
     grid:
-      body-width: 900px
+      body-width: 800px
 
     
 editor: visual

@@ -1,15 +1,38 @@
 ---
-title: "Publications & Reviewing"
+title: "Publications & Peer Review"
 ---
 
 ### Publications
 
+#### Peer reviewed
+
+<p>List to be added</p>
+
+#### Preprints
+
+<p>List to be added</p>
+
+-----
+
+<strong>An up-to-date publication list is available on Google Scholar:&nbsp;</strong>
 <button type="button" class="btn btn-secondary btn-sm"><a href="https://scholar.google.ch/citations?user=JI10T7QAAAAJ&hl" class="link-light text-decoration-none">{{< ai google-scholar >}} Google Scholar profile</a></button>
 
-<p>List to be added</p>
+::: columns
+::: {.column width="65%"}
+### Peer Review
 
-### Reviewing
+I have reviewed scientific articles for the following journals:
 
-<button type="button" class="btn btn-secondary btn-sm"><a href="https://www.webofscience.com/wos/author/record/AFC-9360-2022" class="link-light text-decoration-none">{{< ai publons >}} Publons profile</a></button>
+- Ecology Letters
+- Journal of Animal Ecology
+- Ecology
+- PeerJ
+- Protist
 
-<p>List to be added</p>
+<strong>More information on Publons:&nbsp;</strong> <button type="button" class="btn btn-secondary btn-sm"><a href="https://www.webofscience.com/wos/author/record/AFC-9360-2022" class="link-light text-decoration-none">{{< ai publons >}} Publons profile</a></button> 
+:::
+::: {.column width="35%"}
+<img src="files/stentor2.svg" width="140">
+:::
+:::
+
