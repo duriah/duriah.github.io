@@ -18,7 +18,7 @@ title: "Research"
 <div class="grow">
   <div>
     <figure>
-      <a href="research_qms/warmingFRpage" class="link-primary"><img src="files/warmingfig1.jpg" width="380"/></a>
+      <a href="/ResearchPages/warmingFRpage.qmd" class="link-primary"><img src="files/warmingfig1.jpg" width="380"/></a>
     </figure>
   </div>
 </div>
