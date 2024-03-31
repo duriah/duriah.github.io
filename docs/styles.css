@@ -1,1 +1,74 @@
 /* css styles */
+
+
+
+.fadein img{
+opacity:0.5;
+transition: 1s ease;
+}
+
+.fadein img:hover{
+opacity:1;
+transition: 1s ease;
+}
+
+
+
+
+.color img{
+filter: grayscale(80%);
+-webkit-filter: grayscale(80%);
+-webkit-transition: all 0.5s ease;
+}
+
+.color img:hover{
+filter: grayscale(0%);
+filter: gray;
+-webkit-filter: grayscale(0%);
+filter: none;
+transition: 0.5s ease;
+}
+
+
+
+
+.grow img{
+transition: 1s ease;
+}
+
+.grow img:hover{
+-webkit-transform: scale(1.1);
+-ms-transform: scale(1.1);
+transform: scale(1.1);
+transition: 1s ease;
+}
+
+
+
+
+
+.border img {
+transition: .5s ease;
+}
+
+.border img:hover{
+box-shadow: 0 0 0 5px #93c54b;
+transition: .5s ease;
+}
+
+
+
+
+div.click-to-top span {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #333;
+  color: #fff;
+}
+
+div.click-to-top:hover span {
+  display: block;
+}

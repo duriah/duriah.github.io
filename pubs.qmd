@@ -17,9 +17,10 @@ title: "Publications & Peer Review"
 <strong>An up-to-date publication list is available on Google Scholar:&nbsp;</strong>
 <button type="button" class="btn btn-secondary btn-sm"><a href="https://scholar.google.ch/citations?user=JI10T7QAAAAJ&hl" class="link-light text-decoration-none">{{< ai google-scholar >}} Google Scholar profile</a></button>
 
+### Peer Review
+
 ::: columns
 ::: {.column width="65%"}
-### Peer Review
 
 I have reviewed scientific articles for the following journals:
 
@@ -29,10 +30,14 @@ I have reviewed scientific articles for the following journals:
 - PeerJ
 - Protist
 
+-----
+
 <strong>More information on Publons:&nbsp;</strong> <button type="button" class="btn btn-secondary btn-sm"><a href="https://www.webofscience.com/wos/author/record/AFC-9360-2022" class="link-light text-decoration-none">{{< ai publons >}} Publons profile</a></button> 
 :::
 ::: {.column width="35%"}
-<img src="files/stentor2.svg" width="140">
+<center>
+<img src="files/stentor2.svg" width="150" title="Drawing of Stentor sp. (ciliate). (c) Uriah Daugaard (2023)" alt="Drawing of Stentor sp. (ciliate). (c) Uriah Daugaard (2023)">
+</center>
 :::
 :::
 

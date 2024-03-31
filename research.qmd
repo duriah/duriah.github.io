@@ -1,0 +1,63 @@
+---
+title: "Research"
+---
+
+::: column-margin
+<br> <br> <br> <br> <br> <br>
+
+<center>  <img src="files/spathidium.svg" width="180" title="Drawing of Dexiostoma campylum (ciliate). (c) Uriah Daugaard (2021)" alt="Drawing of Dexiostoma campylum (ciliate). (c) Uriah Daugaard (2021)"/></center>
+
+<br> <br> <br> <br> <br> <br>
+
+<center>  <img src="files/dexiostoma_campylum.svg" width="180" title="Drawing of Dexiostoma campylum (ciliate). (c) Uriah Daugaard (2021)" alt="Drawing of Dexiostoma campylum (ciliate). (c) Uriah Daugaard (2021)"/></center>
+:::
+
+::: {layout-ncol="2"}
+
+```{=html}
+<div class="grow">
+  <div>
+    <figure>
+      <a href="research_qms/warmingFRpage" class="link-primary"><img src="files/warmingfig1.jpg" width="380"/></a>
+    </figure>
+  </div>
+</div>
+```
+
+```{=html}
+<div class="grow">
+  <div>
+    <figure>
+      <a href="https://duriah.github.io/nowhere" class="link-primary"><img src="files/PhdChp1Fig1.jpg" width="380"/></a>
+    </figure>
+  </div>
+</div>
+```
+:::
+
+
+::: {layout-ncol="2"}
+
+```{=html}
+<div class="grow">
+  <div>
+    <figure>
+      <a href="https://duriah.github.io/nowhere" class="link-primary"><img src="files/warmingfig1.jpg" width="380"/></a>
+    </figure>
+  </div>
+</div>
+```
+
+```{=html}
+<div class="grow">
+  <div>
+    <figure>
+      <a href="https://duriah.github.io/nowhere" class="link-primary"><img src="files/PhdChp1Fig1.jpg" width="380"/></a>
+    </figure>
+  </div>
+</div>
+```
+:::
+
+
+

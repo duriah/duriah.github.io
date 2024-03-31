@@ -16,14 +16,14 @@ uriah.daugaard@outlook.com&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn
 Department of Evolutionary Biology and Environmental Studies<br>
 University of Zurich<br>
 Winterthurerstrasse 190<br>
-8057 Zurich
+8057 Zurich, Switzerland
 
 Office: Y19-M-47<br>
 <br>
 :::
 ::: {.column width="30%"}
 <center>
-<img src="files/Chlamygreen.svg" width="300">
+<img src="files/Chlamygreen.svg" width="300" title="Drawing of Chlamydomonas reinhardtii (green alga). (c) Uriah Daugaard (2021)" alt="Drawing of Chlamydomonas reinhardtii (green alga). (c) Uriah Daugaard (2021)">
 </center>
 :::
 :::
