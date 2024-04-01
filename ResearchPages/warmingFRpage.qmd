@@ -1,3 +1,29 @@
 ---
-title: "Warming can destabilize"
+title: "Warming can destabilize predator–prey functional responses"
 ---
+
+```{=html}
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="../index.qmd">Home</a></li>
+  <li class="breadcrumb-item"><a href="../research.qmd">Research</a></li>
+  <li class="breadcrumb-item active">Warming can destabilize predator–prey functional responses</li>
+</ol>
+```
+
+::: column-margin
+
+#### Other highlighted research
+
+<br> 
+
+```{=html}
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">Warming can destabilize predator–prey functional responses</a>
+  <a href="/ResearchPages/EcoComplexEcoForecast.qmd" class="list-group-item list-group-item-action">Forecasting in the face of ecological complexity</a>
+  <a href="/ResearchPages/SamplingFreq.qmd" class="list-group-item list-group-item-action">Using forecasts to improve monitoring in community ecology</a>
+</div>
+```
+
+:::
+
+Content yet to be added (sorry!)

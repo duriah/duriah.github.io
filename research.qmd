@@ -1,6 +1,3 @@
----
-title: "Research"
----
 
 <!-- ::: column-margin -->
 <!-- <br> <br> <br> <br> <br> <br> -->
@@ -12,15 +9,20 @@ title: "Research"
 <!-- <center>  <img src="files/dexiostoma_campylum.svg" width="180" title="Drawing of Dexiostoma campylum (ciliate). (c) Uriah Daugaard (2021)" alt="Drawing of Dexiostoma campylum (ciliate). (c) Uriah Daugaard (2021)"/></center> -->
 <!-- ::: -->
 
+:::{.column-page}
 
-::: {layout-ncol="2"}
+# Highlighted research {.unnumbered .unlisted}
+
+<br>
+
+::: {layout-ncol="3"}
 
 ```{=html}
 <div class="card border-dark mb-3">
   <a href="/ResearchPages/warmingFRpage.qmd" class="link-primary"><img src="files/warmingfig1.jpg" alt="Figure 1 adapted from my JANE 2019 paper" class="card-img-top"/></a>
   <div class="card-body">
-    <h5 class="card-title"> <strong>Warming can destabilize the predator–prey functional response</strong> </h5>
-    <p class="card-text"> We investigated the impact of temperature on the functional response of a predator-prey pair. We found that it switched from a Type III to a Type II at the highest temperature. We used simulations to illustrate the destabilizing effect of this change.</p>
+    <h5 class="card-title"> <strong>Warming can destabilize predator–prey functional responses</strong> </h5>
+    <p class="card-text"> We investigated the impact of temperature on the functional response of a predator-prey pair. We found that it switched from a Type III to a Type II at the highest temperature. We used simulations to show the destabilizing effect of this change.</p>
     <button type="button" class="btn btn-secondary btn-sm"><a href="/ResearchPages/warmingFRpage.qmd" class="link-light text-decoration-none">Find out more</a></button>
   </div>
 </div>
@@ -31,12 +33,26 @@ title: "Research"
 <div class="card border-dark mb-3">
   <a href="/ResearchPages/EcoComplexEcoForecast.qmd" class="link-primary"><img src="files/PhdChp1Fig1.jpg" alt="Figure 1 adapted from my ELE 2022 paper" class="card-img-top"/></a>
   <div class="card-body">
-    <h5 class="card-title"> <strong>Forecasting the face of ecological complexity</strong> </h5>
-    <p class="card-text"> We quantified how ecological complecity affectes forecast skill of species abundances within and across systems. We found that in general we forecasted generalist species (many but weak interactions) better than specialist species (few but strong interactions). </p>
+    <h5 class="card-title"> <strong>Forecasting in the face of ecological complexity</strong> </h5>
+    <p class="card-text"> We quantified how ecological complexity affectes forecast skill of species abundances within and across systems. We found that in general we forecasted generalist species (many but weak interactions) better than specialist species. </p>
     <button type="button" class="btn btn-secondary btn-sm"><a href="/ResearchPages/EcoComplexEcoForecast.qmd" class="link-light text-decoration-none">Find out more</a></button>
   </div>
 </div>
 ```
 
+
+```{=html}
+<div class="card border-dark mb-3">
+  <a href="/ResearchPages/SamplingFreq.qmd" class="link-primary"><img src="files/SamplingFreqPic.jpg" alt="Figure adapted from my Ecology 2024 paper" class="card-img-top"/></a>
+  <div class="card-body">
+    <h5 class="card-title"> <strong>Using forecasts to improve monitoring in community ecology</strong> </h5>
+    <p class="card-text">We show how forecasts deteriorate with decreasing sampling frequency across all taxa in a unique lake plankton data set. We then turn the tables and discuss how forecast skill can help optimize sampling and monitoring in community ecology. </p>
+    <button type="button" class="btn btn-secondary btn-sm"><a href="/ResearchPages/SamplingFreq.qmd" class="link-light text-decoration-none">Find out more</a></button>
+  </div>
+</div>
+```
+
+
 :::
 
+:::

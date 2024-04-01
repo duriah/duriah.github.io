@@ -4,12 +4,13 @@ project:
 
 website:
   title: "Uriah Daugaard"
+  favicon: files/WApic_cropped.png
   navbar:
     right:
       - href: index.qmd
         text: Home
       - href: research.qmd
-        text: Research
+        text: Highlighted research
       - href: pubs.qmd
         text: Publications & Peer Review
       - href: talks.qmd

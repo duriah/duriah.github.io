@@ -1,0 +1,29 @@
+---
+title: "Using forecasts to improve monitoring in community ecology"
+---
+
+```{=html}
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="../index.qmd">Home</a></li>
+  <li class="breadcrumb-item"><a href="../research.qmd">Research</a></li>
+  <li class="breadcrumb-item active">Using forecasts to improve monitoring in community ecology</li>
+</ol>
+```
+
+::: column-margin
+
+#### Other highlighted research
+
+<br> 
+
+```{=html}
+<div class="list-group">
+  <a href="/ResearchPages/warmingFRpage.qmd" class="list-group-item list-group-item-action">Warming can destabilize predator–prey functional responses</a>
+  <a href="/ResearchPages/EcoComplexEcoForecast.qmd" class="list-group-item list-group-item-action">Forecasting in the face of ecological complexity</a>
+  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">Using forecasts to improve monitoring in community ecology</a>
+</div>
+```
+
+:::
+
+Content yet to be added (sorry!)

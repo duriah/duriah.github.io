@@ -57,3 +57,10 @@ transition: .5s ease;
 }
 
 
+.btn-group-xs > .btn, .btn-xs {
+  padding: .17rem .3rem;
+  font-size: .8rem;
+  line-height: .5;
+  border-radius: .2rem;
+}
+

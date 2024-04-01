@@ -1,3 +1,30 @@
 ---
-title: "Ecological complexity and ecological forecasts"
+title: "Forecasting in the face of ecological complexity"
 ---
+
+```{=html}
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="../index.qmd">Home</a></li>
+  <li class="breadcrumb-item"><a href="../research.qmd">Research</a></li>
+  <li class="breadcrumb-item active">Forecasting in the face of ecological complexity</li>
+</ol>
+```
+
+::: column-margin
+
+#### Other highlighted research
+
+<br> 
+
+```{=html}
+<div class="list-group">
+  <a href="/ResearchPages/warmingFRpage.qmd" class="list-group-item list-group-item-action">Warming can destabilize predator–prey functional responses</a>
+  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">Forecasting in the face of ecological complexity</a>
+  <a href="/ResearchPages/SamplingFreq.qmd" class="list-group-item list-group-item-action">Using forecasts to improve monitoring in community ecology</a>
+</div>
+```
+
+:::
+
+
+Content yet to be added (sorry!)

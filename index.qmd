@@ -23,7 +23,7 @@ image: files/WApic_cropped.png
 
 # About me
 
-Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
+Content yet to be added
 
 <center>
 <img src="files/species_network_small.svg" width="350">
@@ -31,11 +31,11 @@ Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
 
 # Research interests
 
-something something
+Content yet to be added
 
 # Selected publications
 
-something something
+Content yet to be added
 
 
 
