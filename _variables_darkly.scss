@@ -42,7 +42,8 @@ $warning:       $yellow !default;
 $danger:        $red !default;
 //$light:         $gray-500 !default;
 $light:         $gray-100 !default;
-$dark:          $gray-800 !default;
+//$dark:          $gray-800 !default;
+$dark:          $gray-700 !default;
 
 $min-contrast-ratio:   1.9 !default;
 
@@ -136,7 +137,7 @@ $pagination-disabled-border-color:  transparent !default;
 // Cards
 
 $card-cap-bg:                       $gray-700 !default;
-$card-bg:                           $gray-800 !default;
+$card-bg:                           $gray-700 !default;
 
 // Popovers
 
