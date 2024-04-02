@@ -2,5 +2,22 @@
 title: "Teaching"
 ---
 
-Content yet to be added
+### Lecturer
 
+-   **BIO144** (Data analysis in biology, 2024, spring semester, UZH)
+
+    <p>**The course**: about 300 second year biology (and related programs) bachelor students are enrolled each year. The topics include among other things data visualization and processing, statistical (hypothesis) testing, linear regression (including ANOVA), logistic regression, Poisson regression, linear mixed models, introduction to linear algebra for linear models, goodness-of-fit measures, etc. The theoretical lectures are paired with hands-on practical sessions that are further accompanied by flipped-classroom style videos.</p>
+
+    <p>**My experience teaching the course**: I taught four of the theoretical lectures (in 2024). Teaching such a large class was an enriching and challenging experience for me in which I learnt a lot about lecturing and what it involves.</p>
+
+### Teaching Assistant (TA)
+
+-   <p>**BIO144** (Data analysis in biology, 2021-2023, spring semester, UZH)</p>
+
+    <p>**Description**: as a teaching assistant I helped the students with the practical exercises and answered methodological and computational (R) questions. I was also the main contact person for the students outside the practical hours when it came to statistical questions, and I answered questions on the course forum and I proactively wrote a statistical and computational FAQ for the students.</p>
+
+    <p>**Head TA:** further, in 2022 and 2023 I was also Head TA, which involved additional responsibilities such as the screening of potential TAs and the briefing and organisation of the selected TAs (and being their main contact person).</p>
+
+-   **R4All : An Introduction to the the Basics of R** (May 12-13, 2022)
+
+    <p>**Description**: A two-day course given for novice R users with a life and environmental science background.</p>

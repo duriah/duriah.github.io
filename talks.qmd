@@ -1,5 +1,34 @@
----
-title: "Talks"
----
+### Contributed Talks
 
-Content yet to be added (talks and posters)
+#### 2023
+
+- **The dependence of forecasts on sampling frequency as a guide to optimizing monitoring in community ecology**
+  - **GfÖ 2023** (52nd annual meeting of the Ecological Society of Germany, Austria and Switzerland), Leipzig, Germany, Sep 12 - 16 2023.
+
+#### 2022
+
+- **Forecasting in the face of ecological complexity: number and strength of species interactions determine forecast skill in ecological communities**
+  - **Biology 2022** (Swiss conference on organismic biology), Basel, Switzerland, Feb 17-18, 2022.
+  - **SFE² GFÖ EEF** (International Conference on Ecological Sciences), Metz, France, Nov 21 - 25, 2022.
+
+#### 2021
+
+- **Non-consumptive and resource-availability effects in a ciliate predator-prey pair**
+  - **ESA 2021** (annual meeting of the Ecological Society of America), virtual, Aug 2 - 6, 2021.
+
+#### 2020
+
+- **Warming can destabilize predator–prey interactions by shifting the functional response from Type III to Type II**
+  - **BES 2020** (annual meeting of the British Ecological Society), virtual, Dec 14 - 18, 2020.
+
+
+### Posters
+
+#### 2022
+
+- **Forecasting in the face of ecological complexity: number and strength of species interactions determine forecast skill in ecological communities** 
+  - **INTECOL 2022** (13th International Congress of Ecology), Geneva, Switzerland, Aug 28 - Sep 2 2022.
+      - Selected as one of the **10 best posters invited to give a flash talk** during the opening plenary.
+  - **Ecology Symposium** hosted by Life Science Zurich Graduate School, Zurich, Switzerland, Oct 12 2022.
+  - The poster is available [here](files/PosterEcoforecast.pdf).
+  

@@ -11,7 +11,7 @@
 
 :::{.column-page}
 
-# Highlighted research {.unnumbered .unlisted}
+# Highlighted Research {.unnumbered .unlisted}
 
 <br>
 
@@ -34,7 +34,7 @@
   <a href="/ResearchPages/EcoComplexEcoForecast.qmd" class="link-primary"><img src="files/PhdChp1Fig1.jpg" alt="Figure 1 adapted from my ELE 2022 paper" class="card-img-top"/></a>
   <div class="card-body">
     <h5 class="card-title"> <strong>Forecasting in the face of ecological complexity</strong> </h5>
-    <p class="card-text"> We quantified how ecological complexity affectes forecast skill of species abundances within and across systems. We found that in general we forecasted generalist species (many but weak interactions) better than specialist species. </p>
+    <p class="card-text"> We quantified how ecological complexity affects forecast skill of species abundances within and across systems. We found that in general we forecasted generalist species (many but weak interactions) better than specialist species. </p>
     <button type="button" class="btn btn-secondary btn-sm"><a href="/ResearchPages/EcoComplexEcoForecast.qmd" class="link-light text-decoration-none">Find out more</a></button>
   </div>
 </div>

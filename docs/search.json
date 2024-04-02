@@ -4,21 +4,21 @@
     "href": "teach.html",
     "title": "Teaching",
     "section": "",
-    "text": "Content yet to be added"
+    "text": "Lecturer\n\nBIO144 (Data analysis in biology, 2024, spring semester, UZH)\n\nThe course: about 300 second year biology (and related programs) bachelor students are enrolled each year. The topics include among other things data visualization and processing, statistical (hypothesis) testing, linear regression (including ANOVA), logistic regression, Poisson regression, linear mixed models, introduction to linear algebra for linear models, goodness-of-fit measures, etc. The theoretical lectures are paired with hands-on practical sessions that are further accompanied by flipped-classroom style videos.\n\n\nMy experience teaching the course: I taught four of the theoretical lectures (in 2024). Teaching such a large class was an enriching and challenging experience for me in which I learnt a lot about lecturing and what it involves.\n\n\n\n\nTeaching Assistant (TA)\n\n\nBIO144 (Data analysis in biology, 2021-2023, spring semester, UZH)\n\n\nDescription: as a teaching assistant I helped the students with the practical exercises and answered methodological and computational (R) questions. I was also the main contact person for the students outside the practical hours when it came to statistical questions, and I answered questions on the course forum and I proactively wrote a statistical and computational FAQ for the students.\n\n\nHead TA: further, in 2022 and 2023 I was also Head TA, which involved additional responsibilities such as the screening of potential TAs and the briefing and organisation of the selected TAs (and being their main contact person).\n\nR4All : An Introduction to the the Basics of R (May 12-13, 2022)\n\nDescription: A two-day course given for novice R users with a life and environmental science background."
   },
   {
     "objectID": "ResearchPages/warmingFRpage.html",
     "href": "ResearchPages/warmingFRpage.html",
     "title": "Warming can destabilize predator–prey functional responses",
     "section": "",
-    "text": "Home\n  Research\n  Warming can destabilize predator–prey functional responses\n\n\n\nOther highlighted research\n\n\n  Warming can destabilize predator–prey functional responses\n  Forecasting in the face of ecological complexity\n  Using forecasts to improve monitoring in community ecology\n\nContent yet to be added (sorry!)"
+    "text": "Home\n  Highlighted Research\n  Warming can destabilize predator–prey functional responses\n\n\n\nHighlighted Research\n\n\n  Warming can destabilize predator–prey functional responses\n  Forecasting in the face of ecological complexity\n  Using forecasts to improve monitoring in community ecology\n\nContent yet to be added (sorry!)"
   },
   {
     "objectID": "ResearchPages/EcoComplexEcoForecast.html",
     "href": "ResearchPages/EcoComplexEcoForecast.html",
     "title": "Forecasting in the face of ecological complexity",
     "section": "",
-    "text": "Home\n  Research\n  Forecasting in the face of ecological complexity\n\n\n\nOther highlighted research\n\n\n  Warming can destabilize predator–prey functional responses\n  Forecasting in the face of ecological complexity\n  Using forecasts to improve monitoring in community ecology\n\nContent yet to be added (sorry!)"
+    "text": "Home\n  Highlighted Research\n  Forecasting in the face of ecological complexity\n\n\n\nHighlighted Research\n\n\n  Warming can destabilize predator–prey functional responses\n  Forecasting in the face of ecological complexity\n  Using forecasts to improve monitoring in community ecology\n\nContent yet to be added (sorry!)"
   },
   {
     "objectID": "pubs.html",
@@ -58,22 +58,22 @@
   {
     "objectID": "research.html",
     "href": "research.html",
-    "title": "Highlighted research",
+    "title": "Highlighted Research",
     "section": "",
-    "text": "Highlighted research\n\n\n\n\n\n  \n  \n     Warming can destabilize predator–prey functional responses \n     We investigated the impact of temperature on the functional response of a predator-prey pair. We found that it switched from a Type III to a Type II at the highest temperature. We used simulations to show the destabilizing effect of this change.\n    Find out more\n  \n\n\n\n\n  \n  \n     Forecasting in the face of ecological complexity \n     We quantified how ecological complexity affectes forecast skill of species abundances within and across systems. We found that in general we forecasted generalist species (many but weak interactions) better than specialist species. \n    Find out more\n  \n\n\n\n\n\n  \n  \n     Using forecasts to improve monitoring in community ecology \n    We show how forecasts deteriorate with decreasing sampling frequency across all taxa in a unique lake plankton data set. We then turn the tables and discuss how forecast skill can help optimize sampling and monitoring in community ecology. \n    Find out more"
+    "text": "Highlighted Research\n\n\n\n\n\n  \n  \n     Warming can destabilize predator–prey functional responses \n     We investigated the impact of temperature on the functional response of a predator-prey pair. We found that it switched from a Type III to a Type II at the highest temperature. We used simulations to show the destabilizing effect of this change.\n    Find out more\n  \n\n\n\n\n  \n  \n     Forecasting in the face of ecological complexity \n     We quantified how ecological complexity affects forecast skill of species abundances within and across systems. We found that in general we forecasted generalist species (many but weak interactions) better than specialist species. \n    Find out more\n  \n\n\n\n\n\n  \n  \n     Using forecasts to improve monitoring in community ecology \n    We show how forecasts deteriorate with decreasing sampling frequency across all taxa in a unique lake plankton data set. We then turn the tables and discuss how forecast skill can help optimize sampling and monitoring in community ecology. \n    Find out more"
   },
   {
     "objectID": "ResearchPages/SamplingFreq.html",
     "href": "ResearchPages/SamplingFreq.html",
     "title": "Using forecasts to improve monitoring in community ecology",
     "section": "",
-    "text": "Home\n  Research\n  Using forecasts to improve monitoring in community ecology\n\n\n\nOther highlighted research\n\n\n  Warming can destabilize predator–prey functional responses\n  Forecasting in the face of ecological complexity\n  Using forecasts to improve monitoring in community ecology\n\nContent yet to be added (sorry!)"
+    "text": "Home\n  Highlighted Research\n  Using forecasts to improve monitoring in community ecology\n\n\n\nHighlighted Research\n\n\n  Warming can destabilize predator–prey functional responses\n  Forecasting in the face of ecological complexity\n  Using forecasts to improve monitoring in community ecology\n\nContent yet to be added (sorry!)"
   },
   {
     "objectID": "talks.html",
     "href": "talks.html",
-    "title": "Talks",
+    "title": "Uriah Daugaard",
     "section": "",
-    "text": "Content yet to be added (talks and posters)"
+    "text": "Contributed Talks\n\n2023\n\nThe dependence of forecasts on sampling frequency as a guide to optimizing monitoring in community ecology\n\nGfÖ 2023 (52nd annual meeting of the Ecological Society of Germany, Austria and Switzerland), Leipzig, Germany, Sep 12 - 16 2023.\n\n\n\n\n2022\n\nForecasting in the face of ecological complexity: number and strength of species interactions determine forecast skill in ecological communities\n\nBiology 2022 (Swiss conference on organismic biology), Basel, Switzerland, Feb 17-18, 2022.\nSFE² GFÖ EEF (International Conference on Ecological Sciences), Metz, France, Nov 21 - 25, 2022.\n\n\n\n\n2021\n\nNon-consumptive and resource-availability effects in a ciliate predator-prey pair\n\nESA 2021 (annual meeting of the Ecological Society of America), virtual, Aug 2 - 6, 2021.\n\n\n\n\n2020\n\nWarming can destabilize predator–prey interactions by shifting the functional response from Type III to Type II\n\nBES 2020 (annual meeting of the British Ecological Society), virtual, Dec 14 - 18, 2020.\n\n\n\n\n\nPosters\n\n2022\n\nForecasting in the face of ecological complexity: number and strength of species interactions determine forecast skill in ecological communities\n\nINTECOL 2022 (13th International Congress of Ecology), Geneva, Switzerland, Aug 28 - Sep 2 2022.\n\nSelected as one of the 10 best posters invited to give a flash talk during the opening plenary.\n\nEcology Symposium hosted by Life Science Zurich Graduate School, Zurich, Switzerland, Oct 12 2022.\nThe poster is available here."
   }
 ]

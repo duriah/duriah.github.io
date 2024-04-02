@@ -10,7 +10,7 @@ website:
       - href: index.qmd
         text: Home
       - href: research.qmd
-        text: Highlighted research
+        text: Highlighted Research
       - href: pubs.qmd
         text: Publications & Peer Review
       - href: talks.qmd

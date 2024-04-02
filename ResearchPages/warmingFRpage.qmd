@@ -1,18 +1,22 @@
 ---
 title: "Warming can destabilize predator–prey functional responses"
+format:
+  html:
+    grid:
+      margin-width: 300px
 ---
 
 ```{=html}
 <ol class="breadcrumb">
   <li class="breadcrumb-item"><a href="../index.qmd">Home</a></li>
-  <li class="breadcrumb-item"><a href="../research.qmd">Research</a></li>
+  <li class="breadcrumb-item"><a href="../research.qmd">Highlighted Research</a></li>
   <li class="breadcrumb-item active">Warming can destabilize predator–prey functional responses</li>
 </ol>
 ```
 
 ::: column-margin
 
-#### Other highlighted research
+#### Highlighted Research
 
 <br> 
 
