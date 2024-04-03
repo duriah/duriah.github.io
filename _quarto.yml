@@ -5,6 +5,7 @@ project:
 website:
   title: "Uriah Daugaard"
   favicon: files/WApic_cropped.png
+  open-graph: true
   navbar:
     right:
       - href: index.qmd
