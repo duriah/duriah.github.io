@@ -4,63 +4,44 @@ title: "Publications & Peer Review"
 
 ## Publications
 
-An up-to-date publication list is also available on Google Scholar:&nbsp;
-<button type="button" class="btn btn-secondary btn-sm"><a href="https://scholar.google.ch/citations?user=JI10T7QAAAAJ&hl" class="link-light text-decoration-none">{{< ai google-scholar >}} Google Scholar profile</a></button>
+An up-to-date publication list is also available on Google Scholar:  <button type="button" class="btn btn-secondary btn-sm"><a href="https://scholar.google.ch/citations?user=JI10T7QAAAAJ&hl" class="link-light text-decoration-none">{{< ai google-scholar >}} Google Scholar profile</a></button>
 
 ### Peer reviewed
 
-- **Daugaard, U.**, Merkli, S., Merz, E., Pomati, F. & Petchey, O.L. (2024). The dependence of forecasts on sampling frequency as a guide to optimizing monitoring in community ecology. Ecosphere, 15, e4786. <br>
-Doi: <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1002/ecs2.4786" class="link-light text-decoration-none">{{< ai doi >}} {{< ai open-access >}} Publication</a></button> 
-Data & code: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10066786.svg)](https://doi.org/10.5281/zenodo.10066786)
+-   **Daugaard, U.**, Merkli, S., Merz, E., Pomati, F. & Petchey, O.L. (2024). The dependence of forecasts on sampling frequency as a guide to optimizing monitoring in community ecology. Ecosphere, 15, e4786. <br> Doi: <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1002/ecs2.4786" class="link-light text-decoration-none">{{< ai doi >}} {{< ai open-access >}} Publication</a></button> Data & code: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10066786.svg)](https://doi.org/10.5281/zenodo.10066786)
 
-- Limberger, R., **Daugaard, U.**, Gupta, A., Krug, R.M., Lemmen, K.D., Van Moorsel, S.J., et al. (2023). Functional diversity can facilitate the collapse of an undesirable ecosystem state. Ecology Letters, 26, 883–895.
-Doi: <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1111/ele.14217" class="link-light text-decoration-none">{{< ai doi >}} {{< ai open-access >}} Publication</a></button>
-Data: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7743866.svg)](https://doi.org/10.5281/zenodo.7743866)
-Code: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7744094.svg)](https://doi.org/10.5281/zenodo.7744094)
+-   Limberger, R., **Daugaard, U.**, Gupta, A., Krug, R.M., Lemmen, K.D., Van Moorsel, S.J., et al. (2023). Functional diversity can facilitate the collapse of an undesirable ecosystem state. Ecology Letters, 26, 883–895. <br> Doi: <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1111/ele.14217" class="link-light text-decoration-none">{{< ai doi >}} {{< ai open-access >}} Publication</a></button> Data: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7743866.svg)](https://doi.org/10.5281/zenodo.7743866) Code: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7744094.svg)](https://doi.org/10.5281/zenodo.7744094)
 
-- **Daugaard, U.**, Munch, S., Inauen, D., Pennekamp, F. & Petchey, O. (2022). Forecasting in the face of ecological complexity: number and strength of species interactions determines forecast skill in ecological communities. Ecology Letters.
-Doi: <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1111/ele.14070" class="link-light text-decoration-none">{{< ai doi >}} {{< ai open-access >}} Publication</a></button>
-Data & code: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6524695.svg)](https://doi.org/10.5281/zenodo.6524695)
+-   **Daugaard, U.**, Munch, S., Inauen, D., Pennekamp, F. & Petchey, O. (2022). Forecasting in the face of ecological complexity: number and strength of species interactions determines forecast skill in ecological communities. Ecology Letters. <br> Doi: <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1111/ele.14070" class="link-light text-decoration-none">{{< ai doi >}} {{< ai open-access >}} Publication</a></button> Data & code: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6524695.svg)](https://doi.org/10.5281/zenodo.6524695)
 
-- Suleiman, M., **Daugaard, U.**, Choffat, Y., Zheng, X. & Petchey, O.L. (2022). Predicting the effects of multiple global change drivers on microbial communities remains challenging. Global Change Biology, 28, 5575–5586.
-Doi: <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1111/gcb.16303" class="link-light text-decoration-none">{{< ai doi >}} {{< ai open-access >}} Publication</a></button>
-Data & code: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5948600.svg)](https://doi.org/10.5281/zenodo.5948600)
+-   Suleiman, M., **Daugaard, U.**, Choffat, Y., Zheng, X. & Petchey, O.L. (2022). Predicting the effects of multiple global change drivers on microbial communities remains challenging. Global Change Biology, 28, 5575–5586. <br> Doi: <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1111/gcb.16303" class="link-light text-decoration-none">{{< ai doi >}} {{< ai open-access >}} Publication</a></button> Data & code: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5948600.svg)](https://doi.org/10.5281/zenodo.5948600)
 
-- Suleiman, M., Choffat, Y., **Daugaard, U.** & Petchey, O.L. (2021). Large and interacting effects of temperature and nutrient addition on stratified microbial ecosystems in a small, replicated, and liquid-dominated Winogradsky column approach. Microbiologyopen, 10, e1189.
-Doi: <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1002/mbo3.1189" class="link-light text-decoration-none">{{< ai doi >}} {{< ai open-access >}} Publication</a></button>
+-   Suleiman, M., Choffat, Y., **Daugaard, U.** & Petchey, O.L. (2021). Large and interacting effects of temperature and nutrient addition on stratified microbial ecosystems in a small, replicated, and liquid-dominated Winogradsky column approach. Microbiologyopen, 10, e1189. <br> Doi: <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1002/mbo3.1189" class="link-light text-decoration-none">{{< ai doi >}} {{< ai open-access >}} Publication</a></button>
 
-- **Daugaard, U.**, Petchey, O.L. & Pennekamp, F. (2019). Warming can destabilize predator–prey interactions by shifting the functional response from Type III to Type II. Journal of Animal Ecology, 88, 1575–1586.
-Doi: <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1111/1365-2656.13053" class="link-light text-decoration-none">{{< ai doi >}} {{< ai open-access >}} Publication</a></button> 
-Data & code: <a href="https://zenodo.org/badge/latestdoi/186978107"><img src="https://zenodo.org/badge/186978107.svg" alt="DOI"></a>
-
+-   **Daugaard, U.**, Petchey, O.L. & Pennekamp, F. (2019). Warming can destabilize predator–prey interactions by shifting the functional response from Type III to Type II. Journal of Animal Ecology, 88, 1575–1586. <br> Doi: <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1111/1365-2656.13053" class="link-light text-decoration-none">{{< ai doi >}} {{< ai open-access >}} Publication</a></button> Data & code: <a href="https://zenodo.org/badge/latestdoi/186978107"><img src="https://zenodo.org/badge/186978107.svg" alt="DOI"/></a>
 
 ### Preprints
 
-- **Daugaard, U.**, Furrer, R. & Petchey, O.L. (2021). Prey speed up, predators slow down: non-consumptive effects on movement behavior of a ciliate predator-prey pair. bioRxiv, 2021–11. <br>
-Doi: <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1101/2021.11.15.468607 " class="link-light text-decoration-none">{{< ai doi >}} {{< ai biorxiv >}} Preprint</a></button>
-Data & code: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5676309.svg)](https://doi.org/10.5281/zenodo.5676309)
+-   **Daugaard, U.**, Furrer, R. & Petchey, O.L. (2021). Prey speed up, predators slow down: non-consumptive effects on movement behavior of a ciliate predator-prey pair. bioRxiv, 2021–11. <br> Doi: <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1101/2021.11.15.468607 " class="link-light text-decoration-none">{{< ai doi >}} {{< ai biorxiv >}} Preprint</a></button> Data & code: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5676309.svg)](https://doi.org/10.5281/zenodo.5676309)
 
 ## Peer Review
 
 ::: columns
 ::: {.column width="65%"}
-
 I have reviewed scientific articles for the following journals:
 
-- Ecology Letters
-- Journal of Animal Ecology
-- Ecology
-- PeerJ
-- Protist
+-   Ecology Letters
+-   Journal of Animal Ecology
+-   Ecology
+-   PeerJ
+-   Protist
 
------
+------------------------------------------------------------------------
 
-<strong>More information on Publons:&nbsp;</strong> <button type="button" class="btn btn-secondary btn-sm"><a href="https://www.webofscience.com/wos/author/record/AFC-9360-2022" class="link-light text-decoration-none">{{< ai publons >}} Publons profile</a></button> 
+<strong>More information on Publons: </strong> <button type="button" class="btn btn-secondary btn-sm"><a href="https://www.webofscience.com/wos/author/record/AFC-9360-2022" class="link-light text-decoration-none">{{< ai publons >}} Publons profile</a></button>
 :::
+
 ::: {.column width="35%"}
-<center>
-<img src="files/stentor2.svg" width="150" title="Drawing of Stentor sp. (ciliate). (c) Uriah Daugaard (2023)" alt="Drawing of Stentor sp. (ciliate). (c) Uriah Daugaard (2023)">
-</center>
+<center><img src="files/stentor2.svg" title="Drawing of Stentor sp. (ciliate). (c) Uriah Daugaard (2023)" alt="Drawing of Stentor sp. (ciliate). (c) Uriah Daugaard (2023)" width="150"/></center>
 :::
 :::
-

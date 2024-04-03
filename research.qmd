@@ -1,5 +1,5 @@
-
 <!-- ::: column-margin -->
+
 <!-- <br> <br> <br> <br> <br> <br> -->
 
 <!-- <center>  <img src="files/spathidium.svg" width="180" title="Drawing of Dexiostoma campylum (ciliate). (c) Uriah Daugaard (2021)" alt="Drawing of Dexiostoma campylum (ciliate). (c) Uriah Daugaard (2021)"/></center> -->
@@ -7,16 +7,15 @@
 <!-- <br> <br> <br> <br> <br> <br> -->
 
 <!-- <center>  <img src="files/dexiostoma_campylum.svg" width="180" title="Drawing of Dexiostoma campylum (ciliate). (c) Uriah Daugaard (2021)" alt="Drawing of Dexiostoma campylum (ciliate). (c) Uriah Daugaard (2021)"/></center> -->
+
 <!-- ::: -->
 
-:::{.column-page}
-
+::: column-page
 # Highlighted Research {.unnumbered .unlisted}
 
 <br>
 
 ::: {layout-ncol="3"}
-
 ```{=html}
 <div class="card border-dark mb-3">
   <a href="/ResearchPages/warmingFRpage.qmd" class="link-primary"><img src="files/warmingfig1.jpg" alt="Figure 1 adapted from my JANE 2019 paper" class="card-img-top"/></a>
@@ -27,8 +26,6 @@
   </div>
 </div>
 ```
-
-
 ```{=html}
 <div class="card border-dark mb-3">
   <a href="/ResearchPages/EcoComplexEcoForecast.qmd" class="link-primary"><img src="files/PhdChp1Fig1.jpg" alt="Figure 1 adapted from my ELE 2022 paper" class="card-img-top"/></a>
@@ -39,8 +36,6 @@
   </div>
 </div>
 ```
-
-
 ```{=html}
 <div class="card border-dark mb-3">
   <a href="/ResearchPages/SamplingFreq.qmd" class="link-primary"><img src="files/SamplingFreqPic.jpg" alt="Figure adapted from my Ecology 2024 paper" class="card-img-top"/></a>
@@ -51,8 +46,5 @@
   </div>
 </div>
 ```
-
-
 :::
-
 :::

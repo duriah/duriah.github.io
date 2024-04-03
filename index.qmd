@@ -2,6 +2,7 @@
 title: "Uriah Daugaard"
 about:
     template: trestles
+    image-width: 20em
     links:
         - icon: linkedin
           text: LinkedIn
@@ -19,49 +20,36 @@ about:
 image: files/WApic_cropped.png
 ---
 
+### About me
+
+I am currently doing a [PhD in ecology](https://www.ieu.uzh.ch/en/teaching/phd/graduate.html){target="_blank"} at the [University of Zurich (UZH)](https://www.uzh.ch/en.html){target="_blank"} in the [Predictive Ecology Group](https://thetrophiclink.org/){target="_blank"} led by [Prof. Owen L. Petchey](https://www.ieu.uzh.ch/en/staff/member/petchey_owen.html){target="_blank"} (OLP) and which I will conclude towards the end of 2024. I am intrinsically motivated by science and I am always keen to extend my horizon with new methods, topics and collaborations beyond my current scientific focus.
+
+I have a Master in [Biostatistics](https://www.biostat.uzh.ch/){target="_blank"} (UZH, 2018-2020, thesis supervisors: [Prof. Reinhard Furrer](https://user.math.uzh.ch/furrer/){target="_blank"} and OLP) and a Bachelor in Biology (Major) and Environmental Sciences (Minor, UZH, 2015-2018).
 
 
-# About me
-
-I am a PhD candidate at the University of Zurich (UZH) in the Predictive Ecology Group under [Prof. Owen Petchey](#).
-
-Finishing end of 2024, 
-<!-- looking for exciting new opportunities to do science. -->
-
-the over-arching topic of my PhD is forecasting...
-  - link to two highlighte papers
-  - methodologies used
-  - focus on explaining forecast skill/error
-  
-species networks, interactions, quantitaivereserach, etc.  
-  
-to answer my research question I use empirical data, which in many cases is experimental (ciliate microcosms... more info). For instance, LEEF1 and LEEF2 (link to romana)
-
-I've also worked with observational data (lake plankton, e.g., ... collaboration with Pomati and team) and with *in silico* data (i.e. simulations)
-
-look what you wrote on owens page... also write if interst in working on other projects? and learning new thins
-
-focus on reproduciblity and open science
-
-Previous to my PhD studies, my first real science experience came from a 3 months internship I did in 2018 with Owen and Frank Pennekamp LINK (main supervisor) during my Biology (Major) and Environmental Sciences (Minor) Bachelor at UZH (2015-2018). We investigated .. (link to highlight)
-This eventually resulted in my first publication in 2019 (link) in the Journal of Animal Ecology, for which I was awarded the Elton prite (link, somewhere description of what it is)
+<center><img src="files/several_spec.svg" title="Drawings of the ciliates Dexiostoma campylum, Spathidium sp. and Colpidium striatum. (c) Uriah Daugaard (2023)" alt="Drawings of the ciliates Dexiostoma campylum, Spathidium sp. and Colpidium striatum. (c) Uriah Daugaard (2023)" width="400"/></center>
 
 
+###  My research
 
-Master biostat, furrer, thesis, focus of program. why I chose it, etc.
+**The focus of my PhD research is on ecological forecasting** and associated questions such as: **1.** What makes certain ecological systems and measures more predictable than others? **2.** Are there general relations between species or ecosystem characteristics and how well these can be predicted? **3.** How do such relations scale with environmental change/stressors?
 
+**To tackle these questions I work at the intersection of data and theory.** I conduct quantitative analyses (e.g. estimation of species interactions and networks) and forecasts, with a special focus on reproducibility and open science. 
 
-<center>
-<img src="files/species_network_small.svg" width="350">
-</center>
+**As a model system**, I often work with laboratory based **microbial aquatic ecosystems (i.e. protist microcosms)**. For instance, in a team led by [Dr. Romana Limberger](https://www.ieu.uzh.ch/en/staff/member/limberger_romana.html){target="_blank"} we recently carried out 2 long-term (9 months, \~120 time points) microcosm experiments in which we manipulated biodiversity and stressors (soon™ to be published). I also work with observational data (e.g. lake plankton monitoring optimization, a collaboration with [Dr. Francesco Pomati](https://www.eawag.ch/en/about-us/portrait/organisation/staff/profile/francesco-pomati/show/){target="_blank"}, [Stefanie Merkli](https://www.eawag.ch/de/ueber-uns/portraet/organisation/mitarbeitende/profile/stefanie-merkli/show/){target="_blank"}, [Dr. Ewa Merz](https://www.eawag.ch/en/about-us/portrait/organisation/staff/profile/ewa-merz/show/){target="_blank"} and OLP, more info [here](/ResearchPages/SamplingFreq.qmd)) and with *in silico* data (i.e. simulations).
 
-# Research interests
+I generally use various **non-parametric (machine learning) approaches to forecasting** (such as empirical dynamic modelling, random forest and recurrent neural networks) and arima. For instance, I, [Dr. Stephan B. Munch](https://sbmunch.sites.ucsc.edu/){target="_blank"}, OLP and coauthors investigated how taxa abundance forecasts depend on ecological complexity within and across systems and found that generalist species are  forecasted better than specialists (more info [here](/ResearchPages/EcoComplexEcoForecast.qmd)). In my current research project I am working with a more **mechanistic** approach to forecasting, in which I combine population dynamics with generalized additive models.
 
-Content yet to be added
+**Other projects**. During my Bachelor studies I did a 3 months internship with [Dr. Frank Pennekamp](https://www.frank-pennekamp.info/){target="_blank"} (main supervisor) and OLP. In the project, we found that warming can cause a destabilizing type switch in a predator-prey functional response (more info [here](/ResearchPages/warmingFRpage.qmd)). For this publication, I won the [2019 Elton Prize](https://www.britishecologicalsociety.org/publications/best-paper-by-an-early-career-researcher/elton-prize/){target="_blank"} (best research paper in the Journal of Animal Ecology by an early career author). I am also coauthor in two microbiology projects led by [Dr. Marcel Suleiman](https://www.fhnw.ch/en/people/marcel-suleimann){target="_blank"} in which we studied the effects of multiple stressors on bacterial communities kept in special Winogradsky columns (see the publications tab).
+<center><img src="files/copepod_dark.svg" title="Drawing of a copepod species. (c) Uriah Daugaard (2024)" alt="Drawing of a copepod species. (c) Uriah Daugaard (2024)" width="200"/></center>
 
-# Selected publications
+### Selected Publications
 
-Content yet to be added
+-   **Daugaard, U.**, Petchey, O.L. & Pennekamp, F. (2019). Warming can destabilize predator–prey interactions by shifting the functional response from Type III to Type II. Journal of Animal Ecology, 88, 1575–1586. <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1111/1365-2656.13053" class="link-light text-decoration-none">{{< ai doi >}} {{< ai open-access >}} Publication</a></button>
+
+-   **Daugaard, U.**, Munch, S., Inauen, D., Pennekamp, F. & Petchey, O. (2022). Forecasting in the face of ecological complexity: number and strength of species interactions determines forecast skill in ecological communities. Ecology Letters. <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1111/ele.14070" class="link-light text-decoration-none">{{< ai doi >}} {{< ai open-access >}} Publication</a></button> 
+
+-   **Daugaard, U.**, Merkli, S., Merz, E., Pomati, F. & Petchey, O.L. (2024). The dependence of forecasts on sampling frequency as a guide to optimizing monitoring in community ecology. Ecosphere, 15, e4786. <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1002/ecs2.4786" class="link-light text-decoration-none">{{< ai doi >}} {{< ai open-access >}} Publication</a></button>
 
 
 

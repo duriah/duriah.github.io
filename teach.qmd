@@ -10,6 +10,8 @@ title: "Teaching"
 
     <p>**My experience teaching the course**: I taught four of the theoretical lectures (in 2024). Teaching such a large class was an enriching and challenging experience for me in which I learnt a lot about lecturing and what it involves.</p>
 
+<center><img src="files/rotifer.svg" title="Drawing of a rotifer species. (c) Uriah Daugaard (2021)" alt="Drawing of a rotifer species. (c) Uriah Daugaard (2021)" width="300"/></center>
+
 ### Teaching Assistant (TA)
 
 -   <p>**BIO144** (Data analysis in biology, 2021-2023, spring semester, UZH)</p>
@@ -21,3 +23,4 @@ title: "Teaching"
 -   **R4All : An Introduction to the the Basics of R** (May 12-13, 2022)
 
     <p>**Description**: A two-day course given for novice R users with a life and environmental science background.</p>
+
