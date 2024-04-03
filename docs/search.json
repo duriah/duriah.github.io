@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "teach.html",
-    "href": "teach.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "Lecturer\n\nBIO144 (Data analysis in biology, 2024, spring semester, UZH)\n\nThe course: about 300 second year biology (and related programs) bachelor students are enrolled each year. The topics include among other things data visualization and processing, statistical (hypothesis) testing, linear regression (including ANOVA), logistic regression, Poisson regression, linear mixed models, introduction to linear algebra for linear models, goodness-of-fit measures, etc. The theoretical lectures are paired with hands-on practical sessions that are further accompanied by flipped-classroom style videos.\n\n\nMy experience teaching the course: I taught four of the theoretical lectures (in 2024). Teaching such a large class was an enriching and challenging experience for me in which I learnt a lot about lecturing and what it involves.\n\n\n\n\n\n\n\nTeaching Assistant (TA)\n\n\nBIO144 (Data analysis in biology, 2021-2023, spring semester, UZH)\n\n\nDescription: as a teaching assistant I helped the students with the practical exercises and answered methodological and computational (R) questions. I was also the main contact person for the students outside the practical hours when it came to statistical questions, and I answered questions on the course forum and I proactively wrote a statistical and computational FAQ for the students.\n\n\nHead TA: further, in 2022 and 2023 I was also Head TA, which involved additional responsibilities such as the screening of potential TAs and the briefing and organisation of the selected TAs (and being their main contact person).\n\nR4All : An Introduction to the the Basics of R (May 12-13, 2022)\n\nDescription: A two-day course given for novice R users with a life and environmental science background."
-  },
-  {
     "objectID": "ResearchPages/warmingFRpage.html",
     "href": "ResearchPages/warmingFRpage.html",
     "title": "Warming can destabilize predator–prey functional responses",
@@ -14,11 +7,46 @@
     "text": "Home\n  Highlighted Research\n  Warming can destabilize predator–prey functional responses\n\n\n\nHighlighted Research\n\n\n  Warming can destabilize predator–prey functional responses\n  Forecasting in the face of ecological complexity\n  Using forecasts to improve monitoring in community ecology\n\nContent yet to be added (sorry!)"
   },
   {
-    "objectID": "ResearchPages/EcoComplexEcoForecast.html",
-    "href": "ResearchPages/EcoComplexEcoForecast.html",
-    "title": "Forecasting in the face of ecological complexity",
+    "objectID": "ResearchPages/SamplingFreq.html",
+    "href": "ResearchPages/SamplingFreq.html",
+    "title": "Using forecasts to improve monitoring in community ecology",
     "section": "",
-    "text": "Home\n  Highlighted Research\n  Forecasting in the face of ecological complexity\n\n\n\nHighlighted Research\n\n\n  Warming can destabilize predator–prey functional responses\n  Forecasting in the face of ecological complexity\n  Using forecasts to improve monitoring in community ecology\n\nContent yet to be added (sorry!)"
+    "text": "Home\n  Highlighted Research\n  Using forecasts to improve monitoring in community ecology\n\n\n\nHighlighted Research\n\n\n  Warming can destabilize predator–prey functional responses\n  Forecasting in the face of ecological complexity\n  Using forecasts to improve monitoring in community ecology\n\nContent yet to be added (sorry!)"
+  },
+  {
+    "objectID": "teach.html",
+    "href": "teach.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Lecturer\n\nBIO144 (Data analysis in biology, 2024, spring semester, UZH)\n\nThe course: about 300 second year biology (and related programs) bachelor students are enrolled each year. The topics include among other things data visualization and processing, statistical (hypothesis) testing, linear regression (including ANOVA), logistic regression, Poisson regression, linear mixed models, introduction to linear algebra for linear models, goodness-of-fit measures, etc. The theoretical lectures are paired with hands-on practical sessions that are further accompanied by flipped-classroom style videos.\n\n\nMy experience teaching the course: I taught four of the theoretical lectures (in 2024). Teaching such a large class was an enriching and challenging experience for me in which I learnt a lot about lecturing and what it involves.\n\n\n\n\n\n\n\nTeaching Assistant (TA)\n\n\nBIO144 (Data analysis in biology, 2021-2023, spring semester, UZH)\n\n\nDescription: as a teaching assistant I helped the students with the practical exercises and answered methodological and computational (R) questions. I was also the main contact person for the students outside the practical hours when it came to statistical questions, and I answered questions on the course forum and I proactively wrote a statistical and computational FAQ for the students.\n\n\nHead TA: further, in 2022 and 2023 I was also Head TA, which involved additional responsibilities such as the screening of potential TAs and the briefing and organisation of the selected TAs (and being their main contact person).\n\nR4All : An Introduction to the the Basics of R (May 12-13, 2022)\n\nDescription: A two-day course given for novice R users with a life and environmental science background."
+  },
+  {
+    "objectID": "talks.html",
+    "href": "talks.html",
+    "title": "Uriah Daugaard",
+    "section": "",
+    "text": "Contributed Talks\n\n2023\n\nThe dependence of forecasts on sampling frequency as a guide to optimizing monitoring in community ecology\n\nGfÖ 2023 (52nd annual meeting of the Ecological Society of Germany, Austria and Switzerland), Leipzig, Germany, Sep 12 - 16 2023.\n\n\n\n\n2022\n\nForecasting in the face of ecological complexity: number and strength of species interactions determine forecast skill in ecological communities\n\nBiology 2022 (Swiss conference on organismic biology), Basel, Switzerland, Feb 17-18, 2022.\nSFE² GFÖ EEF (International Conference on Ecological Sciences), Metz, France, Nov 21 - 25, 2022.\n\n\n\n\n2021\n\nNon-consumptive and resource-availability effects in a ciliate predator-prey pair\n\nESA 2021 (annual meeting of the Ecological Society of America), virtual, Aug 2 - 6, 2021.\n\n\n\n\n2020\n\nWarming can destabilize predator–prey interactions by shifting the functional response from Type III to Type II\n\nBES 2020 (annual meeting of the British Ecological Society), virtual, Dec 14 - 18, 2020.\n\n\n\n\n\nPosters\n\n2022\n\nForecasting in the face of ecological complexity: number and strength of species interactions determine forecast skill in ecological communities\n\nINTECOL 2022 (13th International Congress of Ecology), Geneva, Switzerland, Aug 28 - Sep 2 2022.\n\nSelected as one of the 10 best posters invited to give a flash talk during the opening plenary.\n\nEcology Symposium hosted by Life Science Zurich Graduate School, Zurich, Switzerland, Oct 12 2022.\nThe poster is available here."
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Highlighted Research",
+    "section": "",
+    "text": "Highlighted Research\n\n\n\n\n\n  \n  \n     Warming can destabilize predator–prey functional responses \n     We investigated the impact of temperature on the functional response of a predator-prey pair. We found that it switched from a Type III to a Type II at the highest temperature. We used simulations to show the destabilizing effect of this change.\n    Find out more\n  \n\n\n\n\n  \n  \n     Forecasting in the face of ecological complexity \n     We quantified how ecological complexity affects forecast skill of species abundances within and across systems. We found that in general we forecasted generalist species (many but weak interactions) better than specialist species. \n    Find out more\n  \n\n\n\n\n\n  \n  \n     Using forecasts to improve monitoring in community ecology \n    We show how forecasts deteriorate with decreasing sampling frequency across all taxa in a unique lake plankton data set. We then turn the tables and discuss how forecast skill can help optimize sampling and monitoring in community ecology. \n    Find out more"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "Email\nuriah.daugaard@outlook.com    Send email\n\n\n\nAddress\nDepartment of Evolutionary Biology and Environmental Studies University of Zurich Winterthurerstrasse 190 8057 Zurich, Switzerland\nOffice: Y19-M-47 \n\n\n\n\n\n\n\n\nAdditional links:   LinkedIn  Twitter   ORCID   GitHub   Google Scholar   Publons"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Uriah Daugaard",
+    "section": "",
+    "text": "About me\nI am currently doing a PhD in ecology at the University of Zurich (UZH) in the Predictive Ecology Group led by Prof. Owen L. Petchey (OLP) and which I will conclude towards the end of 2024. I am intrinsically motivated by science and I am always keen to extend my horizon with new methods, topics and collaborations beyond my current scientific focus.\nI have a Master in Biostatistics (UZH, 2018-2020, thesis supervisors: Prof. Reinhard Furrer and OLP) and a Bachelor in Biology (Major) and Environmental Sciences (Minor, UZH, 2015-2018).\n\n\n\n\n\nMy research\nThe focus of my PhD research is on ecological forecasting and associated questions such as: 1. What makes certain ecological systems and measures more predictable than others? 2. Are there general relations between species or ecosystem characteristics and how well these can be predicted? 3. How do such relations scale with environmental change/stressors?\nTo tackle these questions I work at the intersection of data and theory. I conduct quantitative analyses (e.g. estimation of species interactions and networks) and forecasts, with a special focus on reproducibility and open science.\nAs a model system, I often work with laboratory based microbial aquatic ecosystems (i.e. protist microcosms). For instance, in a team led by Dr. Romana Limberger we recently carried out 2 long-term (9 months, ~120 time points) microcosm experiments in which we manipulated biodiversity and stressors (soon™ to be published). I also work with observational data (e.g. lake plankton monitoring optimization, a collaboration with Dr. Francesco Pomati, Stefanie Merkli, Dr. Ewa Merz and OLP, more info here) and with in silico data (i.e. simulations).\nI generally use various non-parametric (machine learning) approaches to forecasting (such as empirical dynamic modelling, random forest and recurrent neural networks) and arima. For instance, I, Dr. Stephan B. Munch, OLP and coauthors investigated how taxa abundance forecasts depend on ecological complexity within and across systems and found that generalist species are forecasted better than specialists (more info here). In my current research project I am working with a more mechanistic approach to forecasting, in which I combine population dynamics with generalized additive models.\nOther projects. During my Bachelor studies I did a 3 months internship with Dr. Frank Pennekamp (main supervisor) and OLP. In the project, we found that warming can cause a destabilizing type switch in a predator-prey functional response (more info here). For this publication, I won the 2019 Elton Prize (best research paper in the Journal of Animal Ecology by an early career author). I am also coauthor in two microbiology projects led by Dr. Marcel Suleiman in which we studied the effects of multiple stressors on bacterial communities kept in special Winogradsky columns (see the publications tab).\n\n\n\n\n\nSelected Publications\n\nDaugaard, U., Petchey, O.L. & Pennekamp, F. (2019). Warming can destabilize predator–prey interactions by shifting the functional response from Type III to Type II. Journal of Animal Ecology, 88, 1575–1586.   Publication\nDaugaard, U., Munch, S., Inauen, D., Pennekamp, F. & Petchey, O. (2022). Forecasting in the face of ecological complexity: number and strength of species interactions determines forecast skill in ecological communities. Ecology Letters.   Publication\nDaugaard, U., Merkli, S., Merz, E., Pomati, F. & Petchey, O.L. (2024). The dependence of forecasts on sampling frequency as a guide to optimizing monitoring in community ecology. Ecosphere, 15, e4786.   Publication"
   },
   {
     "objectID": "pubs.html",
@@ -42,38 +70,10 @@
     "text": "Peer Review\n\n\nI have reviewed scientific articles for the following journals:\n\nEcology Letters\nJournal of Animal Ecology\nEcology\nPeerJ\nProtist\n\n\nMore information on Publons:   Publons profile"
   },
   {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact",
+    "objectID": "ResearchPages/EcoComplexEcoForecast.html",
+    "href": "ResearchPages/EcoComplexEcoForecast.html",
+    "title": "Forecasting in the face of ecological complexity",
     "section": "",
-    "text": "Email\nuriah.daugaard@outlook.com    Send email\n\n\n\nAddress\nDepartment of Evolutionary Biology and Environmental Studies University of Zurich Winterthurerstrasse 190 8057 Zurich, Switzerland\nOffice: Y19-M-47 \n\n\n\n\n\n\n\n\nAdditional links:   LinkedIn  Twitter   ORCID   GitHub   Google Scholar   Publons"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Uriah Daugaard",
-    "section": "",
-    "text": "About me\nI am currently doing a PhD in ecology at the University of Zurich (UZH) in the Predictive Ecology Group led by Prof. Owen L. Petchey (OLP) and which I will conclude towards the end of 2024. I am intrinsically motivated by science and I am always keen to extend my horizon with new methods, topics and collaborations beyond my current scientific focus.\nI have a Master in Biostatistics (UZH, 2018-2020, thesis supervisors: Prof. Reinhard Furrer and OLP) and a Bachelor in Biology (Major) and Environmental Sciences (Minor, UZH, 2015-2018).\n\n\n\n\n\nMy research\nThe focus of my PhD research is on ecological forecasting and associated questions such as: 1. What makes certain ecological systems and measures more predictable than others? 2. Are there general relations between species or ecosystem characteristics and how well these can be predicted? 3. How do such relations scale with environmental change/stressors?\nTo tackle these questions I work at the intersection of data and theory. I conduct quantitative analyses (e.g. estimation of species interactions and networks) and forecasts, with a special focus on reproducibility and open science.\nAs a model system, I often work with laboratory based microbial aquatic ecosystems (i.e. protist microcosms). For instance, in a team led by Dr. Romana Limberger we recently carried out 2 long-term (9 months, ~120 time points) microcosm experiments in which we manipulated biodiversity and stressors (soon™ to be published). I also work with observational data (e.g. lake plankton monitoring optimization, a collaboration with Dr. Francesco Pomati, Stefanie Merkli, Dr. Ewa Merz and OLP, more info here) and with in silico data (i.e. simulations).\nI generally use various non-parametric (machine learning) approaches to forecasting (such as empirical dynamic modelling, random forest and recurrent neural networks) and arima. For instance, I, Dr. Stephan B. Munch, OLP and coauthors investigated how taxa abundance forecasts depend on ecological complexity within and across systems and found that generalist species are forecasted better than specialists (more info here). In my current research project I am working with a more mechanistic approach to forecasting, in which I combine population dynamics with generalized additive models.\nOther projects. During my Bachelor studies I did a 3 months internship with Dr. Frank Pennekamp (main supervisor) and OLP. In the project, we found that warming can cause a destabilizing type switch in a predator-prey functional response (more info here). For this publication, I won the 2019 Elton Prize (best research paper in the Journal of Animal Ecology by an early career author). I am also coauthor in two microbiology projects led by Dr. Marcel Suleiman in which we studied the effects of multiple stressors on bacterial communities kept in special Winogradsky columns (see the publications tab).\n\n\n\n\n\nSelected Publications\n\nDaugaard, U., Petchey, O.L. & Pennekamp, F. (2019). Warming can destabilize predator–prey interactions by shifting the functional response from Type III to Type II. Journal of Animal Ecology, 88, 1575–1586.   Publication\nDaugaard, U., Munch, S., Inauen, D., Pennekamp, F. & Petchey, O. (2022). Forecasting in the face of ecological complexity: number and strength of species interactions determines forecast skill in ecological communities. Ecology Letters.   Publication\nDaugaard, U., Merkli, S., Merz, E., Pomati, F. & Petchey, O.L. (2024). The dependence of forecasts on sampling frequency as a guide to optimizing monitoring in community ecology. Ecosphere, 15, e4786.   Publication"
-  },
-  {
-    "objectID": "research.html",
-    "href": "research.html",
-    "title": "Highlighted Research",
-    "section": "",
-    "text": "Highlighted Research\n\n\n\n\n\n  \n  \n     Warming can destabilize predator–prey functional responses \n     We investigated the impact of temperature on the functional response of a predator-prey pair. We found that it switched from a Type III to a Type II at the highest temperature. We used simulations to show the destabilizing effect of this change.\n    Find out more\n  \n\n\n\n\n  \n  \n     Forecasting in the face of ecological complexity \n     We quantified how ecological complexity affects forecast skill of species abundances within and across systems. We found that in general we forecasted generalist species (many but weak interactions) better than specialist species. \n    Find out more\n  \n\n\n\n\n\n  \n  \n     Using forecasts to improve monitoring in community ecology \n    We show how forecasts deteriorate with decreasing sampling frequency across all taxa in a unique lake plankton data set. We then turn the tables and discuss how forecast skill can help optimize sampling and monitoring in community ecology. \n    Find out more"
-  },
-  {
-    "objectID": "ResearchPages/SamplingFreq.html",
-    "href": "ResearchPages/SamplingFreq.html",
-    "title": "Using forecasts to improve monitoring in community ecology",
-    "section": "",
-    "text": "Home\n  Highlighted Research\n  Using forecasts to improve monitoring in community ecology\n\n\n\nHighlighted Research\n\n\n  Warming can destabilize predator–prey functional responses\n  Forecasting in the face of ecological complexity\n  Using forecasts to improve monitoring in community ecology\n\nContent yet to be added (sorry!)"
-  },
-  {
-    "objectID": "talks.html",
-    "href": "talks.html",
-    "title": "Uriah Daugaard",
-    "section": "",
-    "text": "Contributed Talks\n\n2023\n\nThe dependence of forecasts on sampling frequency as a guide to optimizing monitoring in community ecology\n\nGfÖ 2023 (52nd annual meeting of the Ecological Society of Germany, Austria and Switzerland), Leipzig, Germany, Sep 12 - 16 2023.\n\n\n\n\n2022\n\nForecasting in the face of ecological complexity: number and strength of species interactions determine forecast skill in ecological communities\n\nBiology 2022 (Swiss conference on organismic biology), Basel, Switzerland, Feb 17-18, 2022.\nSFE² GFÖ EEF (International Conference on Ecological Sciences), Metz, France, Nov 21 - 25, 2022.\n\n\n\n\n2021\n\nNon-consumptive and resource-availability effects in a ciliate predator-prey pair\n\nESA 2021 (annual meeting of the Ecological Society of America), virtual, Aug 2 - 6, 2021.\n\n\n\n\n2020\n\nWarming can destabilize predator–prey interactions by shifting the functional response from Type III to Type II\n\nBES 2020 (annual meeting of the British Ecological Society), virtual, Dec 14 - 18, 2020.\n\n\n\n\n\nPosters\n\n2022\n\nForecasting in the face of ecological complexity: number and strength of species interactions determine forecast skill in ecological communities\n\nINTECOL 2022 (13th International Congress of Ecology), Geneva, Switzerland, Aug 28 - Sep 2 2022.\n\nSelected as one of the 10 best posters invited to give a flash talk during the opening plenary.\n\nEcology Symposium hosted by Life Science Zurich Graduate School, Zurich, Switzerland, Oct 12 2022.\nThe poster is available here."
+    "text": "Home\n  Highlighted Research\n  Forecasting in the face of ecological complexity\n\n\n\nHighlighted Research\n\n\n  Warming can destabilize predator–prey functional responses\n  Forecasting in the face of ecological complexity\n  Using forecasts to improve monitoring in community ecology\n\nContent yet to be added (sorry!)"
   }
 ]
