@@ -10,7 +10,6 @@
 
 <!-- ::: -->
 
-::: column-page
 # Highlighted Research {.unnumbered .unlisted}
 
 <br>
@@ -30,7 +29,7 @@
 <div class="card border-dark mb-3">
   <a href="/ResearchPages/EcoComplexEcoForecast.qmd" class="link-primary"><img src="files/PhdChp1Fig1.jpg" alt="Figure 1 adapted from my ELE 2022 paper" class="card-img-top"/></a>
   <div class="card-body">
-    <h5 class="card-title"> <strong>Forecasting in the face of ecological complexity</strong> </h5>
+    <h5 class="card-title"> <strong>Forecasting in the face of ecological complexity</strong></h5>
     <p class="card-text"> We quantified how ecological complexity affects forecast skill of species abundances within and across systems. We found that in general we forecasted generalist species (many but weak interactions) better than specialist species. </p>
     <button type="button" class="btn btn-secondary btn-sm"><a href="/ResearchPages/EcoComplexEcoForecast.qmd" class="link-light text-decoration-none">Find out more</a></button>
   </div>
@@ -40,11 +39,10 @@
 <div class="card border-dark mb-3">
   <a href="/ResearchPages/SamplingFreq.qmd" class="link-primary"><img src="files/SamplingFreqPic.jpg" alt="Figure adapted from my Ecology 2024 paper" class="card-img-top"/></a>
   <div class="card-body">
-    <h5 class="card-title"> <strong>Using forecasts to improve monitoring in community ecology</strong> </h5>
-    <p class="card-text">We show how forecasts deteriorate with decreasing sampling frequency across all taxa in a unique lake plankton data set. We then turn the tables and discuss how forecast skill can help optimize sampling and monitoring in community ecology. </p>
+    <h5 class="card-title"> <strong>Using forecasts to improve monitoring in community ecology</strong></h5>
+    <p class="card-text">We show how forecasts deteriorate with decreasing sampling frequency across all taxa in a unique lake plankton data set. We then turn the tables and discuss how forecast skill can help with the optimization of sampling and monitoring in community ecology. </p>
     <button type="button" class="btn btn-secondary btn-sm"><a href="/ResearchPages/SamplingFreq.qmd" class="link-light text-decoration-none">Find out more</a></button>
   </div>
 </div>
 ```
-:::
 :::

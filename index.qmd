@@ -1,4 +1,8 @@
 ---
+format:
+  html:
+    toc: false
+
 title: "Uriah Daugaard"
 about:
     template: trestles
@@ -36,7 +40,7 @@ I have a Master in [Biostatistics](https://www.biostat.uzh.ch/){target="_blank"}
 
 **To tackle these questions I work at the intersection of data and theory.** I conduct quantitative analyses (e.g. estimation of species interactions and networks) and forecasts, with a special focus on reproducibility and open science. 
 
-**As a model system**, I often work with laboratory based **microbial aquatic ecosystems (i.e. protist microcosms)**. For instance, in a team led by [Dr. Romana Limberger](https://www.ieu.uzh.ch/en/staff/member/limberger_romana.html){target="_blank"} we recently carried out 2 long-term (9 months, \~120 time points) microcosm experiments in which we manipulated biodiversity and stressors (soon™ to be published). I also work with observational data (e.g. lake plankton monitoring optimization, a collaboration with [Dr. Francesco Pomati](https://www.eawag.ch/en/about-us/portrait/organisation/staff/profile/francesco-pomati/show/){target="_blank"}, [Stefanie Merkli](https://www.eawag.ch/de/ueber-uns/portraet/organisation/mitarbeitende/profile/stefanie-merkli/show/){target="_blank"}, [Dr. Ewa Merz](https://www.eawag.ch/en/about-us/portrait/organisation/staff/profile/ewa-merz/show/){target="_blank"} and OLP, more info [here](/ResearchPages/SamplingFreq.qmd)) and with *in silico* data (i.e. simulations).
+**As a model system**, I often work with laboratory based **microbial aquatic ecosystems (i.e. protist microcosms)**. For instance, in a team led by [Dr. Romana Limberger](https://www.ieu.uzh.ch/en/staff/member/limberger_romana.html){target="_blank"} we recently carried out 2 long-term (9 months, \~120 time points) microcosm experiments in which we manipulated biodiversity and stressors (soon™ to be published). I also work with observational data (e.g. lake plankton monitoring optimization, a collaboration with [Dr. Francesco Pomati](https://www.eawag.ch/en/about-us/portrait/organisation/staff/profile/francesco-pomati/show/){target="_blank"}, [Stefanie Merkli](https://www.eawag.ch/de/ueber-uns/portraet/organisation/mitarbeitende/profile/stefanie-merkli/show/){target="_blank"}, [Dr. Ewa Merz](https://www.eawag.ch/en/about-us/portrait/organisation/staff/profile/ewa-merz/show/){target="_blank"} and OLP, more info [here](/ResearchPages/SamplingFreq.qmd)) and with simulations.
 
 I generally use various **non-parametric (machine learning) approaches to forecasting** (such as empirical dynamic modelling, random forest and recurrent neural networks) and arima. For instance, I, [Dr. Stephan B. Munch](https://sbmunch.sites.ucsc.edu/){target="_blank"}, OLP and coauthors investigated how taxa abundance forecasts depend on ecological complexity within and across systems and found that generalist species are  forecasted better than specialists (more info [here](/ResearchPages/EcoComplexEcoForecast.qmd)). In my current research project I am working with a more **mechanistic** approach to forecasting, in which I combine population dynamics with generalized additive models.
 
