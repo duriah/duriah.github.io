@@ -1,18 +1,18 @@
 ---
-title: "Warming can destabilize predator–prey functional responses"
+# title: "Warming can destabilize predator–prey functional responses"
 format:
   html:
     grid:
       margin-width: 300px
 ---
 
-```{=html}
-<ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="../index.qmd">Home</a></li>
-  <li class="breadcrumb-item"><a href="../research.qmd">Highlighted Research</a></li>
-  <li class="breadcrumb-item active">Warming can destabilize predator–prey functional responses</li>
-</ol>
-```
+<!-- ```{=html} -->
+<!-- <ol class="breadcrumb"> -->
+<!--   <li class="breadcrumb-item"><a href="../index.qmd">Home</a></li> -->
+<!--   <li class="breadcrumb-item"><a href="../research.qmd">Highlighted Research</a></li> -->
+<!--   <li class="breadcrumb-item active">Warming can destabilize predator–prey functional responses</li> -->
+<!-- </ol> -->
+<!-- ``` -->
 
 ::: column-margin
 
@@ -30,4 +30,48 @@ format:
 
 :::
 
-Content yet to be added (sorry!)
+<div style="width: 85%;margin: 0 auto;">
+
+## Warming can destabilize predator–prey functional responses
+
+In a three-month long internship during my undergraduate studies, together with [Dr. Frank Pennekamp](https://www.frank-pennekamp.info/){target="_blank"} (main supervisor) and [Prof. Owen L. Petchey](https://www.ieu.uzh.ch/en/staff/member/petchey_owen.html){target="_blank"} I investigated the effects of environmental warming on the functional response of a protist predator-prey pair. For this publication, I won the [2019 Elton Prize](https://www.britishecologicalsociety.org/publications/best-paper-by-an-early-career-researcher/elton-prize/){target="_blank"} (best research paper in the Journal of Animal Ecology by an early career author). The open-access article can be found here: <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1111/1365-2656.13053" class="link-light text-decoration-none">{{< ai doi >}} {{< ai open-access >}} Publication</a></button>
+
+## Extended abstract with Figures
+
+1. The potential for climate change and temperature shifts to affect community stability remains relatively unknown. One mechanism by which temperature may affect stability is by altering trophic interactions. The functional response quantifies the per capita resource consumption by the consumer as a function of resource abundance and is a suitable framework for the description of nonlinear trophic interactions.
+
+2. We studied the effect of temperature on a ciliate predator–prey pair (*Spathidium sp.* and *Dexiostoma campylum*) by estimating warming effects on the functional response and on the associated conversion efficiency of the predator.
+
+<center><img src="FRpic.png" width="600"/></center>
+
+3. We recorded prey and predator dynamics over 24 hr and at three temperature levels (15, 20 and 25°C). 
+
+<center><img src="FRexperiment.png" width="600"/></center>
+
+4. To these data, we fitted a population dynamic model including the predator functional response, such that we estimated the functional response parameters (space clearance rate, handling time and density dependence of space clearance rate) for each temperature separately. To evaluate the ecological significance of temperature effects on the functional response parameters, we simulated predator–prey population dynamics. We considered the predator–prey system to be destabilized, if the prey was driven extinct by the predator.
+
+<center><img src="FRmodel.png" width="600"/></center>
+
+
+5. Effects of increased temperature included a transition of the functional response
+from a Type III to a Type II and an increase of the conversion efficiency of the
+predator. The simulated population dynamics showed a destabilization of the system
+with warming, with greater risk of prey extinction at higher temperatures
+likely caused by the transition from a Type III to a Type II functional response.
+
+<center><img src="FRmodelfit.png" width="600"/></center>
+
+<center><img src="FRresults.png" width="600"/></center>
+
+6. Warming‐induced shifts from a Type III to II are not commonly considered in
+modelling studies that investigate how population dynamics respond to warming.
+Future studies should investigate the mechanism and generality of the effect we
+observed and simulate temperature effects in complex food webs including shifts
+in the type of the functional response as well as consider the possibility of a temperature‐
+dependent conversion efficiency.
+
+------
+
+**Daugaard, U.**, Petchey, O.L. & Pennekamp, F. (2019). Warming can destabilize predator–prey interactions by shifting the functional response from Type III to Type II. Journal of Animal Ecology, 88, 1575–1586. <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1111/1365-2656.13053" class="link-light text-decoration-none">{{< ai doi >}} {{< ai open-access >}} Publication</a></button>
+
+</div>
