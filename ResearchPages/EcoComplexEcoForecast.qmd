@@ -1,18 +1,19 @@
 ---
-title: "Forecasting in the face of ecological complexity"
+# title: "Forecasting in the face of ecological complexity"
 format:
   html:
     grid:
       margin-width: 300px
+    toc: false  
 ---
 
-```{=html}
-<ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="../index.qmd">Home</a></li>
-  <li class="breadcrumb-item"><a href="../research.qmd">Highlighted Research</a></li>
-  <li class="breadcrumb-item active">Forecasting in the face of ecological complexity</li>
-</ol>
-```
+<!-- ```{=html} -->
+<!-- <ol class="breadcrumb"> -->
+<!--   <li class="breadcrumb-item"><a href="../index.qmd">Home</a></li> -->
+<!--   <li class="breadcrumb-item"><a href="../research.qmd">Highlighted Research</a></li> -->
+<!--   <li class="breadcrumb-item active">Forecasting in the face of ecological complexity</li> -->
+<!-- </ol> -->
+<!-- ``` -->
 ::: column-margin
 #### Highlighted Research
 
@@ -27,4 +28,38 @@ format:
 ```
 :::
 
-Content yet to be added (sorry!)
+<div style="width: 85%;margin: 0 auto;">
+
+
+# Forecasting in the face of ecological complexity
+
+In my first PhD chapter, we investigated how taxa abundance forecasts depend on ecological complexity within and across systems and found that generalist species are  forecasted better than specialists. The open-access article can be found here: <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1111/ele.14070" class="link-light text-decoration-none">{{< ai doi >}} {{< ai open-access >}} Publication</a></button> 
+
+## Extended abstract with Figures
+
+The potential for forecasting the dynamics of ecological systems is currently unclear, with contrasting opinions regarding its feasibility due to ecological complexity. Here, we investigated forecast skill within and across systems
+
+<center><img src="EcoComplexEcoForecast_fig1.png" width="850"/></center>
+
+we monitored a microbial system exposed to either constant or fluctuating temperatures in a 5-month-long laboratory experiment. We tested how forecasting of species abundances depends on the number and strength of interactions and on model size (number of predictors). We also tested how greater system complexity (i.e.the fluctuating temperatures) impacted these relations.
+
+<center><img src="EcoComplexEcoForecast_fig2.png" width="850"/></center>
+
+We found that the more interactions a species had, the weaker these interactions were and the better its abundance was predicted. 
+
+<center><img src="EcoComplexEcoForecast_fig3.png" width="700"/></center>
+
+
+Forecast skill increased with model size. Greater system complexity decreased forecast skill for three out of eight species. 
+
+<center><img src="EcoComplexEcoForecast_fig4.png" width="700"/></center>
+
+These insights into how abundance prediction depends on the connectedness of the species within the system and on overall system complexity could improve species forecasting and monitoring.
+
+
+-------
+
+**Daugaard, U.**, Munch, S., Inauen, D., Pennekamp, F. & Petchey, O. (2022). Forecasting in the face of ecological complexity: number and strength of species interactions determines forecast skill in ecological communities. Ecology Letters. <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1111/ele.14070" class="link-light text-decoration-none">{{< ai doi >}} {{< ai open-access >}} Publication</a></button> 
+
+
+</div>

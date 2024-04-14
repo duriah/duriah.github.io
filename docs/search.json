@@ -9,21 +9,14 @@
   {
     "objectID": "ResearchPages/warmingFRpage.html",
     "href": "ResearchPages/warmingFRpage.html",
-    "title": "Uriah Daugaard",
+    "title": "Warming can destabilize predator–prey functional responses",
     "section": "",
     "text": "Warming can destabilize predator–prey functional responses\n  Forecasting in the face of ecological complexity\n  Using forecasts to improve monitoring in community ecology"
   },
   {
-    "objectID": "ResearchPages/warmingFRpage.html#warming-can-destabilize-predatorprey-functional-responses",
-    "href": "ResearchPages/warmingFRpage.html#warming-can-destabilize-predatorprey-functional-responses",
-    "title": "Uriah Daugaard",
-    "section": "Warming can destabilize predator–prey functional responses",
-    "text": "Warming can destabilize predator–prey functional responses\nIn a three-month long internship during my undergraduate studies, together with Dr. Frank Pennekamp (main supervisor) and Prof. Owen L. Petchey I investigated the effects of environmental warming on the functional response of a protist predator-prey pair. For this publication, I won the 2019 Elton Prize (best research paper in the Journal of Animal Ecology by an early career author). The open-access article can be found here:   Publication"
-  },
-  {
     "objectID": "ResearchPages/warmingFRpage.html#extended-abstract-with-figures",
     "href": "ResearchPages/warmingFRpage.html#extended-abstract-with-figures",
-    "title": "Uriah Daugaard",
+    "title": "Warming can destabilize predator–prey functional responses",
     "section": "Extended abstract with Figures",
     "text": "Extended abstract with Figures\n\nThe potential for climate change and temperature shifts to affect community stability remains relatively unknown. One mechanism by which temperature may affect stability is by altering trophic interactions. The functional response quantifies the per capita resource consumption by the consumer as a function of resource abundance and is a suitable framework for the description of nonlinear trophic interactions.\nWe studied the effect of temperature on a ciliate predator–prey pair (Spathidium sp. and Dexiostoma campylum) by estimating warming effects on the functional response and on the associated conversion efficiency of the predator.\n\n\n\n\n\nWe recorded prey and predator dynamics over 24 hr and at three temperature levels (15, 20 and 25°C).\n\n\n\n\n\nTo these data, we fitted a population dynamic model including the predator functional response, such that we estimated the functional response parameters (space clearance rate, handling time and density dependence of space clearance rate) for each temperature separately. To evaluate the ecological significance of temperature effects on the functional response parameters, we simulated predator–prey population dynamics. We considered the predator–prey system to be destabilized, if the prey was driven extinct by the predator.\n\n\n\n\n\nEffects of increased temperature included a transition of the functional response from a Type III to a Type II and an increase of the conversion efficiency of the predator. The simulated population dynamics showed a destabilization of the system with warming, with greater risk of prey extinction at higher temperatures likely caused by the transition from a Type III to a Type II functional response.\n\n\n\n\n\n\n\n\nWarming‐induced shifts from a Type III to II are not commonly considered in modelling studies that investigate how population dynamics respond to warming. Future studies should investigate the mechanism and generality of the effect we observed and simulate temperature effects in complex food webs including shifts in the type of the functional response as well as consider the possibility of a temperature‐ dependent conversion efficiency.\n\n\nDaugaard, U., Petchey, O.L. & Pennekamp, F. (2019). Warming can destabilize predator–prey interactions by shifting the functional response from Type III to Type II. Journal of Animal Ecology, 88, 1575–1586.   Publication"
   },
@@ -32,7 +25,14 @@
     "href": "ResearchPages/EcoComplexEcoForecast.html",
     "title": "Forecasting in the face of ecological complexity",
     "section": "",
-    "text": "Home\n  Highlighted Research\n  Forecasting in the face of ecological complexity\n\n\n\nHighlighted Research\n\n\n  Warming can destabilize predator–prey functional responses\n  Forecasting in the face of ecological complexity\n  Using forecasts to improve monitoring in community ecology\n\nContent yet to be added (sorry!)"
+    "text": "Warming can destabilize predator–prey functional responses\n  Forecasting in the face of ecological complexity\n  Using forecasts to improve monitoring in community ecology"
+  },
+  {
+    "objectID": "ResearchPages/EcoComplexEcoForecast.html#extended-abstract-with-figures",
+    "href": "ResearchPages/EcoComplexEcoForecast.html#extended-abstract-with-figures",
+    "title": "Forecasting in the face of ecological complexity",
+    "section": "Extended abstract with Figures",
+    "text": "Extended abstract with Figures\nThe potential for forecasting the dynamics of ecological systems is currently unclear, with contrasting opinions regarding its feasibility due to ecological complexity. Here, we investigated forecast skill within and across systems\n\n\n\nwe monitored a microbial system exposed to either constant or fluctuating temperatures in a 5-month-long laboratory experiment. We tested how forecasting of species abundances depends on the number and strength of interactions and on model size (number of predictors). We also tested how greater system complexity (i.e.the fluctuating temperatures) impacted these relations.\n\n\n\nWe found that the more interactions a species had, the weaker these interactions were and the better its abundance was predicted.\n\n\n\nForecast skill increased with model size. Greater system complexity decreased forecast skill for three out of eight species.\n\n\n\nThese insights into how abundance prediction depends on the connectedness of the species within the system and on overall system complexity could improve species forecasting and monitoring.\n\nDaugaard, U., Munch, S., Inauen, D., Pennekamp, F. & Petchey, O. (2022). Forecasting in the face of ecological complexity: number and strength of species interactions determines forecast skill in ecological communities. Ecology Letters.   Publication"
   },
   {
     "objectID": "pubs.html",
