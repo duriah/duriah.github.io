@@ -35,7 +35,7 @@ format:
 
 In my first PhD chapter, we investigated how taxa abundance forecasts depend on ecological complexity within and across systems and found that generalist species are  forecasted better than specialists. The open-access article can be found here: <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1111/ele.14070" class="link-light text-decoration-none">{{< ai doi >}} {{< ai open-access >}} Publication</a></button> 
 
-## Extended abstract with Figures
+## Extended abstract with figures
 
 The potential for forecasting the dynamics of ecological systems is currently unclear, with contrasting opinions regarding its feasibility due to ecological complexity. Here, we investigated forecast skill within and across systems
 

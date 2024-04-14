@@ -1,18 +1,19 @@
 ---
-title: "Using forecasts to improve monitoring in community ecology"
+# title: "Using forecasts to improve monitoring in community ecology"
 format:
   html:
     grid:
       margin-width: 300px
+    toc: false    
 ---
 
-```{=html}
-<ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="../index.qmd">Home</a></li>
-  <li class="breadcrumb-item"><a href="../research.qmd">Highlighted Research</a></li>
-  <li class="breadcrumb-item active">Using forecasts to improve monitoring in community ecology</li>
-</ol>
-```
+<!-- ```{=html} -->
+<!-- <ol class="breadcrumb"> -->
+<!--   <li class="breadcrumb-item"><a href="../index.qmd">Home</a></li> -->
+<!--   <li class="breadcrumb-item"><a href="../research.qmd">Highlighted Research</a></li> -->
+<!--   <li class="breadcrumb-item active">Using forecasts to improve monitoring in community ecology</li> -->
+<!-- </ol> -->
+<!-- ``` -->
 
 ::: column-margin
 
@@ -30,4 +31,32 @@ format:
 
 :::
 
-Content yet to be added (sorry!)
+<div style="width: 85%;margin: 0 auto;">
+
+# Using forecasts to improve monitoring in community ecology
+
+We show how forecasts deteriorate with decreasing sampling frequency across all taxa in a unique lake plankton data set. We then turn the tables and discuss how forecast skill can help with the optimization of sampling and monitoring in community ecology. The open-access article can be found here: <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1002/ecs2.4786" class="link-light text-decoration-none">{{< ai doi >}} {{< ai open-access >}} Publication</a></button>
+
+## Extended abstract with figures
+
+
+Facing climate change and biodiversity loss, it is critical that ecology advances so that processes, such as species interactions and dynamics, can be correctly estimated and skillfully forecasted. As different processes occur on different time scales, the sampling frequency used to record them should intuitively match these scales. Yet, the effect of data sampling frequency on ecological forecasting accuracy is understudied. Using a simple simulated dataset as a baseline and a more complex high-frequency plankton dataset, we tested how different sampling frequencies impacted abundance forecasts of different plankton classes and the estimation of their interactions.
+
+<center><img src="Sampling_fig1.png" width="850"/></center>
+
+
+We then investigated whether plankton growth rates and body sizes could be used to select the most appropriate sampling frequency. The simple simulated dataset showed that the optimal sampling frequency scaled positively with growth rate. This finding was not repeated in the analyses of the plankton time series, however. There, we found that a reduction in sampling frequency worsened forecasts and led us to both over- and underestimate plankton interactions. 
+
+<center><img src="Sampling_fig2.png" width="850"/></center>
+
+<center><img src="Sampling_fig3.png" width="600"/></center>
+
+
+This suggests that forecasting can be used to determine the ideal sampling frequency in scientific and monitoring programs. A better study design will improve theoretical understanding of ecology and advance policy measures dealing with current global challenges.
+
+-------
+
+**Daugaard, U.**, Merkli, S., Merz, E., Pomati, F. & Petchey, O.L. (2024). The dependence of forecasts on sampling frequency as a guide to optimizing monitoring in community ecology. Ecosphere, 15, e4786. <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1002/ecs2.4786" class="link-light text-decoration-none">{{< ai doi >}} {{< ai open-access >}} Publication</a></button>
+
+
+</div>
