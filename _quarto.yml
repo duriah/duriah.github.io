@@ -16,7 +16,7 @@ website:
       - href: pubs.qmd
         text: Publications & Peer Review
       - href: talks.qmd
-        text: Talks
+        text: Presentations
       - href: teach.qmd
         text: Teaching
       # - href: cv.qmd

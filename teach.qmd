@@ -2,6 +2,8 @@
 title: "Teaching"
 ---
 
+<!--# THINK ABOUT ADDING A TEACHING PHILOSOPHY STATEMENT -->
+
 ### Lecturer
 
 -   **BIO144** (Data analysis in biology, 2024, spring semester, UZH)
@@ -23,4 +25,3 @@ title: "Teaching"
 -   **R4All : An Introduction to the the Basics of R** (May 12-13, 2022)
 
     <p>**Description**: A two-day course given for novice R users with a life and environmental science background.</p>
-
