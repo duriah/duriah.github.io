@@ -26,7 +26,7 @@ image: files/WApic_cropped.png
 
 ### About me
 
-I am currently doing a [PhD in ecology](https://www.ieu.uzh.ch/en/teaching/phd/graduate.html){target="_blank"} at the [University of Zurich (UZH)](https://www.uzh.ch/en.html){target="_blank"} in the [Predictive Ecology Group](https://thetrophiclink.org/){target="_blank"} led by [Prof. Owen L. Petchey](https://www.ieu.uzh.ch/en/staff/member/petchey_owen.html){target="_blank"} (OLP) and which I will conclude towards the end of 2024. I am intrinsically motivated by science and I am always keen to extend my horizon with new methods, topics and collaborations beyond my current scientific focus.
+I am currently doing a [PhD in ecology](https://www.ieu.uzh.ch/en/teaching/phd/graduate.html){target="_blank"} at the [University of Zurich (UZH)](https://www.uzh.ch/en.html){target="_blank"} in the [Predictive Ecology Group](https://thetrophiclink.org/){target="_blank"} led by [Prof. Owen L. Petchey](https://www.ieu.uzh.ch/en/staff/member/petchey_owen.html){target="_blank"} (OLP) and which I will conclude towards the end of 2024. I am fascinated by the complexity and diversity of ecological systems and I strive to discover and explain new things about them. I am always keen to extend my horizon with new methods, topics and collaborations about and  beyond my current scientific focus.
 
 I have a Master in [Biostatistics](https://www.biostat.uzh.ch/){target="_blank"} (UZH, 2018-2020, thesis supervisors: [Prof. Reinhard Furrer](https://user.math.uzh.ch/furrer/){target="_blank"} and OLP) and a Bachelor in Biology (Major) and Environmental Sciences (Minor, UZH, 2015-2018).
 
