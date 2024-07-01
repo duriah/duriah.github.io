@@ -21,6 +21,8 @@ about:
           url: https://orcid.org/0000-0003-4092-717X
         - text: "{{< ai google-scholar >}} Google Scholar"
           url: https://scholar.google.ch/citations?user=JI10T7QAAAAJ&hl
+        - text: "{{< fa solid file >}} CV"
+          url: "files/CV_long.pdf"
 image: files/WApic_cropped.png
 ---
 
