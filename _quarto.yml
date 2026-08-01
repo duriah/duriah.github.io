@@ -1,40 +1,44 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - "files/**"
+    - "assets/**"
+    - "site/**"
+    - "ResearchPages/*.png"
 
 website:
   title: "Uriah Daugaard"
   favicon: files/WApic_cropped.png
   open-graph:
     image: files/WApic_cropped.png
-  navbar:
-    right:
-      - href: index.qmd
-        text: Home
-      - href: research.qmd
-        text: Highlighted Research
-      - href: pubs.qmd
-        text: Publications & Peer Review
-      - href: talks.qmd
-        text: Presentations
-      - href: teach.qmd
-        text: Teaching
-      # - href: cv.qmd
-      #   text: CV      "{{< ai cv >}} to be added"  
-      - href: contact.qmd
-        text: Contact
+  # Custom top nav + footer are injected by site/site.js on every page (see
+  # `include-after-body` below). Quarto's built-in navbar is intentionally
+  # disabled — do not add a `navbar:` section here.
 
 format:
   html:
-    theme:
-      light: [flatly, _variables_flatly.scss]
-      dark: [darkly, _variables_darkly.scss]
-    css: styles.css
-    toc: true
+    # `pubs.qmd` and `teach.qmd` still rely on Bootstrap utility classes from
+    # the old flatly theme — keep flatly as the default so they keep rendering.
+    # Redesigned pages override per-page with `theme: none` + `page-layout: custom`.
+    theme: [flatly, _variables_flatly.scss]
+    css:
+      - styles.css
+      - site/site.css
+      - site/research-page.css
+    toc: false
     grid:
       body-width: 1050px
-    include-in-header: 
-      text: <meta name="google-site-verification" content="US9UugOmq-GXdRt4_XqJtenD7bkmr-q2J2JQUu1q8Xk" />
-
+    include-in-header:
+      - text: |
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cookie&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+          <meta name="google-site-verification" content="US9UugOmq-GXdRt4_XqJtenD7bkmr-q2J2JQUu1q8Xk" />
+    # site.js is referenced root-relatively so it resolves the same way from
+    # pages at any depth (incl. ResearchPages/*.qmd).
+    include-after-body:
+      - text: |
+          <script src="/site/site.js"></script>
 
 editor: source

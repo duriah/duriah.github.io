@@ -1,73 +1,261 @@
 ---
+title: "Uriah Daugaard — bioinformatics, ecology, pipelines"
+page-layout: custom
 format:
   html:
-    toc: false
-
-title: "Uriah Daugaard"
-about:
-    template: trestles
-    image-width: 20em
-    links:
-        - icon: linkedin
-          text: LinkedIn
-          url: https://www.linkedin.com/in/uriah-daugaard-8280681b1/
-        - icon: twitter
-          text: Twitter
-          url: https://twitter.com/DaugaardUriah
-        - icon: github
-          text: GitHub
-          url: https://github.com/duriah
-        - text: "{{< ai orcid >}} ORCID"
-          url: https://orcid.org/0000-0003-4092-717X
-        - text: "{{< ai google-scholar >}} Google Scholar"
-          url: https://scholar.google.ch/citations?user=JI10T7QAAAAJ&hl
-        - text: "{{< fa solid file >}} CV"
-          url: "files/CV_long.pdf"
-image: files/WApic_cropped.png
+    theme: none
+    include-in-header:
+      - text: |
+          <style>
+              /* Home-only flourishes */
+              .home-hero{padding:32px 56px 24px;text-align:center;position:relative}
+              .home-hero .name{
+                font-family:'Cormorant Garamond',serif;font-weight:500;
+                font-size:88px;line-height:.95;color:var(--ink);letter-spacing:.005em;
+                margin:0 0 8px;
+              }
+              .home-hero .script{
+                font-family:'Cookie',cursive;font-weight:400;
+                font-size:52px;line-height:.9;color:var(--sage);
+                margin:0;
+              }
+              .home-hero .phd-line{
+                font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;
+                text-transform:uppercase;color:var(--ink-3);font-weight:500;
+                margin:22px 0 0;
+              }
+              .home-hero .phd-line .dot{color:var(--sage);margin:0 10px;opacity:.6}
+              .home-hero .tagline{
+                font-family:'Cormorant Garamond',serif;
+                font-size:19px;line-height:1.55;color:var(--ink-2);
+                max-width:62ch;margin:36px auto 0;
+              }
+              .home-hero .tagline em{color:var(--sage);font-style:italic}
+          
+              .home-bio{
+                max-width:64ch;margin:48px auto 0;text-align:left;
+                font-family:'Cormorant Garamond',serif;font-size:19px;line-height:1.65;
+                color:var(--ink-2);padding-top:28px;border-top:1px solid var(--rule);
+              }
+              .home-bio p{margin:0 0 12px}
+              .home-bio p:last-child{margin-bottom:0}
+              .home-bio .eyebrow{display:block;margin-bottom:14px}
+          
+              /* tighter plates row above name — width matches wordmark */
+              .plates-tight{
+                width:554px;max-width:100%;
+                gap:0 !important;margin:0 auto 14px !important;
+                justify-content:space-between !important;
+              }
+              .plates-tight .plate{margin:0;gap:8px;width:140px;flex:0 1 140px;min-width:0}
+              .plates-tight .plate img{width:140px;height:140px;max-width:100%;height:auto;aspect-ratio:1}
+              .plates-tight .plate .lbl{max-width:140px}
+              .plates-tight .plate .lbl b{font-size:14px}
+              @media (max-width:600px){
+                .plates-tight{width:auto;max-width:100%;gap:0 !important;justify-content:space-between !important}
+                .plates-tight .plate{flex:1 1 0;width:auto;min-width:0;gap:6px}
+                .plates-tight .plate img{width:80px;height:80px;aspect-ratio:1}
+                .plates-tight .plate .lbl,.plates-tight .plate .lbl b{font-size:10px;max-width:none}
+              }
+          
+              .home-grid{
+                max-width:1080px;margin:80px auto 0;padding:0 56px;
+                display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:start;
+              }
+              .home-grid h2{
+                font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:500;
+                margin:0 0 6px;color:var(--ink);
+              }
+              .home-grid .sub{
+                font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;
+                text-transform:uppercase;color:var(--sage);margin-bottom:18px;font-weight:500;
+              }
+              .home-grid .more{
+                margin-top:20px;font-family:'Inter',sans-serif;font-size:12px;
+                letter-spacing:.04em;
+              }
+              .home-grid .more a{color:var(--sage);text-decoration:none;border-bottom:1px solid rgba(58,106,82,.4)}
+              .home-grid .more a:hover{color:var(--terracotta);border-bottom-color:var(--terracotta)}
+          
+              .home-links{
+                max-width:1080px;margin:80px auto 0;padding:32px 56px 0;
+                border-top:1px solid var(--rule);
+                display:flex;flex-wrap:wrap;gap:14px;justify-content:center;
+                font-family:'Inter',sans-serif;font-size:13px;
+              }
+              .home-links a{
+                color:var(--ink-2);text-decoration:none;
+                border:1px solid var(--rule);padding:8px 14px;border-radius:999px;
+                letter-spacing:.02em;
+              }
+              .home-links a:hover{border-color:var(--sage);color:var(--sage)}
+          
+              @media (max-width:900px){
+                .home-hero{padding:40px 24px 16px}
+                .home-hero .name{font-size:60px}
+                .home-hero .script{font-size:44px}
+                .home-grid{grid-template-columns:1fr;gap:48px;padding:0 24px;margin-top:56px}
+                .home-links{padding:24px 24px 0;margin-top:56px}
+              }
+          </style>
 ---
 
-### About me
+```{=html}
+<script>document.body.dataset.page='home';document.body.dataset.screenLabel='01 Home';</script>
 
-I am currently doing a [PhD in ecology](https://www.ieu.uzh.ch/en/teaching/phd/graduate.html){target="_blank"} at the [University of Zurich (UZH)](https://www.uzh.ch/en.html){target="_blank"} in the [Predictive Ecology Group](https://thetrophiclink.org/){target="_blank"} led by [Prof. Owen L. Petchey](https://www.ieu.uzh.ch/en/staff/member/petchey_owen.html){target="_blank"} (OLP) and which I will conclude towards the end of 2024. I am fascinated by the complexity and diversity of ecological systems and I strive to discover and explain new things about them. I am always keen to extend my horizon with new methods, topics and collaborations about and  beyond my current scientific focus.
+<span data-mount="bar"></span>
 
-I have a Master in [Biostatistics](https://www.biostat.uzh.ch/){target="_blank"} (UZH, 2018-2020, thesis supervisors: [Prof. Reinhard Furrer](https://user.math.uzh.ch/furrer/){target="_blank"} and OLP) and a Bachelor in Biology (Major) and Environmental Sciences (Minor, UZH, 2015-2018).
+<main>
+<!-- Hero -->
+<section class="home-hero" data-screen-label="01a Hero">
+<div class="plates plates-tight">
+<figure class="plate">
+<img src="assets/aggregates.png" alt="Drawing of a Chlamydomonas reinhardtii aggregate." />
+<figcaption class="lbl"><b>C. reinhardtii aggregate</b></figcaption>
+</figure>
+<figure class="plate">
+<img src="assets/protists.png" alt="Drawing of D. nasutum, D. campylum and C. striatum (ciliates)." />
+<figcaption class="lbl"><b>D. nasutum &middot; D. campylum &middot; C. striatum</b></figcaption>
+</figure>
+<figure class="plate">
+<img src="assets/bacteria.png" alt="Drawing of a bacterial community." />
+<figcaption class="lbl"><b>Bacterial community</b></figcaption>
+</figure>
+</div>
 
-<center><img src="files/several_spec.svg" title="Drawings of the ciliates Dexiostoma campylum, Spathidium sp. and Colpidium striatum. (c) Uriah Daugaard (2023)" alt="Drawings of the ciliates Dexiostoma campylum, Spathidium sp. and Colpidium striatum. (c) Uriah Daugaard (2023)" width="400"/></center>
+<h1 class="name">Uriah Daugaard</h1>
+<div class="script">bioinformatics &middot; ecology &middot; pipelines</div>
+<div class="phd-line">PhD in Ecology<span class="dot">&middot;</span>MSc in Biostatistics</div>
 
-### My research
+<p class="tagline">
+My work spans <em>bioinformatics</em>, <em>microbiome biology</em>, <em>ecological modelling</em>
+and <em>forecasting</em>, <em>statistics</em> and <em>machine learning</em>. I turn sequencing and time series
+data into models of how living systems behave.
+</p>
 
-**The focus of my PhD research is on ecological forecasting** and associated questions such as:
+<div class="home-bio">
+<span class="eyebrow">a short bio</span>
+<p>
+I work as a computational ecologist at <a class="inline" href="https://cybiome.com" target="_blank" rel="noopener"><strong>Cybiome</strong></a>
+(Basel, Switzerland), where I build bioinformatics pipelines and predictive models for microbiome questions.
+</p>
+<p>
+Before that I did a PhD in ecology at the University of Zurich
+(Petchey lab, 2020 to 2024) with a thesis on ecological forecasting,
+an MSc in Biostatistics at UZH, and a BSc in Biology and Environmental Sciences.
+</p>
+</div>
+</section>
 
-1.  What makes certain ecological systems and measures more predictable than others?
-2.  Are there general relations between species or ecosystem characteristics and how well these can be predicted?
-3.  How do such relations scale with environmental change/stressors?
+<!-- Now + Selected publications -->
+<section class="home-grid" data-screen-label="01b Now &amp; Pubs">
+<div>
+<h2>What I'm working on</h2>
+<div class="sub">currently on the bench</div>
+<div class="kv">
+<div class="row">
+<div class="k">Amplicon</div>
+<div class="v">
+<span>filtering + denoising</span>
+<span>taxonomy</span>
+<span>community structure</span>
+<span>function</span>
+<span>pathogenicity</span>
+</div>
+</div>
+<div class="row">
+<div class="k">Genomes</div>
+<div class="v">
+<span>assembly + annotation</span>
+<span>phylogeny</span>
+<span>ecological niche</span>
+<span>metabolic capacity</span>
+<span>secondary metabolites</span>
+<span>biosafety</span>
+</div>
+</div>
+<div class="row">
+<div class="k">Analysis</div>
+<div class="v">
+<span>machine learning</span>
+<span>feature selection</span>
+<span>ecological forecasting</span>
+<span>community modelling</span>
+<span>network analysis</span>
+</div>
+</div>
+<div class="row">
+<div class="k">Stack</div>
+<div class="v">
+<span>R</span>
+<span>Python</span>
+<span>Quarto</span>
+<span>Docker</span>
+<span>Git</span>
+<span>HDF5</span>
+</div>
+</div>
+</div>
+<div class="more"><a href="projects.html">read more on the Projects page →</a></div>
+</div>
 
-**To tackle these questions I work at the intersection of data and theory.** I conduct quantitative analyses (e.g. estimation of species interactions and networks) and forecasts, with a special focus on reproducibility and open science.
+<div>
+<h2>Selected publications</h2>
+<div class="sub">first or joint first author</div>
 
-#### **Model system**
+<article class="pub">
+<div class="yr">2025</div>
+<div class="body">
+<span class="au">Limberger R., <strong>Daugaard U.</strong>, Choffat Y., Gupta A., Jelić M., Jyrkinen S., Krug R.M., Nohl S., Pennekamp F., van Moorsel S.J., Zheng X., Zuppinger-Dingley D. &amp; Petchey O.L.</span>
+<span class="ti"> Mixed evidence for species diversity affecting ecological forecasts in constant versus declining light.</span>
+<span class="vn"> Global Change Biology, 31, e70364.</span>
+<span class="ja">joint first</span>
+<div class="links">
+<a href="https://doi.org/10.1111/gcb.70364" target="_blank" rel="noopener">doi</a>
+</div>
+</div>
+</article>
 
-I often work with laboratory based **microbial aquatic ecosystems (i.e. protist microcosms)**. For instance, in a team led by [Dr. Romana Limberger](https://www.ieu.uzh.ch/en/staff/member/limberger_romana.html){target="_blank"} (RL) we recently carried out 2 long-term (9 months, \~120 time points) microcosm experiments in which we manipulated biodiversity and stressors (soon™ to be published).
+<article class="pub">
+<div class="yr">2024</div>
+<div class="body">
+<span class="au"><strong>Daugaard U.</strong>, Merkli S., Merz E., Pomati F. &amp; Petchey O.L.</span>
+<span class="ti"> The dependence of forecasts on sampling frequency as a guide to optimizing monitoring in community ecology.</span>
+<span class="vn"> Ecosphere, 15, e4786.</span>
+<div class="links">
+<a href="https://doi.org/10.1002/ecs2.4786" target="_blank" rel="noopener">doi</a>
+<a href="https://doi.org/10.5281/zenodo.10066786" target="_blank" rel="noopener">data + code</a>
+</div>
+</div>
+</article>
 
-I also work with **observational data** (e.g. lake plankton monitoring optimization, a collaboration with [Dr. Francesco Pomati](https://www.eawag.ch/en/about-us/portrait/organisation/staff/profile/francesco-pomati/show/){target="_blank"}, [Stefanie Merkli](https://www.eawag.ch/de/ueber-uns/portraet/organisation/mitarbeitende/profile/stefanie-merkli/show/){target="_blank"}, [Dr. Ewa Merz](https://www.eawag.ch/en/about-us/portrait/organisation/staff/profile/ewa-merz/show/){target="_blank"} and OLP, more info [here](/ResearchPages/SamplingFreq.qmd)) and with **simulations**.
+<article class="pub">
+<div class="yr">2022</div>
+<div class="body">
+<span class="au"><strong>Daugaard U.</strong>, Munch S., Inauen D., Pennekamp F. &amp; Petchey O.</span>
+<span class="ti"> Forecasting in the face of ecological complexity: number and strength of species interactions determines forecast skill in ecological communities.</span>
+<span class="vn"> Ecology Letters.</span>
+<div class="links">
+<a href="https://doi.org/10.1111/ele.14070" target="_blank" rel="noopener">doi</a>
+<a href="https://doi.org/10.5281/zenodo.6524695" target="_blank" rel="noopener">data + code</a>
+</div>
+</div>
+</article>
 
-#### **Data analysis**
+<div class="more"><a href="research.html">full publication list and peer review →</a></div>
+</div>
+</section>
 
-I generally use various **non-parametric (machine learning) approaches to forecasting** (such as empirical dynamic modelling, random forest and recurrent neural networks) and arima. For instance, I, [Dr. Stephan B. Munch](https://sbmunch.sites.ucsc.edu/){target="_blank"}, OLP and coauthors investigated how taxa abundance forecasts depend on ecological complexity within and across systems and found that generalist species are forecasted better than specialists (more info [here](/ResearchPages/EcoComplexEcoForecast.qmd)).
+<!-- Quick links -->
+<section class="home-links" data-screen-label="01c Links">
+<a href="https://www.linkedin.com/in/uriah-daugaard-8280681b1/" target="_blank" rel="noopener">LinkedIn</a>
+<a href="https://github.com/duriah" target="_blank" rel="noopener">GitHub</a>
+<a href="https://orcid.org/0000-0003-4092-717X" target="_blank" rel="noopener">ORCID</a>
+<a href="https://scholar.google.ch/citations?user=JI10T7QAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+<a href="files/CV_long.pdf">CV (pdf)</a>
+<a href="mailto:uriah.daugaard@cybiome.com">email</a>
+</section>
+</main>
 
-In my current research project I am working with a more **mechanistic** approach to forecasting, in which I combine **population dynamics with generalized additive models.**
-
-#### **Other projects**
-
-During my Bachelor studies I did a 3 months internship with [Dr. Frank Pennekamp](https://www.frank-pennekamp.info/){target="_blank"} (main supervisor) and OLP. In the project, we found that warming can cause a destabilizing type switch in a predator-prey **functional response** (more info [here](/ResearchPages/warmingFRpage.qmd)). For this publication, I won the [**2019 Elton Prize**](https://www.britishecologicalsociety.org/publications/best-paper-by-an-early-career-researcher/elton-prize/){target="_blank"} (best research paper in the Journal of Animal Ecology by an early career author).
-
-I am also coauthor in two microbiology projects led by [Dr. Marcel Suleiman](https://www.fhnw.ch/en/people/marcel-suleimann){target="_blank"} in which we studied the effects of **multiple stressors** on bacterial communities kept in special Winogradsky columns, and in a projects led by RL in which we investigated the role of **functional diversity in regime shifts** (see the publications tab).
-
-<center><img src="files/copepod_dark.svg" title="Drawing of a copepod species. (c) Uriah Daugaard (2024)" alt="Drawing of a copepod species. (c) Uriah Daugaard (2024)" width="200"/></center>
-
-### Selected Publications
-
--   **Daugaard, U.**, Petchey, O.L. & Pennekamp, F. (2019). Warming can destabilize predator–prey interactions by shifting the functional response from Type III to Type II. Journal of Animal Ecology, 88, 1575–1586. <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1111/1365-2656.13053" class="link-light text-decoration-none">{{< ai doi >}} {{< ai open-access >}} Publication</a></button>
-
--   **Daugaard, U.**, Munch, S., Inauen, D., Pennekamp, F. & Petchey, O. (2022). Forecasting in the face of ecological complexity: number and strength of species interactions determines forecast skill in ecological communities. Ecology Letters. <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1111/ele.14070" class="link-light text-decoration-none">{{< ai doi >}} {{< ai open-access >}} Publication</a></button>
-
--   **Daugaard, U.**, Merkli, S., Merz, E., Pomati, F. & Petchey, O.L. (2024). The dependence of forecasts on sampling frequency as a guide to optimizing monitoring in community ecology. Ecosphere, 15, e4786. <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1002/ecs2.4786" class="link-light text-decoration-none">{{< ai doi >}} {{< ai open-access >}} Publication</a></button>
+<span data-mount="foot"></span>
+```

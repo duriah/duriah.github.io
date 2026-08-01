@@ -1,28 +1,99 @@
 ---
 title: "Contact"
+page-layout: custom
+format:
+  html:
+    theme: none
+    include-in-header:
+      - text: |
+          <style>
+              .ct-layout{
+                max-width:1180px;margin:40px auto 0;padding:0 56px;
+                display:grid;grid-template-columns:auto 1fr;column-gap:56px;row-gap:32px;
+                align-items:start;
+              }
+              .ct-portrait{
+                grid-column:1;grid-row:1 / span 2;
+                width:392px;height:392px;
+                border-radius:50%;overflow:hidden;
+              }
+              .ct-portrait img{
+                width:100%;height:100%;object-fit:cover;object-position:center;display:block;
+              }
+              .ct-title{grid-column:2;grid-row:1;align-self:end}
+              .ct-title .page-title{margin:0;text-align:left}
+              .ct-body{grid-column:2;grid-row:2;max-width:640px}
+              .ct-body h2{
+                font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;
+                text-transform:uppercase;color:var(--sage);margin:0 0 10px;font-weight:500;
+              }
+              .ct-body h2:not(:first-child){margin-top:36px}
+              .ct-email{
+                font-family:'Cormorant Garamond',serif;font-size:24px;font-style:italic;
+                color:var(--ink);text-decoration:none;display:block;margin-bottom:6px;
+              }
+              .ct-email:hover{color:var(--terracotta)}
+          
+              .ct-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+              .ct-links a{
+                font-family:'Inter',sans-serif;font-size:13px;color:var(--ink-2);
+                text-decoration:none;border:1px solid var(--rule);padding:8px 14px;border-radius:999px;
+                letter-spacing:.02em;
+              }
+              .ct-links a:hover{border-color:var(--sage);color:var(--sage)}
+              .ct-cta{
+                margin-top:22px;
+                display:flex;flex-wrap:wrap;gap:12px;
+              }
+          
+              @media (max-width:1100px){
+                .ct-portrait{width:300px;height:300px}
+              }
+              @media (max-width:900px){
+                .ct-layout{padding:0 24px;grid-template-columns:1fr;column-gap:0;row-gap:24px}
+                .ct-portrait{grid-column:1;grid-row:1;width:200px;height:200px}
+                .ct-title{grid-column:1;grid-row:2}
+                .ct-body{grid-column:1;grid-row:3}
+              }
+          </style>
 ---
 
-::: columns
-::: {.column width="70%"}
-### Email
+```{=html}
+<script>document.body.dataset.page='contact';document.body.dataset.screenLabel='06 Contact';</script>
 
-uriah.daugaard\@outlook.com   <button type="button" class="btn btn-secondary btn-sm"><a href="mailto:uriah.daugaard@outlook.com" class="link-light text-decoration-none">{{< fa envelope >}} Send email</a></button>
+<span data-mount="bar"></span>
 
-<!-- alternative button <button type="button" class="btn btn-primary btn-sm"><a href="https://orcid.org/0000-0003-4092-717X" class="link-light text-decoration-none">{{< ai orcid >}} ORCID</a></button> -->
+<main>
+<div class="ct-layout">
+<div class="ct-portrait">
+<img src="files/WApic_cropped.png" alt="Portrait of Uriah Daugaard." />
+</div>
+<div class="ct-title">
+<h1 class="page-title">Contact</h1>
+</div>
 
-### Address
+<div class="ct-body">
+<h2>email</h2>
+<a class="ct-email" href="mailto:uriah.daugaard@outlook.com">
+uriah.daugaard@outlook.com
+</a>
 
-Department of Evolutionary Biology and Environmental Studies<br> University of Zurich<br> Winterthurerstrasse 190<br> 8057 Zurich, Switzerland
+<div class="ct-cta">
+<a class="btn" href="mailto:uriah.daugaard@outlook.com">Send email <span class="arrow">↗</span></a>
+<a class="btn ghost" href="files/CV_long.pdf">CV (pdf) <span class="arrow">↗</span></a>
+</div>
 
-Office: Y19-M-47<br> <br>
-:::
+<h2>elsewhere</h2>
+<div class="ct-links">
+<a href="https://www.linkedin.com/in/uriah-daugaard-8280681b1/" target="_blank" rel="noopener">LinkedIn</a>
+<a href="https://github.com/duriah" target="_blank" rel="noopener">GitHub</a>
+<a href="https://orcid.org/0000-0003-4092-717X" target="_blank" rel="noopener">ORCID</a>
+<a href="https://scholar.google.ch/citations?user=JI10T7QAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+<a href="https://www.webofscience.com/wos/author/record/AFC-9360-2022" target="_blank" rel="noopener">Web of Science / Publons</a>
+</div>
+</div>
+</div>
+</main>
 
-::: {.column width="30%"}
-<center><img src="files/Chlamygreen.svg" title="Drawing of Chlamydomonas reinhardtii (green alga). (c) Uriah Daugaard (2021)" alt="Drawing of Chlamydomonas reinhardtii (green alga). (c) Uriah Daugaard (2021)" width="300"/></center>
-:::
-:::
-
-------------------------------------------------------------------------
-
-<strong>Additional links: </strong> <button type="button" class="btn btn-secondary btn-sm"><a href="https://www.linkedin.com/in/uriah-daugaard-8280681b1/" class="link-light text-decoration-none">{{< fa brands linkedin >}} LinkedIn</a></button> <button type="button" class="btn btn-secondary btn-sm"><a href="https://twitter.com/DaugaardUriah" class="link-light text-decoration-none">{{< fa brands twitter >}} Twitter </a></button> <button type="button" class="btn btn-secondary btn-sm"><a href="https://orcid.org/0000-0003-4092-717X" class="link-light text-decoration-none">{{< ai orcid >}} ORCID </a></button> <button type="button" class="btn btn-secondary btn-sm"><a href="https://github.com/duriah" class="link-light text-decoration-none">{{< fa brands github >}} GitHub </a></button> <button type="button" class="btn btn-secondary btn-sm"><a href="https://scholar.google.ch/citations?user=JI10T7QAAAAJ&hl" class="link-light text-decoration-none">{{< ai google-scholar >}} Google Scholar </a></button> <button type="button" class="btn btn-secondary btn-sm"><a href="https://www.webofscience.com/wos/author/record/AFC-9360-2022" class="link-light text-decoration-none">{{< ai publons >}} Publons </a></button>
-</a></button> <button type="button" class="btn btn-secondary btn-sm"><a href="/files/CV_long.pdf" class="link-light text-decoration-none">{{< fa solid file >}} CV </a></button>
+<span data-mount="foot"></span>
+```

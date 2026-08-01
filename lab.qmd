@@ -1,0 +1,361 @@
+---
+title: "Lab"
+page-layout: custom
+format:
+  html:
+    theme: none
+    include-in-header:
+      - text: |
+          <style>
+              .lab-lead{max-width:780px;margin:0 auto;padding:0 56px}
+              .lab-lead .lede{
+                font-family:'Cormorant Garamond',serif;font-size:23px;line-height:1.55;
+                color:var(--ink-2);margin:24px 0;
+              }
+              .lab-lead .lede em{color:var(--sage);font-style:italic}
+              .lab-lead .note{
+                font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.04em;
+                color:var(--ink-3);background:var(--cream-2);border:1px solid var(--rule);
+                padding:12px 16px;border-radius:6px;line-height:1.55;
+              }
+          
+              .lab-demo{
+                max-width:1080px;margin:80px auto 0;padding:0 56px;
+              }
+              .lab-demo .head{
+                display:grid;grid-template-columns:auto 1fr auto;gap:32px;align-items:end;
+                padding-bottom:18px;border-bottom:1px solid var(--rule);
+              }
+              .lab-demo .head .num{
+                font-family:'Cookie',cursive;font-size:96px;color:var(--sage);line-height:.8;
+              }
+              .lab-demo .head h2{
+                font-family:'Cormorant Garamond',serif;font-weight:500;font-size:42px;
+                margin:0;color:var(--ink);
+              }
+              .lab-demo .head .kicker{
+                font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;
+                text-transform:uppercase;color:var(--sage);font-weight:500;margin-bottom:8px;
+              }
+              .lab-demo .head .status{
+                font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.16em;
+                text-transform:uppercase;color:var(--terracotta);font-weight:500;
+                border:1px solid rgba(179,74,58,.4);padding:4px 10px;border-radius:999px;
+              }
+          
+              .lab-grid{
+                display:grid;grid-template-columns:1.2fr 1fr;gap:48px;margin-top:40px;align-items:start;
+              }
+              .lab-grid .copy h3{
+                font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;
+                font-size:22px;margin:0 0 6px;color:var(--ink);
+              }
+              .lab-grid .copy p{font-size:18px;line-height:1.6;color:var(--ink-2)}
+          
+              .lab-controls{
+                background:var(--cream-2);border:1px solid var(--rule);border-radius:6px;
+                padding:24px 26px;
+              }
+              .lab-controls h3{
+                font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;
+                text-transform:uppercase;color:var(--sage);margin:0 0 14px;font-weight:500;
+              }
+              .lab-controls .control{
+                padding:14px 0;border-top:1px solid var(--rule-2);
+                display:grid;grid-template-columns:1fr auto;gap:8px 24px;align-items:center;
+              }
+              .lab-controls .control:first-of-type{border-top:none}
+              .lab-controls .control .label{
+                font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:var(--ink);
+              }
+              .lab-controls .control .hint{
+                font-family:'Inter',sans-serif;font-size:11px;color:var(--ink-3);
+                grid-column:1/-1;letter-spacing:.02em;
+              }
+              .lab-controls .control input[type="range"]{
+                grid-column:1/-1;width:100%;accent-color:var(--sage);
+              }
+              .lab-controls .control .val{
+                font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--sage);
+                padding:2px 8px;background:var(--cream);border:1px solid var(--rule);border-radius:999px;
+              }
+          
+              .lab-plot{
+                margin-top:32px;background:var(--cream-2);border:1px solid var(--rule);
+                border-radius:6px;padding:24px;
+              }
+              .lab-plot .title{
+                display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px;
+              }
+              .lab-plot .title h4{
+                font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;
+                font-size:20px;margin:0;color:var(--ink);
+              }
+              .lab-plot .title .skill{
+                font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--sage);
+              }
+              .lab-plot svg{display:block;width:100%;height:auto}
+              .lab-plot .legend{
+                margin-top:10px;font-family:'Inter',sans-serif;font-size:11px;
+                letter-spacing:.06em;color:var(--ink-3);display:flex;gap:18px;
+              }
+              .lab-plot .legend span{display:inline-flex;align-items:center;gap:6px}
+              .lab-plot .legend .sw{width:14px;height:2px;background:var(--ink)}
+              .lab-plot .legend .sw.fc{background:var(--terracotta);height:0;border-top:2px dashed var(--terracotta)}
+          
+              .lab-meta{
+                margin-top:24px;
+                display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;
+              }
+              .lab-meta .m{
+                font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.12em;
+                text-transform:uppercase;color:var(--sage);
+              }
+              .lab-meta .m b{
+                display:block;font-family:'Cormorant Garamond',serif;font-style:italic;
+                font-size:17px;color:var(--ink);text-transform:none;letter-spacing:0;
+                margin-top:2px;font-weight:500;
+              }
+          
+              .lab-back{
+                max-width:1080px;margin:80px auto 0;padding:32px 56px 0;border-top:1px solid var(--rule);
+              }
+              .lab-back h2{
+                font-family:'Cormorant Garamond',serif;font-weight:500;font-size:28px;
+                margin:0 0 4px;color:var(--ink);
+              }
+              .lab-back .sub{
+                font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;
+                text-transform:uppercase;color:var(--sage);margin-bottom:16px;font-weight:500;
+              }
+              .lab-back ul{margin:0;padding:0;list-style:none}
+              .lab-back ul li{
+                padding:10px 0;border-top:1px solid var(--rule-2);
+                display:grid;grid-template-columns:140px 1fr;gap:18px;
+                font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--ink-2);
+              }
+              .lab-back ul li:first-child{border-top:none}
+              .lab-back ul li .tag{
+                font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.12em;
+                text-transform:uppercase;color:var(--sage);font-weight:500;padding-top:3px;
+              }
+          
+              @media (max-width:900px){
+                .lab-lead,.lab-demo,.lab-back{padding-left:24px;padding-right:24px}
+                .lab-demo,.lab-back{margin-top:48px}
+                .lab-grid{grid-template-columns:1fr;gap:24px}
+                .lab-meta{grid-template-columns:1fr}
+                .lab-demo .head{grid-template-columns:1fr;gap:6px}
+                .lab-back ul li{grid-template-columns:1fr;gap:2px}
+              }
+          </style>
+---
+
+```{=html}
+<script>document.body.dataset.page='lab';document.body.dataset.screenLabel='04 Lab';</script>
+
+<span data-mount="bar"></span>
+
+<main>
+<div class="page-narrow" style="text-align:center">
+<h1 class="page-title">Lab</h1>
+<div class="page-sub">small things you can poke at</div>
+</div>
+
+<div class="lab-lead">
+<p class="lede">
+A small workshop of <em>interactive demos</em>. Each one drops you straight into a method
+I use, on a public dataset, with controls that change the numbers in real time. Ships
+with one item now. Grows from there.
+</p>
+<p class="note">
+<b style="color:var(--ink)">Build status.</b> The Lab page is new with this redesign.
+The first demo (EDM forecasting) is in design here, not yet wired to a live engine.
+The plot below uses placeholder data so the layout and interaction model can be
+reviewed before the maths goes in.
+</p>
+</div>
+
+<!-- Demo 1 -->
+<section class="lab-demo" data-screen-label="04a EDM demo">
+<div class="head">
+<div class="num">i</div>
+<div>
+<div class="kicker">demo one</div>
+<h2>EDM forecasting on a public time series</h2>
+</div>
+<div class="status">In design</div>
+</div>
+
+<div class="lab-grid">
+<div class="copy">
+<h3>What it is</h3>
+<p>
+Empirical Dynamic Modelling reconstructs the underlying state space of a system
+from a single observed time series. It does not assume a parametric model. That
+makes it useful for ecological data, where the dynamics are often nonlinear and
+the right functional form is rarely obvious in advance.
+</p>
+<h3>What you get to do</h3>
+<p>
+Pick a forecast horizon, an embedding dimension, and a train / test split.
+Watch the forecast track or fail to track the held out portion of the series,
+and read the skill metric update underneath.
+</p>
+</div>
+
+<aside class="lab-controls" aria-label="EDM forecast controls">
+<h3>controls</h3>
+<div class="control">
+<span class="label">Forecast horizon</span>
+<span class="val" id="v-h">6 steps</span>
+<input type="range" min="1" max="24" value="6" id="c-h" aria-label="Forecast horizon" />
+<span class="hint">how far ahead the model predicts</span>
+</div>
+<div class="control">
+<span class="label">Embedding dimension</span>
+<span class="val" id="v-e">3</span>
+<input type="range" min="2" max="10" value="3" id="c-e" aria-label="Embedding dimension" />
+<span class="hint">number of lags used to reconstruct the attractor</span>
+</div>
+<div class="control">
+<span class="label">Train / test split</span>
+<span class="val" id="v-s">70 / 30</span>
+<input type="range" min="50" max="90" value="70" id="c-s" aria-label="Train fraction" />
+<span class="hint">proportion of the series used to fit</span>
+</div>
+</aside>
+</div>
+
+<div class="lab-plot">
+<div class="title">
+<h4>Observed series with forecast overlay</h4>
+<div class="skill">forecast skill (rho) <b id="v-rho" style="color:var(--ink)">0.84</b></div>
+</div>
+<svg id="lab-svg" viewBox="0 0 800 240" preserveAspectRatio="none" aria-hidden="true">
+<!-- grid -->
+<g stroke="rgba(31,58,47,.08)" stroke-width="1">
+<line x1="0" y1="60"  x2="800" y2="60" />
+<line x1="0" y1="120" x2="800" y2="120" />
+<line x1="0" y1="180" x2="800" y2="180" />
+</g>
+<!-- train/test divider -->
+<line id="lab-div" x1="560" y1="0" x2="560" y2="240" stroke="rgba(31,58,47,.25)" stroke-dasharray="4 4" />
+<text id="lab-div-l" x="568" y="18" font-family="Inter,sans-serif" font-size="10" fill="#3a6a52" letter-spacing=".12em">TEST →</text>
+<!-- observed -->
+<path id="lab-obs" fill="none" stroke="#1f3a2f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+<!-- forecast -->
+<path id="lab-fc"  fill="none" stroke="#b34a3a" stroke-width="1.6" stroke-dasharray="3 4" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+<div class="legend">
+<span><span class="sw"></span> observed</span>
+<span><span class="sw fc"></span> forecast</span>
+</div>
+</div>
+
+<div class="lab-meta">
+<div class="m">data
+<b>placeholder, public ecological time series</b>
+</div>
+<div class="m">method
+<b>simplex projection, S-map family</b>
+</div>
+<div class="m">behind the demo
+<b>ELE 2022 · Ecosphere 2024 · GCB 2025</b>
+</div>
+</div>
+</section>
+
+<!-- Backlog -->
+<section class="lab-back" data-screen-label="04b Backlog">
+<h2>On the bench, not yet shipped</h2>
+<div class="sub">next demos in the queue</div>
+<ul>
+<li><span class="tag">diversity</span><span>Alpha and beta diversity explorer on a public 16S dataset.</span></li>
+<li><span class="tag">functional resp.</span><span>Functional response fit, callback to JAE 2019.</span></li>
+<li><span class="tag">bayesian toy</span><span>Bayesian regression where you tune the prior and watch the posterior move.</span></li>
+<li><span class="tag">gallery</span><span>Static interactive figures from published work, embedded as widgets.</span></li>
+<li><span class="tag">code</span><span>Curated snippets: reproducible Quarto report, tidy R package skeleton, parallel pipeline scaffold.</span></li>
+</ul>
+</section>
+</main>
+<span data-mount="foot"></span>
+
+<script>
+// Tiny reactive demo: regenerate a synthetic ecological-looking series + forecast
+// when the user moves any slider. Pure decoration; not real EDM.
+(function () {
+const W = 800, H = 240, N = 96;
+const obs = document.getElementById('lab-obs');
+const fc  = document.getElementById('lab-fc');
+const div = document.getElementById('lab-div');
+const divL= document.getElementById('lab-div-l');
+const cH = document.getElementById('c-h'), vH = document.getElementById('v-h');
+const cE = document.getElementById('c-e'), vE = document.getElementById('v-e');
+const cS = document.getElementById('c-s'), vS = document.getElementById('v-s');
+const vRho = document.getElementById('v-rho');
+
+// Deterministic-ish "ecological" series: damped wobble + noise.
+function genSeries(n, seed) {
+const xs = [];
+let r = seed;
+for (let i = 0; i < n; i++) {
+r = (r * 9301 + 49297) % 233280;
+const noise = (r / 233280 - 0.5) * 0.35;
+const v = 0.55
++ 0.30 * Math.sin(i * 0.32)
++ 0.15 * Math.sin(i * 0.11 + 1.3)
++ 0.10 * Math.cos(i * 0.55 + 0.7)
++ noise * 0.5;
+xs.push(Math.max(0, Math.min(1, v)));
+}
+return xs;
+}
+const series = genSeries(N, 7);
+
+function pathFor(arr, x0, x1) {
+const n = arr.length;
+let d = '';
+for (let i = 0; i < n; i++) {
+const x = x0 + (i / (n - 1)) * (x1 - x0);
+const y = 220 - arr[i] * 180;
+d += (i === 0 ? 'M' : 'L') + x.toFixed(1) + ',' + y.toFixed(1) + ' ';
+}
+return d;
+}
+
+function update() {
+const horizon = +cH.value;          // 1..24
+const embed   = +cE.value;           // 2..10
+const split   = +cS.value;           // 50..90 percent train
+vH.textContent = horizon + ' steps';
+vE.textContent = embed;
+vS.textContent = split + ' / ' + (100 - split);
+
+const cut = Math.round(N * split / 100);
+const xCut = (cut / (N - 1)) * W;
+div.setAttribute('x1', xCut);
+div.setAttribute('x2', xCut);
+divL.setAttribute('x', xCut + 8);
+
+// Observed = full series, but we only draw up to test region with smooth path.
+obs.setAttribute('d', pathFor(series, 0, W));
+
+// Forecast = noisy copy of test segment, "skill" depends on horizon + embed.
+const skill = Math.max(0.05, Math.min(0.96,
+0.95 - 0.018 * (horizon - 1) - 0.04 * Math.abs(embed - 4) - (1 - split / 100) * 0.6
+));
+const tail = series.slice(cut);
+const noisy = tail.map((v, i) => {
+const drift = (1 - skill) * 0.5 * Math.sin(i * 0.7 + embed);
+return Math.max(0, Math.min(1, v + drift + (Math.random() - 0.5) * (1 - skill) * 0.3));
+});
+fc.setAttribute('d', pathFor(noisy, xCut, W));
+
+vRho.textContent = skill.toFixed(2);
+}
+[cH, cE, cS].forEach(el => el.addEventListener('input', update));
+update();
+})();
+</script>
+```

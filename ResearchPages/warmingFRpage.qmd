@@ -1,78 +1,211 @@
 ---
-# title: "Warming can destabilize predator–prey functional responses"
+title: "Warming destabilises predator–prey functional responses"
+page-layout: custom
 format:
   html:
-    grid:
-      margin-width: 300px
-    toc: false  
+    theme: none
 ---
 
-<!-- ```{=html} -->
-<!-- <ol class="breadcrumb"> -->
-<!--   <li class="breadcrumb-item"><a href="../index.qmd">Home</a></li> -->
-<!--   <li class="breadcrumb-item"><a href="../research.qmd">Highlighted Research</a></li> -->
-<!--   <li class="breadcrumb-item active">Warming can destabilize predator–prey functional responses</li> -->
-<!-- </ol> -->
-<!-- ``` -->
-
-::: column-margin
-
-#### Highlighted Research
-
-<br> 
-
 ```{=html}
-<div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">Warming can destabilize predator–prey functional responses</a>
-  <a href="/ResearchPages/EcoComplexEcoForecast.qmd" class="list-group-item list-group-item-action">Forecasting in the face of ecological complexity</a>
-  <a href="/ResearchPages/SamplingFreq.qmd" class="list-group-item list-group-item-action">Using forecasts to improve monitoring in community ecology</a>
+<script>document.body.dataset.page='research';document.body.dataset.screenLabel='03 Research / Warming & FR';</script>
+
+<span data-mount="bar"></span>
+
+<main>
+<div class="rp-wrap">
+
+<aside class="rp-toc" aria-label="Highlighted research">
+<a class="back" href="../research.html">← Research &amp; Publications</a>
+<div class="h">Highlighted research</div>
+<ul class="list">
+<li class="current">
+<a aria-current="page" href="warmingFRpage.html">
+<span class="meta">JAE 2019 · Elton Prize</span>
+<span class="ti">Warming destabilises predator–prey functional responses</span>
+</a>
+</li>
+<li>
+<a href="EcoComplexEcoForecast.html">
+<span class="meta">Ecology Letters 2022</span>
+<span class="ti">Forecasting in the face of ecological complexity</span>
+</a>
+</li>
+<li>
+<a href="SamplingFreq.html">
+<span class="meta">Ecosphere 2024</span>
+<span class="ti">Sampling frequency and forecast skill</span>
+</a>
+</li>
+</ul>
+</aside>
+
+<header class="rp-header">
+<div class="titles">
+<div class="eyebrow">
+<span>Journal of Animal Ecology</span><span class="dot"></span>
+<span>2019</span><span class="dot"></span>
+<span class="prize">★ 2019 Elton Prize</span>
 </div>
+<h1>Warming can destabilise predator–prey functional responses</h1>
+<p class="lede">
+A three-month undergraduate project showing that warming can flip a predator's
+functional response from Type III to Type II, and that this small shape change is
+enough to drive the prey extinct in simulation.
+</p>
+</div>
+</header>
+
+<div class="rp-meta">
+<div class="authors"><strong>Daugaard U.</strong>, Petchey O.L. &amp; Pennekamp F.</div>
+<a class="doi-btn" href="https://doi.org/10.1111/1365-2656.13053" target="_blank" rel="noopener">
+doi: 10.1111/1365-2656.13053 <span class="arrow">↗</span>
+</a>
+</div>
+
+<article class="rp-body">
+
+<section class="section">
+<div class="head">
+<div class="num">01 · The question</div>
+<h2>Does warming reshape the way predators eat their prey?</h2>
+</div>
+<div class="text">
+<p>
+The <em>functional response</em> describes how much prey a single predator
+consumes as prey density rises. Its shape (Type I, II or III) sets whether the
+interaction is stabilising or destabilising. We asked whether a few degrees of
+warming can change that shape.
+</p>
+</div>
+</section>
+
+<section class="section">
+<div class="head">
+<div class="num">02 · What we did</div>
+<h2>A ciliate pair, 24 hours, three temperatures</h2>
+</div>
+<div class="text">
+<p>
+We chose <em>Spathidium sp.</em>, a generalist ciliate predator, and its
+preferred prey <em>Dexiostoma campylum</em>.
+</p>
+
+<figure class="rp-fig tight">
+<img src="FRpic.png" alt="Microscope photographs of Spathidium sp. and Dexiostoma campylum." />
+<figcaption>
+<span class="lbl">Fig. 1</span>
+The predator–prey pair. <em>Spathidium sp.</em> feeds on
+<em>Dexiostoma campylum</em>.
+</figcaption>
+</figure>
+
+<p>
+We recorded both species over 24 hours at 15°, 20° and 25 °C, across a gradient
+of starting prey densities, so the functional response could be reconstructed at
+each temperature.
+</p>
+
+<figure class="rp-fig">
+<img src="FRexperiment.png" alt="Schematic of the experimental design." />
+<figcaption>
+<span class="lbl">Fig. 2</span>
+Experimental design. A density gradient at each of three temperatures.
+</figcaption>
+</figure>
+
+<p>
+We then fit a population-dynamic model that explicitly contains the predator's
+functional response. That gave us space clearance rate, handling time and density
+dependence at each temperature, plus the predator's conversion efficiency.
+</p>
+
+<figure class="rp-fig">
+<img src="FRmodel.png" alt="Diagram of the population-dynamic model." />
+<figcaption>
+<span class="lbl">Fig. 3</span>
+Model used for inference. Prey grow logistically; the predator consumes prey
+through a functional response.
+</figcaption>
+</figure>
+</div>
+</section>
+
+<section class="section">
+<div class="head">
+<div class="num">03 · What we found</div>
+<h2>Type III at 15 and 20 °C, Type II at 25 °C</h2>
+</div>
+<div class="text">
+<p>
+At the two cooler temperatures the functional response was Type III: it
+accelerates at low prey densities, which gives prey a refuge when rare. At 25 °C
+the response switched to Type II, with no acceleration phase.
+</p>
+
+<figure class="rp-fig">
+<img src="FRmodelfit.png" alt="Fitted functional response curves across the three temperatures." />
+<figcaption>
+<span class="lbl">Fig. 4</span>
+Estimated functional response. The Type III acceleration phase disappears at
+25 °C.
+</figcaption>
+</figure>
+
+<div class="rp-pull">
+<strong>The destabilising consequence.</strong> Simulated long-run dynamics with
+the fitted models show greater risk of prey extinction at higher temperatures,
+with the largest jump at the Type III to Type II transition.
+</div>
+
+<figure class="rp-fig">
+<img src="FRresults.png" alt="Long-run simulated predator–prey dynamics across temperatures." />
+<figcaption>
+<span class="lbl">Fig. 5</span>
+Simulated dynamics. Prey-extinction probability rises with temperature.
+</figcaption>
+</figure>
+
+<p>
+Conversion efficiency also increased with warming, compounding the destabilising
+effect.
+</p>
+</div>
+</section>
+
+<section class="section">
+<div class="head">
+<div class="num">04 · Why it matters</div>
+<h2>Shape changes are usually missing from food-web models</h2>
+</div>
+<div class="text">
+<p>
+Most climate-change food-web models hold the type of the functional response
+fixed and only let temperature scale its parameters. The type itself can change,
+with consequences that scaling alone will not capture. Future work should
+investigate how often this happens, and how it propagates through multi-species
+food webs.
+</p>
+</div>
+</section>
+
+</article>
+
+<aside class="rp-cite" aria-label="Full citation">
+<div class="lbl">Cite this paper</div>
+<p class="full">
+<strong>Daugaard, U.</strong>, Petchey, O.L. &amp; Pennekamp, F. (2019).
+Warming can destabilize predator–prey interactions by shifting the functional response
+from Type III to Type II. <em>Journal of Animal Ecology</em>, 88, 1575–1586.
+</p>
+<div class="actions">
+<a class="primary" href="https://doi.org/10.1111/1365-2656.13053" target="_blank" rel="noopener">Read paper (open access) ↗</a>
+<a href="https://zenodo.org/badge/latestdoi/186978107" target="_blank" rel="noopener">Data + code ↗</a>
+<a href="https://www.britishecologicalsociety.org/publications/best-paper-by-an-early-career-researcher/elton-prize/" target="_blank" rel="noopener">About the Elton Prize ↗</a>
+</div>
+</aside>
+
+</div>
+</main>
+
+<span data-mount="foot"></span>
 ```
-
-:::
-
-<div style="width: 85%;margin: 0 auto;">
-
-# Warming can destabilize predator–prey functional responses
-
-In a three-month long internship during my undergraduate studies, together with [Dr. Frank Pennekamp](https://www.frank-pennekamp.info/){target="_blank"} (main supervisor) and [Prof. Owen L. Petchey](https://www.ieu.uzh.ch/en/staff/member/petchey_owen.html){target="_blank"} I investigated the effects of environmental warming on the functional response of a protist predator-prey pair. For this publication, I won the [2019 Elton Prize](https://www.britishecologicalsociety.org/publications/best-paper-by-an-early-career-researcher/elton-prize/){target="_blank"} (best research paper in the Journal of Animal Ecology by an early career author). The open-access article can be found here: <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1111/1365-2656.13053" class="link-light text-decoration-none">{{< ai doi >}} {{< ai open-access >}} Publication</a></button> (Journal of Animal Ecology, 2019).
-
-## Extended abstract with figures
-
-1. The potential for climate change and temperature shifts to affect community stability remains relatively unknown. One mechanism by which temperature may affect stability is by altering trophic interactions. The functional response quantifies the per capita resource consumption by the consumer as a function of resource abundance and is a suitable framework for the description of nonlinear trophic interactions.
-
-2. We studied the effect of temperature on a ciliate predator–prey pair (*Spathidium sp.* and *Dexiostoma campylum*) by estimating warming effects on the functional response and on the associated conversion efficiency of the predator.
-
-<center><img src="FRpic.png" width="600"/></center>
-
-3. We recorded prey and predator dynamics over 24 hr and at three temperature levels (15, 20 and 25°C). 
-
-<center><img src="FRexperiment.png" width="600"/></center>
-
-4. To these data, we fitted a population dynamic model including the predator functional response, such that we estimated the functional response parameters (space clearance rate, handling time and density dependence of space clearance rate) for each temperature separately. To evaluate the ecological significance of temperature effects on the functional response parameters, we simulated predator–prey population dynamics. We considered the predator–prey system to be destabilized, if the prey was driven extinct by the predator.
-
-<center><img src="FRmodel.png" width="600"/></center>
-
-
-5. Effects of increased temperature included a transition of the functional response
-from a Type III to a Type II and an increase of the conversion efficiency of the
-predator. The simulated population dynamics showed a destabilization of the system
-with warming, with greater risk of prey extinction at higher temperatures
-likely caused by the transition from a Type III to a Type II functional response.
-
-<center><img src="FRmodelfit.png" width="600"/></center>
-
-<center><img src="FRresults.png" width="600"/></center>
-
-6. Warming‐induced shifts from a Type III to II are not commonly considered in
-modelling studies that investigate how population dynamics respond to warming.
-Future studies should investigate the mechanism and generality of the effect we
-observed and simulate temperature effects in complex food webs including shifts
-in the type of the functional response as well as consider the possibility of a temperature‐
-dependent conversion efficiency.
-
-------
-
-**Daugaard, U.**, Petchey, O.L. & Pennekamp, F. (2019). Warming can destabilize predator–prey interactions by shifting the functional response from Type III to Type II. Journal of Animal Ecology, 88, 1575–1586. <button type="button" class="btn btn-secondary btn-xs"><a href="https://doi.org/10.1111/1365-2656.13053" class="link-light text-decoration-none">{{< ai doi >}} {{< ai open-access >}} Publication</a></button>
-
-</div>
