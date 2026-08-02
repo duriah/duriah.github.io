@@ -1,7 +1,8 @@
 /* =========================================================
    Uriah Daugaard — site stylesheet
    Cream + ink-green visual system, with terracotta accent.
-   Type pairing: Cormorant Garamond (serif), Cookie (script),
+   Type pairing: Cormorant Garamond (serif, also used letterspaced for the
+   wordmark and page subtitles), Cookie (decorative numerals only),
    Inter (UI / metadata), JetBrains Mono (code-like labels).
    ========================================================= */
 
@@ -14,6 +15,8 @@
   --sage:         #3a6a52;   /* script + script-like accents */
   --terracotta:   #b34a3a;   /* "current/active" + small highlights */
   --gold:         #b08538;   /* small distinctions (Elton, etc.) */
+  --gold-rgb:     176,133,56; /* same, as channels, for per-rule alphas */
+  --gold-fill:    transparent;
   --rule:         rgba(31,58,47,.18);
   --rule-2:       rgba(31,58,47,.08);
   --max:          1080px;
@@ -28,6 +31,12 @@
   --sage:         #d4af52;   /* gold accent (replaces sage) */
   --terracotta:   #e0a060;   /* warmer current/active */
   --gold:         #d4af52;
+  --gold-rgb:     212,175,82;
+  /* Dark mode rebinds --sage to gold, so a gold *outline* no longer separates a
+     distinction badge from ordinary accent text. Distinctions keep their meaning
+     here by being filled rather than by finding a fourth hue — the warm range is
+     already carrying --sage and --terracotta. */
+  --gold-fill:    rgba(212,175,82,.13);
   --rule:         rgba(212,175,82,.25);
   --rule-2:       rgba(212,175,82,.10);
 }
@@ -37,6 +46,14 @@ html[data-theme="dark"]{color-scheme:dark}
 
 /* Suppress Quarto's auto-rendered title block — every page provides its own H1. */
 #title-block-header,.quarto-title-block{display:none}
+
+/* Quarto's Bootstrap bundle rules every h2 with
+   `border-bottom:1px solid #dee2e6; padding-bottom:.5rem`.
+   That underline is not part of this design — #dee2e6 is a grey that appears
+   nowhere in the palette, and it collides with the rules the page draws for
+   itself (.kv, .talks, .pj-section …). The padding is left in place so that
+   removing the line does not reflow anything. */
+h2,.h2{border-bottom:none}
 
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
@@ -70,7 +87,17 @@ body{
 .site-bar .nav-r{justify-content:flex-end}
 .site-bar a{color:var(--ink);text-decoration:none}
 .site-bar a:hover{color:var(--sage)}
-.site-bar a.on{color:var(--terracotta)}
+/* Active nav item. The bar is one static file shared by every page, so the
+   current page identifies itself with data-page on <html> (set from the page's
+   YAML header) instead of a server- or script-applied class. :where() keeps the
+   specificity at exactly what `.site-bar a.on` used to weigh, so hover still
+   resolves the same way. */
+:where(:root[data-page="home"])     .site-bar a[data-nav="home"],
+:where(:root[data-page="projects"]) .site-bar a[data-nav="projects"],
+:where(:root[data-page="research"]) .site-bar a[data-nav="research"],
+:where(:root[data-page="lab"])      .site-bar a[data-nav="lab"],
+:where(:root[data-page="talks"])    .site-bar a[data-nav="talks"],
+:where(:root[data-page="contact"])  .site-bar a[data-nav="contact"]{color:var(--terracotta)}
 
 /* theme toggle */
 .theme-toggle{
@@ -91,20 +118,21 @@ body{
 
 /* narrow-only tools cluster (hamburger + theme) — hidden on desktop */
 .bar-tools{display:none}
-.site-bar .mark{
+.site-bar .wordmark{
   text-align:center;
   font-family:'Cormorant Garamond',serif;
   font-size:17px;
   line-height:1.05;
   color:var(--ink);
 }
-.site-bar .mark .b{
-  font-family:'Cookie',cursive;
-  font-size:21px;
+.site-bar .wordmark .b{
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:.11em;
   color:var(--sage);
   display:block;
-  margin-top:2px;
-  letter-spacing:.005em;
+  margin-top:3px;
 }
 
 /* ---- footer -------------------------------------------- */
@@ -126,9 +154,45 @@ body{
 .site-foot a{color:var(--ink-3);text-decoration:none;margin-left:18px}
 .site-foot a:hover{color:var(--sage)}
 
+/* Quarto's layout stylesheet rules every direct child of #quarto-content with
+   `padding-top:14px`, dropping to 0 under `@media (max-width:991.98px)`. That is
+   an id selector, so it outranks `.site-bar` and `.site-foot` above and quietly
+   replaced their top padding: the bar ended up with 14px of top against 22px of
+   bottom (0 against 22 on narrow viewports, which is why its contents looked
+   stuck to the top edge), and the footer lost 36px down to 14px. Restore the
+   intended values at a specificity that actually wins. */
+#quarto-content > .site-bar{padding-top:22px}
+#quarto-content > .site-foot{padding-top:36px}
+
 /* ---- generic page scaffold ----------------------------- */
 .page{max-width:var(--max);margin:0 auto;padding:0 56px}
 .page-narrow{max-width:780px;margin:0 auto;padding:0 56px}
+
+/* Interior-page header: the title and its subtitle on the left, the page's lede
+   set beside them. Only the home page is centred — it is a masthead. Every other
+   page gives the reader a left edge to come back to, and puts the lede where it
+   is read immediately rather than in a separate block below.
+   Projects and Research grew their own copies of this (.pj-header, .rs-header);
+   this is the shared version they should all converge on. */
+.page-head{
+  max-width:1100px;margin:48px auto 0;padding:0 56px;
+  display:grid;grid-template-columns:max-content 1fr;
+  gap:96px;align-items:start;
+}
+.page-head .titles{text-align:left;width:max-content}
+.page-head .titles .page-title{margin:0;text-wrap:balance}
+.page-head .titles .page-sub{margin-top:6px}
+.page-head .lead{
+  font-family:'Cormorant Garamond',serif;font-size:23px;line-height:1.55;
+  color:var(--ink-2);margin:0;text-wrap:pretty;
+  padding-top:.55em;justify-self:stretch;
+}
+.page-head .lead em{color:var(--sage);font-style:italic}
+@media (max-width:900px){
+  .page-head{grid-template-columns:1fr;gap:4px;margin-top:32px;padding:0 24px}
+  .page-head .titles{width:auto}
+  .page-head .lead{font-size:21px;padding-top:0;margin-top:18px}
+}
 
 .eyebrow{
   font-family:'Inter',sans-serif;
@@ -148,14 +212,6 @@ body{
   color:var(--ink);
   margin:0;
 }
-.h-script{
-  font-family:'Cookie',cursive;
-  font-weight:400;
-  font-size:48px;
-  line-height:1.1;
-  color:var(--sage);
-  margin:14px 0 0;
-}
 
 h1.page-title{
   font-family:'Cormorant Garamond',serif;
@@ -166,13 +222,18 @@ h1.page-title{
   color:var(--ink);
   margin:64px 0 8px;
 }
+/* Page subtitles drop the script for the body serif, but not the wordmark's
+   letterspacing: that tracking works on the home page because three words under
+   a 88px name read as a lockup, whereas here it makes every page look like it is
+   trying to be a logo — and it forced the longer Talks subtitle onto two lines.
+   Italic carries the "subtitle" job instead, without needing the tracking. */
 h1.page-title + .page-sub{
-  font-family:'Cookie',cursive;
-  font-weight:400;
-  font-size:36px;
+  font-family:'Cormorant Garamond',serif;
+  font-weight:400;font-style:italic;
+  font-size:24px;
   color:var(--sage);
   margin:14px 0 36px;
-  line-height:1.2;
+  line-height:1.3;
 }
 
 h2.section{
@@ -271,7 +332,7 @@ ul.clean li:first-child{border-top:none}
   border-radius:999px;
   font-weight:500;
 }
-.chip.gold{color:var(--gold);border-color:rgba(176,133,56,.4)}
+.chip.gold{color:var(--gold);border-color:rgba(var(--gold-rgb),.4);background:var(--gold-fill)}
 .chip.terra{color:var(--terracotta);border-color:rgba(179,74,58,.35)}
 
 /* ---- buttons ------------------------------------------- */
@@ -348,35 +409,144 @@ ul.clean li:first-child{border-top:none}
 }
 
 /* ---- publication entry --------------------------------- */
+/* Each entry is one record in three parts — authors, title, then a metadata rail
+   of venue + chips — instead of a single run of prose. The parts are separated
+   by size and colour rather than by rules or boxes, so the list keeps a
+   bibliography's density while gaining a rhythm you can scan. */
 .pub{
+  position:relative;
   display:grid;
-  grid-template-columns:64px 1fr;
-  gap:16px;
-  padding:16px 0;
+  grid-template-columns:68px 1fr;
+  gap:22px;
+  padding:13px 0 15px;
   border-top:1px solid var(--rule-2);
   font-family:'Cormorant Garamond',serif;
 }
 .pub:first-of-type{border-top:1px solid var(--rule)}
-.pub .yr{
-  font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.06em;
-  color:var(--sage);font-weight:500;padding-top:4px;
+
+/* Whole-row hover. The tint is painted by a pseudo-element inset past the text
+   column rather than by margins on .pub itself, so the row reads as a band while
+   the hairline separators stay aligned with the rest of the page. */
+.pub::before{
+  content:"";
+  position:absolute;inset:0 -18px;z-index:-1;
+  border-radius:2px;background:transparent;
+  transition:background-color .18s ease;
 }
-.pub .body{font-size:18px;line-height:1.5;color:var(--ink-2)}
-.pub .body .au{color:var(--ink)}
-.pub .body .au strong{font-weight:600}
-.pub .body .ti{color:var(--ink);font-style:italic}
-.pub .body .vn{color:var(--sage)}
-.pub .body .links{margin-top:6px;display:flex;gap:10px;flex-wrap:wrap}
+@media (hover:hover){
+  .pub:hover::before{background:var(--cream-2)}
+  .pub:hover .yr{color:var(--sage)}
+  .pub:hover .yr::after{background:var(--sage)}
+}
+
+/* The year anchors the gutter: mono numerals and a hairline tick, giving the
+   column a repeating beat that marks where each record begins. */
+.pub .yr{
+  font-family:'JetBrains Mono', ui-monospace, monospace;
+  font-size:15px;letter-spacing:.01em;font-weight:400;
+  color:var(--ink-3);padding-top:6px;
+  transition:color .18s ease;
+}
+.pub .yr::after{
+  content:"";display:block;width:20px;height:1px;
+  margin-top:9px;background:var(--rule);
+  transition:background-color .18s ease;
+}
+
+/* .body is the flex container for every part of the record: authors and title
+   take a full line each, and the venue, any distinction and the chips share the
+   last one. */
+.pub .body{
+  display:flex;flex-wrap:wrap;align-items:baseline;
+  column-gap:10px;row-gap:4px;
+  font-size:18px;line-height:1.5;color:var(--ink-2);
+}
+/* --ink-2 rather than --ink-3: at 16px the lighter tone measured 5.0:1 on cream
+   and 4.6:1 on the hover band — passing, but with nothing to spare. The title
+   still leads on size and weight. */
+.pub .body .au{
+  flex:1 0 100%;
+  font-size:16px;line-height:1.4;color:var(--ink-2);
+}
+.pub .body .au strong{color:var(--ink);font-weight:600}
+/* Roman, not italic: at 20px in --ink the title carries the entry on size and
+   colour alone. Italic recedes, and a heavier weight is not available — only
+   400/500/600 of Cormorant are loaded. */
+.pub .body .ti{
+  flex:1 0 100%;
+  font-size:20px;line-height:1.3;
+  font-weight:500;font-style:normal;color:var(--ink);
+  margin-bottom:4px;text-wrap:pretty;
+}
+/* Venue as a label rather than prose, in the same small uppercase Inter the rest
+   of the site uses for metadata; --ink-3 leaves --sage to the chips, which are
+   the only things on that line you can actually click. */
+.pub .body .vn{
+  font-family:'Inter',sans-serif;font-weight:500;
+  font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-3);margin-right:4px;
+}
+/* display:contents dissolves the wrapper into .body so the chips join the venue
+   on the metadata line. */
+.pub .body .links{display:contents}
 .pub .body .links a{
   font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.06em;
   color:var(--sage);text-decoration:none;
   border:1px solid var(--rule);padding:2px 8px;border-radius:999px;
 }
 .pub .body .links a:hover{border-color:var(--sage);background:var(--cream-2)}
+/* The one chip that keeps you on the site — the long-form write-up — so it is
+   marked out from the doi/data links, which all leave. */
+.pub .body .links a.deep{
+  color:var(--ink);border-color:rgba(var(--gold-rgb),.45);background:var(--gold-fill);
+}
+.pub .body .links a.deep:hover{border-color:var(--gold);background:var(--cream-2)}
+
+/* Abstract disclosure. A native <details>, so it works without JavaScript and is
+   keyboard-operable for free. It deliberately does NOT wear the chip pill: the
+   chips beside it (doi, data + code) all navigate away, and a fourth pill reads
+   as one more link off the page. A rotating triangle and plain label say
+   "this opens here" instead. It sits on its own line under the chips. */
+/* .body is a flex container, so the disclosure claims its own full-width row
+   below the venue + chips line. */
+.pub .abs{flex:1 0 100%;margin-top:6px}
+.pub .abs > summary{
+  list-style:none;cursor:pointer;user-select:none;width:max-content;
+  font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;font-weight:500;
+  color:var(--ink-3);
+  transition:color .15s;
+}
+.pub .abs > summary::-webkit-details-marker{display:none}
+/* Drawn rather than a glyph, so it is identical in every font. */
+.pub .abs > summary::before{
+  content:"";display:inline-block;
+  width:0;height:0;margin-right:8px;
+  border-left:5px solid currentColor;
+  border-top:4px solid transparent;
+  border-bottom:4px solid transparent;
+  transform-origin:30% 50%;
+  transition:transform .18s ease;
+}
+.pub .abs[open] > summary::before{transform:rotate(90deg)}
+.pub .abs > summary:hover{color:var(--sage)}
+.pub .abs[open] > summary{color:var(--sage)}
+.pub .abs-body{
+  margin-top:10px;padding-left:14px;
+  border-left:2px solid var(--rule);
+  max-width:74ch;
+}
+.pub .abs-body p{
+  font-family:'Cormorant Garamond',serif;
+  font-size:17px;line-height:1.55;color:var(--ink-2);
+  margin:0 0 8px;text-wrap:pretty;
+}
+.pub .abs-body p:last-child{margin-bottom:0}
 .pub .body .badge{
   display:inline-block;font-family:'Inter',sans-serif;font-size:11px;
   letter-spacing:.1em;text-transform:uppercase;color:var(--gold);
-  border:1px solid rgba(176,133,56,.35);padding:1px 8px;border-radius:999px;
+  border:1px solid rgba(var(--gold-rgb),.35);background:var(--gold-fill);
+  padding:1px 8px;border-radius:999px;
   margin-left:8px;font-weight:500;
 }
 .pub .body .ja{color:var(--terracotta);font-family:'Inter',sans-serif;
@@ -384,23 +554,58 @@ ul.clean li:first-child{border-top:none}
   margin-left:8px;}
 
 /* ---- talks list ---------------------------------------- */
+/* Same three-part record as the publication list: year in a mono gutter, the
+   talk title carrying the row, then a metadata rail. See the "publication
+   entry" block above — the two lists are deliberately the same instrument. */
 .talks .item{
-  padding:18px 0;border-top:1px solid var(--rule-2);
-  display:grid;grid-template-columns:120px 1fr;gap:24px;align-items:start;
+  position:relative;
+  padding:13px 0 15px;border-top:1px solid var(--rule-2);
+  display:grid;grid-template-columns:68px 1fr;gap:22px;align-items:start;
 }
 .talks .item:first-of-type{border-top:1px solid var(--rule)}
+.talks .item::before{
+  content:"";position:absolute;inset:0 -18px;z-index:-1;
+  border-radius:2px;background:transparent;
+  transition:background-color .18s ease;
+}
+@media (hover:hover){
+  .talks .item:hover::before{background:var(--cream-2)}
+  .talks .item:hover .when{color:var(--sage)}
+  .talks .item:hover .when::after{background:var(--sage)}
+}
 .talks .item .when{
-  font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.12em;
-  color:var(--sage);font-weight:500;padding-top:4px;
+  font-family:'JetBrains Mono', ui-monospace, monospace;
+  font-size:15px;letter-spacing:.01em;font-weight:400;
+  color:var(--ink-3);padding-top:6px;
+  transition:color .18s ease;
+}
+.talks .item .when::after{
+  content:"";display:block;width:20px;height:1px;
+  margin-top:9px;background:var(--rule);
+  transition:background-color .18s ease;
 }
 .talks .item .what{font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--ink-2);line-height:1.5}
-.talks .item .what strong{color:var(--ink);font-weight:500}
-.talks .item .what em{color:var(--ink);font-style:italic}
-.talks .item .what .where{display:block;margin-top:4px;color:var(--ink-3);font-size:17px}
+/* The talk title, roman and on its own line — the same move as .pub .ti. */
+.talks .item .what > em,
+.talks .item .what > strong{
+  display:block;
+  font-size:20px;line-height:1.3;font-style:normal;font-weight:500;
+  color:var(--ink);margin-bottom:5px;text-wrap:pretty;
+}
+.talks .item .what .where{
+  display:block;margin-top:2px;color:var(--ink-2);font-size:16px;line-height:1.45;
+}
+/* The venue name reads as a label; the rest of the line stays prose. */
+.talks .item .what .where strong{
+  font-family:'Inter',sans-serif;font-weight:500;
+  font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-3);margin-right:2px;
+}
 .talks .item .badge{
   display:inline-block;font-family:'Inter',sans-serif;font-size:10px;
   letter-spacing:.12em;text-transform:uppercase;color:var(--gold);
-  border:1px solid rgba(176,133,56,.35);padding:1px 7px;border-radius:999px;
+  border:1px solid rgba(var(--gold-rgb),.35);background:var(--gold-fill);
+  padding:1px 7px;border-radius:999px;
   margin-left:6px;font-weight:500;vertical-align:middle;
 }
 
@@ -470,13 +675,19 @@ ul.clean li:first-child{border-top:none}
 }
 .nav-drawer nav{display:flex;flex-direction:column;gap:2px;font-family:'Inter',sans-serif;font-size:14px}
 .nav-drawer a{color:var(--ink);text-decoration:none;padding:8px 4px;line-height:1.2;border-radius:4px}
-.nav-drawer a.on{color:var(--terracotta)}
+/* Active item in the drawer — see the matching note on `.site-bar a`. */
+:where(:root[data-page="home"])     .nav-drawer a[data-nav="home"],
+:where(:root[data-page="projects"]) .nav-drawer a[data-nav="projects"],
+:where(:root[data-page="research"]) .nav-drawer a[data-nav="research"],
+:where(:root[data-page="lab"])      .nav-drawer a[data-nav="lab"],
+:where(:root[data-page="talks"])    .nav-drawer a[data-nav="talks"],
+:where(:root[data-page="contact"])  .nav-drawer a[data-nav="contact"]{color:var(--terracotta)}
 .nav-drawer a:hover{color:var(--sage)}
 
 /* ---- responsive bits ------------------------------------ */
 @media (max-width:900px){
   .site-bar{padding:22px 20px;grid-template-columns:1fr auto;gap:14px;text-align:left}
-  .site-bar .mark{
+  .site-bar .wordmark{
     grid-column:1;justify-self:start;text-align:left;
   }
   .site-bar .nav-l,.site-bar .nav-r{display:none}

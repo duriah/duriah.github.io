@@ -1,0 +1,68 @@
+/* Research & Publications page — layout only.
+   Loaded before styles.css / site.css (see research.qmd), so the
+   shared stylesheets still win ties at equal specificity. */
+
+.rs-header{
+  max-width:1100px;margin:48px auto 0;padding:0 56px;
+  display:grid;grid-template-columns:max-content 1fr;
+  gap:96px;align-items:start;
+}
+.rs-header .titles{text-align:left;width:max-content}
+.rs-header .titles .page-title{max-width:315px}
+.rs-header .titles .page-title{margin:0;text-wrap:balance}
+.rs-header .titles .page-sub{margin-top:6px}
+.rs-header .lead{
+  font-family:'Cormorant Garamond',serif;font-size:23px;line-height:1.55;
+  color:var(--ink-2);margin:0;text-wrap:pretty;
+  padding-top:0.55em;justify-self:stretch;
+}
+.rs-header .lead em{color:var(--sage);font-style:italic}
+
+.rs-block{max-width:1080px;margin:80px auto 0;padding:0 56px}
+.rs-block h2{
+  font-family:'Cormorant Garamond',serif;font-weight:500;font-size:38px;
+  margin:0 0 4px;color:var(--ink);
+}
+.rs-block .sub{
+  font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--sage);margin-bottom:24px;font-weight:500;
+}
+
+.rs-cards{
+  max-width:1080px;margin:40px auto 0;padding:0 56px;
+}
+.rs-cards h2{
+  font-family:'Cormorant Garamond',serif;font-weight:500;font-size:38px;
+  margin:0 0 4px;color:var(--ink);
+}
+.rs-cards .sub{
+  font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--sage);margin-bottom:28px;font-weight:500;
+}
+
+.rs-review{
+  max-width:1080px;margin:80px auto 0;padding:32px 56px 0;
+  border-top:1px solid var(--rule);
+  display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:start;
+}
+.rs-review h2{
+  font-family:'Cormorant Garamond',serif;font-weight:500;font-size:34px;
+  margin:0 0 4px;color:var(--ink);
+}
+.rs-review .sub{
+  font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--sage);margin-bottom:18px;font-weight:500;
+}
+.rs-review img.illu{display:block;margin:0 auto;max-width:200px;width:100%;height:auto}
+.rs-review .illu-cap{
+  text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:14px;color:var(--ink-3);margin-top:8px;
+}
+
+@media (max-width:900px){
+  .rs-header,.rs-block,.rs-cards,.rs-review{padding-left:24px;padding-right:24px}
+  .rs-header{grid-template-columns:1fr;gap:4px;margin-top:32px}
+  .rs-header .lead{font-size:21px;padding-top:0;margin-top:18px}
+  .rs-block,.rs-cards,.rs-review{margin-top:48px}
+  .rs-review{grid-template-columns:1fr;gap:24px}
+}

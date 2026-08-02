@@ -1,0 +1,146 @@
+/* Talks & Teaching page — layout only.
+   Loaded before styles.css / site.css (see talks.qmd), so the
+   shared stylesheets still win ties at equal specificity. */
+
+.tt-block{max-width:1080px;margin:80px auto 0;padding:0 56px}
+.tt-block h2{
+  font-family:'Cormorant Garamond',serif;font-weight:500;font-size:38px;
+  margin:0 0 4px;color:var(--ink);
+}
+.tt-block .sub{
+  font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--sage);margin-bottom:20px;font-weight:500;
+}
+.tt-block h3{
+  font-family:'Cormorant Garamond',serif;font-weight:500;font-style:italic;
+  font-size:24px;margin:32px 0 10px;color:var(--ink);
+}
+.tt-illu{
+  max-width:1080px;margin:64px auto 0;padding:0 56px;
+  display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;
+}
+.tt-illu img{display:block;width:100%;max-width:240px;margin:0 auto;height:auto}
+.tt-illu .cap{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;
+  color:var(--ink-3);text-align:center;margin-top:8px;
+}
+.tt-teach{max-width:1080px;margin:80px auto 0;padding:0 56px}
+/* Teaching entries follow the same record idiom as the talks and publication
+   lists: a quiet label, the course as the thing that carries the row, mono for
+   the run dates, and a hover band over the whole entry. */
+.tt-teach .item{
+  position:relative;
+  padding:18px 0 20px;border-top:1px solid var(--rule-2);
+  display:grid;grid-template-columns:180px 1fr;gap:32px;align-items:start;
+}
+.tt-teach .item:first-of-type{border-top:1px solid var(--rule)}
+.tt-teach .item::before{
+  content:"";position:absolute;inset:0 -18px;z-index:-1;
+  border-radius:2px;background:transparent;
+  transition:background-color .18s ease;
+}
+@media (hover:hover){
+  .tt-teach .item:hover::before{background:var(--cream-2)}
+  .tt-teach .item:hover .meta{color:var(--sage)}
+}
+.tt-teach .item .meta{
+  font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--ink-3);font-weight:500;padding-top:6px;
+  transition:color .18s ease;
+}
+/* The course code is the title of the record — roman, not italic, like .pub .ti
+   and the talk titles. */
+.tt-teach .item .meta b{
+  display:block;color:var(--ink);font-family:'Cormorant Garamond',serif;
+  font-style:normal;font-size:20px;line-height:1.25;letter-spacing:0;
+  margin:4px 0 5px;font-weight:500;
+}
+/* Run dates in the numeral face, matching the year gutters elsewhere. */
+.tt-teach .item .meta span{
+  font-family:'JetBrains Mono', ui-monospace, monospace !important;
+  font-size:12px !important;letter-spacing:.01em !important;
+  text-transform:none;
+}
+.tt-teach .item .body{font-family:'Cormorant Garamond',serif;font-size:17px;line-height:1.6;color:var(--ink-2)}
+.tt-teach .item .body strong{color:var(--ink);font-weight:500}
+.tt-teach .item .body p{margin:0 0 10px}
+@media (max-width:900px){
+  .tt-block,.tt-teach,.tt-illu{padding-left:24px;padding-right:24px}
+  .tt-block,.tt-teach,.tt-illu{margin-top:48px}
+  .tt-illu{grid-template-columns:1fr}
+  .tt-teach .item{grid-template-columns:1fr;gap:6px}
+}
+
+/* ---- poster cards ---------------------------------------
+   Reuses the .card / .thumb / .body / .meta / .chip anatomy from research.qmd,
+   with three deliberate departures. A poster is a tall A0 page, so the
+   thumbnail sits beside the text rather than above it, one card per row. The
+   card drops the filled .card background for a plain rule-separated row: the
+   Talks list above is the main content of this page, and a pair of filled boxes
+   would outweigh it. And the thumbnail is kept small — it is there to say "this
+   is a poster you can open", not to be read. */
+.tt-block .card-grid.poster-grid{
+  grid-template-columns:1fr;
+  gap:0;
+  max-width:860px;
+}
+.poster-grid .card{
+  flex-direction:row;
+  align-items:flex-start;
+  gap:22px;
+  background:none;              /* not a filled box — see note above */
+  border:none;
+  border-top:1px solid var(--rule-2);
+  border-radius:0;
+  padding:22px 0;
+}
+.poster-grid .card:first-child{border-top:1px solid var(--rule)}
+.poster-grid .card:hover{transform:none;box-shadow:none}
+
+.poster-grid .card .thumb{
+  aspect-ratio:auto;
+  flex:0 0 110px;
+  background:none;
+  border:none;
+  padding:0;
+}
+.poster-grid .card .thumb img{
+  display:block;width:100%;height:auto;
+  border:1px solid var(--rule);
+  transition:border-color .2s ease, filter .2s ease;
+}
+/* A full-brightness white page glares against the dark background, so knock it
+   back and let hover restore it. */
+:root[data-theme="dark"] .poster-grid .card .thumb img{
+  filter:brightness(.82) saturate(.9);
+}
+.poster-grid .card:hover .thumb img{border-color:var(--sage)}
+:root[data-theme="dark"] .poster-grid .card:hover .thumb img{filter:none}
+
+.poster-grid .card .body{padding:0;display:flex;flex-direction:column;align-items:flex-start}
+.poster-grid .card .meta{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.poster-grid .card .body h4{
+  font-style:italic;font-size:20px;line-height:1.25;margin:0 0 8px;text-wrap:pretty;
+}
+.poster-grid .card .where{
+  font-family:'Cormorant Garamond',serif;font-size:17px;line-height:1.45;
+  color:var(--ink-3);margin:0 0 8px;text-wrap:pretty;
+}
+.poster-grid .card .where strong{color:var(--ink-2);font-weight:500}
+.poster-grid .card .where.again{padding-top:8px;border-top:1px solid var(--rule-2)}
+.poster-grid .card .again-lbl{
+  display:block;
+  font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--sage);font-weight:500;margin-bottom:3px;
+}
+.poster-grid .card .chip.open{margin-top:2px;border-color:var(--rule)}
+.poster-grid .card .chip.open .arrow{letter-spacing:0}
+.poster-grid .card:hover .chip.open{border-color:var(--sage);background:var(--cream-2)}
+
+@media (max-width:560px){
+  .poster-grid .card{gap:16px}
+  .poster-grid .card .thumb{flex-basis:84px}
+  .poster-grid .card .body h4{font-size:19px}
+  .poster-grid .card .where{font-size:16px}
+}

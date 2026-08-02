@@ -29,7 +29,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./files/WApic_cropped.png" rel="icon" type="image/png">
+<link href="./assets/img/WApic_cropped.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -72,65 +72,14 @@ ul.task-list li input[type="checkbox"] {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Cookie&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <meta name="google-site-verification" content="US9UugOmq-GXdRt4_XqJtenD7bkmr-q2J2JQUu1q8Xk">
-<style>
-    .tt-lead{max-width:780px;margin:0 auto;padding:0 56px}
-    .tt-lead .lede{
-      font-family:'Cormorant Garamond',serif;font-size:22px;line-height:1.55;
-      color:var(--ink-2);margin:24px 0 0;
-    }
-    .tt-block{max-width:1080px;margin:80px auto 0;padding:0 56px}
-    .tt-block h2{
-      font-family:'Cormorant Garamond',serif;font-weight:500;font-size:38px;
-      margin:0 0 4px;color:var(--ink);
-    }
-    .tt-block .sub{
-      font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;
-      text-transform:uppercase;color:var(--sage);margin-bottom:20px;font-weight:500;
-    }
-    .tt-block h3{
-      font-family:'Cormorant Garamond',serif;font-weight:500;font-style:italic;
-      font-size:24px;margin:32px 0 10px;color:var(--ink);
-    }
-    .tt-illu{
-      max-width:1080px;margin:64px auto 0;padding:0 56px;
-      display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;
-    }
-    .tt-illu img{display:block;width:100%;max-width:240px;margin:0 auto;height:auto}
-    .tt-illu .cap{
-      font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;
-      color:var(--ink-3);text-align:center;margin-top:8px;
-    }
-    .tt-teach{max-width:1080px;margin:80px auto 0;padding:0 56px}
-    .tt-teach .item{
-      padding:24px 0;border-top:1px solid var(--rule-2);
-      display:grid;grid-template-columns:160px 1fr;gap:32px;align-items:start;
-    }
-    .tt-teach .item:first-of-type{border-top:1px solid var(--rule)}
-    .tt-teach .item .meta{
-      font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.14em;
-      color:var(--sage);font-weight:500;padding-top:6px;
-    }
-    .tt-teach .item .meta b{
-      display:block;color:var(--ink);font-family:'Cormorant Garamond',serif;
-      font-style:italic;font-size:18px;letter-spacing:0;margin-top:2px;font-weight:500;
-    }
-    .tt-teach .item .body{font-family:'Cormorant Garamond',serif;font-size:17px;line-height:1.6;color:var(--ink-2)}
-    .tt-teach .item .body strong{color:var(--ink);font-weight:500}
-    .tt-teach .item .body p{margin:0 0 10px}
-    @media (max-width:900px){
-      .tt-lead,.tt-block,.tt-teach,.tt-illu{padding-left:24px;padding-right:24px}
-      .tt-block,.tt-teach,.tt-illu{margin-top:48px}
-      .tt-illu{grid-template-columns:1fr}
-      .tt-teach .item{grid-template-columns:1fr;gap:6px}
-    }
-</style>
+<link rel="stylesheet" href="./site/pages/talks.css">
+<script>document.documentElement.dataset.page='talks';</script>
 
 
-<link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="site/site.css">
 <link rel="stylesheet" href="site/research-page.css">
 <meta property="og:title" content="Talks &amp; Teaching – Uriah Daugaard">
-<meta property="og:image" content="files/WApic_cropped.png">
+<meta property="og:image" content="assets/img/WApic_cropped.png">
 <meta property="og:site_name" content="Uriah Daugaard">
 </head>
 
@@ -142,6 +91,49 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
 <!-- main -->
+<!--
+  Shared top bar. Injected into every page at build time via `include-before-body`
+  in _quarto.yml, so the navigation exists in the served HTML rather than being
+  assembled by JavaScript on load.
+
+  Links are root-relative on purpose: pages live at two depths (/contact.html and
+  /ResearchPages/SamplingFreq.html) and document-relative hrefs resolve wrongly
+  from the second. The active item is highlighted by CSS off the page key on <html>
+  (see "active nav item" in site/site.css) so this file stays identical everywhere.
+-->
+<header class="site-bar">
+  <nav class="nav-l">
+    <a data-nav="home" href="./index.html">Home</a>
+    <a data-nav="projects" href="./projects.html">Projects</a>
+    <a data-nav="research" href="./research.html">Research &amp; Publications</a>
+  </nav>
+  <a class="wordmark" href="./index.html">
+    Uriah Daugaard
+    <span class="b">bioinformatics · ecology · pipelines</span>
+  </a>
+  <nav class="nav-r">
+    <a data-nav="lab" href="./lab.html">Lab</a>
+    <a data-nav="talks" href="./talks.html">Talks &amp; Teaching</a>
+    <a data-nav="contact" href="./contact.html">Contact</a>
+    <button class="theme-toggle" aria-label="Toggle dark mode" type="button"><span class="ico-light"><svg viewbox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M20.5 13.2A8.5 8.5 0 1 1 10.8 3.5a6.8 6.8 0 0 0 9.7 9.7z"></path></svg></span><span class="ico-dark"><svg viewbox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5 5l1.85 1.85M17.15 17.15 19 19M5 19l1.85-1.85M17.15 6.85 19 5"></path></svg></span></button>
+  </nav>
+  <div class="bar-tools">
+    <button class="theme-toggle" aria-label="Toggle dark mode" type="button"><span class="ico-light"><svg viewbox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M20.5 13.2A8.5 8.5 0 1 1 10.8 3.5a6.8 6.8 0 0 0 9.7 9.7z"></path></svg></span><span class="ico-dark"><svg viewbox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5 5l1.85 1.85M17.15 17.15 19 19M5 19l1.85-1.85M17.15 6.85 19 5"></path></svg></span></button>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-drawer" hidden="">
+  <nav>
+    <a data-nav="home" href="./index.html">Home</a>
+    <a data-nav="projects" href="./projects.html">Projects</a>
+    <a data-nav="research" href="./research.html">Research &amp; Publications</a>
+    <a data-nav="lab" href="./lab.html">Lab</a>
+    <a data-nav="talks" href="./talks.html">Talks &amp; Teaching</a>
+    <a data-nav="contact" href="./contact.html">Contact</a>
+  </nav>
+</div>
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -162,34 +154,28 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<script>document.body.dataset.page='talks';document.body.dataset.screenLabel='05 Talks & Teaching';</script>
-
-<span data-mount="bar"></span>
-
 <main>
-<div class="page-narrow" style="text-align:center">
-<h1 class="page-title">Talks &amp; Teaching</h1>
-<div class="page-sub">— invited and contributed talks, posters, and the teaching record</div>
+<div class="page-head">
+<div class="titles">
+<h1 class="page-title" id="talks-teaching">Talks &amp; Teaching</h1>
+<div class="page-sub">invited and contributed talks, posters, and the teaching record</div>
 </div>
-
-<div class="tt-lead">
-<p class="lede">
+<p class="lead">
 A reverse chronological record of where this work has been spoken about, and the courses
 I have taught and supported. Where a talk matches a published paper, the paper is on
 <a class="inline" href="research.html">Research &amp; Publications</a>.
 </p>
 </div>
-
 <!-- Talks -->
-<section class="tt-block" data-screen-label="05a Talks">
+<section id="talks" class="tt-block">
 <h2 class="anchored">Talks</h2>
-<div class="sub">— contributed</div>
+<div class="sub">contributed</div>
 <div class="talks">
 <div class="item">
 <div class="when">2024</div>
 <div class="what">
 <strong>To be filled in.</strong>
-<span class="where">Placeholder — talk for 2024 to be added.</span>
+<span class="where">Placeholder. Talk for 2024 to be added.</span>
 </div>
 </div>
 <div class="item">
@@ -228,52 +214,49 @@ I have taught and supported. Where a talk matches a published paper, the paper i
 </div>
 </div>
 </div>
-
-<h3 style="margin-top:48px" class="anchored">Posters</h3>
-<div class="talks">
-<div class="item">
-<div class="when">2026</div>
-<div class="what">
-<em>COUSIN poster.</em> <span class="badge">first author</span>
-<span class="where"><strong>Let's Liberate Diversity (LLD)</strong> · Italy · 2026 · with Alexandre Jousset · Cybiome / EU Horizon Europe COUSIN consortium.</span>
+<h3 style="margin-top:48px" id="posters" class="anchored">Posters</h3>
+<div class="card-grid poster-grid">
+<a class="card" href="assets/docs/COUSIN_Poster_Cybiome_LLD_Italy_2026.pdf" target="_blank" rel="noopener">
+<div class="thumb">
+<img src="assets/img/poster-cousin-2026.png" alt="Page 1 of the COUSIN poster shown at Let's Liberate Diversity, Italy, 2026." loading="lazy" width="400" height="566">
 </div>
+<div class="body">
+<div class="meta">2026 <span class="chip gold">first author</span></div>
+<h4 class="anchored">COUSIN poster.</h4>
+<p class="where"><strong>Let's Liberate Diversity (LLD)</strong> · Italy · 2026 · with Alexandre Jousset · Cybiome / EU Horizon Europe COUSIN consortium.</p>
+<span class="chip open">Poster pdf <span class="arrow">↗</span></span>
 </div>
-<div class="item">
-<div class="when">2022</div>
-<div class="what">
-<em>Forecasting in the face of ecological complexity: number and strength of species interactions determine forecast skill in ecological communities.</em>
-<span class="badge">flash talk</span>
-<span class="where"><strong>INTECOL 2022</strong> · 13th International Congress of Ecology · Geneva · Aug 28 - Sep 2 2022. Selected as one of 10 best posters invited to a flash talk during the opening plenary. <a class="inline" href="files/PosterEcoforecast.pdf">Poster pdf</a>.</span>
+</a>
+<a class="card" href="assets/docs/PosterEcoForecast.pdf" target="_blank" rel="noopener">
+<div class="thumb">
+<img src="assets/img/poster-intecol-2022.png" alt="Page 1 of the forecasting and ecological complexity poster shown at INTECOL 2022." loading="lazy" width="400" height="566">
 </div>
+<div class="body">
+<div class="meta">2022 <span class="chip gold">flash talk</span></div>
+<h4 class="anchored">Forecasting in the face of ecological complexity: number and strength of species interactions determine forecast skill in ecological communities.</h4>
+<p class="where"><strong>INTECOL 2022</strong> · 13th International Congress of Ecology · Geneva · Aug 28 - Sep 2 2022. Selected as one of 10 best posters invited to a flash talk during the opening plenary.</p>
+<p class="where again"><span class="again-lbl">same poster, also shown at</span><strong>Ecology Symposium</strong> · hosted by Life Science Zurich Graduate School · Zurich · Oct 12 2022.</p>
+<span class="chip open">Poster pdf <span class="arrow">↗</span></span>
 </div>
-<div class="item">
-<div class="when">2022</div>
-<div class="what">
-<em>Same poster as above.</em>
-<span class="where"><strong>Ecology Symposium</strong> · hosted by Life Science Zurich Graduate School · Zurich · Oct 12 2022.</span>
-</div>
-</div>
+</a>
 </div>
 </section>
-
-<div class="tt-illu" data-screen-label="05b Illustration">
+<div class="tt-illu">
 <figure class="figure">
-<img src="files/paramecium_caudatum.svg" alt="Drawing of Paramecium caudatum (ciliate). © Uriah Daugaard 2021." class="figure-img">
-<div class="cap">Paramecium caudatum <span style="color:var(--sage)">— ciliate, drawn 2021</span></div>
+<img src="assets/img/paramecium_caudatum.svg" alt="Drawing of Paramecium caudatum (ciliate)." class="figure-img">
+<div class="cap">Paramecium caudatum</div>
 </figure>
 <figure class="figure">
-<img src="files/rotifer.svg" alt="Drawing of a rotifer. © Uriah Daugaard 2021." class="figure-img">
-<div class="cap">Rotifer sp. <span style="color:var(--sage)">— drawn 2021</span></div>
+<img src="assets/img/rotifer.svg" alt="Drawing of a rotifer." class="figure-img">
+<div class="cap">Rotifer sp.</div>
 </figure>
 </div>
-
 <!-- Teaching -->
-<section class="tt-teach" data-screen-label="05c Teaching">
+<section class="tt-teach">
 <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:38px;margin:0 0 4px" class="anchored">Teaching</h2>
-<div class="sub" style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--sage);margin-bottom:24px;font-weight:500">— lecturer, head TA, R for biologists</div>
-
+<div class="sub" style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--sage);margin-bottom:24px;font-weight:500">lecturer, head TA, R for biologists</div>
 <div class="item">
-<div class="meta">— lecturer
+<div class="meta">lecturer
 <b>BIO144</b>
 <span style="color:var(--ink-3);font-family:'Inter',sans-serif;font-size:11px;font-style:normal;letter-spacing:.06em;display:block;margin-top:4px">UZH · 2024 spring</span>
 </div>
@@ -282,9 +265,8 @@ I have taught and supported. Where a talk matches a published paper, the paper i
 <p><em>My role.</em> Taught four of the theoretical lectures in 2024.</p>
 </div>
 </div>
-
 <div class="item">
-<div class="meta">— teaching assistant
+<div class="meta">teaching assistant
 <b>BIO144</b>
 <span style="color:var(--ink-3);font-family:'Inter',sans-serif;font-size:11px;font-style:normal;letter-spacing:.06em;display:block;margin-top:4px">UZH · 2021-2023 spring</span>
 </div>
@@ -293,9 +275,8 @@ I have taught and supported. Where a talk matches a published paper, the paper i
 <p><strong>Head TA in 2022 and 2023.</strong> Screening of TA candidates, briefing and organisation of the selected TAs, primary TA contact person.</p>
 </div>
 </div>
-
 <div class="item">
-<div class="meta">— short course
+<div class="meta">short course
 <b>R4All</b>
 <span style="color:var(--ink-3);font-family:'Inter',sans-serif;font-size:11px;font-style:normal;letter-spacing:.06em;display:block;margin-top:4px">May 12-13 2022</span>
 </div>
@@ -305,11 +286,25 @@ I have taught and supported. Where a talk matches a published paper, the paper i
 </div>
 </section>
 </main>
-<span data-mount="foot"></span>
 
 
 
 
+<!--
+  Shared page footer. Injected into every page at build time via
+  `include-after-body` in _quarto.yml. See site/_nav.html for why the hrefs
+  here are root-relative.
+-->
+<footer class="site-foot">
+  <div class="l">© Uriah Daugaard · 2026</div>
+  <div class="c" aria-hidden="true"></div>
+  <div class="r">
+    <a href="mailto:uriah.daugaard@cybiome.com">email</a>
+    <a href="https://github.com/duriah" target="_blank" rel="noopener">github</a>
+    <a href="https://www.linkedin.com/in/uriah-daugaard-8280681b1/" target="_blank" rel="noopener">linkedin</a>
+    <a href="https://orcid.org/0000-0003-4092-717X" target="_blank" rel="noopener">orcid</a>
+  </div>
+</footer>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

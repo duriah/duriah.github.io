@@ -6,89 +6,51 @@ format:
     theme: none
     include-in-header:
       - text: |
-          <style>
-              .tt-lead{max-width:780px;margin:0 auto;padding:0 56px}
-              .tt-lead .lede{
-                font-family:'Cormorant Garamond',serif;font-size:22px;line-height:1.55;
-                color:var(--ink-2);margin:24px 0 0;
-              }
-              .tt-block{max-width:1080px;margin:80px auto 0;padding:0 56px}
-              .tt-block h2{
-                font-family:'Cormorant Garamond',serif;font-weight:500;font-size:38px;
-                margin:0 0 4px;color:var(--ink);
-              }
-              .tt-block .sub{
-                font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;
-                text-transform:uppercase;color:var(--sage);margin-bottom:20px;font-weight:500;
-              }
-              .tt-block h3{
-                font-family:'Cormorant Garamond',serif;font-weight:500;font-style:italic;
-                font-size:24px;margin:32px 0 10px;color:var(--ink);
-              }
-              .tt-illu{
-                max-width:1080px;margin:64px auto 0;padding:0 56px;
-                display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;
-              }
-              .tt-illu img{display:block;width:100%;max-width:240px;margin:0 auto;height:auto}
-              .tt-illu .cap{
-                font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;
-                color:var(--ink-3);text-align:center;margin-top:8px;
-              }
-              .tt-teach{max-width:1080px;margin:80px auto 0;padding:0 56px}
-              .tt-teach .item{
-                padding:24px 0;border-top:1px solid var(--rule-2);
-                display:grid;grid-template-columns:160px 1fr;gap:32px;align-items:start;
-              }
-              .tt-teach .item:first-of-type{border-top:1px solid var(--rule)}
-              .tt-teach .item .meta{
-                font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.14em;
-                color:var(--sage);font-weight:500;padding-top:6px;
-              }
-              .tt-teach .item .meta b{
-                display:block;color:var(--ink);font-family:'Cormorant Garamond',serif;
-                font-style:italic;font-size:18px;letter-spacing:0;margin-top:2px;font-weight:500;
-              }
-              .tt-teach .item .body{font-family:'Cormorant Garamond',serif;font-size:17px;line-height:1.6;color:var(--ink-2)}
-              .tt-teach .item .body strong{color:var(--ink);font-weight:500}
-              .tt-teach .item .body p{margin:0 0 10px}
-              @media (max-width:900px){
-                .tt-lead,.tt-block,.tt-teach,.tt-illu{padding-left:24px;padding-right:24px}
-                .tt-block,.tt-teach,.tt-illu{margin-top:48px}
-                .tt-illu{grid-template-columns:1fr}
-                .tt-teach .item{grid-template-columns:1fr;gap:6px}
-              }
-          </style>
+          <link rel="stylesheet" href="/site/pages/talks.css">
+          <script>document.documentElement.dataset.page='talks';</script>
 ---
 
 ```{=html}
-<script>document.body.dataset.page='talks';document.body.dataset.screenLabel='05 Talks & Teaching';</script>
-
-<span data-mount="bar"></span>
-
 <main>
-<div class="page-narrow" style="text-align:center">
-<h1 class="page-title">Talks &amp; Teaching</h1>
-<div class="page-sub">— invited and contributed talks, posters, and the teaching record</div>
-</div>
+```
 
-<div class="tt-lead">
-<p class="lede">
+::: {.page-head}
+```{=html}
+<div class="titles">
+```
+
+# Talks & Teaching {.page-title}
+
+```{=html}
+<div class="page-sub">invited and contributed talks, posters, and the teaching record</div>
+</div>
+```
+
+```{=html}
+<p class="lead">
 A reverse chronological record of where this work has been spoken about, and the courses
 I have taught and supported. Where a talk matches a published paper, the paper is on
 <a class="inline" href="research.html">Research &amp; Publications</a>.
 </p>
-</div>
+```
+:::
 
 <!-- Talks -->
-<section class="tt-block" data-screen-label="05a Talks">
-<h2>Talks</h2>
-<div class="sub">— contributed</div>
-<div class="talks">
+
+::: {.tt-block}
+## Talks
+
+```{=html}
+<div class="sub">contributed</div>
+```
+
+::: {.talks}
+```{=html}
 <div class="item">
 <div class="when">2024</div>
 <div class="what">
 <strong>To be filled in.</strong>
-<span class="where">Placeholder — talk for 2024 to be added.</span>
+<span class="where">Placeholder. Talk for 2024 to be added.</span>
 </div>
 </div>
 <div class="item">
@@ -126,83 +88,105 @@ I have taught and supported. Where a talk matches a published paper, the paper i
 <span class="where"><strong>BES 2020</strong> &middot; annual meeting of the British Ecological Society &middot; virtual &middot; Dec 14-18 2020.</span>
 </div>
 </div>
-</div>
+```
+:::
 
-<h3 style="margin-top:48px">Posters</h3>
-<div class="talks">
-<div class="item">
-<div class="when">2026</div>
-<div class="what">
-<em>COUSIN poster.</em> <span class="badge">first author</span>
-<span class="where"><strong>Let's Liberate Diversity (LLD)</strong> &middot; Italy &middot; 2026 &middot; with Alexandre Jousset &middot; Cybiome / EU Horizon Europe COUSIN consortium.</span>
-</div>
-</div>
-<div class="item">
-<div class="when">2022</div>
-<div class="what">
-<em>Forecasting in the face of ecological complexity: number and strength of species interactions determine forecast skill in ecological communities.</em>
-<span class="badge">flash talk</span>
-<span class="where"><strong>INTECOL 2022</strong> &middot; 13th International Congress of Ecology &middot; Geneva &middot; Aug 28 - Sep 2 2022. Selected as one of 10 best posters invited to a flash talk during the opening plenary. <a class="inline" href="files/PosterEcoforecast.pdf">Poster pdf</a>.</span>
-</div>
-</div>
-<div class="item">
-<div class="when">2022</div>
-<div class="what">
-<em>Same poster as above.</em>
-<span class="where"><strong>Ecology Symposium</strong> &middot; hosted by Life Science Zurich Graduate School &middot; Zurich &middot; Oct 12 2022.</span>
-</div>
-</div>
-</div>
-</section>
+### Posters {style="margin-top:48px"}
 
-<div class="tt-illu" data-screen-label="05b Illustration">
+::: {.card-grid .poster-grid}
+```{=html}
+<a class="card" href="assets/docs/COUSIN_Poster_Cybiome_LLD_Italy_2026.pdf" target="_blank" rel="noopener">
+<div class="thumb">
+<img src="assets/img/poster-cousin-2026.png" alt="Page 1 of the COUSIN poster shown at Let's Liberate Diversity, Italy, 2026." loading="lazy" width="400" height="566" />
+</div>
+<div class="body">
+<div class="meta">2026 <span class="chip gold">first author</span></div>
+<h4>COUSIN poster.</h4>
+<p class="where"><strong>Let's Liberate Diversity (LLD)</strong> &middot; Italy &middot; 2026 &middot; with Alexandre Jousset &middot; Cybiome / EU Horizon Europe COUSIN consortium.</p>
+<span class="chip open">Poster pdf <span class="arrow">↗</span></span>
+</div>
+</a>
+<a class="card" href="assets/docs/PosterEcoForecast.pdf" target="_blank" rel="noopener">
+<div class="thumb">
+<img src="assets/img/poster-intecol-2022.png" alt="Page 1 of the forecasting and ecological complexity poster shown at INTECOL 2022." loading="lazy" width="400" height="566" />
+</div>
+<div class="body">
+<div class="meta">2022 <span class="chip gold">flash talk</span></div>
+<h4>Forecasting in the face of ecological complexity: number and strength of species interactions determine forecast skill in ecological communities.</h4>
+<p class="where"><strong>INTECOL 2022</strong> &middot; 13th International Congress of Ecology &middot; Geneva &middot; Aug 28 - Sep 2 2022. Selected as one of 10 best posters invited to a flash talk during the opening plenary.</p>
+<p class="where again"><span class="again-lbl">same poster, also shown at</span><strong>Ecology Symposium</strong> &middot; hosted by Life Science Zurich Graduate School &middot; Zurich &middot; Oct 12 2022.</p>
+<span class="chip open">Poster pdf <span class="arrow">↗</span></span>
+</div>
+</a>
+```
+:::
+:::
+
+::: {.tt-illu}
+```{=html}
 <figure>
-<img src="files/paramecium_caudatum.svg" alt="Drawing of Paramecium caudatum (ciliate). © Uriah Daugaard 2021." />
-<div class="cap">Paramecium caudatum <span style="color:var(--sage)">— ciliate, drawn 2021</span></div>
+<img src="assets/img/paramecium_caudatum.svg" alt="Drawing of Paramecium caudatum (ciliate)." />
+<div class="cap">Paramecium caudatum</div>
 </figure>
 <figure>
-<img src="files/rotifer.svg" alt="Drawing of a rotifer. © Uriah Daugaard 2021." />
-<div class="cap">Rotifer sp. <span style="color:var(--sage)">— drawn 2021</span></div>
+<img src="assets/img/rotifer.svg" alt="Drawing of a rotifer." />
+<div class="cap">Rotifer sp.</div>
 </figure>
-</div>
+```
+:::
 
 <!-- Teaching -->
-<section class="tt-teach" data-screen-label="05c Teaching">
-<h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:38px;margin:0 0 4px">Teaching</h2>
-<div class="sub" style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--sage);margin-bottom:24px;font-weight:500">— lecturer, head TA, R for biologists</div>
 
-<div class="item">
-<div class="meta">— lecturer
+```{=html}
+<section class="tt-teach">
+<h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:38px;margin:0 0 4px">Teaching</h2>
+<div class="sub" style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--sage);margin-bottom:24px;font-weight:500">lecturer, head TA, R for biologists</div>
+```
+
+::: {.item}
+```{=html}
+<div class="meta">lecturer
 <b>BIO144</b>
 <span style="color:var(--ink-3);font-family:'Inter',sans-serif;font-size:11px;font-style:normal;letter-spacing:.06em;display:block;margin-top:4px">UZH · 2024 spring</span>
 </div>
-<div class="body">
-<p><strong>Data analysis in biology.</strong> About 300 second year biology bachelor students per year. Topics include data visualisation and processing, statistical hypothesis testing, linear and logistic and Poisson regression, linear mixed models, intro linear algebra for linear models, goodness of fit. Theoretical lectures paired with practical sessions and flipped classroom videos.</p>
-<p><em>My role.</em> Taught four of the theoretical lectures in 2024.</p>
-</div>
-</div>
+```
 
-<div class="item">
-<div class="meta">— teaching assistant
+::: {.body}
+**Data analysis in biology.** About 300 second year biology bachelor students per year. Topics include data visualisation and processing, statistical hypothesis testing, linear and logistic and Poisson regression, linear mixed models, intro linear algebra for linear models, goodness of fit. Theoretical lectures paired with practical sessions and flipped classroom videos.
+
+*My role.* Taught four of the theoretical lectures in 2024.
+:::
+:::
+
+::: {.item}
+```{=html}
+<div class="meta">teaching assistant
 <b>BIO144</b>
 <span style="color:var(--ink-3);font-family:'Inter',sans-serif;font-size:11px;font-style:normal;letter-spacing:.06em;display:block;margin-top:4px">UZH · 2021-2023 spring</span>
 </div>
-<div class="body">
-<p>Practical exercise support, methodological and computational (R) Q&amp;A, main contact for statistical questions outside class hours, course forum support. Wrote a statistics and computation FAQ for the students proactively.</p>
-<p><strong>Head TA in 2022 and 2023.</strong> Screening of TA candidates, briefing and organisation of the selected TAs, primary TA contact person.</p>
-</div>
-</div>
+```
 
-<div class="item">
-<div class="meta">— short course
+::: {.body}
+Practical exercise support, methodological and computational (R) Q&A, main contact for statistical questions outside class hours, course forum support. Wrote a statistics and computation FAQ for the students proactively.
+
+**Head TA in 2022 and 2023.** Screening of TA candidates, briefing and organisation of the selected TAs, primary TA contact person.
+:::
+:::
+
+::: {.item}
+```{=html}
+<div class="meta">short course
 <b>R4All</b>
 <span style="color:var(--ink-3);font-family:'Inter',sans-serif;font-size:11px;font-style:normal;letter-spacing:.06em;display:block;margin-top:4px">May 12-13 2022</span>
 </div>
-<div class="body">
-<p><strong>An Introduction to the Basics of R.</strong> Two-day course for novice R users with a life and environmental science background.</p>
-</div>
-</div>
+```
+
+::: {.body}
+**An Introduction to the Basics of R.** Two-day course for novice R users with a life and environmental science background.
+:::
+:::
+
+```{=html}
 </section>
 </main>
-<span data-mount="foot"></span>
 ```

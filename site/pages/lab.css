@@ -1,0 +1,143 @@
+/* Lab page — layout only.
+   Loaded before styles.css / site.css (see lab.qmd), so the
+   shared stylesheets still win ties at equal specificity. */
+
+/* The build-status note, now that the lede has moved up into .page-head. It
+   lines up with the page gutter rather than sitting in a centred column. */
+.lab-note{max-width:1100px;margin:26px auto 0;padding:0 56px}
+.lab-note .note{
+  max-width:74ch;
+  font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.04em;
+  color:var(--ink-3);background:var(--cream-2);border:1px solid var(--rule);
+  padding:12px 16px;border-radius:6px;line-height:1.55;
+}
+
+.lab-demo{
+  max-width:1080px;margin:80px auto 0;padding:0 56px;
+}
+.lab-demo .head{
+  display:grid;grid-template-columns:auto 1fr auto;gap:32px;align-items:end;
+  padding-bottom:18px;border-bottom:1px solid var(--rule);
+}
+.lab-demo .head .num{
+  font-family:'Cookie',cursive;font-size:96px;color:var(--sage);line-height:.8;
+}
+.lab-demo .head h2{
+  font-family:'Cormorant Garamond',serif;font-weight:500;font-size:42px;
+  margin:0;color:var(--ink);
+}
+.lab-demo .head .kicker{
+  font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--sage);font-weight:500;margin-bottom:8px;
+}
+.lab-demo .head .status{
+  font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--terracotta);font-weight:500;
+  border:1px solid rgba(179,74,58,.4);padding:4px 10px;border-radius:999px;
+}
+
+.lab-grid{
+  display:grid;grid-template-columns:1.2fr 1fr;gap:48px;margin-top:40px;align-items:start;
+}
+.lab-grid .copy h3{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;
+  font-size:22px;margin:0 0 6px;color:var(--ink);
+}
+.lab-grid .copy p{font-size:18px;line-height:1.6;color:var(--ink-2)}
+
+.lab-controls{
+  background:var(--cream-2);border:1px solid var(--rule);border-radius:6px;
+  padding:24px 26px;
+}
+.lab-controls h3{
+  font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--sage);margin:0 0 14px;font-weight:500;
+}
+.lab-controls .control{
+  padding:14px 0;border-top:1px solid var(--rule-2);
+  display:grid;grid-template-columns:1fr auto;gap:8px 24px;align-items:center;
+}
+.lab-controls .control:first-of-type{border-top:none}
+.lab-controls .control .label{
+  font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:var(--ink);
+}
+.lab-controls .control .hint{
+  font-family:'Inter',sans-serif;font-size:11px;color:var(--ink-3);
+  grid-column:1/-1;letter-spacing:.02em;
+}
+.lab-controls .control input[type="range"]{
+  grid-column:1/-1;width:100%;accent-color:var(--sage);
+}
+.lab-controls .control .val{
+  font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--sage);
+  padding:2px 8px;background:var(--cream);border:1px solid var(--rule);border-radius:999px;
+}
+
+.lab-plot{
+  margin-top:32px;background:var(--cream-2);border:1px solid var(--rule);
+  border-radius:6px;padding:24px;
+}
+.lab-plot .title{
+  display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px;
+}
+.lab-plot .title h4{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;
+  font-size:20px;margin:0;color:var(--ink);
+}
+.lab-plot .title .skill{
+  font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--sage);
+}
+.lab-plot svg{display:block;width:100%;height:auto}
+.lab-plot .legend{
+  margin-top:10px;font-family:'Inter',sans-serif;font-size:11px;
+  letter-spacing:.06em;color:var(--ink-3);display:flex;gap:18px;
+}
+.lab-plot .legend span{display:inline-flex;align-items:center;gap:6px}
+.lab-plot .legend .sw{width:14px;height:2px;background:var(--ink)}
+.lab-plot .legend .sw.fc{background:var(--terracotta);height:0;border-top:2px dashed var(--terracotta)}
+
+.lab-meta{
+  margin-top:24px;
+  display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;
+}
+.lab-meta .m{
+  font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--sage);
+}
+.lab-meta .m b{
+  display:block;font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:17px;color:var(--ink);text-transform:none;letter-spacing:0;
+  margin-top:2px;font-weight:500;
+}
+
+.lab-back{
+  max-width:1080px;margin:80px auto 0;padding:32px 56px 0;border-top:1px solid var(--rule);
+}
+.lab-back h2{
+  font-family:'Cormorant Garamond',serif;font-weight:500;font-size:28px;
+  margin:0 0 4px;color:var(--ink);
+}
+.lab-back .sub{
+  font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--sage);margin-bottom:16px;font-weight:500;
+}
+.lab-back ul{margin:0;padding:0;list-style:none}
+.lab-back ul li{
+  padding:10px 0;border-top:1px solid var(--rule-2);
+  display:grid;grid-template-columns:140px 1fr;gap:18px;
+  font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--ink-2);
+}
+.lab-back ul li:first-child{border-top:none}
+.lab-back ul li .tag{
+  font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--sage);font-weight:500;padding-top:3px;
+}
+
+@media (max-width:900px){
+  .lab-note,.lab-demo,.lab-back{padding-left:24px;padding-right:24px}
+  .lab-demo,.lab-back{margin-top:48px}
+  .lab-grid{grid-template-columns:1fr;gap:24px}
+  .lab-meta{grid-template-columns:1fr}
+  .lab-demo .head{grid-template-columns:1fr;gap:6px}
+  .lab-back ul li{grid-template-columns:1fr;gap:2px}
+}

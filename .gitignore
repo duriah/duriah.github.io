@@ -8,3 +8,6 @@
 .positai
 
 **/*.quarto_ipynb
+
+# macOS
+.DS_Store

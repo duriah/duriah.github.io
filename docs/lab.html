@@ -29,7 +29,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./files/WApic_cropped.png" rel="icon" type="image/png">
+<link href="./assets/img/WApic_cropped.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -72,156 +72,14 @@ ul.task-list li input[type="checkbox"] {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Cookie&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <meta name="google-site-verification" content="US9UugOmq-GXdRt4_XqJtenD7bkmr-q2J2JQUu1q8Xk">
-<style>
-    .lab-lead{max-width:780px;margin:0 auto;padding:0 56px}
-    .lab-lead .lede{
-      font-family:'Cormorant Garamond',serif;font-size:23px;line-height:1.55;
-      color:var(--ink-2);margin:24px 0;
-    }
-    .lab-lead .lede em{color:var(--sage);font-style:italic}
-    .lab-lead .note{
-      font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.04em;
-      color:var(--ink-3);background:var(--cream-2);border:1px solid var(--rule);
-      padding:12px 16px;border-radius:6px;line-height:1.55;
-    }
-
-    .lab-demo{
-      max-width:1080px;margin:80px auto 0;padding:0 56px;
-    }
-    .lab-demo .head{
-      display:grid;grid-template-columns:auto 1fr auto;gap:32px;align-items:end;
-      padding-bottom:18px;border-bottom:1px solid var(--rule);
-    }
-    .lab-demo .head .num{
-      font-family:'Cookie',cursive;font-size:96px;color:var(--sage);line-height:.8;
-    }
-    .lab-demo .head h2{
-      font-family:'Cormorant Garamond',serif;font-weight:500;font-size:42px;
-      margin:0;color:var(--ink);
-    }
-    .lab-demo .head .kicker{
-      font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;
-      text-transform:uppercase;color:var(--sage);font-weight:500;margin-bottom:8px;
-    }
-    .lab-demo .head .status{
-      font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.16em;
-      text-transform:uppercase;color:var(--terracotta);font-weight:500;
-      border:1px solid rgba(179,74,58,.4);padding:4px 10px;border-radius:999px;
-    }
-
-    .lab-grid{
-      display:grid;grid-template-columns:1.2fr 1fr;gap:48px;margin-top:40px;align-items:start;
-    }
-    .lab-grid .copy h3{
-      font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;
-      font-size:22px;margin:0 0 6px;color:var(--ink);
-    }
-    .lab-grid .copy p{font-size:18px;line-height:1.6;color:var(--ink-2)}
-
-    .lab-controls{
-      background:var(--cream-2);border:1px solid var(--rule);border-radius:6px;
-      padding:24px 26px;
-    }
-    .lab-controls h3{
-      font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;
-      text-transform:uppercase;color:var(--sage);margin:0 0 14px;font-weight:500;
-    }
-    .lab-controls .control{
-      padding:14px 0;border-top:1px solid var(--rule-2);
-      display:grid;grid-template-columns:1fr auto;gap:8px 24px;align-items:center;
-    }
-    .lab-controls .control:first-of-type{border-top:none}
-    .lab-controls .control .label{
-      font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:var(--ink);
-    }
-    .lab-controls .control .hint{
-      font-family:'Inter',sans-serif;font-size:11px;color:var(--ink-3);
-      grid-column:1/-1;letter-spacing:.02em;
-    }
-    .lab-controls .control input[type="range"]{
-      grid-column:1/-1;width:100%;accent-color:var(--sage);
-    }
-    .lab-controls .control .val{
-      font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--sage);
-      padding:2px 8px;background:var(--cream);border:1px solid var(--rule);border-radius:999px;
-    }
-
-    .lab-plot{
-      margin-top:32px;background:var(--cream-2);border:1px solid var(--rule);
-      border-radius:6px;padding:24px;
-    }
-    .lab-plot .title{
-      display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px;
-    }
-    .lab-plot .title h4{
-      font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;
-      font-size:20px;margin:0;color:var(--ink);
-    }
-    .lab-plot .title .skill{
-      font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--sage);
-    }
-    .lab-plot svg{display:block;width:100%;height:auto}
-    .lab-plot .legend{
-      margin-top:10px;font-family:'Inter',sans-serif;font-size:11px;
-      letter-spacing:.06em;color:var(--ink-3);display:flex;gap:18px;
-    }
-    .lab-plot .legend span{display:inline-flex;align-items:center;gap:6px}
-    .lab-plot .legend .sw{width:14px;height:2px;background:var(--ink)}
-    .lab-plot .legend .sw.fc{background:var(--terracotta);height:0;border-top:2px dashed var(--terracotta)}
-
-    .lab-meta{
-      margin-top:24px;
-      display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;
-    }
-    .lab-meta .m{
-      font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.12em;
-      text-transform:uppercase;color:var(--sage);
-    }
-    .lab-meta .m b{
-      display:block;font-family:'Cormorant Garamond',serif;font-style:italic;
-      font-size:17px;color:var(--ink);text-transform:none;letter-spacing:0;
-      margin-top:2px;font-weight:500;
-    }
-
-    .lab-back{
-      max-width:1080px;margin:80px auto 0;padding:32px 56px 0;border-top:1px solid var(--rule);
-    }
-    .lab-back h2{
-      font-family:'Cormorant Garamond',serif;font-weight:500;font-size:28px;
-      margin:0 0 4px;color:var(--ink);
-    }
-    .lab-back .sub{
-      font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;
-      text-transform:uppercase;color:var(--sage);margin-bottom:16px;font-weight:500;
-    }
-    .lab-back ul{margin:0;padding:0;list-style:none}
-    .lab-back ul li{
-      padding:10px 0;border-top:1px solid var(--rule-2);
-      display:grid;grid-template-columns:140px 1fr;gap:18px;
-      font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--ink-2);
-    }
-    .lab-back ul li:first-child{border-top:none}
-    .lab-back ul li .tag{
-      font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.12em;
-      text-transform:uppercase;color:var(--sage);font-weight:500;padding-top:3px;
-    }
-
-    @media (max-width:900px){
-      .lab-lead,.lab-demo,.lab-back{padding-left:24px;padding-right:24px}
-      .lab-demo,.lab-back{margin-top:48px}
-      .lab-grid{grid-template-columns:1fr;gap:24px}
-      .lab-meta{grid-template-columns:1fr}
-      .lab-demo .head{grid-template-columns:1fr;gap:6px}
-      .lab-back ul li{grid-template-columns:1fr;gap:2px}
-    }
-</style>
+<link rel="stylesheet" href="./site/pages/lab.css">
+<script>document.documentElement.dataset.page='lab';</script>
 
 
-<link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="site/site.css">
 <link rel="stylesheet" href="site/research-page.css">
 <meta property="og:title" content="Lab – Uriah Daugaard">
-<meta property="og:image" content="files/WApic_cropped.png">
+<meta property="og:image" content="assets/img/WApic_cropped.png">
 <meta property="og:site_name" content="Uriah Daugaard">
 </head>
 
@@ -233,6 +91,49 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
 <!-- main -->
+<!--
+  Shared top bar. Injected into every page at build time via `include-before-body`
+  in _quarto.yml, so the navigation exists in the served HTML rather than being
+  assembled by JavaScript on load.
+
+  Links are root-relative on purpose: pages live at two depths (/contact.html and
+  /ResearchPages/SamplingFreq.html) and document-relative hrefs resolve wrongly
+  from the second. The active item is highlighted by CSS off the page key on <html>
+  (see "active nav item" in site/site.css) so this file stays identical everywhere.
+-->
+<header class="site-bar">
+  <nav class="nav-l">
+    <a data-nav="home" href="./index.html">Home</a>
+    <a data-nav="projects" href="./projects.html">Projects</a>
+    <a data-nav="research" href="./research.html">Research &amp; Publications</a>
+  </nav>
+  <a class="wordmark" href="./index.html">
+    Uriah Daugaard
+    <span class="b">bioinformatics · ecology · pipelines</span>
+  </a>
+  <nav class="nav-r">
+    <a data-nav="lab" href="./lab.html">Lab</a>
+    <a data-nav="talks" href="./talks.html">Talks &amp; Teaching</a>
+    <a data-nav="contact" href="./contact.html">Contact</a>
+    <button class="theme-toggle" aria-label="Toggle dark mode" type="button"><span class="ico-light"><svg viewbox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M20.5 13.2A8.5 8.5 0 1 1 10.8 3.5a6.8 6.8 0 0 0 9.7 9.7z"></path></svg></span><span class="ico-dark"><svg viewbox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5 5l1.85 1.85M17.15 17.15 19 19M5 19l1.85-1.85M17.15 6.85 19 5"></path></svg></span></button>
+  </nav>
+  <div class="bar-tools">
+    <button class="theme-toggle" aria-label="Toggle dark mode" type="button"><span class="ico-light"><svg viewbox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M20.5 13.2A8.5 8.5 0 1 1 10.8 3.5a6.8 6.8 0 0 0 9.7 9.7z"></path></svg></span><span class="ico-dark"><svg viewbox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5 5l1.85 1.85M17.15 17.15 19 19M5 19l1.85-1.85M17.15 6.85 19 5"></path></svg></span></button>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-drawer" hidden="">
+  <nav>
+    <a data-nav="home" href="./index.html">Home</a>
+    <a data-nav="projects" href="./projects.html">Projects</a>
+    <a data-nav="research" href="./research.html">Research &amp; Publications</a>
+    <a data-nav="lab" href="./lab.html">Lab</a>
+    <a data-nav="talks" href="./talks.html">Talks &amp; Teaching</a>
+    <a data-nav="contact" href="./contact.html">Contact</a>
+  </nav>
+</div>
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -253,22 +154,19 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<script>document.body.dataset.page='lab';document.body.dataset.screenLabel='04 Lab';</script>
-
-<span data-mount="bar"></span>
-
 <main>
-<div class="page-narrow" style="text-align:center">
-<h1 class="page-title">Lab</h1>
+<div class="page-head">
+<div class="titles">
+<h1 class="page-title" id="lab">Lab</h1>
 <div class="page-sub">small things you can poke at</div>
 </div>
-
-<div class="lab-lead">
-<p class="lede">
+<p class="lead">
 A small workshop of <em>interactive demos</em>. Each one drops you straight into a method
 I use, on a public dataset, with controls that change the numbers in real time. Ships
 with one item now. Grows from there.
 </p>
+</div>
+<div class="lab-note">
 <p class="note">
 <b style="color:var(--ink)">Build status.</b> The Lab page is new with this redesign.
 The first demo (EDM forecasting) is in design here, not yet wired to a live engine.
@@ -276,37 +174,25 @@ The plot below uses placeholder data so the layout and interaction model can be
 reviewed before the maths goes in.
 </p>
 </div>
-
 <!-- Demo 1 -->
-<section class="lab-demo" data-screen-label="04a EDM demo">
+<section class="lab-demo">
 <div class="head">
 <div class="num">i</div>
 <div>
 <div class="kicker">demo one</div>
-<h2 class="anchored">EDM forecasting on a public time series</h2>
+<h2 id="edm-forecasting-on-a-public-time-series" class="anchored">EDM forecasting on a public time series</h2>
 </div>
 <div class="status">In design</div>
 </div>
-
 <div class="lab-grid">
 <div class="copy">
-<h3 class="anchored">What it is</h3>
-<p>
-Empirical Dynamic Modelling reconstructs the underlying state space of a system
-from a single observed time series. It does not assume a parametric model. That
-makes it useful for ecological data, where the dynamics are often nonlinear and
-the right functional form is rarely obvious in advance.
-</p>
-<h3 class="anchored">What you get to do</h3>
-<p>
-Pick a forecast horizon, an embedding dimension, and a train / test split.
-Watch the forecast track or fail to track the held out portion of the series,
-and read the skill metric update underneath.
-</p>
+<h3 id="what-it-is" class="anchored">What it is</h3>
+<p>Empirical Dynamic Modelling reconstructs the underlying state space of a system from a single observed time series. It does not assume a parametric model. That makes it useful for ecological data, where the dynamics are often nonlinear and the right functional form is rarely obvious in advance.</p>
+<h3 id="what-you-get-to-do" class="anchored">What you get to do</h3>
+<p>Pick a forecast horizon, an embedding dimension, and a train / test split. Watch the forecast track or fail to track the held out portion of the series, and read the skill metric update underneath.</p>
 </div>
-
 <aside class="lab-controls" aria-label="EDM forecast controls">
-<h3 class="anchored">controls</h3>
+<h3 id="controls" class="anchored">controls</h3>
 <div class="control">
 <span class="label">Forecast horizon</span>
 <span class="val" id="v-h">6 steps</span>
@@ -327,10 +213,9 @@ and read the skill metric update underneath.
 </div>
 </aside>
 </div>
-
 <div class="lab-plot">
 <div class="title">
-<h4 class="anchored">Observed series with forecast overlay</h4>
+<h4 id="observed-series-with-forecast-overlay" class="anchored">Observed series with forecast overlay</h4>
 <div class="skill">forecast skill (rho) <b id="v-rho" style="color:var(--ink)">0.84</b></div>
 </div>
 <svg id="lab-svg" viewbox="0 0 800 240" preserveaspectratio="none" aria-hidden="true">
@@ -353,7 +238,6 @@ and read the skill metric update underneath.
 <span><span class="sw fc"></span> forecast</span>
 </div>
 </div>
-
 <div class="lab-meta">
 <div class="m">data
 <b>placeholder, public ecological time series</b>
@@ -366,10 +250,9 @@ and read the skill metric update underneath.
 </div>
 </div>
 </section>
-
 <!-- Backlog -->
-<section class="lab-back" data-screen-label="04b Backlog">
-<h2 class="anchored">On the bench, not yet shipped</h2>
+<section class="lab-back">
+<h2 id="on-the-bench-not-yet-shipped" class="anchored">On the bench, not yet shipped</h2>
 <div class="sub">next demos in the queue</div>
 <ul>
 <li><span class="tag">diversity</span><span>Alpha and beta diversity explorer on a public 16S dataset.</span></li>
@@ -380,7 +263,6 @@ and read the skill metric update underneath.
 </ul>
 </section>
 </main>
-<span data-mount="foot"></span>
 
 <script>
 // Tiny reactive demo: regenerate a synthetic ecological-looking series + forecast
@@ -463,6 +345,21 @@ update();
 
 
 
+<!--
+  Shared page footer. Injected into every page at build time via
+  `include-after-body` in _quarto.yml. See site/_nav.html for why the hrefs
+  here are root-relative.
+-->
+<footer class="site-foot">
+  <div class="l">© Uriah Daugaard · 2026</div>
+  <div class="c" aria-hidden="true"></div>
+  <div class="r">
+    <a href="mailto:uriah.daugaard@cybiome.com">email</a>
+    <a href="https://github.com/duriah" target="_blank" rel="noopener">github</a>
+    <a href="https://www.linkedin.com/in/uriah-daugaard-8280681b1/" target="_blank" rel="noopener">linkedin</a>
+    <a href="https://orcid.org/0000-0003-4092-717X" target="_blank" rel="noopener">orcid</a>
+  </div>
+</footer>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

@@ -29,7 +29,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../files/WApic_cropped.png" rel="icon" type="image/png">
+<link href="../assets/img/WApic_cropped.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -72,13 +72,13 @@ ul.task-list li input[type="checkbox"] {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Cookie&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <meta name="google-site-verification" content="US9UugOmq-GXdRt4_XqJtenD7bkmr-q2J2JQUu1q8Xk">
+<script>document.documentElement.dataset.page='research';</script>
 
 
-<link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="../site/site.css">
 <link rel="stylesheet" href="../site/research-page.css">
 <meta property="og:title" content="Sampling frequency and forecast skill – Uriah Daugaard">
-<meta property="og:image" content="files/WApic_cropped.png">
+<meta property="og:image" content="assets/img/WApic_cropped.png">
 <meta property="og:site_name" content="Uriah Daugaard">
 </head>
 
@@ -90,6 +90,49 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
 <!-- main -->
+<!--
+  Shared top bar. Injected into every page at build time via `include-before-body`
+  in _quarto.yml, so the navigation exists in the served HTML rather than being
+  assembled by JavaScript on load.
+
+  Links are root-relative on purpose: pages live at two depths (/contact.html and
+  /ResearchPages/SamplingFreq.html) and document-relative hrefs resolve wrongly
+  from the second. The active item is highlighted by CSS off the page key on <html>
+  (see "active nav item" in site/site.css) so this file stays identical everywhere.
+-->
+<header class="site-bar">
+  <nav class="nav-l">
+    <a data-nav="home" href="../index.html">Home</a>
+    <a data-nav="projects" href="../projects.html">Projects</a>
+    <a data-nav="research" href="../research.html">Research &amp; Publications</a>
+  </nav>
+  <a class="wordmark" href="../index.html">
+    Uriah Daugaard
+    <span class="b">bioinformatics · ecology · pipelines</span>
+  </a>
+  <nav class="nav-r">
+    <a data-nav="lab" href="../lab.html">Lab</a>
+    <a data-nav="talks" href="../talks.html">Talks &amp; Teaching</a>
+    <a data-nav="contact" href="../contact.html">Contact</a>
+    <button class="theme-toggle" aria-label="Toggle dark mode" type="button"><span class="ico-light"><svg viewbox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M20.5 13.2A8.5 8.5 0 1 1 10.8 3.5a6.8 6.8 0 0 0 9.7 9.7z"></path></svg></span><span class="ico-dark"><svg viewbox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5 5l1.85 1.85M17.15 17.15 19 19M5 19l1.85-1.85M17.15 6.85 19 5"></path></svg></span></button>
+  </nav>
+  <div class="bar-tools">
+    <button class="theme-toggle" aria-label="Toggle dark mode" type="button"><span class="ico-light"><svg viewbox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M20.5 13.2A8.5 8.5 0 1 1 10.8 3.5a6.8 6.8 0 0 0 9.7 9.7z"></path></svg></span><span class="ico-dark"><svg viewbox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5 5l1.85 1.85M17.15 17.15 19 19M5 19l1.85-1.85M17.15 6.85 19 5"></path></svg></span></button>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-drawer" hidden="">
+  <nav>
+    <a data-nav="home" href="../index.html">Home</a>
+    <a data-nav="projects" href="../projects.html">Projects</a>
+    <a data-nav="research" href="../research.html">Research &amp; Publications</a>
+    <a data-nav="lab" href="../lab.html">Lab</a>
+    <a data-nav="talks" href="../talks.html">Talks &amp; Teaching</a>
+    <a data-nav="contact" href="../contact.html">Contact</a>
+  </nav>
+</div>
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -110,13 +153,13 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<script>document.body.dataset.page='research';document.body.dataset.screenLabel='03 Research / Sampling frequency';</script>
-
-<span data-mount="bar"></span>
-
 <main>
 <div class="rp-wrap">
-
+<!-- Nav block stays raw HTML end to end. Quarto's bundled stylesheet styles the
+     bare `aside` tag (font-size:.825rem plus a colour that the borders inherit),
+     so this cannot become a fenced div; inside it, `.back` is inline-block and
+     `.list` is a flex column of display:block links wrapping inline spans, all
+     of which a <p> wrapper would break. -->
 <aside class="rp-toc" aria-label="Highlighted research">
 <a class="back" href="../research.html">← Research &amp; Publications</a>
 <div class="h">Highlighted research</div>
@@ -141,113 +184,84 @@ ul.task-list li input[type="checkbox"] {
 </li>
 </ul>
 </aside>
-
-<header class="rp-header">
+<div class="rp-header">
 <div class="titles">
 <div class="eyebrow">
 <span>Ecosphere</span><span class="dot"></span>
 <span>2024</span><span class="dot"></span>
 <span>Monitoring design</span>
 </div>
-<h1>Using forecasts to improve monitoring in community ecology</h1>
+<h1 id="using-forecasts-to-improve-monitoring-in-community-ecology">Using forecasts to improve monitoring in community ecology</h1>
 <p class="lede">
 As sampling frequency drops, forecasts deteriorate across every taxon of a long
 lake-plankton record, and species interactions are estimated with systematic
 bias. Forecast skill can be turned into a design tool for monitoring programs.
 </p>
 </div>
-</header>
-
+</div>
 <div class="rp-meta">
 <div class="authors"><strong>Daugaard U.</strong>, Merkli S., Merz E., Pomati F. &amp; Petchey O.L.</div>
 <a class="doi-btn" href="https://doi.org/10.1002/ecs2.4786" target="_blank" rel="noopener">
 doi: 10.1002/ecs2.4786 <span class="arrow">↗</span>
 </a>
 </div>
-
-<article class="rp-body">
-
+<div class="rp-body">
+<!-- The `<section class="section">` wrappers are opened and closed with raw
+     HTML: pandoc's html5 writer rewrites any div carrying the class `section`
+     into a bare <section> and drops the class, which would leave every
+     `.rp-body .section ...` rule unmatched. Their contents are markdown. -->
 <section class="section">
 <div class="head">
 <div class="num">01 · The question</div>
-<h2 class="anchored">How often is often enough?</h2>
+<h2 id="how-often-is-often-enough" class="anchored">How often is often enough?</h2>
 </div>
 <div class="text">
-<p>
-Long-term monitoring programs face a recurring choice: how often to sample.
-Sampling too rarely may miss the dynamics that matter; sampling too often is
-expensive. We asked whether forecast skill itself can guide that choice, both
-in principle and on a real lake.
-</p>
+<p>Long-term monitoring programs face a recurring choice: how often to sample. Sampling too rarely may miss the dynamics that matter; sampling too often is expensive. We asked whether forecast skill itself can guide that choice, both in principle and on a real lake.</p>
 </div>
 </section>
 
 <section class="section">
 <div class="head">
 <div class="num">02 · What we did</div>
-<h2 class="anchored">A simulated baseline and a real high-frequency lake</h2>
+<h2 id="a-simulated-baseline-and-a-real-high-frequency-lake" class="anchored">A simulated baseline and a real high-frequency lake</h2>
 </div>
 <div class="text">
-<p>
-We worked with two datasets. The first is a simulated community where the true
-dynamics and interactions are known. The second is a high-frequency plankton
-time series from Lake Greifensee, with measurements taken much more often than
-standard monitoring.
-</p>
-
+<p>We worked with two datasets. The first is a simulated community where the true dynamics and interactions are known. The second is a high-frequency plankton time series from Lake Greifensee, with measurements taken much more often than standard monitoring.</p>
 <figure class="rp-fig figure">
-<img src="Sampling_fig1.png" alt="Overview of the simulated baseline and the high-frequency plankton dataset, with thinning to lower sampling frequencies illustrated." class="figure-img">
+<img src="../assets/figures/Sampling_fig1.png" alt="Overview of the simulated baseline and the high-frequency plankton dataset, with thinning to lower sampling frequencies illustrated." class="figure-img">
 <figcaption>
 <span class="lbl">Fig. 1</span>
 The two datasets and the thinning procedure: keep every <em>n</em>-th sample
 to mimic a less frequent monitoring program, refit, and compare.
 </figcaption>
 </figure>
-
-<p>
-For each dataset we thinned the time series to mimic lower sampling rates,
-refit forecasting models at every frequency, and compared the resulting forecast
-skill and interaction estimates against the high-frequency reference.
-</p>
+<p>For each dataset we thinned the time series to mimic lower sampling rates, refit forecasting models at every frequency, and compared the resulting forecast skill and interaction estimates against the high-frequency reference.</p>
 </div>
 </section>
 
 <section class="section">
 <div class="head">
 <div class="num">03 · What we found</div>
-<h2 class="anchored">Forecasts decay, and interactions are biased both ways</h2>
+<h2 id="forecasts-decay-and-interactions-are-biased-both-ways" class="anchored">Forecasts decay, and interactions are biased both ways</h2>
 </div>
 <div class="text">
-<p>
-Forecast skill dropped as sampling became less frequent, in every taxon of the
-lake series. The steepest losses were in taxa with the fastest underlying
-dynamics. Interactions estimated from the thinned series were systematically
-biased: some inflated, some attenuated, relative to the high-frequency truth.
-</p>
-
+<p>Forecast skill dropped as sampling became less frequent, in every taxon of the lake series. The steepest losses were in taxa with the fastest underlying dynamics. Interactions estimated from the thinned series were systematically biased: some inflated, some attenuated, relative to the high-frequency truth.</p>
 <figure class="rp-fig figure">
-<img src="Sampling_fig2.png" alt="Forecast skill across taxa as sampling frequency is reduced; skill decays monotonically." class="figure-img">
+<img src="../assets/figures/Sampling_fig2.png" alt="Forecast skill across taxa as sampling frequency is reduced; skill decays monotonically." class="figure-img">
 <figcaption>
 <span class="lbl">Fig. 2</span>
 Forecast skill across taxa as the dataset is thinned. Skill decays as
 sampling frequency drops, with the steepest losses where dynamics are fastest.
 </figcaption>
 </figure>
-
 <div class="rp-pull">
 <strong>Frequency is informative, not just operational.</strong> The right
 sampling cadence depends on the dynamics of the system being monitored. Faster
 dynamics demand denser sampling.
 </div>
-
-<p>
-In the simulated baseline, the optimal sampling frequency scaled cleanly with
-growth rate. In the real lake the same rule did not transfer cleanly, because
-community context shapes the relationship as well.
-</p>
-
+<p>In the simulated baseline, the optimal sampling frequency scaled cleanly with growth rate. In the real lake the same rule did not transfer cleanly, because community context shapes the relationship as well.</p>
 <figure class="rp-fig figure">
-<img src="Sampling_fig3.png" alt="Optimal sampling frequency vs growth rate in the simulated baseline, with the plankton field data overlaid." class="figure-img">
+<img src="../assets/figures/Sampling_fig3.png" alt="Optimal sampling frequency vs growth rate in the simulated baseline, with the plankton field data overlaid." class="figure-img">
 <figcaption>
 <span class="lbl">Fig. 3</span>
 Optimal sampling frequency scales with growth rate in the simulated
@@ -261,20 +275,15 @@ context matters too.
 <section class="section">
 <div class="head">
 <div class="num">04 · Why it matters</div>
-<h2 class="anchored">Forecast skill is a design tool, not just an outcome</h2>
+<h2 id="forecast-skill-is-a-design-tool-not-just-an-outcome" class="anchored">Forecast skill is a design tool, not just an outcome</h2>
 </div>
 <div class="text">
-<p>
-Monitoring programs can pilot their sampling cadence against forecast skill,
-choosing the lowest frequency that preserves both prediction and inference.
-That makes ecological monitoring cheaper to run, and the inferences drawn from
-it more honest.
-</p>
+<p>Monitoring programs can pilot their sampling cadence against forecast skill, choosing the lowest frequency that preserves both prediction and inference. That makes ecological monitoring cheaper to run, and the inferences drawn from it more honest.</p>
 </div>
 </section>
-
-</article>
-
+</div>
+<!-- Citation block: `aside` again, plus `<p class="full">` (markdown cannot put
+     a class on a paragraph) and `.actions`, a flex row of inline links. -->
 <aside class="rp-cite" aria-label="Full citation">
 <div class="lbl">Cite this paper</div>
 <p class="full">
@@ -287,15 +296,27 @@ in community ecology. <em>Ecosphere</em>, 15, e4786.
 <a href="https://doi.org/10.5281/zenodo.10066786" target="_blank" rel="noopener">Data + code ↗</a>
 </div>
 </aside>
-
 </div>
 </main>
 
-<span data-mount="foot"></span>
 
 
 
-
+<!--
+  Shared page footer. Injected into every page at build time via
+  `include-after-body` in _quarto.yml. See site/_nav.html for why the hrefs
+  here are root-relative.
+-->
+<footer class="site-foot">
+  <div class="l">© Uriah Daugaard · 2026</div>
+  <div class="c" aria-hidden="true"></div>
+  <div class="r">
+    <a href="mailto:uriah.daugaard@cybiome.com">email</a>
+    <a href="https://github.com/duriah" target="_blank" rel="noopener">github</a>
+    <a href="https://www.linkedin.com/in/uriah-daugaard-8280681b1/" target="_blank" rel="noopener">linkedin</a>
+    <a href="https://orcid.org/0000-0003-4092-717X" target="_blank" rel="noopener">orcid</a>
+  </div>
+</footer>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

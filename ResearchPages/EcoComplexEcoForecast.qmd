@@ -4,16 +4,20 @@ page-layout: custom
 format:
   html:
     theme: none
+    include-in-header:
+      - text: |
+          <script>document.documentElement.dataset.page='research';</script>
 ---
 
 ```{=html}
-<script>document.body.dataset.page='research';document.body.dataset.screenLabel='03 Research / Ecological complexity';</script>
-
-<span data-mount="bar"></span>
-
 <main>
-<div class="rp-wrap">
+```
 
+::: {.rp-wrap}
+
+<!-- Sibling-paper nav. `.rp-toc .list` is a flex column whose items are
+     `display:block` links wrapping inline spans, so it stays raw HTML. -->
+```{=html}
 <aside class="rp-toc" aria-label="Highlighted research">
 <a class="back" href="../research.html">← Research &amp; Publications</a>
 <div class="h">Highlighted research</div>
@@ -38,123 +42,187 @@ format:
 </li>
 </ul>
 </aside>
+```
 
-<header class="rp-header">
-<div class="titles">
+::: {.rp-header}
+
+::: {.titles}
+
+<!-- `.rp-header .eyebrow` is a flex row of bare spans: as markdown its
+     children would collapse into a single flex item. -->
+```{=html}
 <div class="eyebrow">
 <span>Ecology Letters</span><span class="dot"></span>
 <span>2022</span><span class="dot"></span>
 <span>PhD chapter 1</span>
 </div>
-<h1>Forecasting in the face of ecological complexity</h1>
+```
+
+# Forecasting in the face of ecological complexity
+
+<!-- `.lede` is a classed <p>; a fenced div would nest a bare <p> inside it and
+     pick up the 19px/14px bare-<p> rule from site.css. -->
+```{=html}
 <p class="lede">
 In a small protist community, species with many but weak interactions are
 forecast better than species with few strong ones. Connectedness, not just data
 quality, sets a ceiling on how predictable a species is.
 </p>
-</div>
-</header>
+```
 
+:::
+
+:::
+
+<!-- `.rp-meta` is a flex row; its DOI link is a flex item styled as a button. -->
+```{=html}
 <div class="rp-meta">
 <div class="authors"><strong>Daugaard U.</strong>, Munch S., Inauen D., Pennekamp F. &amp; Petchey O.</div>
 <a class="doi-btn" href="https://doi.org/10.1111/ele.14070" target="_blank" rel="noopener">
 doi: 10.1111/ele.14070 <span class="arrow">↗</span>
 </a>
 </div>
+```
 
-<article class="rp-body">
+::: {.rp-body}
 
+<!-- Pandoc's HTML writer special-cases a div whose class is exactly "section":
+     it emits <section> and *drops* the class, which would take every
+     `.rp-body .section ...` rule with it. The four section wrappers are
+     therefore opened and closed as raw tags, like <main>. -->
+```{=html}
 <section class="section">
-<div class="head">
+```
+
+::: {.head}
+
+<!-- `.num` holds bare text: as a fenced div it would gain a <p> wrapper. -->
+```{=html}
 <div class="num">01 · The question</div>
-<h2>Is ecological forecasting feasible given community complexity?</h2>
-</div>
-<div class="text">
-<p>
+```
+
+## Is ecological forecasting feasible given community complexity?
+
+:::
+
+::: {.text}
+
 Ecology aims to forecast how populations and communities will respond to change.
 Real communities are messy, with many species interacting at once. We asked
-whether a species' position in that web of interactions sets a ceiling on how
+whether a species\' position in that web of interactions sets a ceiling on how
 forecastable it is, and how much extra noise from a fluctuating environment
 compounds that limit.
-</p>
-</div>
-</section>
 
+:::
+
+```{=html}
+</section>
+```
+
+```{=html}
 <section class="section">
-<div class="head">
+```
+
+::: {.head}
+
+```{=html}
 <div class="num">02 · What we did</div>
-<h2>A protist community, five months, two thermal regimes</h2>
-</div>
-<div class="text">
-<p>
+```
+
+## A protist community, five months, two thermal regimes
+
+:::
+
+::: {.text}
+
 We grew a community of eight aquatic protist taxa under two regimes with the
 same long-run mean temperature: one held constant, the other fluctuating. The
 experiment ran for about five months with regular video samples that gave us
 abundance time series for every taxon.
-</p>
 
+<!-- <figure>/<img> stay raw: markdown images are wrapped in a <p> or promoted
+     to a Quarto figure with its own caption markup. -->
+```{=html}
 <figure class="rp-fig">
-<img src="EcoComplexEcoForecast_fig1.png" alt="Schematic of the microbial system and the constant versus fluctuating temperature treatments." />
+<img src="../assets/figures/EcoComplexEcoForecast_fig1.png" alt="Schematic of the microbial system and the constant versus fluctuating temperature treatments." />
 <figcaption>
 <span class="lbl">Fig. 1</span>
 The microbial community and the two thermal regimes. Constant and fluctuating
 temperatures share the same long-run mean.
 </figcaption>
 </figure>
+```
 
-<p>
 For each species we fit empirical dynamic models on a training window and
 forecast the held-out tail of the series, then scored the forecast against
 truth. From the same models we extracted estimates of the number and strength
-of each species' interactions: its connectedness.
-</p>
+of each species\' interactions: its connectedness.
 
+```{=html}
 <figure class="rp-fig">
-<img src="EcoComplexEcoForecast_fig2.png" alt="Forecasting workflow showing how abundance time series are split into training and forecast windows, then evaluated against truth." />
+<img src="../assets/figures/EcoComplexEcoForecast_fig2.png" alt="Forecasting workflow showing how abundance time series are split into training and forecast windows, then evaluated against truth." />
 <figcaption>
 <span class="lbl">Fig. 2</span>
 The forecasting workflow. Train on the early window, forecast the held-out
 tail, score against truth.
 </figcaption>
 </figure>
-</div>
-</section>
+```
 
+:::
+
+```{=html}
+</section>
+```
+
+```{=html}
 <section class="section">
-<div class="head">
+```
+
+::: {.head}
+
+```{=html}
 <div class="num">03 · What we found</div>
-<h2>Generalists are easier to forecast than specialists</h2>
-</div>
-<div class="text">
-<p>
+```
+
+## Generalists are easier to forecast than specialists
+
+:::
+
+::: {.text}
+
 Forecast skill rose with the number of interactions a species had, and fell with
 their mean strength. Generalists, with many weak interactions, were the most
 forecastable. Specialists, with few strong interactions, were the least.
-</p>
 
+```{=html}
 <figure class="rp-fig">
-<img src="EcoComplexEcoForecast_fig3.png" alt="Scatter plot showing forecast skill rising with the number of interactions and falling with their mean strength." />
+<img src="../assets/figures/EcoComplexEcoForecast_fig3.png" alt="Scatter plot showing forecast skill rising with the number of interactions and falling with their mean strength." />
 <figcaption>
 <span class="lbl">Fig. 3</span>
 Forecast skill rises with the number of interactions a species has and falls
 with their mean strength. Generalists sit in the upper right.
 </figcaption>
 </figure>
+```
 
+<!-- `.rp-pull` styles its own inline content directly; a fenced div would add
+     a <p> between the box and its text. -->
+```{=html}
 <div class="rp-pull">
 <strong>Connectedness is a predictability signature.</strong> Where a species
 sits in the community sets a ceiling on how well it can be forecast, before
 data quality or model choice enter the picture.
 </div>
+```
 
-<p>
 Fluctuating temperatures degraded forecast skill for some species but not
 others. The community context, not just the environmental noise, decided which
 species suffered.
-</p>
 
+```{=html}
 <figure class="rp-fig">
-<img src="EcoComplexEcoForecast_fig4.png" alt="Effect of fluctuating temperature on forecast skill, with three of eight species showing significant degradation." />
+<img src="../assets/figures/EcoComplexEcoForecast_fig4.png" alt="Effect of fluctuating temperature on forecast skill, with three of eight species showing significant degradation." />
 <figcaption>
 <span class="lbl">Fig. 4</span>
 Effect of fluctuating temperatures on forecast skill. Some species hold their
@@ -162,25 +230,45 @@ skill; others lose it. Community position matters more than the environment
 alone.
 </figcaption>
 </figure>
-</div>
-</section>
+```
 
+:::
+
+```{=html}
+</section>
+```
+
+```{=html}
 <section class="section">
-<div class="head">
+```
+
+::: {.head}
+
+```{=html}
 <div class="num">04 · Why it matters</div>
-<h2>Predictability is structured by the community itself</h2>
-</div>
-<div class="text">
-<p>
-A species' interactions are a forecasting trait. Estimating connectedness can
+```
+
+## Predictability is structured by the community itself
+
+:::
+
+::: {.text}
+
+A species\' interactions are a forecasting trait. Estimating connectedness can
 tell us in advance which parts of a community will be easy or hard to predict,
 and where monitoring effort and model attention are best spent.
-</p>
-</div>
+
+:::
+
+```{=html}
 </section>
+```
 
-</article>
+:::
 
+<!-- Citation block: `.lbl` and `.full` are a bare-text div and a classed <p>,
+     and `.actions` is a flex row of button-styled links. -->
+```{=html}
 <aside class="rp-cite" aria-label="Full citation">
 <div class="lbl">Cite this paper</div>
 <p class="full">
@@ -194,9 +282,10 @@ interactions determines forecast skill in ecological communities.
 <a href="https://doi.org/10.5281/zenodo.6524695" target="_blank" rel="noopener">Data + code ↗</a>
 </div>
 </aside>
+```
 
-</div>
+:::
+
+```{=html}
 </main>
-
-<span data-mount="foot"></span>
 ```

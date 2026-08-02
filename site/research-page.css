@@ -112,7 +112,8 @@
 .rp-header .eyebrow .prize{
   display: inline-flex; align-items: center; gap: 6px;
   color: var(--gold);
-  border: 1px solid rgba(176,133,56,.35);
+  border: 1px solid rgba(var(--gold-rgb),.35);
+  background: var(--gold-fill);
   padding: 3px 8px; border-radius: 999px;
   letter-spacing: .14em;
   white-space: nowrap;

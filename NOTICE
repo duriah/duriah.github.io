@@ -1,0 +1,41 @@
+COPYRIGHT AND LICENSING
+=======================
+
+This repository contains two different kinds of material, under two different
+terms. The MIT License in LICENSE applies to the CODE ONLY.
+
+Code — MIT License (see LICENSE)
+--------------------------------
+  _quarto.yml
+  site/site.css, site/research-page.css, site/site.js, site/pages/*.css
+  _partials/*.html
+  tools/*
+
+You are free to reuse the machinery of this site: the stylesheets, the build
+configuration, the navigation partials and the helper scripts.
+
+Content — © Uriah Daugaard, all rights reserved
+-----------------------------------------------
+  assets/img/**      original drawings and diagrams
+  assets/docs/**     conference posters, CV
+  *.qmd, ResearchPages/*.qmd   written text of the pages
+
+The illustrations of protists, bacteria, algal aggregates and rotifers, and the
+pipeline diagrams, are original works drawn by Uriah Daugaard. They are NOT
+covered by the MIT License. They may not be copied, redistributed, modified or
+used commercially without permission. Please ask — permission is usually easy to
+get for teaching and non-commercial use.
+
+Third-party material
+--------------------
+  assets/figures/**            figures from published papers; rights may rest
+                               with the respective journals
+  assets/img/PhdChp1Fig1.jpg
+  assets/img/SamplingFreqPic.jpg
+  assets/img/warmingfig1.jpg   as above
+  assets/img/WApic_cropped.png photograph, not covered by the above
+
+Fonts are loaded from Google Fonts and remain under their own licences
+(Cormorant Garamond, Cookie, Inter, JetBrains Mono — all SIL Open Font License).
+
+Contact: uriah.daugaard@cybiome.com

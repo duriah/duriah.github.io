@@ -4,16 +4,18 @@ page-layout: custom
 format:
   html:
     theme: none
+    include-in-header:
+      - text: |
+          <script>document.documentElement.dataset.page='research';</script>
 ---
 
 ```{=html}
-<script>document.body.dataset.page='research';document.body.dataset.screenLabel='03 Research / Warming & FR';</script>
-
-<span data-mount="bar"></span>
-
 <main>
-<div class="rp-wrap">
+```
 
+::: {.rp-wrap}
+
+```{=html}
 <aside class="rp-toc" aria-label="Highlighted research">
 <a class="back" href="../research.html">← Research &amp; Publications</a>
 <div class="h">Highlighted research</div>
@@ -38,112 +40,156 @@ format:
 </li>
 </ul>
 </aside>
+```
 
-<header class="rp-header">
-<div class="titles">
+::: {.rp-header}
+
+::: {.titles}
+
+```{=html}
 <div class="eyebrow">
 <span>Journal of Animal Ecology</span><span class="dot"></span>
 <span>2019</span><span class="dot"></span>
 <span class="prize">★ 2019 Elton Prize</span>
 </div>
-<h1>Warming can destabilise predator–prey functional responses</h1>
+```
+
+# Warming can destabilise predator–prey functional responses
+
+```{=html}
 <p class="lede">
 A three-month undergraduate project showing that warming can flip a predator's
 functional response from Type III to Type II, and that this small shape change is
 enough to drive the prey extinct in simulation.
 </p>
-</div>
-</header>
+```
 
+:::
+
+:::
+
+```{=html}
 <div class="rp-meta">
 <div class="authors"><strong>Daugaard U.</strong>, Petchey O.L. &amp; Pennekamp F.</div>
 <a class="doi-btn" href="https://doi.org/10.1111/1365-2656.13053" target="_blank" rel="noopener">
 doi: 10.1111/1365-2656.13053 <span class="arrow">↗</span>
 </a>
 </div>
+```
 
-<article class="rp-body">
+::: {.rp-body}
 
+```{=html}
 <section class="section">
-<div class="head">
+```
+
+::: {.head}
+
+```{=html}
 <div class="num">01 · The question</div>
-<h2>Does warming reshape the way predators eat their prey?</h2>
-</div>
-<div class="text">
-<p>
-The <em>functional response</em> describes how much prey a single predator
+```
+
+## Does warming reshape the way predators eat their prey?
+
+:::
+
+::: {.text}
+
+The *functional response* describes how much prey a single predator
 consumes as prey density rises. Its shape (Type I, II or III) sets whether the
 interaction is stabilising or destabilising. We asked whether a few degrees of
 warming can change that shape.
-</p>
-</div>
+
+:::
+
+```{=html}
 </section>
 
 <section class="section">
-<div class="head">
-<div class="num">02 · What we did</div>
-<h2>A ciliate pair, 24 hours, three temperatures</h2>
-</div>
-<div class="text">
-<p>
-We chose <em>Spathidium sp.</em>, a generalist ciliate predator, and its
-preferred prey <em>Dexiostoma campylum</em>.
-</p>
+```
 
+::: {.head}
+
+```{=html}
+<div class="num">02 · What we did</div>
+```
+
+## A ciliate pair, 24 hours, three temperatures
+
+:::
+
+::: {.text}
+
+We chose *Spathidium sp.*, a generalist ciliate predator, and its
+preferred prey *Dexiostoma campylum*.
+
+```{=html}
 <figure class="rp-fig tight">
-<img src="FRpic.png" alt="Microscope photographs of Spathidium sp. and Dexiostoma campylum." />
+<img src="../assets/figures/FRpic.png" alt="Microscope photographs of Spathidium sp. and Dexiostoma campylum." />
 <figcaption>
 <span class="lbl">Fig. 1</span>
 The predator–prey pair. <em>Spathidium sp.</em> feeds on
 <em>Dexiostoma campylum</em>.
 </figcaption>
 </figure>
+```
 
-<p>
 We recorded both species over 24 hours at 15°, 20° and 25 °C, across a gradient
 of starting prey densities, so the functional response could be reconstructed at
 each temperature.
-</p>
 
+```{=html}
 <figure class="rp-fig">
-<img src="FRexperiment.png" alt="Schematic of the experimental design." />
+<img src="../assets/figures/FRexperiment.png" alt="Schematic of the experimental design." />
 <figcaption>
 <span class="lbl">Fig. 2</span>
 Experimental design. A density gradient at each of three temperatures.
 </figcaption>
 </figure>
+```
 
-<p>
-We then fit a population-dynamic model that explicitly contains the predator's
+We then fit a population-dynamic model that explicitly contains the predator\'s
 functional response. That gave us space clearance rate, handling time and density
-dependence at each temperature, plus the predator's conversion efficiency.
-</p>
+dependence at each temperature, plus the predator\'s conversion efficiency.
 
+```{=html}
 <figure class="rp-fig">
-<img src="FRmodel.png" alt="Diagram of the population-dynamic model." />
+<img src="../assets/figures/FRmodel.png" alt="Diagram of the population-dynamic model." />
 <figcaption>
 <span class="lbl">Fig. 3</span>
 Model used for inference. Prey grow logistically; the predator consumes prey
 through a functional response.
 </figcaption>
 </figure>
-</div>
+```
+
+:::
+
+```{=html}
 </section>
 
 <section class="section">
-<div class="head">
+```
+
+::: {.head}
+
+```{=html}
 <div class="num">03 · What we found</div>
-<h2>Type III at 15 and 20 °C, Type II at 25 °C</h2>
-</div>
-<div class="text">
-<p>
+```
+
+## Type III at 15 and 20 °C, Type II at 25 °C
+
+:::
+
+::: {.text}
+
 At the two cooler temperatures the functional response was Type III: it
 accelerates at low prey densities, which gives prey a refuge when rare. At 25 °C
 the response switched to Type II, with no acceleration phase.
-</p>
 
+```{=html}
 <figure class="rp-fig">
-<img src="FRmodelfit.png" alt="Fitted functional response curves across the three temperatures." />
+<img src="../assets/figures/FRmodelfit.png" alt="Fitted functional response curves across the three temperatures." />
 <figcaption>
 <span class="lbl">Fig. 4</span>
 Estimated functional response. The Type III acceleration phase disappears at
@@ -158,38 +204,52 @@ with the largest jump at the Type III to Type II transition.
 </div>
 
 <figure class="rp-fig">
-<img src="FRresults.png" alt="Long-run simulated predator–prey dynamics across temperatures." />
+<img src="../assets/figures/FRresults.png" alt="Long-run simulated predator–prey dynamics across temperatures." />
 <figcaption>
 <span class="lbl">Fig. 5</span>
 Simulated dynamics. Prey-extinction probability rises with temperature.
 </figcaption>
 </figure>
+```
 
-<p>
 Conversion efficiency also increased with warming, compounding the destabilising
 effect.
-</p>
-</div>
+
+:::
+
+```{=html}
 </section>
 
 <section class="section">
-<div class="head">
+```
+
+::: {.head}
+
+```{=html}
 <div class="num">04 · Why it matters</div>
-<h2>Shape changes are usually missing from food-web models</h2>
-</div>
-<div class="text">
-<p>
+```
+
+## Shape changes are usually missing from food-web models
+
+:::
+
+::: {.text}
+
 Most climate-change food-web models hold the type of the functional response
 fixed and only let temperature scale its parameters. The type itself can change,
 with consequences that scaling alone will not capture. Future work should
 investigate how often this happens, and how it propagates through multi-species
 food webs.
-</p>
-</div>
+
+:::
+
+```{=html}
 </section>
+```
 
-</article>
+:::
 
+```{=html}
 <aside class="rp-cite" aria-label="Full citation">
 <div class="lbl">Cite this paper</div>
 <p class="full">
@@ -203,9 +263,10 @@ from Type III to Type II. <em>Journal of Animal Ecology</em>, 88, 1575–1586.
 <a href="https://www.britishecologicalsociety.org/publications/best-paper-by-an-early-career-researcher/elton-prize/" target="_blank" rel="noopener">About the Elton Prize ↗</a>
 </div>
 </aside>
+```
 
-</div>
+:::
+
+```{=html}
 </main>
-
-<span data-mount="foot"></span>
 ```

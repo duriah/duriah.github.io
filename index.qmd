@@ -1,129 +1,43 @@
 ---
-title: "Uriah Daugaard — bioinformatics, ecology, pipelines"
+title: "Uriah Daugaard · bioinformatics, ecology, pipelines"
 page-layout: custom
 format:
   html:
     theme: none
     include-in-header:
       - text: |
-          <style>
-              /* Home-only flourishes */
-              .home-hero{padding:32px 56px 24px;text-align:center;position:relative}
-              .home-hero .name{
-                font-family:'Cormorant Garamond',serif;font-weight:500;
-                font-size:88px;line-height:.95;color:var(--ink);letter-spacing:.005em;
-                margin:0 0 8px;
-              }
-              .home-hero .script{
-                font-family:'Cookie',cursive;font-weight:400;
-                font-size:52px;line-height:.9;color:var(--sage);
-                margin:0;
-              }
-              .home-hero .phd-line{
-                font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;
-                text-transform:uppercase;color:var(--ink-3);font-weight:500;
-                margin:22px 0 0;
-              }
-              .home-hero .phd-line .dot{color:var(--sage);margin:0 10px;opacity:.6}
-              .home-hero .tagline{
-                font-family:'Cormorant Garamond',serif;
-                font-size:19px;line-height:1.55;color:var(--ink-2);
-                max-width:62ch;margin:36px auto 0;
-              }
-              .home-hero .tagline em{color:var(--sage);font-style:italic}
-          
-              .home-bio{
-                max-width:64ch;margin:48px auto 0;text-align:left;
-                font-family:'Cormorant Garamond',serif;font-size:19px;line-height:1.65;
-                color:var(--ink-2);padding-top:28px;border-top:1px solid var(--rule);
-              }
-              .home-bio p{margin:0 0 12px}
-              .home-bio p:last-child{margin-bottom:0}
-              .home-bio .eyebrow{display:block;margin-bottom:14px}
-          
-              /* tighter plates row above name — width matches wordmark */
-              .plates-tight{
-                width:554px;max-width:100%;
-                gap:0 !important;margin:0 auto 14px !important;
-                justify-content:space-between !important;
-              }
-              .plates-tight .plate{margin:0;gap:8px;width:140px;flex:0 1 140px;min-width:0}
-              .plates-tight .plate img{width:140px;height:140px;max-width:100%;height:auto;aspect-ratio:1}
-              .plates-tight .plate .lbl{max-width:140px}
-              .plates-tight .plate .lbl b{font-size:14px}
-              @media (max-width:600px){
-                .plates-tight{width:auto;max-width:100%;gap:0 !important;justify-content:space-between !important}
-                .plates-tight .plate{flex:1 1 0;width:auto;min-width:0;gap:6px}
-                .plates-tight .plate img{width:80px;height:80px;aspect-ratio:1}
-                .plates-tight .plate .lbl,.plates-tight .plate .lbl b{font-size:10px;max-width:none}
-              }
-          
-              .home-grid{
-                max-width:1080px;margin:80px auto 0;padding:0 56px;
-                display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:start;
-              }
-              .home-grid h2{
-                font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:500;
-                margin:0 0 6px;color:var(--ink);
-              }
-              .home-grid .sub{
-                font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;
-                text-transform:uppercase;color:var(--sage);margin-bottom:18px;font-weight:500;
-              }
-              .home-grid .more{
-                margin-top:20px;font-family:'Inter',sans-serif;font-size:12px;
-                letter-spacing:.04em;
-              }
-              .home-grid .more a{color:var(--sage);text-decoration:none;border-bottom:1px solid rgba(58,106,82,.4)}
-              .home-grid .more a:hover{color:var(--terracotta);border-bottom-color:var(--terracotta)}
-          
-              .home-links{
-                max-width:1080px;margin:80px auto 0;padding:32px 56px 0;
-                border-top:1px solid var(--rule);
-                display:flex;flex-wrap:wrap;gap:14px;justify-content:center;
-                font-family:'Inter',sans-serif;font-size:13px;
-              }
-              .home-links a{
-                color:var(--ink-2);text-decoration:none;
-                border:1px solid var(--rule);padding:8px 14px;border-radius:999px;
-                letter-spacing:.02em;
-              }
-              .home-links a:hover{border-color:var(--sage);color:var(--sage)}
-          
-              @media (max-width:900px){
-                .home-hero{padding:40px 24px 16px}
-                .home-hero .name{font-size:60px}
-                .home-hero .script{font-size:44px}
-                .home-grid{grid-template-columns:1fr;gap:48px;padding:0 24px;margin-top:56px}
-                .home-links{padding:24px 24px 0;margin-top:56px}
-              }
-          </style>
+          <link rel="stylesheet" href="/site/pages/index.css">
+          <script>document.documentElement.dataset.page='home';</script>
 ---
 
 ```{=html}
-<script>document.body.dataset.page='home';document.body.dataset.screenLabel='01 Home';</script>
-
-<span data-mount="bar"></span>
-
 <main>
+```
+
 <!-- Hero -->
-<section class="home-hero" data-screen-label="01a Hero">
+
+::: {.home-hero}
+
+```{=html}
 <div class="plates plates-tight">
 <figure class="plate">
-<img src="assets/aggregates.png" alt="Drawing of a Chlamydomonas reinhardtii aggregate." />
-<figcaption class="lbl"><b>C. reinhardtii aggregate</b></figcaption>
+<img src="assets/img/aggregates.png" alt="Drawing of a Chlamydomonas reinhardtii aggregate." />
+<figcaption class="lbl" aria-hidden="true"><b>C. reinhardtii aggregate</b></figcaption>
 </figure>
 <figure class="plate">
-<img src="assets/protists.png" alt="Drawing of D. nasutum, D. campylum and C. striatum (ciliates)." />
-<figcaption class="lbl"><b>D. nasutum &middot; D. campylum &middot; C. striatum</b></figcaption>
+<img src="assets/img/protists2.png" alt="Drawing of D. nasutum, D. campylum and C. striatum (ciliates)." />
+<figcaption class="lbl" aria-hidden="true"><b>D. nasutum &middot; D. campylum &middot; C. striatum</b></figcaption>
 </figure>
 <figure class="plate">
-<img src="assets/bacteria.png" alt="Drawing of a bacterial community." />
-<figcaption class="lbl"><b>Bacterial community</b></figcaption>
+<img src="assets/img/bacteria13.png" alt="Drawing of a bacterial community." />
+<figcaption class="lbl" aria-hidden="true"><b>Bacterial community</b></figcaption>
 </figure>
 </div>
+```
 
-<h1 class="name">Uriah Daugaard</h1>
+# Uriah Daugaard {.name}
+
+```{=html}
 <div class="script">bioinformatics &middot; ecology &middot; pipelines</div>
 <div class="phd-line">PhD in Ecology<span class="dot">&middot;</span>MSc in Biostatistics</div>
 
@@ -132,25 +46,36 @@ My work spans <em>bioinformatics</em>, <em>microbiome biology</em>, <em>ecologic
 and <em>forecasting</em>, <em>statistics</em> and <em>machine learning</em>. I turn sequencing and time series
 data into models of how living systems behave.
 </p>
+```
 
-<div class="home-bio">
+::: {.home-bio}
+
+```{=html}
 <span class="eyebrow">a short bio</span>
-<p>
-I work as a computational ecologist at <a class="inline" href="https://cybiome.com" target="_blank" rel="noopener"><strong>Cybiome</strong></a>
+```
+
+I work as a computational ecologist at [**Cybiome**](https://cybiome.com){.inline target="_blank" rel="noopener"}
 (Basel, Switzerland), where I build bioinformatics pipelines and predictive models for microbiome questions.
-</p>
-<p>
+
 Before that I did a PhD in ecology at the University of Zurich
 (Petchey lab, 2020 to 2024) with a thesis on ecological forecasting,
 an MSc in Biostatistics at UZH, and a BSc in Biology and Environmental Sciences.
-</p>
-</div>
-</section>
+
+:::
+
+:::
 
 <!-- Now + Selected publications -->
-<section class="home-grid" data-screen-label="01b Now &amp; Pubs">
+
+::: {.home-grid}
+
+```{=html}
 <div>
-<h2>What I'm working on</h2>
+```
+
+## What I\'m working on
+
+```{=html}
 <div class="sub">currently on the bench</div>
 <div class="kv">
 <div class="row">
@@ -198,9 +123,15 @@ an MSc in Biostatistics at UZH, and a BSc in Biology and Environmental Sciences.
 </div>
 <div class="more"><a href="projects.html">read more on the Projects page →</a></div>
 </div>
+```
 
+```{=html}
 <div>
-<h2>Selected publications</h2>
+```
+
+## Selected publications
+
+```{=html}
 <div class="sub">first or joint first author</div>
 
 <article class="pub">
@@ -244,18 +175,25 @@ an MSc in Biostatistics at UZH, and a BSc in Biology and Environmental Sciences.
 
 <div class="more"><a href="research.html">full publication list and peer review →</a></div>
 </div>
-</section>
+```
+
+:::
 
 <!-- Quick links -->
-<section class="home-links" data-screen-label="01c Links">
+
+::: {.home-links}
+
+```{=html}
 <a href="https://www.linkedin.com/in/uriah-daugaard-8280681b1/" target="_blank" rel="noopener">LinkedIn</a>
 <a href="https://github.com/duriah" target="_blank" rel="noopener">GitHub</a>
 <a href="https://orcid.org/0000-0003-4092-717X" target="_blank" rel="noopener">ORCID</a>
 <a href="https://scholar.google.ch/citations?user=JI10T7QAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-<a href="files/CV_long.pdf">CV (pdf)</a>
+<a href="assets/docs/CV_long.pdf">CV (pdf)</a>
 <a href="mailto:uriah.daugaard@cybiome.com">email</a>
-</section>
-</main>
+```
 
-<span data-mount="foot"></span>
+:::
+
+```{=html}
+</main>
 ```

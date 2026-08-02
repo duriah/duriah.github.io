@@ -4,16 +4,23 @@ page-layout: custom
 format:
   html:
     theme: none
+    include-in-header:
+      - text: |
+          <script>document.documentElement.dataset.page='research';</script>
 ---
 
 ```{=html}
-<script>document.body.dataset.page='research';document.body.dataset.screenLabel='03 Research / Sampling frequency';</script>
-
-<span data-mount="bar"></span>
-
 <main>
-<div class="rp-wrap">
+```
 
+:::::::: {.rp-wrap}
+
+<!-- Nav block stays raw HTML end to end. Quarto's bundled stylesheet styles the
+     bare `aside` tag (font-size:.825rem plus a colour that the borders inherit),
+     so this cannot become a fenced div; inside it, `.back` is inline-block and
+     `.list` is a flex column of display:block links wrapping inline spans, all
+     of which a <p> wrapper would break. -->
+```{=html}
 <aside class="rp-toc" aria-label="Highlighted research">
 <a class="back" href="../research.html">← Research &amp; Publications</a>
 <div class="h">Highlighted research</div>
@@ -38,113 +45,135 @@ format:
 </li>
 </ul>
 </aside>
+```
 
-<header class="rp-header">
-<div class="titles">
+:::::: {.rp-header}
+:::: {.titles}
+```{=html}
 <div class="eyebrow">
 <span>Ecosphere</span><span class="dot"></span>
 <span>2024</span><span class="dot"></span>
 <span>Monitoring design</span>
 </div>
-<h1>Using forecasts to improve monitoring in community ecology</h1>
+```
+
+# Using forecasts to improve monitoring in community ecology
+
+```{=html}
 <p class="lede">
 As sampling frequency drops, forecasts deteriorate across every taxon of a long
 lake-plankton record, and species interactions are estimated with systematic
 bias. Forecast skill can be turned into a design tool for monitoring programs.
 </p>
-</div>
-</header>
+```
+::::
+::::::
 
-<div class="rp-meta">
+:::::: {.rp-meta}
+```{=html}
 <div class="authors"><strong>Daugaard U.</strong>, Merkli S., Merz E., Pomati F. &amp; Petchey O.L.</div>
 <a class="doi-btn" href="https://doi.org/10.1002/ecs2.4786" target="_blank" rel="noopener">
 doi: 10.1002/ecs2.4786 <span class="arrow">↗</span>
 </a>
-</div>
+```
+::::::
 
-<article class="rp-body">
+:::::: {.rp-body}
 
+<!-- The `<section class="section">` wrappers are opened and closed with raw
+     HTML: pandoc's html5 writer rewrites any div carrying the class `section`
+     into a bare <section> and drops the class, which would leave every
+     `.rp-body .section ...` rule unmatched. Their contents are markdown. -->
+```{=html}
 <section class="section">
-<div class="head">
+```
+:::: {.head}
+```{=html}
 <div class="num">01 · The question</div>
-<h2>How often is often enough?</h2>
-</div>
-<div class="text">
-<p>
+```
+## How often is often enough?
+::::
+:::: {.text}
 Long-term monitoring programs face a recurring choice: how often to sample.
 Sampling too rarely may miss the dynamics that matter; sampling too often is
 expensive. We asked whether forecast skill itself can guide that choice, both
 in principle and on a real lake.
-</p>
-</div>
+::::
+```{=html}
 </section>
 
 <section class="section">
-<div class="head">
+```
+:::: {.head}
+```{=html}
 <div class="num">02 · What we did</div>
-<h2>A simulated baseline and a real high-frequency lake</h2>
-</div>
-<div class="text">
-<p>
+```
+## A simulated baseline and a real high-frequency lake
+::::
+:::: {.text}
 We worked with two datasets. The first is a simulated community where the true
 dynamics and interactions are known. The second is a high-frequency plankton
 time series from Lake Greifensee, with measurements taken much more often than
 standard monitoring.
-</p>
 
+```{=html}
 <figure class="rp-fig">
-<img src="Sampling_fig1.png" alt="Overview of the simulated baseline and the high-frequency plankton dataset, with thinning to lower sampling frequencies illustrated." />
+<img src="../assets/figures/Sampling_fig1.png" alt="Overview of the simulated baseline and the high-frequency plankton dataset, with thinning to lower sampling frequencies illustrated." />
 <figcaption>
 <span class="lbl">Fig. 1</span>
 The two datasets and the thinning procedure: keep every <em>n</em>-th sample
 to mimic a less frequent monitoring program, refit, and compare.
 </figcaption>
 </figure>
+```
 
-<p>
 For each dataset we thinned the time series to mimic lower sampling rates,
 refit forecasting models at every frequency, and compared the resulting forecast
 skill and interaction estimates against the high-frequency reference.
-</p>
-</div>
+::::
+```{=html}
 </section>
 
 <section class="section">
-<div class="head">
+```
+:::: {.head}
+```{=html}
 <div class="num">03 · What we found</div>
-<h2>Forecasts decay, and interactions are biased both ways</h2>
-</div>
-<div class="text">
-<p>
+```
+## Forecasts decay, and interactions are biased both ways
+::::
+:::: {.text}
 Forecast skill dropped as sampling became less frequent, in every taxon of the
 lake series. The steepest losses were in taxa with the fastest underlying
 dynamics. Interactions estimated from the thinned series were systematically
 biased: some inflated, some attenuated, relative to the high-frequency truth.
-</p>
 
+```{=html}
 <figure class="rp-fig">
-<img src="Sampling_fig2.png" alt="Forecast skill across taxa as sampling frequency is reduced; skill decays monotonically." />
+<img src="../assets/figures/Sampling_fig2.png" alt="Forecast skill across taxa as sampling frequency is reduced; skill decays monotonically." />
 <figcaption>
 <span class="lbl">Fig. 2</span>
 Forecast skill across taxa as the dataset is thinned. Skill decays as
 sampling frequency drops, with the steepest losses where dynamics are fastest.
 </figcaption>
 </figure>
+```
 
-<div class="rp-pull">
+::: {.rp-pull}
+```{=html}
 <strong>Frequency is informative, not just operational.</strong> The right
 sampling cadence depends on the dynamics of the system being monitored. Faster
 dynamics demand denser sampling.
-</div>
+```
+:::
 
-<p>
 In the simulated baseline, the optimal sampling frequency scaled cleanly with
 growth rate. In the real lake the same rule did not transfer cleanly, because
 community context shapes the relationship as well.
-</p>
 
+```{=html}
 <figure class="rp-fig">
-<img src="Sampling_fig3.png" alt="Optimal sampling frequency vs growth rate in the simulated baseline, with the plankton field data overlaid." />
+<img src="../assets/figures/Sampling_fig3.png" alt="Optimal sampling frequency vs growth rate in the simulated baseline, with the plankton field data overlaid." />
 <figcaption>
 <span class="lbl">Fig. 3</span>
 Optimal sampling frequency scales with growth rate in the simulated
@@ -152,26 +181,34 @@ baseline. The same rule does not transfer cleanly to the lake; community
 context matters too.
 </figcaption>
 </figure>
-</div>
+```
+::::
+```{=html}
 </section>
 
 <section class="section">
-<div class="head">
+```
+:::: {.head}
+```{=html}
 <div class="num">04 · Why it matters</div>
-<h2>Forecast skill is a design tool, not just an outcome</h2>
-</div>
-<div class="text">
-<p>
+```
+## Forecast skill is a design tool, not just an outcome
+::::
+:::: {.text}
 Monitoring programs can pilot their sampling cadence against forecast skill,
 choosing the lowest frequency that preserves both prediction and inference.
 That makes ecological monitoring cheaper to run, and the inferences drawn from
 it more honest.
-</p>
-</div>
+::::
+```{=html}
 </section>
+```
 
-</article>
+::::::
 
+<!-- Citation block: `aside` again, plus `<p class="full">` (markdown cannot put
+     a class on a paragraph) and `.actions`, a flex row of inline links. -->
+```{=html}
 <aside class="rp-cite" aria-label="Full citation">
 <div class="lbl">Cite this paper</div>
 <p class="full">
@@ -184,9 +221,10 @@ in community ecology. <em>Ecosphere</em>, 15, e4786.
 <a href="https://doi.org/10.5281/zenodo.10066786" target="_blank" rel="noopener">Data + code ↗</a>
 </div>
 </aside>
+```
 
-</div>
+::::::::
+
+```{=html}
 </main>
-
-<span data-mount="foot"></span>
 ```

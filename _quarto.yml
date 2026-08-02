@@ -2,31 +2,36 @@ project:
   type: website
   output-dir: docs
   resources:
-    - "files/**"
     - "assets/**"
     - "site/**"
-    - "ResearchPages/*.png"
 
 website:
   title: "Uriah Daugaard"
-  favicon: files/WApic_cropped.png
+  favicon: assets/img/WApic_cropped.png
   open-graph:
-    image: files/WApic_cropped.png
-  # Custom top nav + footer are injected by site/site.js on every page (see
-  # `include-after-body` below). Quarto's built-in navbar is intentionally
-  # disabled — do not add a `navbar:` section here.
+    image: assets/img/WApic_cropped.png
+  # Quarto's built-in `navbar:` is intentionally not used: it only renders when
+  # a Bootstrap theme supplies its markup and JS, and restyling it would not
+  # reproduce this design. The bar and footer are plain partials injected at
+  # build time instead — see `include-before-body` / `include-after-body`.
 
 format:
   html:
-    # `pubs.qmd` and `teach.qmd` still rely on Bootstrap utility classes from
-    # the old flatly theme — keep flatly as the default so they keep rendering.
-    # Redesigned pages override per-page with `theme: none` + `page-layout: custom`.
+    # Keep flatly even though every page also sets `theme: none`: the per-page
+    # setting does not stop Quarto from emitting the project's Bootstrap bundle,
+    # and the redesigned pages have been built against the base styling it
+    # provides (heading rules, list and figure margins, button metrics). Dropping
+    # it shifts layout on every page — measured, not assumed. See README.
     theme: [flatly, _variables_flatly.scss]
     css:
-      - styles.css
       - site/site.css
       - site/research-page.css
     toc: false
+    # Pages are laid out with CSS grid and flex, so their structure has to be
+    # exactly the divs written in the source. Quarto's default heading wrapper
+    # would insert a <section> around every heading — and move the heading's own
+    # classes onto it — which reparents grid children and breaks the layout.
+    section-divs: false
     grid:
       body-width: 1050px
     include-in-header:
@@ -35,9 +40,14 @@ format:
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
           <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cookie&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
           <meta name="google-site-verification" content="US9UugOmq-GXdRt4_XqJtenD7bkmr-q2J2JQUu1q8Xk" />
+    # The bar and footer live under _partials/ rather than site/, so Quarto
+    # inlines them without also publishing them as standalone pages.
+    include-before-body:
+      - _partials/nav.html
     # site.js is referenced root-relatively so it resolves the same way from
     # pages at any depth (incl. ResearchPages/*.qmd).
     include-after-body:
+      - _partials/foot.html
       - text: |
           <script src="/site/site.js"></script>
 
