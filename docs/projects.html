@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Microbiome bioinformatics at Cybiome: amplicon and whole-genome sequencing pipelines, and the predictive, mechanistic and time-series models that run on top of them.">
 
 <title>Projects – Uriah Daugaard</title>
 <style>
@@ -29,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./assets/img/WApic_cropped.png" rel="icon" type="image/png">
+<link href="./assets/img/favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -71,7 +72,26 @@ ul.task-list li input[type="checkbox"] {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Cookie&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" href="./assets/img/favicon.png">
 <meta name="google-site-verification" content="US9UugOmq-GXdRt4_XqJtenD7bkmr-q2J2JQUu1q8Xk">
+<script>
+/* Theme boot. Inline and in <head> on purpose: site.js runs at the end
+   of <body>, so resolving the theme there paints the cream page first
+   and then repaints dark — a flash on every navigation for anyone who
+   chose dark.
+
+   Light is the default and `prefers-color-scheme` is deliberately not
+   consulted. That media query does not report an operating-system
+   setting: Firefox answers it from its own "Website appearance"
+   preference, and Chrome from an auto-dark flag, so a machine sitting
+   in light mode can still ask every site for dark. Cream is the
+   design; dark is available from the toggle and then persists. */
+(function(){try{
+  if(localStorage.getItem('ud-theme')==='dark'){
+    document.documentElement.setAttribute('data-theme','dark');
+  }
+}catch(e){}})();
+</script>
 <link rel="stylesheet" href="./site/pages/projects.css">
 <script>document.documentElement.dataset.page='projects';</script>
 
@@ -79,8 +99,17 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="site/site.css">
 <link rel="stylesheet" href="site/research-page.css">
 <meta property="og:title" content="Projects – Uriah Daugaard">
-<meta property="og:image" content="assets/img/WApic_cropped.png">
+<meta property="og:description" content="Microbiome bioinformatics at Cybiome: amplicon and whole-genome sequencing pipelines, and the predictive, mechanistic and time-series models that run on top of them.">
+<meta property="og:image" content="https://duriah.github.io/assets/img/og-card.png">
 <meta property="og:site_name" content="Uriah Daugaard">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta name="twitter:title" content="Projects – Uriah Daugaard">
+<meta name="twitter:description" content="Microbiome bioinformatics at Cybiome: amplicon and whole-genome sequencing pipelines, and the predictive, mechanistic and time-series models that run on top of them.">
+<meta name="twitter:image" content="https://duriah.github.io/assets/img/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="630">
+<meta name="twitter:image-width" content="1200">
 </head>
 
 <body class="fullcontent quarto-light">
@@ -140,6 +169,11 @@ ul.task-list li input[type="checkbox"] {
 <h1 class="title">Projects</h1>
 </div>
 
+<div>
+  <div class="description">
+    Microbiome bioinformatics at Cybiome: amplicon and whole-genome sequencing pipelines, and the predictive, mechanistic and time-series models that run on top of them.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -158,12 +192,11 @@ ul.task-list li input[type="checkbox"] {
 <div class="pj-header">
 <div class="titles">
 <h1 class="page-title" id="projects">Projects</h1>
-<div class="page-sub">what I currently do</div>
 </div>
-<!-- `.page-sub` above and `.lead` below stay raw: a fenced div would wrap their
-     bare text in a <p>, and site.css styles bare <p> (19px/1.6 + 14px margin).
-     Pandoc also cannot put a class on a markdown paragraph, so `.lead` has to
-     keep its own <p class="lead"> tag. -->
+<!-- `.lead` below stays raw: a fenced div would wrap its bare text in a <p>,
+     and site.css styles bare <p> (19px/1.6 + 14px margin). Pandoc also cannot
+     put a class on a markdown paragraph, so `.lead` has to keep its own
+     <p class="lead"> tag. -->
 <p class="lead">
 My work at Cybiome has two halves. First, the <em>pipelines</em> that take raw sequencing data
 and turn it into a structured view of a microbial community. Second, the <em>models</em>
@@ -188,7 +221,7 @@ an integrated workflow (R, Python, containers), so that one piece flows into the
 <div class="pj-intro">
 <p>Two pipelines: one for amplicon sequencing, one for whole genome bacterial sequencing. They produce structurally different data, broad and shallow on one side, deep and per strain on the other, but they are linked. Amplicon ASVs can be matched back to genomes from the genome pipeline, so an amplicon survey can pull down the genome derived traits of the organisms it found.</p>
 <figure aria-hidden="true" class="figure">
-<img src="assets/img/schema_pipelines.png" alt="" class="figure-img">
+<img src="assets/img/schema_pipelines.webp" alt="" width="1640" height="477" class="figure-img">
 <figcaption>fig. i · from soil to community view</figcaption>
 </figure>
 </div>
@@ -289,11 +322,13 @@ an integrated workflow (R, Python, containers), so that one piece flows into the
 </ul>
 </section>
 </section>
-<div class="pj-wayfind">
-The peer reviewed work behind some of this lives on
-<a href="research.html">Research &amp; Publications</a>.
-Method demos you can poke at live on <a href="lab.html">Lab</a>.
-</div>
+<!-- ```{=html} -->
+<!-- <div class="pj-wayfind"> -->
+<!-- The peer reviewed work behind some of this lives on -->
+<!-- <a href="research.html">Research &amp; Publications</a>. -->
+<!-- Method demos you can poke at live on <a href="lab.html">Lab</a>. -->
+<!-- </div> -->
+<!-- ``` -->
 </main>
 
 
@@ -308,9 +343,9 @@ Method demos you can poke at live on <a href="lab.html">Lab</a>.
   <div class="l">© Uriah Daugaard · 2026</div>
   <div class="c" aria-hidden="true"></div>
   <div class="r">
-    <a href="mailto:uriah.daugaard@cybiome.com">email</a>
+    <a href="mailto:uriah.daugaard@outlook.com">email</a>
     <a href="https://github.com/duriah" target="_blank" rel="noopener">github</a>
-    <a href="https://www.linkedin.com/in/uriah-daugaard-8280681b1/" target="_blank" rel="noopener">linkedin</a>
+    <a href="https://www.linkedin.com/in/daugaarduriah/" target="_blank" rel="noopener">linkedin</a>
     <a href="https://orcid.org/0000-0003-4092-717X" target="_blank" rel="noopener">orcid</a>
   </div>
 </footer>
@@ -387,7 +422,7 @@ Method demos you can poke at live on <a href="lab.html">Lab</a>.
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/duriah\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

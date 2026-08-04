@@ -62,7 +62,7 @@
   font-size:12px !important;letter-spacing:.01em !important;
   text-transform:none;
 }
-.tt-teach .item .body{font-family:'Cormorant Garamond',serif;font-size:17px;line-height:1.6;color:var(--ink-2)}
+.tt-teach .item .body{font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.6;color:var(--ink-2)}
 .tt-teach .item .body strong{color:var(--ink);font-weight:500}
 .tt-teach .item .body p{margin:0 0 10px}
 @media (max-width:900px){
@@ -124,7 +124,7 @@
   font-style:italic;font-size:20px;line-height:1.25;margin:0 0 8px;text-wrap:pretty;
 }
 .poster-grid .card .where{
-  font-family:'Cormorant Garamond',serif;font-size:17px;line-height:1.45;
+  font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.5;
   color:var(--ink-3);margin:0 0 8px;text-wrap:pretty;
 }
 .poster-grid .card .where strong{color:var(--ink-2);font-weight:500}

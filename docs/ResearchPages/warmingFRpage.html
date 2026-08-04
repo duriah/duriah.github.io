@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Warming flips a ciliate predator’s functional response from Type III to Type II, and simulations show that one change of shape drives the prey extinct. Winner of the 2019 Elton Prize.">
 
-<title>Warming destabilises predator–prey functional responses – Uriah Daugaard</title>
+<title>Warming can destabilise predator–prey interactions – Uriah Daugaard</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../assets/img/WApic_cropped.png" rel="icon" type="image/png">
+<link href="../assets/img/favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -71,15 +72,39 @@ ul.task-list li input[type="checkbox"] {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Cookie&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" href="../assets/img/favicon.png">
 <meta name="google-site-verification" content="US9UugOmq-GXdRt4_XqJtenD7bkmr-q2J2JQUu1q8Xk">
+<script>
+/* Theme boot. Inline and in <head> on purpose: site.js runs at the end
+   of <body>, so resolving the theme there paints the cream page first
+   and then repaints dark — a flash on every navigation for anyone who
+   chose dark.
+
+   Light is the default and `prefers-color-scheme` is deliberately not
+   consulted. That media query does not report an operating-system
+   setting: Firefox answers it from its own "Website appearance"
+   preference, and Chrome from an auto-dark flag, so a machine sitting
+   in light mode can still ask every site for dark. Cream is the
+   design; dark is available from the toggle and then persists. */
+(function(){try{
+  if(localStorage.getItem('ud-theme')==='dark'){
+    document.documentElement.setAttribute('data-theme','dark');
+  }
+}catch(e){}})();
+</script>
 <script>document.documentElement.dataset.page='research';</script>
 
 
 <link rel="stylesheet" href="../site/site.css">
 <link rel="stylesheet" href="../site/research-page.css">
-<meta property="og:title" content="Warming destabilises predator–prey functional responses – Uriah Daugaard">
-<meta property="og:image" content="assets/img/WApic_cropped.png">
+<meta property="og:title" content="Warming can destabilise predator–prey interactions – Uriah Daugaard">
+<meta property="og:description" content="Warming flips a ciliate predator’s functional response from Type III to Type II, and simulations show that one change of shape drives the prey extinct. Winner of the 2019 Elton Prize.">
+<meta property="og:image" content="https://duriah.github.io/assets/img/warmingfig1.jpg">
 <meta property="og:site_name" content="Uriah Daugaard">
+<meta name="twitter:title" content="Warming can destabilise predator–prey interactions – Uriah Daugaard">
+<meta name="twitter:description" content="Warming flips a ciliate predator’s functional response from Type III to Type II, and simulations show that one change of shape drives the prey extinct. Winner of the 2019 Elton Prize.">
+<meta name="twitter:image" content="https://duriah.github.io/assets/img/warmingfig1.jpg">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="fullcontent quarto-light">
@@ -136,9 +161,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Warming destabilises predator–prey functional responses</h1>
+<h1 class="title">Warming can destabilise predator–prey interactions</h1>
 </div>
 
+<div>
+  <div class="description">
+    Warming flips a ciliate predator’s functional response from Type III to Type II, and simulations show that one change of shape drives the prey extinct. Winner of the 2019 Elton Prize.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -162,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
 <li class="current">
 <a aria-current="page" href="warmingFRpage.html">
 <span class="meta">JAE 2019 · Elton Prize</span>
-<span class="ti">Warming destabilises predator–prey functional responses</span>
+<span class="ti">Warming can destabilise predator–prey interactions</span>
 </a>
 </li>
 <li>
@@ -186,11 +216,11 @@ ul.task-list li input[type="checkbox"] {
 <span>2019</span><span class="dot"></span>
 <span class="prize">★ 2019 Elton Prize</span>
 </div>
-<h1 id="warming-can-destabilise-predatorprey-functional-responses">Warming can destabilise predator–prey functional responses</h1>
+<h1 id="warming-can-destabilise-predatorprey-interactions">Warming can destabilise predator–prey interactions</h1>
 <p class="lede">
 A three-month undergraduate project showing that warming can flip a predator's
-functional response from Type III to Type II, and that this small shape change is
-enough to drive the prey extinct in simulation.
+functional response from Type III to Type II, and that this one change of shape
+is enough to drive the prey extinct in simulation.
 </p>
 </div>
 </div>
@@ -207,7 +237,15 @@ doi: 10.1111/1365-2656.13053 <span class="arrow">↗</span>
 <h2 id="does-warming-reshape-the-way-predators-eat-their-prey" class="anchored">Does warming reshape the way predators eat their prey?</h2>
 </div>
 <div class="text">
-<p>The <em>functional response</em> describes how much prey a single predator consumes as prey density rises. Its shape (Type I, II or III) sets whether the interaction is stabilising or destabilising. We asked whether a few degrees of warming can change that shape.</p>
+<p>The <em>functional response</em> describes how much prey a single predator consumes as prey density rises. Its shape matters for stability: a Type III response accelerates at low prey density, so predation pressure eases when prey are rare, and is generally considered the stabilising one. A Type II has no such phase. We asked whether a few degrees of warming can change which shape a predator–prey pair shows.</p>
+<figure class="rp-fig figure">
+<img src="../assets/figures/FRpic.webp" alt="Plot of the Type I, Type II and Type III functional response curves, prey consumed against prey abundance, beside the study's research question." width="1640" height="598" class="figure-img">
+<figcaption>
+<span class="lbl">Fig. 1</span>
+The three functional response types, and the question we put to them. Only the
+Type III accelerates at low prey density.
+</figcaption>
+</figure>
 </div>
 </section>
 
@@ -217,30 +255,22 @@ doi: 10.1111/1365-2656.13053 <span class="arrow">↗</span>
 <h2 id="a-ciliate-pair-24-hours-three-temperatures" class="anchored">A ciliate pair, 24 hours, three temperatures</h2>
 </div>
 <div class="text">
-<p>We chose <em>Spathidium sp.</em>, a generalist ciliate predator, and its preferred prey <em>Dexiostoma campylum</em>.</p>
-<figure class="rp-fig tight figure">
-<img src="../assets/figures/FRpic.png" alt="Microscope photographs of Spathidium sp. and Dexiostoma campylum." class="figure-img">
-<figcaption>
-<span class="lbl">Fig. 1</span>
-The predator–prey pair. <em>Spathidium sp.</em> feeds on
-<em>Dexiostoma campylum</em>.
-</figcaption>
-</figure>
-<p>We recorded both species over 24 hours at 15°, 20° and 25 °C, across a gradient of starting prey densities, so the functional response could be reconstructed at each temperature.</p>
+<p>We paired the ciliate predator <em>Spathidium</em> sp. with its prey <em>Dexiostoma campylum</em>, two species that co-occur in nature, and followed both over 24 hours at 15, 20 and 25 °C. At each temperature we set up eight starting prey densities, each with five predators or with none at all as a control. That came to 72 one-millilitre wells per temperature, enough of a density gradient to reconstruct the functional response at each of them.</p>
 <figure class="rp-fig figure">
-<img src="../assets/figures/FRexperiment.png" alt="Schematic of the experimental design." class="figure-img">
+<img src="../assets/figures/FRexperiment.webp" alt="Schematic of the feeding experiment: the two ciliate species, three temperatures, eight starting prey densities, predator present or absent, 72 wells per temperature." width="1640" height="914" loading="lazy" decoding="async" class="figure-img">
 <figcaption>
 <span class="lbl">Fig. 2</span>
-Experimental design. A density gradient at each of three temperatures.
+The experiment. Eight starting prey densities at each of three temperatures,
+with the predator present or absent, scored after one day.
 </figcaption>
 </figure>
-<p>We then fit a population-dynamic model that explicitly contains the predator's functional response. That gave us space clearance rate, handling time and density dependence at each temperature, plus the predator's conversion efficiency.</p>
+<p>We then fitted a population-dynamic model built around a <em>generalised</em> functional response, whose exponent <em>q</em> decides the type rather than being assumed: <em>q</em> = 0 gives a Type II, <em>q</em> &gt; 0 a Type III. Fitting it separately at each temperature returned the space clearance constant, the handling time and the exponent itself, along with the predator’s conversion efficiency.</p>
 <figure class="rp-fig figure">
-<img src="../assets/figures/FRmodel.png" alt="Diagram of the population-dynamic model." class="figure-img">
+<img src="../assets/figures/FRmodel.webp" alt="The generalised functional response equation and the predator–prey differential equations fitted to the data, with all parameters defined." width="1640" height="653" loading="lazy" decoding="async" class="figure-img">
 <figcaption>
 <span class="lbl">Fig. 3</span>
-Model used for inference. Prey grow logistically; the predator consumes prey
-through a functional response.
+The model we fitted. A generalised functional response with a free exponent
+<em>q</em>, inside a predator–prey model with logistic prey growth.
 </figcaption>
 </figure>
 </div>
@@ -252,30 +282,33 @@ through a functional response.
 <h2 id="type-iii-at-15-and-20-c-type-ii-at-25-c" class="anchored">Type III at 15 and 20 °C, Type II at 25 °C</h2>
 </div>
 <div class="text">
-<p>At the two cooler temperatures the functional response was Type III: it accelerates at low prey densities, which gives prey a refuge when rare. At 25 °C the response switched to Type II, with no acceleration phase.</p>
+<p>At the two cooler temperatures the fitted exponent was positive: the response accelerated at low prey density, leaving rare prey some respite. At 25 °C that acceleration was gone and the response was Type II. Every other parameter of the model shifted with temperature too, the conversion efficiency among them.</p>
 <figure class="rp-fig figure">
-<img src="../assets/figures/FRmodelfit.png" alt="Fitted functional response curves across the three temperatures." class="figure-img">
+<img src="../assets/figures/FRmodelfit.webp" alt="Model fits at 15, 20 and 25 °C: change in prey density over 24 hours with and without predators, and predator density after 24 hours." width="1640" height="1226" loading="lazy" decoding="async" class="figure-img">
 <figcaption>
 <span class="lbl">Fig. 4</span>
-Estimated functional response. The Type III acceleration phase disappears at
-25 °C.
+Model fit. Top: change in prey density over 24 h with predators (circles) and
+without (triangles). Bottom: predator density after 24 h, against a starting
+density of five per millilitre (dashed).
 </figcaption>
 </figure>
 
 <div class="rp-pull">
-<strong>The destabilising consequence.</strong> Simulated long-run dynamics with
-the fitted models show greater risk of prey extinction at higher temperatures,
-with the largest jump at the Type III to Type II transition.
+<strong>The destabilising consequence.</strong> Simulating the fitted models
+forward drives the prey extinct in 99.8% of runs at 25 °C, against 14.6% at
+15 °C and none at all at 20 °C. The jump arrives with the change in type, not
+gradually with warming.
 </div>
 
 <figure class="rp-fig figure">
-<img src="../assets/figures/FRresults.png" alt="Long-run simulated predator–prey dynamics across temperatures." class="figure-img">
+<img src="../assets/figures/FRresults.webp" alt="Left: estimated functional responses at the three temperatures, labelled Type III, Type III and Type II. Right: percentage of simulations in which the prey went extinct, and time to extinction." width="1640" height="513" loading="lazy" decoding="async" class="figure-img">
 <figcaption>
 <span class="lbl">Fig. 5</span>
-Simulated dynamics. Prey-extinction probability rises with temperature.
+Left: the estimated functional responses, Type III at 15 and 20 °C and Type II
+at 25 °C. Right: how often the simulations drove the prey extinct, and how fast.
 </figcaption>
 </figure>
-<p>Conversion efficiency also increased with warming, compounding the destabilising effect.</p>
+<p>Conversion efficiency rose with warming as well, so it should not be assumed temperature-independent either. It is not what destabilises the system, though: pinning every parameter but the three functional response terms to its 20 °C value leaves the extinction pattern in place, if weaker.</p>
 </div>
 </section>
 
@@ -285,7 +318,7 @@ Simulated dynamics. Prey-extinction probability rises with temperature.
 <h2 id="shape-changes-are-usually-missing-from-food-web-models" class="anchored">Shape changes are usually missing from food-web models</h2>
 </div>
 <div class="text">
-<p>Most climate-change food-web models hold the type of the functional response fixed and only let temperature scale its parameters. The type itself can change, with consequences that scaling alone will not capture. Future work should investigate how often this happens, and how it propagates through multi-species food webs.</p>
+<p>Models that project food webs under warming generally hold the type of the functional response fixed and let temperature scale its parameters. The type itself can change, and scaling alone will not capture what follows. How often this happens, and how it propagates through a multi-species food web, is still open.</p>
 </div>
 </section>
 </div>
@@ -297,11 +330,30 @@ Warming can destabilize predator–prey interactions by shifting the functional 
 from Type III to Type II. <em>Journal of Animal Ecology</em>, 88, 1575–1586.
 </p>
 <div class="actions">
-<a class="primary" href="https://doi.org/10.1111/1365-2656.13053" target="_blank" rel="noopener">Read paper (open access) ↗</a>
-<a href="https://zenodo.org/badge/latestdoi/186978107" target="_blank" rel="noopener">Data + code ↗</a>
+<a class="primary" href="https://doi.org/10.1111/1365-2656.13053" target="_blank" rel="noopener">Read paper ↗</a>
+<a href="https://doi.org/10.5281/zenodo.2864317" target="_blank" rel="noopener">Data + code ↗</a>
 <a href="https://www.britishecologicalsociety.org/publications/best-paper-by-an-early-career-researcher/elton-prize/" target="_blank" rel="noopener">About the Elton Prize ↗</a>
 </div>
 </aside>
+<!-- Sibling navigation. The .rp-toc at the top of the page is a float and scrolls
+     away, so without this the only route to the other two deep dives is back at
+     the very top of a long page. The styling for it already existed in
+     research-page.css (.rp-siblings); only the markup was missing. -->
+<nav class="rp-siblings" aria-label="Other highlighted research">
+<div class="h">Other highlighted research</div>
+<div class="row">
+<a class="sib" href="EcoComplexEcoForecast.html">
+<div class="meta">Ecology Letters 2022</div>
+<h4 class="anchored">Forecasting in the face of ecological complexity</h4>
+<span class="chip">Read the deep dive →</span>
+</a>
+<a class="sib" href="SamplingFreq.html">
+<div class="meta">Ecosphere 2024</div>
+<h4 class="anchored">Sampling frequency and forecast skill</h4>
+<span class="chip">Read the deep dive →</span>
+</a>
+</div>
+</nav>
 </div>
 </main>
 
@@ -317,9 +369,9 @@ from Type III to Type II. <em>Journal of Animal Ecology</em>, 88, 1575–1586.
   <div class="l">© Uriah Daugaard · 2026</div>
   <div class="c" aria-hidden="true"></div>
   <div class="r">
-    <a href="mailto:uriah.daugaard@cybiome.com">email</a>
+    <a href="mailto:uriah.daugaard@outlook.com">email</a>
     <a href="https://github.com/duriah" target="_blank" rel="noopener">github</a>
-    <a href="https://www.linkedin.com/in/uriah-daugaard-8280681b1/" target="_blank" rel="noopener">linkedin</a>
+    <a href="https://www.linkedin.com/in/daugaarduriah/" target="_blank" rel="noopener">linkedin</a>
     <a href="https://orcid.org/0000-0003-4092-717X" target="_blank" rel="noopener">orcid</a>
   </div>
 </footer>
@@ -396,7 +448,7 @@ from Type III to Type II. <em>Journal of Animal Ecology</em>, 88, 1575–1586.
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/duriah\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

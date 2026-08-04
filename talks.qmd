@@ -1,5 +1,6 @@
 ---
 title: "Talks & Teaching"
+description: "Conference talks, posters and university teaching by Uriah Daugaard, including the BIO144 data-analysis course at the University of Zurich."
 page-layout: custom
 format:
   html:
@@ -22,15 +23,13 @@ format:
 # Talks & Teaching {.page-title}
 
 ```{=html}
-<div class="page-sub">invited and contributed talks, posters, and the teaching record</div>
 </div>
 ```
 
 ```{=html}
 <p class="lead">
-A reverse chronological record of where this work has been spoken about, and the courses
-I have taught and supported. Where a talk matches a published paper, the paper is on
-<a class="inline" href="research.html">Research &amp; Publications</a>.
+Conference talks and posters on ecological forecasting and species interactions, and
+undergraduate statistics teaching at the University of Zurich.
 </p>
 ```
 :::
@@ -49,8 +48,8 @@ I have taught and supported. Where a talk matches a published paper, the paper i
 <div class="item">
 <div class="when">2024</div>
 <div class="what">
-<strong>To be filled in.</strong>
-<span class="where">Placeholder. Talk for 2024 to be added.</span>
+<em>Biodiversity has opposite effects on the forecastability of species abundances in constant versus declining light.</em>
+<span class="where"><strong>SFE² 2024</strong> &middot; biennial meeting of the French Society of Ecology and Evolution &middot; Lyon &middot; Oct 21-25 2024.</span>
 </div>
 </div>
 <div class="item">
@@ -71,7 +70,7 @@ I have taught and supported. Where a talk matches a published paper, the paper i
 <div class="when">2022</div>
 <div class="what">
 <em>Forecasting in the face of ecological complexity: number and strength of species interactions determine forecast skill in ecological communities.</em>
-<span class="where"><strong>SFE² GFÖ EEF</strong> &middot; International Conference on Ecological Sciences &middot; Metz, France &middot; Nov 21-25 2022.</span>
+<span class="where"><strong>SFE² GfÖ EEF</strong> &middot; International Conference on Ecological Sciences &middot; Metz, France &middot; Nov 21-25 2022.</span>
 </div>
 </div>
 <div class="item">
@@ -93,6 +92,15 @@ I have taught and supported. Where a talk matches a published paper, the paper i
 
 ### Posters {style="margin-top:48px"}
 
+<!-- Authorship is stated once for the section rather than per card. A `chip gold`
+     on one poster and not the other read as a contrast between them, when the
+     only real difference is which distinction each carries. The chip is left to
+     mean "distinction" alone, as it does on Research & Publications. -->
+
+```{=html}
+<div class="sub">first author</div>
+```
+
 ::: {.card-grid .poster-grid}
 ```{=html}
 <a class="card" href="assets/docs/COUSIN_Poster_Cybiome_LLD_Italy_2026.pdf" target="_blank" rel="noopener">
@@ -100,9 +108,9 @@ I have taught and supported. Where a talk matches a published paper, the paper i
 <img src="assets/img/poster-cousin-2026.png" alt="Page 1 of the COUSIN poster shown at Let's Liberate Diversity, Italy, 2026." loading="lazy" width="400" height="566" />
 </div>
 <div class="body">
-<div class="meta">2026 <span class="chip gold">first author</span></div>
+<div class="meta">2026</div>
 <h4>COUSIN poster.</h4>
-<p class="where"><strong>Let's Liberate Diversity (LLD)</strong> &middot; Italy &middot; 2026 &middot; with Alexandre Jousset &middot; Cybiome / EU Horizon Europe COUSIN consortium.</p>
+<p class="where"><strong>Let's Liberate Diversity (LLD)</strong> &middot; Scandicci (Florence) &middot; Italy &middot; May 2026 &middot; with Alexandre Jousset &middot; Cybiome / EU Horizon Europe COUSIN consortium.</p>
 <span class="chip open">Poster pdf <span class="arrow">↗</span></span>
 </div>
 </a>

@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Uriah Daugaard — computational ecologist and bioinformatician at Cybiome, Basel. PhD in ecology (UZH), MSc in biostatistics. Microbiome pipelines, modelling and forecasting.">
 
 <title>Uriah Daugaard · bioinformatics, ecology, pipelines – Uriah Daugaard</title>
 <style>
@@ -29,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./assets/img/WApic_cropped.png" rel="icon" type="image/png">
+<link href="./assets/img/favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -71,7 +72,26 @@ ul.task-list li input[type="checkbox"] {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Cookie&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" href="./assets/img/favicon.png">
 <meta name="google-site-verification" content="US9UugOmq-GXdRt4_XqJtenD7bkmr-q2J2JQUu1q8Xk">
+<script>
+/* Theme boot. Inline and in <head> on purpose: site.js runs at the end
+   of <body>, so resolving the theme there paints the cream page first
+   and then repaints dark — a flash on every navigation for anyone who
+   chose dark.
+
+   Light is the default and `prefers-color-scheme` is deliberately not
+   consulted. That media query does not report an operating-system
+   setting: Firefox answers it from its own "Website appearance"
+   preference, and Chrome from an auto-dark flag, so a machine sitting
+   in light mode can still ask every site for dark. Cream is the
+   design; dark is available from the toggle and then persists. */
+(function(){try{
+  if(localStorage.getItem('ud-theme')==='dark'){
+    document.documentElement.setAttribute('data-theme','dark');
+  }
+}catch(e){}})();
+</script>
 <link rel="stylesheet" href="./site/pages/index.css">
 <script>document.documentElement.dataset.page='home';</script>
 
@@ -79,8 +99,17 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="site/site.css">
 <link rel="stylesheet" href="site/research-page.css">
 <meta property="og:title" content="Uriah Daugaard · bioinformatics, ecology, pipelines – Uriah Daugaard">
-<meta property="og:image" content="assets/img/WApic_cropped.png">
+<meta property="og:description" content="Uriah Daugaard — computational ecologist and bioinformatician at Cybiome, Basel. PhD in ecology (UZH), MSc in biostatistics. Microbiome pipelines, modelling and forecasting.">
+<meta property="og:image" content="https://duriah.github.io/assets/img/og-card.png">
 <meta property="og:site_name" content="Uriah Daugaard">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta name="twitter:title" content="Uriah Daugaard · bioinformatics, ecology, pipelines – Uriah Daugaard">
+<meta name="twitter:description" content="Uriah Daugaard — computational ecologist and bioinformatician at Cybiome, Basel. PhD in ecology (UZH), MSc in biostatistics. Microbiome pipelines, modelling and forecasting.">
+<meta name="twitter:image" content="https://duriah.github.io/assets/img/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="630">
+<meta name="twitter:image-width" content="1200">
 </head>
 
 <body class="fullcontent quarto-light">
@@ -140,6 +169,11 @@ ul.task-list li input[type="checkbox"] {
 <h1 class="title">Uriah Daugaard · bioinformatics, ecology, pipelines</h1>
 </div>
 
+<div>
+  <div class="description">
+    Uriah Daugaard — computational ecologist and bioinformatician at Cybiome, Basel. PhD in ecology (UZH), MSc in biostatistics. Microbiome pipelines, modelling and forecasting.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -159,15 +193,15 @@ ul.task-list li input[type="checkbox"] {
 <div class="home-hero">
 <div class="plates plates-tight">
 <figure class="plate figure">
-<img src="assets/img/aggregates.png" alt="Drawing of a Chlamydomonas reinhardtii aggregate." class="figure-img">
+<img src="assets/img/aggregates.webp" alt="Drawing of a Chlamydomonas reinhardtii aggregate." width="320" height="297" class="figure-img">
 <figcaption class="lbl" aria-hidden="true"><b>C. reinhardtii aggregate</b></figcaption>
 </figure>
 <figure class="plate figure">
-<img src="assets/img/protists2.png" alt="Drawing of D. nasutum, D. campylum and C. striatum (ciliates)." class="figure-img">
+<img src="assets/img/protists2.webp" alt="Drawing of D. nasutum, D. campylum and C. striatum (ciliates)." width="320" height="341" loading="lazy" decoding="async" class="figure-img">
 <figcaption class="lbl" aria-hidden="true"><b>D. nasutum · D. campylum · C. striatum</b></figcaption>
 </figure>
 <figure class="plate figure">
-<img src="assets/img/bacteria13.png" alt="Drawing of a bacterial community." class="figure-img">
+<img src="assets/img/bacteria13.webp" alt="Drawing of a bacterial community." width="320" height="289" loading="lazy" decoding="async" class="figure-img">
 <figcaption class="lbl" aria-hidden="true"><b>Bacterial community</b></figcaption>
 </figure>
 </div>
@@ -250,6 +284,7 @@ data into models of how living systems behave.
 <span class="ja">joint first</span>
 <div class="links">
 <a href="https://doi.org/10.1111/gcb.70364" target="_blank" rel="noopener">doi</a>
+<a href="https://doi.org/10.5281/zenodo.15106928" target="_blank" rel="noopener">data + code</a>
 </div>
 </div>
 </article>
@@ -271,8 +306,8 @@ data into models of how living systems behave.
 <div class="yr">2022</div>
 <div class="body">
 <span class="au"><strong>Daugaard U.</strong>, Munch S., Inauen D., Pennekamp F. &amp; Petchey O.</span>
-<span class="ti"> Forecasting in the face of ecological complexity: number and strength of species interactions determines forecast skill in ecological communities.</span>
-<span class="vn"> Ecology Letters.</span>
+<span class="ti"> Forecasting in the face of ecological complexity: number and strength of species interactions determine forecast skill in ecological communities.</span>
+<span class="vn"> Ecology Letters, 25, 1974-1985.</span>
 <div class="links">
 <a href="https://doi.org/10.1111/ele.14070" target="_blank" rel="noopener">doi</a>
 <a href="https://doi.org/10.5281/zenodo.6524695" target="_blank" rel="noopener">data + code</a>
@@ -285,12 +320,12 @@ data into models of how living systems behave.
 </div>
 <!-- Quick links -->
 <div class="home-links">
-<a href="https://www.linkedin.com/in/uriah-daugaard-8280681b1/" target="_blank" rel="noopener">LinkedIn</a>
+<a href="https://www.linkedin.com/in/daugaarduriah/" target="_blank" rel="noopener">LinkedIn</a>
 <a href="https://github.com/duriah" target="_blank" rel="noopener">GitHub</a>
 <a href="https://orcid.org/0000-0003-4092-717X" target="_blank" rel="noopener">ORCID</a>
 <a href="https://scholar.google.ch/citations?user=JI10T7QAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-<a href="assets/docs/CV_long.pdf">CV (pdf)</a>
-<a href="mailto:uriah.daugaard@cybiome.com">email</a>
+<a href="assets/docs/CV_long.pdf" target="_blank" rel="noopener">CV (pdf)</a>
+<a href="mailto:uriah.daugaard@outlook.com">email</a>
 </div>
 </main>
 
@@ -306,9 +341,9 @@ data into models of how living systems behave.
   <div class="l">© Uriah Daugaard · 2026</div>
   <div class="c" aria-hidden="true"></div>
   <div class="r">
-    <a href="mailto:uriah.daugaard@cybiome.com">email</a>
+    <a href="mailto:uriah.daugaard@outlook.com">email</a>
     <a href="https://github.com/duriah" target="_blank" rel="noopener">github</a>
-    <a href="https://www.linkedin.com/in/uriah-daugaard-8280681b1/" target="_blank" rel="noopener">linkedin</a>
+    <a href="https://www.linkedin.com/in/daugaarduriah/" target="_blank" rel="noopener">linkedin</a>
     <a href="https://orcid.org/0000-0003-4092-717X" target="_blank" rel="noopener">orcid</a>
   </div>
 </footer>
@@ -385,7 +420,7 @@ data into models of how living systems behave.
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/duriah\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

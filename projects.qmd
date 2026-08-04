@@ -1,5 +1,6 @@
 ---
 title: "Projects"
+description: "Microbiome bioinformatics at Cybiome: amplicon and whole-genome sequencing pipelines, and the predictive, mechanistic and time-series models that run on top of them."
 page-layout: custom
 format:
   html:
@@ -22,14 +23,13 @@ format:
 # Projects {.page-title}
 
 ```{=html}
-<div class="page-sub">what I currently do</div>
 </div>
 ```
 
-<!-- `.page-sub` above and `.lead` below stay raw: a fenced div would wrap their
-     bare text in a <p>, and site.css styles bare <p> (19px/1.6 + 14px margin).
-     Pandoc also cannot put a class on a markdown paragraph, so `.lead` has to
-     keep its own <p class="lead"> tag. -->
+<!-- `.lead` below stays raw: a fenced div would wrap its bare text in a <p>,
+     and site.css styles bare <p> (19px/1.6 + 14px margin). Pandoc also cannot
+     put a class on a markdown paragraph, so `.lead` has to keep its own
+     <p class="lead"> tag. -->
 
 ```{=html}
 <p class="lead">
@@ -71,7 +71,7 @@ of the organisms it found.
 
 ```{=html}
 <figure aria-hidden="true">
-<img src="assets/img/schema_pipelines.png" alt="" />
+<img src="assets/img/schema_pipelines.webp" alt="" width="1640" height="477" />
 <figcaption>fig. i &middot; from soil to community view</figcaption>
 </figure>
 ```
@@ -236,13 +236,13 @@ from the PhD years, still in active use here.
 
 :::
 
-```{=html}
-<div class="pj-wayfind">
-The peer reviewed work behind some of this lives on
-<a href="research.html">Research &amp; Publications</a>.
-Method demos you can poke at live on <a href="lab.html">Lab</a>.
-</div>
-```
+<!-- ```{=html} -->
+<!-- <div class="pj-wayfind"> -->
+<!-- The peer reviewed work behind some of this lives on -->
+<!-- <a href="research.html">Research &amp; Publications</a>. -->
+<!-- Method demos you can poke at live on <a href="lab.html">Lab</a>. -->
+<!-- </div> -->
+<!-- ``` -->
 
 ```{=html}
 </main>

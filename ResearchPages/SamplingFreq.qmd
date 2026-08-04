@@ -1,5 +1,7 @@
 ---
 title: "Sampling frequency and forecast skill"
+description: "As sampling frequency drops, plankton forecasts get worse and fewer species interactions are recovered. Forecast skill can be turned into a design tool for monitoring."
+image: ../assets/img/SamplingFreqPic.jpg
 page-layout: custom
 format:
   html:
@@ -28,7 +30,7 @@ format:
 <li>
 <a href="warmingFRpage.html">
 <span class="meta">JAE 2019 · Elton Prize</span>
-<span class="ti">Warming destabilises predator–prey functional responses</span>
+<span class="ti">Warming can destabilise predator–prey interactions</span>
 </a>
 </li>
 <li>
@@ -53,7 +55,7 @@ format:
 <div class="eyebrow">
 <span>Ecosphere</span><span class="dot"></span>
 <span>2024</span><span class="dot"></span>
-<span>Monitoring design</span>
+<span>PhD chapter 2</span>
 </div>
 ```
 
@@ -61,9 +63,10 @@ format:
 
 ```{=html}
 <p class="lede">
-As sampling frequency drops, forecasts deteriorate across every taxon of a long
-lake-plankton record, and species interactions are estimated with systematic
-bias. Forecast skill can be turned into a design tool for monitoring programs.
+As sampling frequency drops, forecasts get worse for almost every class of a
+long lake-plankton record, and fewer interactions are recovered among the
+phytoplankton. Turn that around, and forecast skill becomes a design tool for
+monitoring programmes.
 </p>
 ```
 ::::
@@ -94,10 +97,10 @@ doi: 10.1002/ecs2.4786 <span class="arrow">↗</span>
 ## How often is often enough?
 ::::
 :::: {.text}
-Long-term monitoring programs face a recurring choice: how often to sample.
+Long-term monitoring programmes face a recurring choice: how often to sample.
 Sampling too rarely may miss the dynamics that matter; sampling too often is
-expensive. We asked whether forecast skill itself can guide that choice, both
-in principle and on a real lake.
+expensive. We asked whether forecast skill itself can guide that choice, both in
+a controlled simulation and on a real lake.
 ::::
 ```{=html}
 </section>
@@ -111,25 +114,32 @@ in principle and on a real lake.
 ## A simulated baseline and a real high-frequency lake
 ::::
 :::: {.text}
-We worked with two datasets. The first is a simulated community where the true
-dynamics and interactions are known. The second is a high-frequency plankton
-time series from Lake Greifensee, with measurements taken much more often than
-standard monitoring.
+We worked with two datasets. The first is a deliberately minimal baseline: a
+single simulated population following a delayed logistic equation, where the
+dynamics are known exactly and growth rate can be dialled up and down. The
+second is a high-frequency plankton record from Lake Greifensee, where an
+automated underwater camera images plankton every hour and neural-network
+classifiers sort the imaged individuals into phytoplankton and zooplankton. That
+gives six zooplankton classes; the phytoplankton we then split into six size
+bins.
 
 ```{=html}
 <figure class="rp-fig">
-<img src="../assets/figures/Sampling_fig1.png" alt="Overview of the simulated baseline and the high-frequency plankton dataset, with thinning to lower sampling frequencies illustrated." />
+<img src="../assets/figures/Sampling_fig1.webp" alt="The Greifensee monitoring setup: the dual-magnification underwater camera, examples of the imaged plankton, and the specifics of the time series: twelve classes, 994 days, four sampling frequencies, 82 time points, twelve-day-ahead forecasts." width="1640" height="644" />
 <figcaption>
 <span class="lbl">Fig. 1</span>
-The two datasets and the thinning procedure: keep every <em>n</em>-th sample
-to mimic a less frequent monitoring program, refit, and compare.
+The field data. A dual-magnification underwater camera images plankton hourly in
+Lake Greifensee; classifiers sort them into six phytoplankton and six
+zooplankton classes over 994 days, April 2019 to December 2021.
 </figcaption>
 </figure>
 ```
 
-For each dataset we thinned the time series to mimic lower sampling rates,
-refit forecasting models at every frequency, and compared the resulting forecast
-skill and interaction estimates against the high-frequency reference.
+From the daily record we built sparser versions along two axes we kept
+deliberately apart: lower sampling frequency at a fixed 82 time points, down to
+one sample every twelve days, and fewer time points at daily frequency. At every
+setting we refit the forecasts, then used convergent cross-mapping to re-detect
+which classes were causally linked and S-map to re-estimate how strongly.
 ::::
 ```{=html}
 </section>
@@ -140,48 +150,58 @@ skill and interaction estimates against the high-frequency reference.
 ```{=html}
 <div class="num">03 · What we found</div>
 ```
-## Forecasts decay, and interactions are biased both ways
+## Forecasts decay, and interaction estimates thin out
 ::::
 :::: {.text}
-Forecast skill dropped as sampling became less frequent, in every taxon of the
-lake series. The steepest losses were in taxa with the fastest underlying
-dynamics. Interactions estimated from the thinned series were systematically
-biased: some inflated, some attenuated, relative to the high-frequency truth.
+Forecast error rose as sampling grew sparser, for eleven of the twelve plankton
+classes; only the ciliates were forecast best from the sparsest series.
+Phyto- and zooplankton lost skill at much the same rate. Faster-growing classes
+were harder to forecast overall, though the evidence for that was weak.
 
 ```{=html}
 <figure class="rp-fig">
-<img src="../assets/figures/Sampling_fig2.png" alt="Forecast skill across taxa as sampling frequency is reduced; skill decays monotonically." />
+<img src="../assets/figures/Sampling_fig2.webp" alt="Three panels: forecast error rising with maximum net growth rate in the lake data, forecast error rising as sampling frequency falls for lake phyto- and zooplankton, and optimal sampling frequency against growth rate for the simulation with the lake classes overlaid." width="1640" height="567" loading="lazy" decoding="async" />
 <figcaption>
 <span class="lbl">Fig. 2</span>
-Forecast skill across taxa as the dataset is thinned. Skill decays as
-sampling frequency drops, with the steepest losses where dynamics are fastest.
+Forecast error (RMSE, lower is better) against growth rate (left) and sampling
+frequency (centre). Right: optimal frequency rises with growth rate in the
+simulation, while eleven of the twelve lake classes sit at daily sampling and
+the ciliates alone at one sample every twelve days.
 </figcaption>
 </figure>
 ```
 
 ::: {.rp-pull}
 ```{=html}
-<strong>Frequency is informative, not just operational.</strong> The right
-sampling cadence depends on the dynamics of the system being monitored. Faster
-dynamics demand denser sampling.
+<strong>Frequency is informative, not just operational.</strong> Growth rate
+predicted the right cadence in the single-species simulation. In the lake it
+predicted nothing: the densest sampling available was the best for eleven of
+twelve classes.
 ```
 :::
 
-In the simulated baseline, the optimal sampling frequency scaled cleanly with
-growth rate. In the real lake the same rule did not transfer cleanly, because
-community context shapes the relationship as well.
+Sampling design also changed what the models said about who interacts with whom.
+Coarser sampling left fewer interactions detected among the phytoplankton
+classes, while the zooplankton estimates held on average, and mean interaction
+strength moved for neither group. The true interactions are unknown, so the bias
+cannot be measured directly. But since the forecasts were best at the densest
+sampling, the counts are likely closest to right there, and undercounts
+elsewhere.
 
 ```{=html}
 <figure class="rp-fig">
-<img src="../assets/figures/Sampling_fig3.png" alt="Optimal sampling frequency vs growth rate in the simulated baseline, with the plankton field data overlaid." />
+<img src="../assets/figures/Sampling_fig3.webp" alt="Number of estimated interactions against sampling frequency in the lake data, in separate panels for phytoplankton and zooplankton; the phytoplankton trend rises with frequency while the zooplankton trend is flat." width="1640" height="713" loading="lazy" decoding="async" />
 <figcaption>
 <span class="lbl">Fig. 3</span>
-Optimal sampling frequency scales with growth rate in the simulated
-baseline. The same rule does not transfer cleanly to the lake; community
-context matters too.
+Interactions recovered against sampling frequency. Sampling less often costs the
+phytoplankton classes interactions; the zooplankton estimates are unmoved.
 </figcaption>
 </figure>
 ```
+
+Natural communities therefore seem to need denser sampling than a target's own
+growth rate would suggest, plausibly because the cadence has to track the
+fastest variable a target interacts with, not the target itself.
 ::::
 ```{=html}
 </section>
@@ -195,10 +215,11 @@ context matters too.
 ## Forecast skill is a design tool, not just an outcome
 ::::
 :::: {.text}
-Monitoring programs can pilot their sampling cadence against forecast skill,
-choosing the lowest frequency that preserves both prediction and inference.
-That makes ecological monitoring cheaper to run, and the inferences drawn from
-it more honest.
+Monitoring programmes can pilot their sampling cadence against forecast skill,
+choosing the lowest frequency that preserves both prediction and inference. That
+makes ecological monitoring cheaper to run, and the inferences drawn from it more
+honest: a programme that samples too rarely will not only forecast worse, it will
+also see a sparser interaction network than is really there.
 ::::
 ```{=html}
 </section>
@@ -221,6 +242,29 @@ in community ecology. <em>Ecosphere</em>, 15, e4786.
 <a href="https://doi.org/10.5281/zenodo.10066786" target="_blank" rel="noopener">Data + code ↗</a>
 </div>
 </aside>
+```
+
+<!-- Sibling navigation. The .rp-toc at the top of the page is a float and scrolls
+     away, so without this the only route to the other two deep dives is back at
+     the very top of a long page. The styling for it already existed in
+     research-page.css (.rp-siblings); only the markup was missing. -->
+
+```{=html}
+<nav class="rp-siblings" aria-label="Other highlighted research">
+<div class="h">Other highlighted research</div>
+<div class="row">
+<a class="sib" href="warmingFRpage.html">
+<div class="meta">JAE 2019 · Elton Prize</div>
+<h4>Warming can destabilise predator–prey interactions</h4>
+<span class="chip">Read the deep dive →</span>
+</a>
+<a class="sib" href="EcoComplexEcoForecast.html">
+<div class="meta">Ecology Letters 2022</div>
+<h4>Forecasting in the face of ecological complexity</h4>
+<span class="chip">Read the deep dive →</span>
+</a>
+</div>
+</nav>
 ```
 
 ::::::::

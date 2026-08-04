@@ -25,14 +25,14 @@
 .home-hero .phd-line .dot{color:var(--sage);margin:0 10px;opacity:.6}
 .home-hero .tagline{
   font-family:'Cormorant Garamond',serif;
-  font-size:19px;line-height:1.55;color:var(--ink-2);
+  font-size:20px;line-height:1.55;color:var(--ink-2);
   max-width:62ch;margin:36px auto 0;
 }
 .home-hero .tagline em{color:var(--sage);font-style:italic}
 
 .home-bio{
   max-width:64ch;margin:48px auto 0;text-align:left;
-  font-family:'Cormorant Garamond',serif;font-size:19px;line-height:1.65;
+  font-family:'Cormorant Garamond',serif;font-size:20px;line-height:1.65;
   color:var(--ink-2);padding-top:28px;border-top:1px solid var(--rule);
 }
 .home-bio p{margin:0 0 12px}
@@ -120,7 +120,20 @@
 @media (max-width:900px){
   .home-hero{padding:40px 24px 16px}
   .home-hero .name{font-size:60px}
-  .home-hero .script{font-size:44px}
+  /* Steps down with .name so the two stay one wordmark. The 44px this used to
+     carry dated from when .script was set in the handwriting face; once it
+     became Cormorant at 27px, that override made the strapline grow as the
+     viewport shrank. Tracking tightens with it so the line stays unbroken. */
+  .home-hero .script{font-size:22px;letter-spacing:.12em}
   .home-grid{grid-template-columns:1fr;gap:48px;padding:0 24px;margin-top:56px}
   .home-links{padding:24px 24px 0;margin-top:56px}
+}
+
+@media (max-width:600px){
+  .home-hero .name{font-size:46px}
+  /* Fluid rather than fixed: the line has to stay on one row down to ~320px,
+     but a size small enough to guarantee that everywhere left it reading
+     smaller than the 11px uppercase .phd-line below it. It therefore tracks
+     the viewport and caps at 20px, which is where it stops gaining anything. */
+  .home-hero .script{font-size:clamp(15px,5vw,20px);letter-spacing:.08em}
 }

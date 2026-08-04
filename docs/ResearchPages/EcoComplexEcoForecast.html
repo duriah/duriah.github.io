@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="In a microbial community, species with many but weak interactions are easier to forecast than specialists. How connected a species is turns out to be a forecasting trait.">
 
 <title>Forecasting in the face of ecological complexity – Uriah Daugaard</title>
 <style>
@@ -29,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../assets/img/WApic_cropped.png" rel="icon" type="image/png">
+<link href="../assets/img/favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -71,15 +72,39 @@ ul.task-list li input[type="checkbox"] {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Cookie&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" href="../assets/img/favicon.png">
 <meta name="google-site-verification" content="US9UugOmq-GXdRt4_XqJtenD7bkmr-q2J2JQUu1q8Xk">
+<script>
+/* Theme boot. Inline and in <head> on purpose: site.js runs at the end
+   of <body>, so resolving the theme there paints the cream page first
+   and then repaints dark — a flash on every navigation for anyone who
+   chose dark.
+
+   Light is the default and `prefers-color-scheme` is deliberately not
+   consulted. That media query does not report an operating-system
+   setting: Firefox answers it from its own "Website appearance"
+   preference, and Chrome from an auto-dark flag, so a machine sitting
+   in light mode can still ask every site for dark. Cream is the
+   design; dark is available from the toggle and then persists. */
+(function(){try{
+  if(localStorage.getItem('ud-theme')==='dark'){
+    document.documentElement.setAttribute('data-theme','dark');
+  }
+}catch(e){}})();
+</script>
 <script>document.documentElement.dataset.page='research';</script>
 
 
 <link rel="stylesheet" href="../site/site.css">
 <link rel="stylesheet" href="../site/research-page.css">
 <meta property="og:title" content="Forecasting in the face of ecological complexity – Uriah Daugaard">
-<meta property="og:image" content="assets/img/WApic_cropped.png">
+<meta property="og:description" content="In a microbial community, species with many but weak interactions are easier to forecast than specialists. How connected a species is turns out to be a forecasting trait.">
+<meta property="og:image" content="https://duriah.github.io/assets/img/PhdChp1Fig1.jpg">
 <meta property="og:site_name" content="Uriah Daugaard">
+<meta name="twitter:title" content="Forecasting in the face of ecological complexity – Uriah Daugaard">
+<meta name="twitter:description" content="In a microbial community, species with many but weak interactions are easier to forecast than specialists. How connected a species is turns out to be a forecasting trait.">
+<meta name="twitter:image" content="https://duriah.github.io/assets/img/PhdChp1Fig1.jpg">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="fullcontent quarto-light">
@@ -139,6 +164,11 @@ ul.task-list li input[type="checkbox"] {
 <h1 class="title">Forecasting in the face of ecological complexity</h1>
 </div>
 
+<div>
+  <div class="description">
+    In a microbial community, species with many but weak interactions are easier to forecast than specialists. How connected a species is turns out to be a forecasting trait.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -164,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
 <li>
 <a href="warmingFRpage.html">
 <span class="meta">JAE 2019 · Elton Prize</span>
-<span class="ti">Warming destabilises predator–prey functional responses</span>
+<span class="ti">Warming can destabilise predator–prey interactions</span>
 </a>
 </li>
 <li class="current">
@@ -194,9 +224,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- `.lede` is a classed <p>; a fenced div would nest a bare <p> inside it and
      pick up the 19px/14px bare-<p> rule from site.css. -->
 <p class="lede">
-In a small protist community, species with many but weak interactions are
-forecast better than species with few strong ones. Connectedness, not just data
-quality, sets a ceiling on how predictable a species is.
+In a small microbial community, species with many but weak interactions are
+easier to forecast than species with few strong ones. How connected a species is
+turns out to be a forecasting trait in its own right.
 </p>
 </div>
 </div>
@@ -219,35 +249,36 @@ doi: 10.1111/ele.14070 <span class="arrow">↗</span>
 <h2 id="is-ecological-forecasting-feasible-given-community-complexity" class="anchored">Is ecological forecasting feasible given community complexity?</h2>
 </div>
 <div class="text">
-<p>Ecology aims to forecast how populations and communities will respond to change. Real communities are messy, with many species interacting at once. We asked whether a species' position in that web of interactions sets a ceiling on how forecastable it is, and how much extra noise from a fluctuating environment compounds that limit.</p>
+<p>Ecology aims to forecast how populations and communities respond to change, and complexity is usually cast as the obstacle. <em>Across</em> systems, more species and more links are expected to mean less forecast skill. <em>Within</em> one system, though, species differ in how many partners they interact with and how strongly, and which end of that trade-off is easier to predict had not been tested.</p>
+<!-- <figure>/<img> stay raw: markdown images are wrapped in a <p> or promoted
+     to a Quarto figure with its own caption markup. -->
+<figure class="rp-fig figure">
+<img src="../assets/figures/EcoComplexEcoForecast_fig1.webp" alt="Two-panel schematic. Left: across systems, complexity and number of links rise while understanding and forecast skill fall. Right: within one system, species trade many interactions against strong ones, and the consequence for forecast skill is left open." width="1640" height="451" class="figure-img">
+<figcaption>
+<span class="lbl">Fig. 1</span>
+Two senses of complexity. Across systems, more links are expected to erode
+forecast skill. Within one system, the direction was an open question.
+</figcaption>
+</figure>
 </div>
 </section>
 <section class="section">
 <div class="head">
 <div class="num">02 · What we did</div>
-<h2 id="a-protist-community-five-months-two-thermal-regimes" class="anchored">A protist community, five months, two thermal regimes</h2>
+<h2 id="a-microbial-community-five-months-two-thermal-regimes" class="anchored">A microbial community, five months, two thermal regimes</h2>
 </div>
 <div class="text">
-<p>We grew a community of eight aquatic protist taxa under two regimes with the same long-run mean temperature: one held constant, the other fluctuating. The experiment ran for about five months with regular video samples that gave us abundance time series for every taxon.</p>
-<!-- <figure>/<img> stay raw: markdown images are wrapped in a <p> or promoted
-     to a Quarto figure with its own caption markup. -->
+<p>We grew a tri-trophic aquatic microbial community of bacteria, algae, ciliates, flagellates and a rotifer in eighteen bottles for 154 days. Nine sat at a constant 17.3 °C; the other nine were split across three fluctuating series with the same mean, variance and autocorrelation, one of them copied from a nearby stream. We sampled three times a week, giving 66 abundance points per bottle, measured by flow cytometry, imaging or manual counts depending on how big the organism was.</p>
 <figure class="rp-fig figure">
-<img src="../assets/figures/EcoComplexEcoForecast_fig1.png" alt="Schematic of the microbial system and the constant versus fluctuating temperature treatments." class="figure-img">
-<figcaption>
-<span class="lbl">Fig. 1</span>
-The microbial community and the two thermal regimes. Constant and fluctuating
-temperatures share the same long-run mean.
-</figcaption>
-</figure>
-<p>For each species we fit empirical dynamic models on a training window and forecast the held-out tail of the series, then scored the forecast against truth. From the same models we extracted estimates of the number and strength of each species' interactions: its connectedness.</p>
-<figure class="rp-fig figure">
-<img src="../assets/figures/EcoComplexEcoForecast_fig2.png" alt="Forecasting workflow showing how abundance time series are split into training and forecast windows, then evaluated against truth." class="figure-img">
+<img src="../assets/figures/EcoComplexEcoForecast_fig2.webp" alt="Left: the microbial food web annotated by functional group, from three grouped bacteria and an autotroph up to a top predator. Right: the constant and three fluctuating temperature series, and the eighteen experimental bottles." width="1640" height="607" loading="lazy" decoding="async" class="figure-img">
 <figcaption>
 <span class="lbl">Fig. 2</span>
-The forecasting workflow. Train on the early window, forecast the held-out
-tail, score against truth.
+The community and the design. Left: the food web, from grouped bacteria up to a
+single top predator. Right: one constant and three fluctuating temperature
+series, and the eighteen bottles spread across them.
 </figcaption>
 </figure>
+<p>For each of eight target species we forecast abundance with <em>multiview embedding</em>, an empirical dynamic modelling method: train on the first 44 time points, predict the last 22, score the error. Separately, in an analysis of its own rather than as a by-product of the forecasts, we used convergent cross-mapping to find which variables influenced each target, and S-map Jacobians to estimate how strongly they did so. Those two quantities, the number of interactions and their mean strength, are what we mean by a species’ connectedness.</p>
 </div>
 </section>
 <section class="section">
@@ -256,30 +287,32 @@ tail, score against truth.
 <h2 id="generalists-are-easier-to-forecast-than-specialists" class="anchored">Generalists are easier to forecast than specialists</h2>
 </div>
 <div class="text">
-<p>Forecast skill rose with the number of interactions a species had, and fell with their mean strength. Generalists, with many weak interactions, were the most forecastable. Specialists, with few strong interactions, were the least.</p>
+<p>Forecast error fell as a species’ number of interactions rose, and climbed as their mean strength rose. The two run against each other: the more interactions a species had, the weaker they were. Generalists, with many weak links, were therefore the easiest to forecast and specialists the hardest. Neither relation depended on the temperature regime.</p>
 <figure class="rp-fig figure">
-<img src="../assets/figures/EcoComplexEcoForecast_fig3.png" alt="Scatter plot showing forecast skill rising with the number of interactions and falling with their mean strength." class="figure-img">
+<img src="../assets/figures/EcoComplexEcoForecast_fig3.webp" alt="Three scatter panels, each split into constant and fluctuating temperature: forecast error falls as the number of interactions rises, rises with mean interaction strength, and mean strength itself falls as the number of interactions rises." width="1272" height="631" loading="lazy" decoding="async" class="figure-img">
 <figcaption>
 <span class="lbl">Fig. 3</span>
-Forecast skill rises with the number of interactions a species has and falls
-with their mean strength. Generalists sit in the upper right.
+Forecast error (RMSE, lower is better) falls as a species' number of
+interactions rises (A) and climbs with their mean strength (B); species with
+more interactions interact more weakly (C). Constant (circles) and fluctuating
+(diamonds) regimes give the same picture.
 </figcaption>
 </figure>
 <!-- `.rp-pull` styles its own inline content directly; a fenced div would add
      a <p> between the box and its text. -->
 <div class="rp-pull">
 <strong>Connectedness is a predictability signature.</strong> Where a species
-sits in the community sets a ceiling on how well it can be forecast, before
-data quality or model choice enter the picture.
+sits in the community accounts for about a third of the variation in forecast
+error: a strong tendency, not a hard limit.
 </div>
-<p>Fluctuating temperatures degraded forecast skill for some species but not others. The community context, not just the environmental noise, decided which species suffered.</p>
+<p>Model size mattered too: the more state variables a model used as predictors, the lower its error, in all eight species. Fluctuating temperatures raised forecast error for three of the eight (<em>C. reinhardtii</em>, <em>P. caudatum</em> and the rotifer) but left the interaction patterns themselves untouched, which argues against any universal law tying complexity to predictability.</p>
 <figure class="rp-fig figure">
-<img src="../assets/figures/EcoComplexEcoForecast_fig4.png" alt="Effect of fluctuating temperature on forecast skill, with three of eight species showing significant degradation." class="figure-img">
+<img src="../assets/figures/EcoComplexEcoForecast_fig4.webp" alt="Eight per-species panels of median forecast error against the log number of predictors used, overlaid for constant and fluctuating temperature, with three species boxed in red." width="1241" height="658" loading="lazy" decoding="async" class="figure-img">
 <figcaption>
 <span class="lbl">Fig. 4</span>
-Effect of fluctuating temperatures on forecast skill. Some species hold their
-skill; others lose it. Community position matters more than the environment
-alone.
+Median forecast error against the number of predictors used, species by species.
+Error falls as models grow. Fluctuating temperatures cost skill in the three
+boxed species and left the other five alone.
 </figcaption>
 </figure>
 </div>
@@ -290,7 +323,7 @@ alone.
 <h2 id="predictability-is-structured-by-the-community-itself" class="anchored">Predictability is structured by the community itself</h2>
 </div>
 <div class="text">
-<p>A species' interactions are a forecasting trait. Estimating connectedness can tell us in advance which parts of a community will be easy or hard to predict, and where monitoring effort and model attention are best spent.</p>
+<p>A species’ interactions are a forecasting trait. Estimating connectedness says something about which parts of a community will be easy or hard to predict before any forecasting is done, and so about where monitoring effort and model attention are worth spending.</p>
 </div>
 </section>
 </div>
@@ -301,14 +334,33 @@ alone.
 <p class="full">
 <strong>Daugaard, U.</strong>, Munch, S., Inauen, D., Pennekamp, F. &amp; Petchey, O. (2022).
 Forecasting in the face of ecological complexity: number and strength of species
-interactions determines forecast skill in ecological communities.
-<em>Ecology Letters</em>, 25, 1659–1672.
+interactions determine forecast skill in ecological communities.
+<em>Ecology Letters</em>, 25, 1974–1985.
 </p>
 <div class="actions">
 <a class="primary" href="https://doi.org/10.1111/ele.14070" target="_blank" rel="noopener">Read paper (open access) ↗</a>
 <a href="https://doi.org/10.5281/zenodo.6524695" target="_blank" rel="noopener">Data + code ↗</a>
 </div>
 </aside>
+<!-- Sibling navigation. The .rp-toc at the top of the page is a float and scrolls
+     away, so without this the only route to the other two deep dives is back at
+     the very top of a long page. The styling for it already existed in
+     research-page.css (.rp-siblings); only the markup was missing. -->
+<nav class="rp-siblings" aria-label="Other highlighted research">
+<div class="h">Other highlighted research</div>
+<div class="row">
+<a class="sib" href="warmingFRpage.html">
+<div class="meta">JAE 2019 · Elton Prize</div>
+<h4 class="anchored">Warming can destabilise predator–prey interactions</h4>
+<span class="chip">Read the deep dive →</span>
+</a>
+<a class="sib" href="SamplingFreq.html">
+<div class="meta">Ecosphere 2024</div>
+<h4 class="anchored">Sampling frequency and forecast skill</h4>
+<span class="chip">Read the deep dive →</span>
+</a>
+</div>
+</nav>
 </div>
 </main>
 
@@ -324,9 +376,9 @@ interactions determines forecast skill in ecological communities.
   <div class="l">© Uriah Daugaard · 2026</div>
   <div class="c" aria-hidden="true"></div>
   <div class="r">
-    <a href="mailto:uriah.daugaard@cybiome.com">email</a>
+    <a href="mailto:uriah.daugaard@outlook.com">email</a>
     <a href="https://github.com/duriah" target="_blank" rel="noopener">github</a>
-    <a href="https://www.linkedin.com/in/uriah-daugaard-8280681b1/" target="_blank" rel="noopener">linkedin</a>
+    <a href="https://www.linkedin.com/in/daugaarduriah/" target="_blank" rel="noopener">linkedin</a>
     <a href="https://orcid.org/0000-0003-4092-717X" target="_blank" rel="noopener">orcid</a>
   </div>
 </footer>
@@ -403,7 +455,7 @@ interactions determines forecast skill in ecological communities.
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/duriah\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

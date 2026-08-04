@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Contact Uriah Daugaard — computational ecologist and bioinformatician based in Zurich, Switzerland. Email, CV and research profiles.">
 
 <title>Contact – Uriah Daugaard</title>
 <style>
@@ -29,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./assets/img/WApic_cropped.png" rel="icon" type="image/png">
+<link href="./assets/img/favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -71,7 +72,26 @@ ul.task-list li input[type="checkbox"] {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Cookie&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" href="./assets/img/favicon.png">
 <meta name="google-site-verification" content="US9UugOmq-GXdRt4_XqJtenD7bkmr-q2J2JQUu1q8Xk">
+<script>
+/* Theme boot. Inline and in <head> on purpose: site.js runs at the end
+   of <body>, so resolving the theme there paints the cream page first
+   and then repaints dark — a flash on every navigation for anyone who
+   chose dark.
+
+   Light is the default and `prefers-color-scheme` is deliberately not
+   consulted. That media query does not report an operating-system
+   setting: Firefox answers it from its own "Website appearance"
+   preference, and Chrome from an auto-dark flag, so a machine sitting
+   in light mode can still ask every site for dark. Cream is the
+   design; dark is available from the toggle and then persists. */
+(function(){try{
+  if(localStorage.getItem('ud-theme')==='dark'){
+    document.documentElement.setAttribute('data-theme','dark');
+  }
+}catch(e){}})();
+</script>
 <link rel="stylesheet" href="./site/pages/contact.css">
 <script>document.documentElement.dataset.page='contact';</script>
 
@@ -79,8 +99,17 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="site/site.css">
 <link rel="stylesheet" href="site/research-page.css">
 <meta property="og:title" content="Contact – Uriah Daugaard">
-<meta property="og:image" content="assets/img/WApic_cropped.png">
+<meta property="og:description" content="Contact Uriah Daugaard — computational ecologist and bioinformatician based in Zurich, Switzerland. Email, CV and research profiles.">
+<meta property="og:image" content="https://duriah.github.io/assets/img/og-card.png">
 <meta property="og:site_name" content="Uriah Daugaard">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta name="twitter:title" content="Contact – Uriah Daugaard">
+<meta name="twitter:description" content="Contact Uriah Daugaard — computational ecologist and bioinformatician based in Zurich, Switzerland. Email, CV and research profiles.">
+<meta name="twitter:image" content="https://duriah.github.io/assets/img/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="630">
+<meta name="twitter:image-width" content="1200">
 </head>
 
 <body class="fullcontent quarto-light">
@@ -140,6 +169,11 @@ ul.task-list li input[type="checkbox"] {
 <h1 class="title">Contact</h1>
 </div>
 
+<div>
+  <div class="description">
+    Contact Uriah Daugaard — computational ecologist and bioinformatician based in Zurich, Switzerland. Email, CV and research profiles.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -156,13 +190,54 @@ ul.task-list li input[type="checkbox"] {
 
 <main>
 <div class="ct-layout">
+<!-- Left column: portrait with the profile links stacked underneath it, so the
+     right column carries only the reasons to write and the address, and the
+     whole page fits one screen again. -->
+<div class="ct-side">
 <div class="ct-portrait">
-<img src="assets/img/WApic_cropped.png" alt="Portrait of Uriah Daugaard.">
+<img src="assets/img/portrait.webp" alt="Portrait of Uriah Daugaard.">
 </div>
+<!-- Grouped by what the visitor came to do rather than listed flat: the five
+     links are not equivalent, and an undifferentiated pill row asks the reader
+     to work out which is which. The group name sits on the same line as its
+     chips and carries the heading job itself, so there is no section title. -->
+<div class="ct-routes">
+<div class="row">
+<div class="k">Papers</div>
+<div class="ct-links">
+<a href="https://scholar.google.ch/citations?user=JI10T7QAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+<a href="https://orcid.org/0000-0003-4092-717X" target="_blank" rel="noopener">ORCID</a>
+<a href="https://www.webofscience.com/wos/author/record/AFC-9360-2022" target="_blank" rel="noopener">Web of Science</a>
+</div>
+</div>
+<div class="row">
+<div class="k">Code</div>
+<div class="ct-links">
+<a href="https://github.com/duriah" target="_blank" rel="noopener">GitHub</a>
+</div>
+</div>
+<div class="row">
+<div class="k">Network</div>
+<div class="ct-links">
+<a href="https://www.linkedin.com/in/daugaarduriah/" target="_blank" rel="noopener">LinkedIn</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Title and body share one grid cell so the right column starts flush with the
+     top of the portrait. As two cells in a two-row grid they were sized against
+     the taller left column, which pushed the title down its row. -->
+<div class="ct-main">
 <section id="contact" class="page-title ct-title">
 <h1 class="page-title">Contact</h1>
 </section>
 <div class="ct-body">
+<!-- ## open to -->
+<p class="ct-open">
+Happy to talk about ecological forecasting, microbiome and sequencing data, or
+reproducible analysis pipelines. Questions about any of the papers are always
+welcome.
+</p>
 <h2 id="email" class="anchored">email</h2>
 <!-- .ct-email is a display:block link styled as its own line; as markdown it
      would land inside a <p>, which changes its inherited line-height. The
@@ -173,15 +248,10 @@ uriah.daugaard@outlook.com
 </a>
 <div class="ct-cta">
 <a class="btn" href="mailto:uriah.daugaard@outlook.com">Send email <span class="arrow">↗</span></a>
-<a class="btn ghost" href="assets/docs/CV_long.pdf">CV (pdf) <span class="arrow">↗</span></a>
+<a class="btn ghost" href="assets/docs/CV_long.pdf" target="_blank" rel="noopener">CV (pdf) <span class="arrow">↗</span></a>
 </div>
-<h2 id="elsewhere" class="anchored">elsewhere</h2>
-<div class="ct-links">
-<a href="https://www.linkedin.com/in/uriah-daugaard-8280681b1/" target="_blank" rel="noopener">LinkedIn</a>
-<a href="https://github.com/duriah" target="_blank" rel="noopener">GitHub</a>
-<a href="https://orcid.org/0000-0003-4092-717X" target="_blank" rel="noopener">ORCID</a>
-<a href="https://scholar.google.ch/citations?user=JI10T7QAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-<a href="https://www.webofscience.com/wos/author/record/AFC-9360-2022" target="_blank" rel="noopener">Web of Science / Publons</a>
+<h2 id="based-in" class="anchored">based in</h2>
+<div class="ct-where">Zurich, Switzerland</div>
 </div>
 </div>
 </div>
@@ -199,9 +269,9 @@ uriah.daugaard@outlook.com
   <div class="l">© Uriah Daugaard · 2026</div>
   <div class="c" aria-hidden="true"></div>
   <div class="r">
-    <a href="mailto:uriah.daugaard@cybiome.com">email</a>
+    <a href="mailto:uriah.daugaard@outlook.com">email</a>
     <a href="https://github.com/duriah" target="_blank" rel="noopener">github</a>
-    <a href="https://www.linkedin.com/in/uriah-daugaard-8280681b1/" target="_blank" rel="noopener">linkedin</a>
+    <a href="https://www.linkedin.com/in/daugaarduriah/" target="_blank" rel="noopener">linkedin</a>
     <a href="https://orcid.org/0000-0003-4092-717X" target="_blank" rel="noopener">orcid</a>
   </div>
 </footer>
@@ -278,7 +348,7 @@ uriah.daugaard@outlook.com
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/duriah\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

@@ -1,5 +1,6 @@
 ---
 title: "Lab"
+description: "Interactive demos of the methods behind the research: empirical dynamic modelling, forecasting and diversity analysis on public ecological datasets."
 page-layout: custom
 format:
   html:
@@ -22,7 +23,6 @@ format:
 # Lab {.page-title}
 
 ```{=html}
-<div class="page-sub">small things you can poke at</div>
 </div>
 ```
 

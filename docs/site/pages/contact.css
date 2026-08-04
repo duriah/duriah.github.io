@@ -2,51 +2,97 @@
    Loaded before styles.css / site.css (see contact.qmd), so the
    shared stylesheets still win ties at equal specificity. */
 
+/* Two columns, both starting at the top. Nothing spans rows: the left column is
+   one block and the right column is one block, which is what keeps the title
+   flush with the top of the portrait. */
+/* The container is sized to what the two columns actually use (353 + 80 + 489,
+   plus the 56px padding either side) rather than to a round number. At 1180px
+   the right column was 612px wide while its widest line wrapped at ~490, so the
+   slack all collected on the right and the page sat visibly left of centre.
+   Widening the gutter therefore has to widen the container by the same amount,
+   or the right column loses the difference and the centring drifts again. */
 .ct-layout{
-  max-width:1180px;margin:40px auto 0;padding:0 56px;
-  display:grid;grid-template-columns:auto 1fr;column-gap:56px;row-gap:32px;
+  max-width:1034px;margin:40px auto 0;padding:0 56px;
+  display:grid;grid-template-columns:auto 1fr;column-gap:80px;
   align-items:start;
 }
+/* Left column holds the portrait and the profile links, at exactly the
+   portrait's width so the two align on both edges. */
+.ct-side{width:353px}
 .ct-portrait{
-  grid-column:1;grid-row:1 / span 2;
-  width:392px;height:392px;
+  width:353px;height:353px;
   border-radius:50%;overflow:hidden;
 }
 .ct-portrait img{
   width:100%;height:100%;object-fit:cover;object-position:center;display:block;
 }
-.ct-title{grid-column:2;grid-row:1;align-self:end}
+.ct-main{max-width:640px}
+.ct-title{margin-bottom:26px}
 .ct-title .page-title{margin:0;text-align:left}
-.ct-body{grid-column:2;grid-row:2;max-width:640px}
 .ct-body h2{
   font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;
   text-transform:uppercase;color:var(--sage);margin:0 0 10px;font-weight:500;
 }
-.ct-body h2:not(:first-child){margin-top:36px}
+.ct-body h2:not(:first-child){margin-top:32px}
 .ct-email{
   font-family:'Cormorant Garamond',serif;font-size:24px;font-style:italic;
   color:var(--ink);text-decoration:none;display:block;margin-bottom:6px;
 }
 .ct-email:hover{color:var(--terracotta)}
 
-.ct-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+/* Set narrower than the 640px .ct-body column: this is the only running prose
+   on the page, and at 20px Cormorant the full column would run past 80
+   characters. */
+.ct-open{
+  font-family:'Cormorant Garamond',serif;font-size:20px;line-height:1.6;
+  color:var(--ink-2);margin:0;max-width:52ch;text-wrap:pretty;
+}
+
+.ct-where{
+  font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--ink);
+}
+
+.ct-links{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
 .ct-links a{
-  font-family:'Inter',sans-serif;font-size:13px;color:var(--ink-2);
-  text-decoration:none;border:1px solid var(--rule);padding:8px 14px;border-radius:999px;
-  letter-spacing:.02em;
+  font-family:'Inter',sans-serif;font-size:11px;color:var(--ink-2);
+  text-decoration:none;border:1px solid var(--rule);padding:5px 10px;border-radius:999px;
+  letter-spacing:.02em;white-space:nowrap;
 }
 .ct-links a:hover{border-color:var(--sage);color:var(--sage)}
+
+/* Profile links grouped by errand, the group name on the same line as its chips.
+   The name carries the heading job, so the block needs no section title above
+   it. The gutter is set just wide enough for "Professional" and the chips are
+   sized so the three-chip Papers row still clears the column. */
+.ct-routes{margin-top:24px}
+.ct-routes .row{
+  display:grid;grid-template-columns:60px 1fr;column-gap:10px;
+  align-items:center;
+  padding:7px 0;border-bottom:1px solid var(--rule-2);
+}
+.ct-routes .row:first-child{border-top:1px solid var(--rule)}
+.ct-routes .k{
+  font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-3);font-weight:500;line-height:1.3;
+}
+.ct-routes .ct-links{margin-top:0}
 .ct-cta{
   margin-top:22px;
   display:flex;flex-wrap:wrap;gap:12px;
 }
 
+/* Below this the column is too narrow for a name plus three chips on one line,
+   so the name steps above its row. */
 @media (max-width:1100px){
-  .ct-portrait{width:300px;height:300px}
+  .ct-side{width:270px}
+  .ct-portrait{width:270px;height:270px}
+  .ct-routes .row{grid-template-columns:1fr;row-gap:6px;align-items:start;padding:9px 0}
 }
+/* Narrow: one column, portrait first, then the text, then the links last. */
 @media (max-width:900px){
   .ct-layout{padding:0 24px;grid-template-columns:1fr;column-gap:0;row-gap:24px}
-  .ct-portrait{grid-column:1;grid-row:1;width:200px;height:200px}
-  .ct-title{grid-column:1;grid-row:2}
-  .ct-body{grid-column:1;grid-row:3}
+  .ct-side{display:contents}
+  .ct-portrait{grid-row:1;width:180px;height:180px}
+  .ct-main{grid-row:2}
+  .ct-routes{grid-row:3;margin-top:0}
 }

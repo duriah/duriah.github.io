@@ -1,5 +1,6 @@
 ---
 title: "Research & Publications"
+description: "Peer-reviewed publications, preprints and peer-review record of Uriah Daugaard, on ecological forecasting, species interactions, plankton time series and microbial communities."
 page-layout: custom
 format:
   html:
@@ -14,7 +15,24 @@ format:
 <main>
 ```
 
-::: {.rs-header}
+<!-- Section rail. The ids below are `sec-`-prefixed because Quarto also derives
+     an id from each H2 ("peer-reviewed", "preprints", …) and the two would
+     collide. It is position:fixed, so its place in the DOM is a reading-order
+     choice only. -->
+
+```{=html}
+<nav class="rs-toc" aria-label="On this page">
+<ul>
+<li class="top"><a href="#sec-header"><span class="t">Research &amp; Publications</span><span class="tick"></span></a></li>
+<li><a href="#sec-highlights"><span class="t">Highlighted</span><span class="tick"></span></a></li>
+<li><a href="#sec-peer-reviewed"><span class="t">Peer reviewed</span><span class="tick"></span></a></li>
+<li><a href="#sec-preprints"><span class="t">Preprints</span><span class="tick"></span></a></li>
+<li><a href="#sec-review"><span class="t">Peer review</span><span class="tick"></span></a></li>
+</ul>
+</nav>
+```
+
+::: {#sec-header .rs-header}
 ```{=html}
 <div class="titles">
 ```
@@ -22,22 +40,20 @@ format:
 # Research & Publications {.page-title}
 
 ```{=html}
-<div class="page-sub">the academic record</div>
 </div>
 ```
 
 ```{=html}
 <p class="lead">
-Peer reviewed work, preprints, and the ongoing peer review record. The list below is
-kept in sync at minor effort; for the live and canonical version, the
-<a class="inline" href="https://scholar.google.ch/citations?user=JI10T7QAAAAJ" target="_blank" rel="noopener"><em>Google Scholar profile</em></a> is updated automatically.
+Peer reviewed papers and preprints on ecological forecasting, species interactions
+and species dynamics.
 </p>
 ```
 :::
 
 <!-- Highlighted research cards -->
 
-::: {.rs-cards}
+::: {#sec-highlights .rs-cards}
 ## Highlighted research
 
 ```{=html}
@@ -50,7 +66,7 @@ kept in sync at minor effort; for the live and canonical version, the
 <div class="thumb" style="background-image:url('assets/img/warmingfig1.jpg')"></div>
 <div class="body">
 <div class="meta">JAE 2019 · Elton Prize</div>
-<h4>Warming can destabilize predator–prey functional responses</h4>
+<h3>Warming can destabilise predator–prey interactions</h3>
 <p>Temperature shifts the functional response of a ciliate predator–prey pair from Type III to Type II at the highest tested temperature. Simulations show the destabilising consequences.</p>
 <span class="chip">Find out more →</span>
 </div>
@@ -59,8 +75,8 @@ kept in sync at minor effort; for the live and canonical version, the
 <div class="thumb" style="background-image:url('assets/img/PhdChp1Fig1.jpg')"></div>
 <div class="body">
 <div class="meta">Ecology Letters 2022</div>
-<h4>Forecasting in the face of ecological complexity</h4>
-<p>Within and across communities, generalists (many but weak interactions) are forecast better than specialists. Number and strength of interactions sets the forecast skill ceiling.</p>
+<h3>Forecasting in the face of ecological complexity</h3>
+<p>In a microbial community, generalists (many but weak interactions) are easier to forecast than specialists. Number and strength of interactions make up a forecasting trait of their own.</p>
 <span class="chip">Find out more →</span>
 </div>
 </a>
@@ -68,8 +84,8 @@ kept in sync at minor effort; for the live and canonical version, the
 <div class="thumb" style="background-image:url('assets/img/SamplingFreqPic.jpg')"></div>
 <div class="body">
 <div class="meta">Ecosphere 2024</div>
-<h4>Sampling frequency and forecast skill</h4>
-<p>Forecasts deteriorate predictably as sampling frequency drops, across all taxa in a long lake plankton record. Turning the tables, forecast skill becomes a guide to optimal monitoring design.</p>
+<h3>Sampling frequency and forecast skill</h3>
+<p>Forecasts deteriorate predictably as sampling frequency drops, across almost all taxa in a long lake plankton record. Turning the tables, forecast skill becomes a guide to optimal monitoring design.</p>
 <span class="chip">Find out more →</span>
 </div>
 </a>
@@ -79,7 +95,7 @@ kept in sync at minor effort; for the live and canonical version, the
 
 <!-- Peer-reviewed -->
 
-::: {.rs-block}
+::: {#sec-peer-reviewed .rs-block}
 ## Peer reviewed
 
 ```{=html}
@@ -94,6 +110,7 @@ kept in sync at minor effort; for the live and canonical version, the
 <span class="ja">joint first</span>
 <div class="links">
 <a href="https://doi.org/10.1111/gcb.70364" target="_blank" rel="noopener">doi</a>
+<a href="https://doi.org/10.5281/zenodo.15106928" target="_blank" rel="noopener">data + code</a>
 </div>
 <details class="abs">
 <summary>abstract</summary>
@@ -127,7 +144,7 @@ kept in sync at minor effort; for the live and canonical version, the
 <article class="pub">
 <div class="yr">2023</div>
 <div class="body">
-<span class="au">Limberger R., <strong>Daugaard U.</strong>, Gupta A., Krug R.M., Lemmen K.D., Van Moorsel S.J., et al.</span>
+<span class="au">Limberger R., <strong>Daugaard U.</strong>, Gupta A., Krug R.M., Lemmen K.D., van Moorsel S.J., Suleiman M., Zuppinger-Dingley D. &amp; Petchey O.L.</span>
 <span class="ti"> Functional diversity can facilitate the collapse of an undesirable ecosystem state.</span>
 <span class="vn"> Ecology Letters, 26, 883-895.</span>
 <div class="links">
@@ -148,8 +165,8 @@ kept in sync at minor effort; for the live and canonical version, the
 <div class="yr">2022</div>
 <div class="body">
 <span class="au"><strong>Daugaard U.</strong>, Munch S., Inauen D., Pennekamp F. &amp; Petchey O.</span>
-<span class="ti"> Forecasting in the face of ecological complexity: number and strength of species interactions determines forecast skill in ecological communities.</span>
-<span class="vn"> Ecology Letters.</span>
+<span class="ti"> Forecasting in the face of ecological complexity: number and strength of species interactions determine forecast skill in ecological communities.</span>
+<span class="vn"> Ecology Letters, 25, 1974-1985.</span>
 <div class="links">
 <a class="deep" href="ResearchPages/EcoComplexEcoForecast.html">deep dive →</a>
 <a href="https://doi.org/10.1111/ele.14070" target="_blank" rel="noopener">doi</a>
@@ -188,7 +205,7 @@ kept in sync at minor effort; for the live and canonical version, the
 <div class="body">
 <span class="au">Suleiman M., Choffat Y., <strong>Daugaard U.</strong> &amp; Petchey O.L.</span>
 <span class="ti"> Large and interacting effects of temperature and nutrient addition on stratified microbial ecosystems in a small, replicated, and liquid-dominated Winogradsky column approach.</span>
-<span class="vn"> Microbiologyopen, 10, e1189.</span>
+<span class="vn"> MicrobiologyOpen, 10, e1189.</span>
 <div class="links">
 <a href="https://doi.org/10.1002/mbo3.1189" target="_blank" rel="noopener">doi</a>
 </div>
@@ -225,16 +242,33 @@ kept in sync at minor effort; for the live and canonical version, the
 </details>
 </div>
 </article>
+
+<p class="more">
+<a class="btn ghost" href="https://scholar.google.ch/citations?user=JI10T7QAAAAJ" target="_blank" rel="noopener">Google Scholar profile <span class="arrow">↗</span></a>
+</p>
 ```
 :::
 
 <!-- Preprints -->
 
-::: {.rs-block}
+::: {#sec-preprints .rs-block}
 ## Preprints
 
 ```{=html}
 <div class="sub">under review or in extended limbo</div>
+<article class="pub">
+<div class="yr">2024</div>
+<div class="body">
+<span class="au"><strong>Daugaard U.</strong>, Limberger R. &amp; Petchey O.L.</span>
+<span class="ti"> Modeling algal defenses under multiple stressors: impacts on explanatory and predictive performance.</span>
+<span class="vn"> University of Zurich, PhD thesis chapter.</span>
+<div class="links">
+<a href="https://www.zora.uzh.ch/entities/publication/b16cdb46-a515-41ab-b456-134268d18665" target="_blank" rel="noopener">zora</a>
+<a href="https://www.zora.uzh.ch/server/api/core/bitstreams/4a890ec1-b7d4-420d-91c7-d1f30e3c534f/content#page=179" target="_blank" rel="noopener">chapter pdf</a>
+</div>
+</div>
+</article>
+
 <article class="pub">
 <div class="yr">2021</div>
 <div class="body">
@@ -261,7 +295,7 @@ kept in sync at minor effort; for the live and canonical version, the
 
 <!-- Peer review -->
 
-::: {.rs-review}
+::: {#sec-review .rs-review}
 ```{=html}
 <div>
 ```

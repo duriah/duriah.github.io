@@ -7,9 +7,18 @@ project:
 
 website:
   title: "Uriah Daugaard"
-  favicon: assets/img/WApic_cropped.png
-  open-graph:
-    image: assets/img/WApic_cropped.png
+  # `site-url` is not cosmetic: without it Quarto emits no sitemap.xml and no
+  # robots.txt, and every og:image is written as a *relative* path — which the
+  # Open Graph spec forbids and scrapers drop, and which 404s outright from
+  # ResearchPages/ because it resolves one directory too deep.
+  site-url: https://duriah.github.io
+  favicon: assets/img/favicon.png
+  # Site-wide social card. Pages override it with their own `image:` in
+  # frontmatter; both are rewritten to absolute URLs off site-url above.
+  image: assets/img/og-card.png
+  open-graph: true
+  twitter-card:
+    card-style: summary_large_image
   # Quarto's built-in `navbar:` is intentionally not used: it only renders when
   # a Bootstrap theme supplies its markup and JS, and restyling it would not
   # reproduce this design. The bar and footer are plain partials injected at
@@ -39,7 +48,26 @@ format:
           <link rel="preconnect" href="https://fonts.googleapis.com">
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
           <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cookie&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+          <link rel="apple-touch-icon" href="/assets/img/favicon.png">
           <meta name="google-site-verification" content="US9UugOmq-GXdRt4_XqJtenD7bkmr-q2J2JQUu1q8Xk" />
+          <script>
+          /* Theme boot. Inline and in <head> on purpose: site.js runs at the end
+             of <body>, so resolving the theme there paints the cream page first
+             and then repaints dark — a flash on every navigation for anyone who
+             chose dark.
+
+             Light is the default and `prefers-color-scheme` is deliberately not
+             consulted. That media query does not report an operating-system
+             setting: Firefox answers it from its own "Website appearance"
+             preference, and Chrome from an auto-dark flag, so a machine sitting
+             in light mode can still ask every site for dark. Cream is the
+             design; dark is available from the toggle and then persists. */
+          (function(){try{
+            if(localStorage.getItem('ud-theme')==='dark'){
+              document.documentElement.setAttribute('data-theme','dark');
+            }
+          }catch(e){}})();
+          </script>
     # The bar and footer live under _partials/ rather than site/, so Quarto
     # inlines them without also publishing them as standalone pages.
     include-before-body:

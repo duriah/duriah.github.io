@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Peer-reviewed publications, preprints and peer-review record of Uriah Daugaard, on ecological forecasting, species interactions, plankton time series and microbial communities.">
 
 <title>Research &amp; Publications – Uriah Daugaard</title>
 <style>
@@ -29,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./assets/img/WApic_cropped.png" rel="icon" type="image/png">
+<link href="./assets/img/favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -71,7 +72,26 @@ ul.task-list li input[type="checkbox"] {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Cookie&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" href="./assets/img/favicon.png">
 <meta name="google-site-verification" content="US9UugOmq-GXdRt4_XqJtenD7bkmr-q2J2JQUu1q8Xk">
+<script>
+/* Theme boot. Inline and in <head> on purpose: site.js runs at the end
+   of <body>, so resolving the theme there paints the cream page first
+   and then repaints dark — a flash on every navigation for anyone who
+   chose dark.
+
+   Light is the default and `prefers-color-scheme` is deliberately not
+   consulted. That media query does not report an operating-system
+   setting: Firefox answers it from its own "Website appearance"
+   preference, and Chrome from an auto-dark flag, so a machine sitting
+   in light mode can still ask every site for dark. Cream is the
+   design; dark is available from the toggle and then persists. */
+(function(){try{
+  if(localStorage.getItem('ud-theme')==='dark'){
+    document.documentElement.setAttribute('data-theme','dark');
+  }
+}catch(e){}})();
+</script>
 <link rel="stylesheet" href="./site/pages/research.css">
 <script>document.documentElement.dataset.page='research';</script>
 
@@ -79,8 +99,17 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="site/site.css">
 <link rel="stylesheet" href="site/research-page.css">
 <meta property="og:title" content="Research &amp; Publications – Uriah Daugaard">
-<meta property="og:image" content="assets/img/WApic_cropped.png">
+<meta property="og:description" content="Peer-reviewed publications, preprints and peer-review record of Uriah Daugaard, on ecological forecasting, species interactions, plankton time series and microbial communities.">
+<meta property="og:image" content="https://duriah.github.io/assets/img/og-card.png">
 <meta property="og:site_name" content="Uriah Daugaard">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta name="twitter:title" content="Research &amp; Publications – Uriah Daugaard">
+<meta name="twitter:description" content="Peer-reviewed publications, preprints and peer-review record of Uriah Daugaard, on ecological forecasting, species interactions, plankton time series and microbial communities.">
+<meta name="twitter:image" content="https://duriah.github.io/assets/img/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="630">
+<meta name="twitter:image-width" content="1200">
 </head>
 
 <body class="fullcontent quarto-light">
@@ -140,6 +169,11 @@ ul.task-list li input[type="checkbox"] {
 <h1 class="title">Research &amp; Publications</h1>
 </div>
 
+<div>
+  <div class="description">
+    Peer-reviewed publications, preprints and peer-review record of Uriah Daugaard, on ecological forecasting, species interactions, plankton time series and microbial communities.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -155,27 +189,38 @@ ul.task-list li input[type="checkbox"] {
 
 
 <main>
-<div class="rs-header">
+<!-- Section rail. The ids below are `sec-`-prefixed because Quarto also derives
+     an id from each H2 ("peer-reviewed", "preprints", …) and the two would
+     collide. It is position:fixed, so its place in the DOM is a reading-order
+     choice only. -->
+<nav class="rs-toc" aria-label="On this page">
+<ul>
+<li class="top"><a href="#sec-header"><span class="t">Research &amp; Publications</span><span class="tick"></span></a></li>
+<li><a href="#sec-highlights"><span class="t">Highlighted</span><span class="tick"></span></a></li>
+<li><a href="#sec-peer-reviewed"><span class="t">Peer reviewed</span><span class="tick"></span></a></li>
+<li><a href="#sec-preprints"><span class="t">Preprints</span><span class="tick"></span></a></li>
+<li><a href="#sec-review"><span class="t">Peer review</span><span class="tick"></span></a></li>
+</ul>
+</nav>
+<div id="sec-header" class="rs-header">
 <div class="titles">
 <h1 class="page-title" id="research-publications">Research &amp; Publications</h1>
-<div class="page-sub">the academic record</div>
 </div>
 <p class="lead">
-Peer reviewed work, preprints, and the ongoing peer review record. The list below is
-kept in sync at minor effort; for the live and canonical version, the
-<a class="inline" href="https://scholar.google.ch/citations?user=JI10T7QAAAAJ" target="_blank" rel="noopener"><em>Google Scholar profile</em></a> is updated automatically.
+Peer reviewed papers and preprints on ecological forecasting, species interactions
+and species dynamics.
 </p>
 </div>
 <!-- Highlighted research cards -->
-<section id="highlighted-research" class="rs-cards">
-<h2 class="anchored">Highlighted research</h2>
+<div id="sec-highlights" class="rs-cards">
+<h2 id="highlighted-research" class="anchored">Highlighted research</h2>
 <div class="sub">deeper dives on three papers</div>
 <div class="card-grid">
 <a class="card" href="ResearchPages/warmingFRpage.html">
 <div class="thumb" style="background-image:url('assets/img/warmingfig1.jpg')"></div>
 <div class="body">
 <div class="meta">JAE 2019 · Elton Prize</div>
-<h4 class="anchored">Warming can destabilize predator–prey functional responses</h4>
+<h3 class="anchored">Warming can destabilise predator–prey interactions</h3>
 <p>Temperature shifts the functional response of a ciliate predator–prey pair from Type III to Type II at the highest tested temperature. Simulations show the destabilising consequences.</p>
 <span class="chip">Find out more →</span>
 </div>
@@ -184,8 +229,8 @@ kept in sync at minor effort; for the live and canonical version, the
 <div class="thumb" style="background-image:url('assets/img/PhdChp1Fig1.jpg')"></div>
 <div class="body">
 <div class="meta">Ecology Letters 2022</div>
-<h4 class="anchored">Forecasting in the face of ecological complexity</h4>
-<p>Within and across communities, generalists (many but weak interactions) are forecast better than specialists. Number and strength of interactions sets the forecast skill ceiling.</p>
+<h3 class="anchored">Forecasting in the face of ecological complexity</h3>
+<p>In a microbial community, generalists (many but weak interactions) are easier to forecast than specialists. Number and strength of interactions make up a forecasting trait of their own.</p>
 <span class="chip">Find out more →</span>
 </div>
 </a>
@@ -193,16 +238,16 @@ kept in sync at minor effort; for the live and canonical version, the
 <div class="thumb" style="background-image:url('assets/img/SamplingFreqPic.jpg')"></div>
 <div class="body">
 <div class="meta">Ecosphere 2024</div>
-<h4 class="anchored">Sampling frequency and forecast skill</h4>
-<p>Forecasts deteriorate predictably as sampling frequency drops, across all taxa in a long lake plankton record. Turning the tables, forecast skill becomes a guide to optimal monitoring design.</p>
+<h3 class="anchored">Sampling frequency and forecast skill</h3>
+<p>Forecasts deteriorate predictably as sampling frequency drops, across almost all taxa in a long lake plankton record. Turning the tables, forecast skill becomes a guide to optimal monitoring design.</p>
 <span class="chip">Find out more →</span>
 </div>
 </a>
 </div>
-</section>
+</div>
 <!-- Peer-reviewed -->
-<section id="peer-reviewed" class="rs-block">
-<h2 class="anchored">Peer reviewed</h2>
+<div id="sec-peer-reviewed" class="rs-block">
+<h2 id="peer-reviewed" class="anchored">Peer reviewed</h2>
 <div class="sub">reverse chronological</div>
 
 <article class="pub">
@@ -214,6 +259,7 @@ kept in sync at minor effort; for the live and canonical version, the
 <span class="ja">joint first</span>
 <div class="links">
 <a href="https://doi.org/10.1111/gcb.70364" target="_blank" rel="noopener">doi</a>
+<a href="https://doi.org/10.5281/zenodo.15106928" target="_blank" rel="noopener">data + code</a>
 </div>
 <details class="abs">
 <summary>abstract</summary>
@@ -247,7 +293,7 @@ kept in sync at minor effort; for the live and canonical version, the
 <article class="pub">
 <div class="yr">2023</div>
 <div class="body">
-<span class="au">Limberger R., <strong>Daugaard U.</strong>, Gupta A., Krug R.M., Lemmen K.D., Van Moorsel S.J., et al.</span>
+<span class="au">Limberger R., <strong>Daugaard U.</strong>, Gupta A., Krug R.M., Lemmen K.D., van Moorsel S.J., Suleiman M., Zuppinger-Dingley D. &amp; Petchey O.L.</span>
 <span class="ti"> Functional diversity can facilitate the collapse of an undesirable ecosystem state.</span>
 <span class="vn"> Ecology Letters, 26, 883-895.</span>
 <div class="links">
@@ -268,8 +314,8 @@ kept in sync at minor effort; for the live and canonical version, the
 <div class="yr">2022</div>
 <div class="body">
 <span class="au"><strong>Daugaard U.</strong>, Munch S., Inauen D., Pennekamp F. &amp; Petchey O.</span>
-<span class="ti"> Forecasting in the face of ecological complexity: number and strength of species interactions determines forecast skill in ecological communities.</span>
-<span class="vn"> Ecology Letters.</span>
+<span class="ti"> Forecasting in the face of ecological complexity: number and strength of species interactions determine forecast skill in ecological communities.</span>
+<span class="vn"> Ecology Letters, 25, 1974-1985.</span>
 <div class="links">
 <a class="deep" href="ResearchPages/EcoComplexEcoForecast.html">deep dive →</a>
 <a href="https://doi.org/10.1111/ele.14070" target="_blank" rel="noopener">doi</a>
@@ -308,7 +354,7 @@ kept in sync at minor effort; for the live and canonical version, the
 <div class="body">
 <span class="au">Suleiman M., Choffat Y., <strong>Daugaard U.</strong> &amp; Petchey O.L.</span>
 <span class="ti"> Large and interacting effects of temperature and nutrient addition on stratified microbial ecosystems in a small, replicated, and liquid-dominated Winogradsky column approach.</span>
-<span class="vn"> Microbiologyopen, 10, e1189.</span>
+<span class="vn"> MicrobiologyOpen, 10, e1189.</span>
 <div class="links">
 <a href="https://doi.org/10.1002/mbo3.1189" target="_blank" rel="noopener">doi</a>
 </div>
@@ -345,11 +391,28 @@ kept in sync at minor effort; for the live and canonical version, the
 </details>
 </div>
 </article>
-</section>
+
+<p class="more">
+<a class="btn ghost" href="https://scholar.google.ch/citations?user=JI10T7QAAAAJ" target="_blank" rel="noopener">Google Scholar profile <span class="arrow">↗</span></a>
+</p>
+</div>
 <!-- Preprints -->
-<section id="preprints" class="rs-block">
-<h2 class="anchored">Preprints</h2>
+<div id="sec-preprints" class="rs-block">
+<h2 id="preprints" class="anchored">Preprints</h2>
 <div class="sub">under review or in extended limbo</div>
+<article class="pub">
+<div class="yr">2024</div>
+<div class="body">
+<span class="au"><strong>Daugaard U.</strong>, Limberger R. &amp; Petchey O.L.</span>
+<span class="ti"> Modeling algal defenses under multiple stressors: impacts on explanatory and predictive performance.</span>
+<span class="vn"> University of Zurich, PhD thesis chapter.</span>
+<div class="links">
+<a href="https://www.zora.uzh.ch/entities/publication/b16cdb46-a515-41ab-b456-134268d18665" target="_blank" rel="noopener">zora</a>
+<a href="https://www.zora.uzh.ch/server/api/core/bitstreams/4a890ec1-b7d4-420d-91c7-d1f30e3c534f/content#page=179" target="_blank" rel="noopener">chapter pdf</a>
+</div>
+</div>
+</article>
+
 <article class="pub">
 <div class="yr">2021</div>
 <div class="body">
@@ -369,10 +432,10 @@ kept in sync at minor effort; for the live and canonical version, the
 </details>
 </div>
 </article>
-</section>
+</div>
 <!-- Highlighted research cards (moved to top) -->
 <!-- Peer review -->
-<div class="rs-review">
+<div id="sec-review" class="rs-review">
 <div>
 <h2 id="peer-review" class="anchored">Peer review</h2>
 <div class="sub">journals reviewed for</div>
@@ -406,9 +469,9 @@ kept in sync at minor effort; for the live and canonical version, the
   <div class="l">© Uriah Daugaard · 2026</div>
   <div class="c" aria-hidden="true"></div>
   <div class="r">
-    <a href="mailto:uriah.daugaard@cybiome.com">email</a>
+    <a href="mailto:uriah.daugaard@outlook.com">email</a>
     <a href="https://github.com/duriah" target="_blank" rel="noopener">github</a>
-    <a href="https://www.linkedin.com/in/uriah-daugaard-8280681b1/" target="_blank" rel="noopener">linkedin</a>
+    <a href="https://www.linkedin.com/in/daugaarduriah/" target="_blank" rel="noopener">linkedin</a>
     <a href="https://orcid.org/0000-0003-4092-717X" target="_blank" rel="noopener">orcid</a>
   </div>
 </footer>
@@ -485,7 +548,7 @@ kept in sync at minor effort; for the live and canonical version, the
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/duriah\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

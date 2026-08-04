@@ -43,7 +43,7 @@
   font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;
   font-size:22px;margin:0 0 6px;color:var(--ink);
 }
-.lab-grid .copy p{font-size:18px;line-height:1.6;color:var(--ink-2)}
+.lab-grid .copy p{font-size:19px;line-height:1.6;color:var(--ink-2)}
 
 .lab-controls{
   background:var(--cream-2);border:1px solid var(--rule);border-radius:6px;

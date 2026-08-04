@@ -1,5 +1,7 @@
 ---
 title: "Forecasting in the face of ecological complexity"
+description: "In a microbial community, species with many but weak interactions are easier to forecast than specialists. How connected a species is turns out to be a forecasting trait."
+image: ../assets/img/PhdChp1Fig1.jpg
 page-layout: custom
 format:
   html:
@@ -25,7 +27,7 @@ format:
 <li>
 <a href="warmingFRpage.html">
 <span class="meta">JAE 2019 · Elton Prize</span>
-<span class="ti">Warming destabilises predator–prey functional responses</span>
+<span class="ti">Warming can destabilise predator–prey interactions</span>
 </a>
 </li>
 <li class="current">
@@ -64,9 +66,9 @@ format:
      pick up the 19px/14px bare-<p> rule from site.css. -->
 ```{=html}
 <p class="lede">
-In a small protist community, species with many but weak interactions are
-forecast better than species with few strong ones. Connectedness, not just data
-quality, sets a ceiling on how predictable a species is.
+In a small microbial community, species with many but weak interactions are
+easier to forecast than species with few strong ones. How connected a species is
+turns out to be a forecasting trait in its own right.
 </p>
 ```
 
@@ -107,11 +109,24 @@ doi: 10.1111/ele.14070 <span class="arrow">↗</span>
 
 ::: {.text}
 
-Ecology aims to forecast how populations and communities will respond to change.
-Real communities are messy, with many species interacting at once. We asked
-whether a species\' position in that web of interactions sets a ceiling on how
-forecastable it is, and how much extra noise from a fluctuating environment
-compounds that limit.
+Ecology aims to forecast how populations and communities respond to change, and
+complexity is usually cast as the obstacle. *Across* systems, more species and
+more links are expected to mean less forecast skill. *Within* one system,
+though, species differ in how many partners they interact with and how strongly,
+and which end of that trade-off is easier to predict had not been tested.
+
+<!-- <figure>/<img> stay raw: markdown images are wrapped in a <p> or promoted
+     to a Quarto figure with its own caption markup. -->
+```{=html}
+<figure class="rp-fig">
+<img src="../assets/figures/EcoComplexEcoForecast_fig1.webp" alt="Two-panel schematic. Left: across systems, complexity and number of links rise while understanding and forecast skill fall. Right: within one system, species trade many interactions against strong ones, and the consequence for forecast skill is left open." width="1640" height="451" />
+<figcaption>
+<span class="lbl">Fig. 1</span>
+Two senses of complexity. Across systems, more links are expected to erode
+forecast skill. Within one system, the direction was an open question.
+</figcaption>
+</figure>
+```
 
 :::
 
@@ -129,45 +144,40 @@ compounds that limit.
 <div class="num">02 · What we did</div>
 ```
 
-## A protist community, five months, two thermal regimes
+## A microbial community, five months, two thermal regimes
 
 :::
 
 ::: {.text}
 
-We grew a community of eight aquatic protist taxa under two regimes with the
-same long-run mean temperature: one held constant, the other fluctuating. The
-experiment ran for about five months with regular video samples that gave us
-abundance time series for every taxon.
-
-<!-- <figure>/<img> stay raw: markdown images are wrapped in a <p> or promoted
-     to a Quarto figure with its own caption markup. -->
-```{=html}
-<figure class="rp-fig">
-<img src="../assets/figures/EcoComplexEcoForecast_fig1.png" alt="Schematic of the microbial system and the constant versus fluctuating temperature treatments." />
-<figcaption>
-<span class="lbl">Fig. 1</span>
-The microbial community and the two thermal regimes. Constant and fluctuating
-temperatures share the same long-run mean.
-</figcaption>
-</figure>
-```
-
-For each species we fit empirical dynamic models on a training window and
-forecast the held-out tail of the series, then scored the forecast against
-truth. From the same models we extracted estimates of the number and strength
-of each species\' interactions: its connectedness.
+We grew a tri-trophic aquatic microbial community of bacteria, algae, ciliates,
+flagellates and a rotifer in eighteen bottles for 154 days. Nine sat at a
+constant 17.3 °C; the other nine were split across three fluctuating series with
+the same mean, variance and autocorrelation, one of them copied from a nearby
+stream. We sampled three times a week, giving 66 abundance points per bottle,
+measured by flow cytometry, imaging or manual counts depending on how big the
+organism was.
 
 ```{=html}
 <figure class="rp-fig">
-<img src="../assets/figures/EcoComplexEcoForecast_fig2.png" alt="Forecasting workflow showing how abundance time series are split into training and forecast windows, then evaluated against truth." />
+<img src="../assets/figures/EcoComplexEcoForecast_fig2.webp" alt="Left: the microbial food web annotated by functional group, from three grouped bacteria and an autotroph up to a top predator. Right: the constant and three fluctuating temperature series, and the eighteen experimental bottles." width="1640" height="607" loading="lazy" decoding="async" />
 <figcaption>
 <span class="lbl">Fig. 2</span>
-The forecasting workflow. Train on the early window, forecast the held-out
-tail, score against truth.
+The community and the design. Left: the food web, from grouped bacteria up to a
+single top predator. Right: one constant and three fluctuating temperature
+series, and the eighteen bottles spread across them.
 </figcaption>
 </figure>
 ```
+
+For each of eight target species we forecast abundance with *multiview
+embedding*, an empirical dynamic modelling method: train on the first 44 time
+points, predict the last 22, score the error. Separately, in an analysis of its
+own rather than as a by-product of the forecasts, we used convergent
+cross-mapping to find which variables influenced each target, and S-map
+Jacobians to estimate how strongly they did so. Those two quantities, the number
+of interactions and their mean strength, are what we mean by a species'
+connectedness.
 
 :::
 
@@ -191,17 +201,21 @@ tail, score against truth.
 
 ::: {.text}
 
-Forecast skill rose with the number of interactions a species had, and fell with
-their mean strength. Generalists, with many weak interactions, were the most
-forecastable. Specialists, with few strong interactions, were the least.
+Forecast error fell as a species' number of interactions rose, and climbed as
+their mean strength rose. The two run against each other: the more interactions
+a species had, the weaker they were. Generalists, with many weak links, were
+therefore the easiest to forecast and specialists the hardest. Neither relation
+depended on the temperature regime.
 
 ```{=html}
 <figure class="rp-fig">
-<img src="../assets/figures/EcoComplexEcoForecast_fig3.png" alt="Scatter plot showing forecast skill rising with the number of interactions and falling with their mean strength." />
+<img src="../assets/figures/EcoComplexEcoForecast_fig3.webp" alt="Three scatter panels, each split into constant and fluctuating temperature: forecast error falls as the number of interactions rises, rises with mean interaction strength, and mean strength itself falls as the number of interactions rises." width="1272" height="631" loading="lazy" decoding="async" />
 <figcaption>
 <span class="lbl">Fig. 3</span>
-Forecast skill rises with the number of interactions a species has and falls
-with their mean strength. Generalists sit in the upper right.
+Forecast error (RMSE, lower is better) falls as a species' number of
+interactions rises (A) and climbs with their mean strength (B); species with
+more interactions interact more weakly (C). Constant (circles) and fluctuating
+(diamonds) regimes give the same picture.
 </figcaption>
 </figure>
 ```
@@ -211,23 +225,25 @@ with their mean strength. Generalists sit in the upper right.
 ```{=html}
 <div class="rp-pull">
 <strong>Connectedness is a predictability signature.</strong> Where a species
-sits in the community sets a ceiling on how well it can be forecast, before
-data quality or model choice enter the picture.
+sits in the community accounts for about a third of the variation in forecast
+error: a strong tendency, not a hard limit.
 </div>
 ```
 
-Fluctuating temperatures degraded forecast skill for some species but not
-others. The community context, not just the environmental noise, decided which
-species suffered.
+Model size mattered too: the more state variables a model used as predictors,
+the lower its error, in all eight species. Fluctuating temperatures raised
+forecast error for three of the eight (*C. reinhardtii*, *P. caudatum* and the
+rotifer) but left the interaction patterns themselves untouched, which argues
+against any universal law tying complexity to predictability.
 
 ```{=html}
 <figure class="rp-fig">
-<img src="../assets/figures/EcoComplexEcoForecast_fig4.png" alt="Effect of fluctuating temperature on forecast skill, with three of eight species showing significant degradation." />
+<img src="../assets/figures/EcoComplexEcoForecast_fig4.webp" alt="Eight per-species panels of median forecast error against the log number of predictors used, overlaid for constant and fluctuating temperature, with three species boxed in red." width="1241" height="658" loading="lazy" decoding="async" />
 <figcaption>
 <span class="lbl">Fig. 4</span>
-Effect of fluctuating temperatures on forecast skill. Some species hold their
-skill; others lose it. Community position matters more than the environment
-alone.
+Median forecast error against the number of predictors used, species by species.
+Error falls as models grow. Fluctuating temperatures cost skill in the three
+boxed species and left the other five alone.
 </figcaption>
 </figure>
 ```
@@ -254,9 +270,10 @@ alone.
 
 ::: {.text}
 
-A species\' interactions are a forecasting trait. Estimating connectedness can
-tell us in advance which parts of a community will be easy or hard to predict,
-and where monitoring effort and model attention are best spent.
+A species' interactions are a forecasting trait. Estimating connectedness says
+something about which parts of a community will be easy or hard to predict
+before any forecasting is done, and so about where monitoring effort and model
+attention are worth spending.
 
 :::
 
@@ -274,14 +291,37 @@ and where monitoring effort and model attention are best spent.
 <p class="full">
 <strong>Daugaard, U.</strong>, Munch, S., Inauen, D., Pennekamp, F. &amp; Petchey, O. (2022).
 Forecasting in the face of ecological complexity: number and strength of species
-interactions determines forecast skill in ecological communities.
-<em>Ecology Letters</em>, 25, 1659–1672.
+interactions determine forecast skill in ecological communities.
+<em>Ecology Letters</em>, 25, 1974–1985.
 </p>
 <div class="actions">
 <a class="primary" href="https://doi.org/10.1111/ele.14070" target="_blank" rel="noopener">Read paper (open access) ↗</a>
 <a href="https://doi.org/10.5281/zenodo.6524695" target="_blank" rel="noopener">Data + code ↗</a>
 </div>
 </aside>
+```
+
+<!-- Sibling navigation. The .rp-toc at the top of the page is a float and scrolls
+     away, so without this the only route to the other two deep dives is back at
+     the very top of a long page. The styling for it already existed in
+     research-page.css (.rp-siblings); only the markup was missing. -->
+
+```{=html}
+<nav class="rp-siblings" aria-label="Other highlighted research">
+<div class="h">Other highlighted research</div>
+<div class="row">
+<a class="sib" href="warmingFRpage.html">
+<div class="meta">JAE 2019 · Elton Prize</div>
+<h4>Warming can destabilise predator–prey interactions</h4>
+<span class="chip">Read the deep dive →</span>
+</a>
+<a class="sib" href="SamplingFreq.html">
+<div class="meta">Ecosphere 2024</div>
+<h4>Sampling frequency and forecast skill</h4>
+<span class="chip">Read the deep dive →</span>
+</a>
+</div>
+</nav>
 ```
 
 :::

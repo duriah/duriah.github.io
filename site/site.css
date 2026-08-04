@@ -13,10 +13,17 @@
   --ink-2:        #2c4a3d;   /* secondary text */
   --ink-3:        #5a6f64;   /* tertiary / metadata */
   --sage:         #3a6a52;   /* script + script-like accents */
-  --terracotta:   #b34a3a;   /* "current/active" + small highlights */
-  --gold:         #b08538;   /* small distinctions (Elton, etc.) */
+  --terracotta:   #a74536;   /* "current/active" + small highlights */
+  --gold:         #b08538;   /* small distinctions (Elton, etc.) — borders/fills */
   --gold-rgb:     176,133,56; /* same, as channels, for per-rule alphas */
   --gold-fill:    transparent;
+  /* Distinction badges are set at 10-11px, and --gold as a *text* colour
+     measures 3.11:1 on --cream and 2.84:1 on --cream-2 — under the 4.5:1 these
+     sizes need, and under even the 3:1 large-text floor on the hover band. The
+     token is therefore split: --gold keeps the border and fill (where contrast
+     is not a legibility question), --gold-text carries the lettering at
+     4.97:1 / 4.55:1. Dark mode needs no split; #d4af52 is 8.5:1 there. */
+  --gold-text:    #86652b;
   --rule:         rgba(31,58,47,.18);
   --rule-2:       rgba(31,58,47,.08);
   --max:          1080px;
@@ -27,10 +34,15 @@
   --cream-2:      #16242a;   /* surface */
   --ink:          #e9e0c8;   /* ivory primary */
   --ink-2:        #c9bfa3;   /* secondary */
-  --ink-3:        #8a8270;   /* tertiary */
+  /* Was #8a8270, which measured 4.17:1 on --cream-2 — an AA failure at the
+     9-12px this tone is actually used at (record metadata, the Lab panels,
+     the sibling-paper rail). #9f9888 is 6.18:1 on the page and 5.55:1 on the
+     surface, and stays clear of --ink-2 so the three-tone hierarchy holds. */
+  --ink-3:        #9f9888;   /* tertiary */
   --sage:         #d4af52;   /* gold accent (replaces sage) */
   --terracotta:   #e0a060;   /* warmer current/active */
   --gold:         #d4af52;
+  --gold-text:    #d4af52;   /* no split needed here — 8.5:1 on --cream */
   --gold-rgb:     212,175,82;
   /* Dark mode rebinds --sage to gold, so a gold *outline* no longer separates a
      distinction badge from ordinary accent text. Distinctions keep their meaning
@@ -43,6 +55,38 @@
 
 html{color-scheme:light dark}
 html[data-theme="dark"]{color-scheme:dark}
+
+/* Keyboard focus. Nothing here authored one, so every control fell back to the
+   UA ring — and Quarto's Bootstrap bundle ships `button:focus:not(:focus-visible)
+   {outline:0}`, so the dark default ring landed invisibly on the near-black
+   `.btn` pill. `:focus-visible` keeps it off mouse clicks. `:where()` holds the
+   specificity at zero so any component can still override it. */
+:where(a, button, summary, input, select, textarea, [tabindex]):focus-visible{
+  outline:2px solid var(--terracotta);
+  outline-offset:3px;
+  border-radius:2px;
+}
+/* Filled controls: the terracotta ring has too little separation from --ink and
+   --sage fills, so those get the page colour instead, ringed outside the pill. */
+.btn:focus-visible,
+.rp-cite .actions a.primary:focus-visible,
+.ab-cta .actions a.primary:focus-visible,
+.rp-toc .list a[aria-current="page"]:focus-visible{
+  outline-color:var(--cream);
+  outline-offset:-4px;
+}
+
+/* Respect a stated preference for less motion: everything animated here is
+   decoration (hover bands, card lifts, drawer slide), so there is nothing to
+   lose by stopping it. */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.001ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;
+    scroll-behavior:auto !important;
+  }
+}
 
 /* Suppress Quarto's auto-rendered title block — every page provides its own H1. */
 #title-block-header,.quarto-title-block{display:none}
@@ -61,7 +105,7 @@ body{
   background:var(--cream);
   color:var(--ink);
   font-family:'Cormorant Garamond', Georgia, serif;
-  font-size:18px;
+  font-size:20px;
   line-height:1.55;
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
@@ -83,6 +127,10 @@ body{
   backdrop-filter:saturate(140%) blur(2px);
 }
 .site-bar .nav-l, .site-bar .nav-r{display:flex;gap:26px;align-items:center}
+/* A nav item that runs out of room should crowd its neighbours — visibly wrong,
+   and fixed by the breakpoint below — rather than quietly fold onto a second
+   line and double the height of the bar. */
+.site-bar .nav-l a, .site-bar .nav-r a{white-space:nowrap}
 .site-bar .nav-l{justify-content:flex-start}
 .site-bar .nav-r{justify-content:flex-end}
 .site-bar a{color:var(--ink);text-decoration:none}
@@ -127,12 +175,12 @@ body{
 }
 .site-bar .wordmark .b{
   font-family:'Cormorant Garamond',serif;
-  font-size:14px;
+  font-size:15px;
   font-weight:600;
   letter-spacing:.11em;
   color:var(--sage);
   display:block;
-  margin-top:3px;
+  margin-top:7px;
 }
 
 /* ---- footer -------------------------------------------- */
@@ -168,30 +216,35 @@ body{
 .page{max-width:var(--max);margin:0 auto;padding:0 56px}
 .page-narrow{max-width:780px;margin:0 auto;padding:0 56px}
 
-/* Interior-page header: the title and its subtitle on the left, the page's lede
-   set beside them. Only the home page is centred — it is a masthead. Every other
-   page gives the reader a left edge to come back to, and puts the lede where it
-   is read immediately rather than in a separate block below.
+/* Interior-page header: the title on one line with the page's lede stacked
+   under it. Only the home page is centred — it is a masthead. Every other page
+   gives the reader a left edge to come back to.
+
+   This was a two-column grid, title beside lede. Both columns then had to be
+   held narrow to share the 968px — `width:max-content` here and a character cap
+   on the H1 — which forced short titles to wrap for no reason and left the row
+   looking half-empty once a lede was trimmed. Stacked, the title gets the whole
+   column and the lede gets a measure chosen for reading rather than for what was
+   left over.
+
    Projects and Research grew their own copies of this (.pj-header, .rs-header);
-   this is the shared version they should all converge on. */
+   this is the shared version they should all converge on. .rs-header already
+   matches these metrics. */
 .page-head{
   max-width:1100px;margin:48px auto 0;padding:0 56px;
-  display:grid;grid-template-columns:max-content 1fr;
-  gap:96px;align-items:start;
 }
-.page-head .titles{text-align:left;width:max-content}
 .page-head .titles .page-title{margin:0;text-wrap:balance}
-.page-head .titles .page-sub{margin-top:6px}
+/* 66ch ≈ 750px ≈ 81 characters. `ch` is the width of "0", 0.477em in Cormorant
+   against a ~0.39em average letter, so the real line is about 22% longer than
+   the number reads. Sized to hold a two-sentence lede on two lines. */
 .page-head .lead{
-  font-family:'Cormorant Garamond',serif;font-size:23px;line-height:1.55;
-  color:var(--ink-2);margin:0;text-wrap:pretty;
-  padding-top:.55em;justify-self:stretch;
+  font-family:'Cormorant Garamond',serif;font-size:24px;line-height:1.55;
+  color:var(--ink-2);margin:16px 0 0;max-width:66ch;text-wrap:pretty;
 }
 .page-head .lead em{color:var(--sage);font-style:italic}
 @media (max-width:900px){
-  .page-head{grid-template-columns:1fr;gap:4px;margin-top:32px;padding:0 24px}
-  .page-head .titles{width:auto}
-  .page-head .lead{font-size:21px;padding-top:0;margin-top:18px}
+  .page-head{margin-top:32px;padding:0 24px}
+  .page-head .lead{font-size:22px;margin-top:14px}
 }
 
 .eyebrow{
@@ -222,20 +275,6 @@ h1.page-title{
   color:var(--ink);
   margin:64px 0 8px;
 }
-/* Page subtitles drop the script for the body serif, but not the wordmark's
-   letterspacing: that tracking works on the home page because three words under
-   a 88px name read as a lockup, whereas here it makes every page look like it is
-   trying to be a logo — and it forced the longer Talks subtitle onto two lines.
-   Italic carries the "subtitle" job instead, without needing the tracking. */
-h1.page-title + .page-sub{
-  font-family:'Cormorant Garamond',serif;
-  font-weight:400;font-style:italic;
-  font-size:24px;
-  color:var(--sage);
-  margin:14px 0 36px;
-  line-height:1.3;
-}
-
 h2.section{
   font-family:'Cormorant Garamond',serif;
   font-weight:500;
@@ -263,14 +302,14 @@ h3.subsection{
   color:var(--ink);
 }
 
-p{margin:0 0 14px;font-size:19px;line-height:1.6;color:var(--ink-2);text-wrap:pretty}
-p.lede{font-size:23px;line-height:1.5;color:var(--ink);max-width:60ch}
+p{margin:0 0 14px;font-size:21px;line-height:1.6;color:var(--ink-2);text-wrap:pretty}
+p.lede{font-size:24px;line-height:1.5;color:var(--ink);max-width:60ch}
 
 a.inline{color:var(--ink);border-bottom:1px solid var(--rule)}
 a.inline:hover{color:var(--terracotta);border-bottom-color:var(--terracotta)}
 
 ul.clean{list-style:none;margin:0;padding:0}
-ul.clean li{padding:6px 0;font-size:18px;color:var(--ink-2);border-top:1px solid var(--rule-2)}
+ul.clean li{padding:6px 0;font-size:20px;color:var(--ink-2);border-top:1px solid var(--rule-2)}
 ul.clean li:first-child{border-top:none}
 
 /* ---- generic table-like "Now" block --------------------- */
@@ -332,7 +371,7 @@ ul.clean li:first-child{border-top:none}
   border-radius:999px;
   font-weight:500;
 }
-.chip.gold{color:var(--gold);border-color:rgba(var(--gold-rgb),.4);background:var(--gold-fill)}
+.chip.gold{color:var(--gold-text);border-color:rgba(var(--gold-rgb),.4);background:var(--gold-fill)}
 .chip.terra{color:var(--terracotta);border-color:rgba(179,74,58,.35)}
 
 /* ---- buttons ------------------------------------------- */
@@ -395,14 +434,14 @@ ul.clean li:first-child{border-top:none}
   border-bottom:1px solid var(--rule);
 }
 .card .body{padding:16px 18px 20px}
-.card .body h4{
+.card .body h3,.card .body h4{
   font-family:'Cormorant Garamond',serif;
   font-weight:500; font-size:20px;
   margin:0 0 8px;
   color:var(--ink);
   line-height:1.2;
 }
-.card .body p{font-size:17px;line-height:1.5;color:var(--ink-2);margin:0 0 14px}
+.card .body p{font-size:18px;line-height:1.5;color:var(--ink-2);margin:0 0 14px}
 .card .meta{
   font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.12em;
   text-transform:uppercase;color:var(--sage);margin-bottom:6px;font-weight:500;
@@ -538,13 +577,13 @@ ul.clean li:first-child{border-top:none}
 }
 .pub .abs-body p{
   font-family:'Cormorant Garamond',serif;
-  font-size:17px;line-height:1.55;color:var(--ink-2);
+  font-size:19px;line-height:1.6;color:var(--ink-2);
   margin:0 0 8px;text-wrap:pretty;
 }
 .pub .abs-body p:last-child{margin-bottom:0}
 .pub .body .badge{
   display:inline-block;font-family:'Inter',sans-serif;font-size:11px;
-  letter-spacing:.1em;text-transform:uppercase;color:var(--gold);
+  letter-spacing:.1em;text-transform:uppercase;color:var(--gold-text);
   border:1px solid rgba(var(--gold-rgb),.35);background:var(--gold-fill);
   padding:1px 8px;border-radius:999px;
   margin-left:8px;font-weight:500;
@@ -584,7 +623,7 @@ ul.clean li:first-child{border-top:none}
   margin-top:9px;background:var(--rule);
   transition:background-color .18s ease;
 }
-.talks .item .what{font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--ink-2);line-height:1.5}
+.talks .item .what{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--ink-2);line-height:1.5}
 /* The talk title, roman and on its own line — the same move as .pub .ti. */
 .talks .item .what > em,
 .talks .item .what > strong{
@@ -593,7 +632,7 @@ ul.clean li:first-child{border-top:none}
   color:var(--ink);margin-bottom:5px;text-wrap:pretty;
 }
 .talks .item .what .where{
-  display:block;margin-top:2px;color:var(--ink-2);font-size:16px;line-height:1.45;
+  display:block;margin-top:2px;color:var(--ink-2);font-size:17px;line-height:1.45;
 }
 /* The venue name reads as a label; the rest of the line stays prose. */
 .talks .item .what .where strong{
@@ -603,7 +642,7 @@ ul.clean li:first-child{border-top:none}
 }
 .talks .item .badge{
   display:inline-block;font-family:'Inter',sans-serif;font-size:10px;
-  letter-spacing:.12em;text-transform:uppercase;color:var(--gold);
+  letter-spacing:.12em;text-transform:uppercase;color:var(--gold-text);
   border:1px solid rgba(var(--gold-rgb),.35);background:var(--gold-fill);
   padding:1px 7px;border-radius:999px;
   margin-left:6px;font-weight:500;vertical-align:middle;
@@ -685,6 +724,20 @@ ul.clean li:first-child{border-top:none}
 .nav-drawer a:hover{color:var(--sage)}
 
 /* ---- responsive bits ------------------------------------ */
+
+/* Between the drawer breakpoint and ~1120px the bar's three columns stop
+   fitting. The two nav groups need ~500px between them and the tagline alone is
+   ~340px at 15px with .11em tracking, so past 1120px something has to give. The
+   tagline is the decorative half of the wordmark and the links are the
+   functional half, so the tagline is what goes — the full horizontal nav then
+   survives all the way down to the drawer instead of the links wrapping into
+   two-line stacks. */
+@media (min-width:901px) and (max-width:1120px){
+  .site-bar{padding:22px 32px;gap:24px}
+  .site-bar .nav-l,.site-bar .nav-r{gap:18px}
+  .site-bar .wordmark .b{display:none}
+}
+
 @media (max-width:900px){
   .site-bar{padding:22px 20px;grid-template-columns:1fr auto;gap:14px;text-align:left}
   .site-bar .wordmark{
@@ -698,7 +751,11 @@ ul.clean li:first-child{border-top:none}
   .h-display{font-size:56px}
   .h-script{font-size:32px}
   h1.page-title{font-size:42px}
-  .card-grid{grid-template-columns:1fr}
+  /* Two columns, not one. The thumbnails are aspect-ratio:4/3, so a single
+     full-width card just below the 3-up breakpoint renders an 850px card with a
+     640px-tall image — larger than the same card at any other width. Dropping to
+     one column only pays off once the column itself is narrow. */
+  .card-grid{grid-template-columns:repeat(2, 1fr)}
   .plates{gap:18px;margin:32px auto 8px;flex-wrap:nowrap}
   .plate{width:auto;gap:6px;flex:0 1 auto;max-width:33%}
   .plate img{width:64px;height:64px}
@@ -710,4 +767,11 @@ ul.clean li:first-child{border-top:none}
   .pub{grid-template-columns:1fr}
   .site-foot{grid-template-columns:1fr;gap:14px;text-align:center}
   .site-foot .l,.site-foot .r{justify-self:center}
+}
+
+/* Below this the two-column card grid leaves each card too narrow to read, and
+   a single column is finally the smaller of the two. Must stay after the 900px
+   block: same specificity, so source order decides. */
+@media (max-width:620px){
+  .card-grid{grid-template-columns:1fr}
 }

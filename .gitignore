@@ -11,3 +11,13 @@
 
 # macOS
 .DS_Store
+
+# Publisher PDFs of my own papers, kept locally as a writing reference.
+# They are not linked from the site, and `assets/**` is a Quarto resource, so
+# without this they would be copied into docs/ and served publicly.
+assets/docs/Ecology Letters - *.pdf
+assets/docs/Ecosphere - *.pdf
+assets/docs/Journal of Animal Ecology - *.pdf
+docs/assets/docs/Ecology Letters - *.pdf
+docs/assets/docs/Ecosphere - *.pdf
+docs/assets/docs/Journal of Animal Ecology - *.pdf

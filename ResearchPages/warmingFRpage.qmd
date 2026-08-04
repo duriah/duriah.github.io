@@ -1,5 +1,7 @@
 ---
-title: "Warming destabilises predator–prey functional responses"
+title: "Warming can destabilise predator–prey interactions"
+description: "Warming flips a ciliate predator’s functional response from Type III to Type II, and simulations show that one change of shape drives the prey extinct. Winner of the 2019 Elton Prize."
+image: ../assets/img/warmingfig1.jpg
 page-layout: custom
 format:
   html:
@@ -23,7 +25,7 @@ format:
 <li class="current">
 <a aria-current="page" href="warmingFRpage.html">
 <span class="meta">JAE 2019 · Elton Prize</span>
-<span class="ti">Warming destabilises predator–prey functional responses</span>
+<span class="ti">Warming can destabilise predator–prey interactions</span>
 </a>
 </li>
 <li>
@@ -54,13 +56,13 @@ format:
 </div>
 ```
 
-# Warming can destabilise predator–prey functional responses
+# Warming can destabilise predator–prey interactions
 
 ```{=html}
 <p class="lede">
 A three-month undergraduate project showing that warming can flip a predator's
-functional response from Type III to Type II, and that this small shape change is
-enough to drive the prey extinct in simulation.
+functional response from Type III to Type II, and that this one change of shape
+is enough to drive the prey extinct in simulation.
 </p>
 ```
 
@@ -95,10 +97,23 @@ doi: 10.1111/1365-2656.13053 <span class="arrow">↗</span>
 
 ::: {.text}
 
-The *functional response* describes how much prey a single predator
-consumes as prey density rises. Its shape (Type I, II or III) sets whether the
-interaction is stabilising or destabilising. We asked whether a few degrees of
-warming can change that shape.
+The *functional response* describes how much prey a single predator consumes as
+prey density rises. Its shape matters for stability: a Type III response
+accelerates at low prey density, so predation pressure eases when prey are rare,
+and is generally considered the stabilising one. A Type II has no such phase. We
+asked whether a few degrees of warming can change which shape a predator–prey
+pair shows.
+
+```{=html}
+<figure class="rp-fig">
+<img src="../assets/figures/FRpic.webp" alt="Plot of the Type I, Type II and Type III functional response curves, prey consumed against prey abundance, beside the study's research question." width="1640" height="598" />
+<figcaption>
+<span class="lbl">Fig. 1</span>
+The three functional response types, and the question we put to them. Only the
+Type III accelerates at low prey density.
+</figcaption>
+</figure>
+```
 
 :::
 
@@ -120,45 +135,37 @@ warming can change that shape.
 
 ::: {.text}
 
-We chose *Spathidium sp.*, a generalist ciliate predator, and its
-preferred prey *Dexiostoma campylum*.
-
-```{=html}
-<figure class="rp-fig tight">
-<img src="../assets/figures/FRpic.png" alt="Microscope photographs of Spathidium sp. and Dexiostoma campylum." />
-<figcaption>
-<span class="lbl">Fig. 1</span>
-The predator–prey pair. <em>Spathidium sp.</em> feeds on
-<em>Dexiostoma campylum</em>.
-</figcaption>
-</figure>
-```
-
-We recorded both species over 24 hours at 15°, 20° and 25 °C, across a gradient
-of starting prey densities, so the functional response could be reconstructed at
-each temperature.
+We paired the ciliate predator *Spathidium* sp. with its prey *Dexiostoma
+campylum*, two species that co-occur in nature, and followed both over 24 hours
+at 15, 20 and 25 °C. At each temperature we set up eight starting prey
+densities, each with five predators or with none at all as a control. That came
+to 72 one-millilitre wells per temperature, enough of a density gradient to
+reconstruct the functional response at each of them.
 
 ```{=html}
 <figure class="rp-fig">
-<img src="../assets/figures/FRexperiment.png" alt="Schematic of the experimental design." />
+<img src="../assets/figures/FRexperiment.webp" alt="Schematic of the feeding experiment: the two ciliate species, three temperatures, eight starting prey densities, predator present or absent, 72 wells per temperature." width="1640" height="914" loading="lazy" decoding="async" />
 <figcaption>
 <span class="lbl">Fig. 2</span>
-Experimental design. A density gradient at each of three temperatures.
+The experiment. Eight starting prey densities at each of three temperatures,
+with the predator present or absent, scored after one day.
 </figcaption>
 </figure>
 ```
 
-We then fit a population-dynamic model that explicitly contains the predator\'s
-functional response. That gave us space clearance rate, handling time and density
-dependence at each temperature, plus the predator\'s conversion efficiency.
+We then fitted a population-dynamic model built around a *generalised*
+functional response, whose exponent *q* decides the type rather than being
+assumed: *q* = 0 gives a Type II, *q* > 0 a Type III. Fitting it separately at
+each temperature returned the space clearance constant, the handling time and
+the exponent itself, along with the predator's conversion efficiency.
 
 ```{=html}
 <figure class="rp-fig">
-<img src="../assets/figures/FRmodel.png" alt="Diagram of the population-dynamic model." />
+<img src="../assets/figures/FRmodel.webp" alt="The generalised functional response equation and the predator–prey differential equations fitted to the data, with all parameters defined." width="1640" height="653" loading="lazy" decoding="async" />
 <figcaption>
 <span class="lbl">Fig. 3</span>
-Model used for inference. Prey grow logistically; the predator consumes prey
-through a functional response.
+The model we fitted. A generalised functional response with a free exponent
+<em>q</em>, inside a predator–prey model with logistic prey growth.
 </figcaption>
 </figure>
 ```
@@ -183,37 +190,43 @@ through a functional response.
 
 ::: {.text}
 
-At the two cooler temperatures the functional response was Type III: it
-accelerates at low prey densities, which gives prey a refuge when rare. At 25 °C
-the response switched to Type II, with no acceleration phase.
+At the two cooler temperatures the fitted exponent was positive: the response
+accelerated at low prey density, leaving rare prey some respite. At 25 °C that
+acceleration was gone and the response was Type II. Every other parameter of the
+model shifted with temperature too, the conversion efficiency among them.
 
 ```{=html}
 <figure class="rp-fig">
-<img src="../assets/figures/FRmodelfit.png" alt="Fitted functional response curves across the three temperatures." />
+<img src="../assets/figures/FRmodelfit.webp" alt="Model fits at 15, 20 and 25 °C: change in prey density over 24 hours with and without predators, and predator density after 24 hours." width="1640" height="1226" loading="lazy" decoding="async" />
 <figcaption>
 <span class="lbl">Fig. 4</span>
-Estimated functional response. The Type III acceleration phase disappears at
-25 °C.
+Model fit. Top: change in prey density over 24 h with predators (circles) and
+without (triangles). Bottom: predator density after 24 h, against a starting
+density of five per millilitre (dashed).
 </figcaption>
 </figure>
 
 <div class="rp-pull">
-<strong>The destabilising consequence.</strong> Simulated long-run dynamics with
-the fitted models show greater risk of prey extinction at higher temperatures,
-with the largest jump at the Type III to Type II transition.
+<strong>The destabilising consequence.</strong> Simulating the fitted models
+forward drives the prey extinct in 99.8% of runs at 25 °C, against 14.6% at
+15 °C and none at all at 20 °C. The jump arrives with the change in type, not
+gradually with warming.
 </div>
 
 <figure class="rp-fig">
-<img src="../assets/figures/FRresults.png" alt="Long-run simulated predator–prey dynamics across temperatures." />
+<img src="../assets/figures/FRresults.webp" alt="Left: estimated functional responses at the three temperatures, labelled Type III, Type III and Type II. Right: percentage of simulations in which the prey went extinct, and time to extinction." width="1640" height="513" loading="lazy" decoding="async" />
 <figcaption>
 <span class="lbl">Fig. 5</span>
-Simulated dynamics. Prey-extinction probability rises with temperature.
+Left: the estimated functional responses, Type III at 15 and 20 °C and Type II
+at 25 °C. Right: how often the simulations drove the prey extinct, and how fast.
 </figcaption>
 </figure>
 ```
 
-Conversion efficiency also increased with warming, compounding the destabilising
-effect.
+Conversion efficiency rose with warming as well, so it should not be assumed
+temperature-independent either. It is not what destabilises the system, though:
+pinning every parameter but the three functional response terms to its 20 °C
+value leaves the extinction pattern in place, if weaker.
 
 :::
 
@@ -235,11 +248,11 @@ effect.
 
 ::: {.text}
 
-Most climate-change food-web models hold the type of the functional response
-fixed and only let temperature scale its parameters. The type itself can change,
-with consequences that scaling alone will not capture. Future work should
-investigate how often this happens, and how it propagates through multi-species
-food webs.
+Models that project food webs under warming generally hold the type of the
+functional response fixed and let temperature scale its parameters. The type
+itself can change, and scaling alone will not capture what follows. How often
+this happens, and how it propagates through a multi-species food web, is still
+open.
 
 :::
 
@@ -258,11 +271,34 @@ Warming can destabilize predator–prey interactions by shifting the functional 
 from Type III to Type II. <em>Journal of Animal Ecology</em>, 88, 1575–1586.
 </p>
 <div class="actions">
-<a class="primary" href="https://doi.org/10.1111/1365-2656.13053" target="_blank" rel="noopener">Read paper (open access) ↗</a>
-<a href="https://zenodo.org/badge/latestdoi/186978107" target="_blank" rel="noopener">Data + code ↗</a>
+<a class="primary" href="https://doi.org/10.1111/1365-2656.13053" target="_blank" rel="noopener">Read paper ↗</a>
+<a href="https://doi.org/10.5281/zenodo.2864317" target="_blank" rel="noopener">Data + code ↗</a>
 <a href="https://www.britishecologicalsociety.org/publications/best-paper-by-an-early-career-researcher/elton-prize/" target="_blank" rel="noopener">About the Elton Prize ↗</a>
 </div>
 </aside>
+```
+
+<!-- Sibling navigation. The .rp-toc at the top of the page is a float and scrolls
+     away, so without this the only route to the other two deep dives is back at
+     the very top of a long page. The styling for it already existed in
+     research-page.css (.rp-siblings); only the markup was missing. -->
+
+```{=html}
+<nav class="rp-siblings" aria-label="Other highlighted research">
+<div class="h">Other highlighted research</div>
+<div class="row">
+<a class="sib" href="EcoComplexEcoForecast.html">
+<div class="meta">Ecology Letters 2022</div>
+<h4>Forecasting in the face of ecological complexity</h4>
+<span class="chip">Read the deep dive →</span>
+</a>
+<a class="sib" href="SamplingFreq.html">
+<div class="meta">Ecosphere 2024</div>
+<h4>Sampling frequency and forecast skill</h4>
+<span class="chip">Read the deep dive →</span>
+</a>
+</div>
+</nav>
 ```
 
 :::

@@ -8,20 +8,43 @@
 .rp-wrap{
   max-width: 1080px;
   margin: 0 auto;
-  padding: 24px 56px 0;
+  /* The gutter is a variable because .rp-toc reaches into it with a negative
+     margin, and the two must stay equal at every breakpoint or the rail hangs
+     off the page and opens a horizontal scrollbar. */
+  --rp-pad: 56px;
+  padding: 24px var(--rp-pad) 0;
+  /* The reading column. Body paragraphs, figures, captions, the pull-quote, the
+     citation panel and the sibling nav all measure against this one value, so
+     the narrative keeps a single right edge instead of six. Held here rather
+     than in :root because research-page.css is loaded on every page of the
+     site, and this only means anything inside .rp-wrap. */
+  --rp-col: 820px;
 }
 
 /* ---- top-right nav block (back link + sibling papers) -- */
+/* Narrow, and pushed out of the text column into the page gutter: the negative
+   right margin is exactly --rp-pad, so the rail's right edge lands on .rp-wrap's
+   outer edge and it reads as marginal apparatus rather than as a block competing
+   with the header for the same column.
+
+   It stays a float rather than becoming a positioned rail like .rs-toc on
+   Research & Publications. That one is pure convenience over a short page; this
+   one carries the only "back to Research & Publications" link at the top of the
+   page, and a positioned version would need ~1424px of viewport and vanish
+   below it. In flow it survives every width. */
 .rp-toc{
   float: right;
-  width: 260px;
-  margin: 0 0 20px 32px;
+  width: 188px;
+  margin: 0 calc(-1 * var(--rp-pad)) 20px 32px;
   font-family: 'Inter', sans-serif;
 }
+/* Set down from 11px/.16em: at that size the back link measured ~211px and
+   wrapped inside the narrower rail. 10px/.10em brings it to ~177px, so it holds
+   one line and also sits quieter than the .h label below it. */
 .rp-toc .back{
   display: inline-block;
-  font-size: 11px;
-  letter-spacing: .16em;
+  font-size: 10px;
+  letter-spacing: .10em;
   text-transform: uppercase;
   color: var(--ink-3);
   text-decoration: none;
@@ -86,12 +109,25 @@
 .rp-toc .list a[aria-current="page"] .ti{ color: var(--cream); }
 
 /* ---- header ------------------------------------------- */
+/* 580px is kept on purpose, and is not the same kind of number as --rp-col. A
+   56px H1 wants a short measure — this is about 26 characters a line — and the
+   lede at 22px lands near 66, both textbook. Widening it to match the narrative
+   column would make the type worse, not better.
+
+   What did read as wrong was the rule that used to close this block: it stopped
+   at 580px while every rule below it spans 820px, and a misaligned *rule* is
+   visible in a way a ragged text block never is. It could not simply be widened,
+   because .rp-toc floats top-right and the two collide across a range of
+   viewport widths. So the rule moved down to .rp-meta, which clears the float
+   vertically and can span the column properly.
+
+   That also puts the break in the right place. Title, lede, authors and DOI are
+   one unit — the paper's identity — and the old rule cut through the middle of
+   it, separating the lede from its own author line. */
 .rp-header{
   margin: 0;
   width: fit-content;
   max-width: 580px;
-  padding-bottom: 36px;
-  border-bottom: 1px solid var(--rule);
 }
 .rp-header .titles{ min-width: 0; }
 .rp-header .eyebrow{
@@ -111,7 +147,7 @@
 .rp-header .eyebrow > span{ white-space: nowrap; }
 .rp-header .eyebrow .prize{
   display: inline-flex; align-items: center; gap: 6px;
-  color: var(--gold);
+  color: var(--gold-text);
   border: 1px solid rgba(var(--gold-rgb),.35);
   background: var(--gold-fill);
   padding: 3px 8px; border-radius: 999px;
@@ -139,8 +175,14 @@
 .rp-header .lede em{ color: var(--sage); font-style: italic; }
 
 /* ---- author line + DOI button -------------------------- */
+/* Closes the masthead. The cap is what the rule is for — it is the one block
+   here that could otherwise have run the full 968px wrap, and it now ends level
+   with every figure, caption and panel below it. */
 .rp-meta{
-  margin: 24px 0 0;
+  margin: 32px 0 0;
+  max-width: var(--rp-col);
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--rule);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -167,35 +209,11 @@
 }
 .rp-meta .doi-btn .arrow{ opacity: .65; }
 
-/* ---- at-a-glance tile --------------------------------- */
-.rp-glance{
-  margin: 56px 0 0;
-  padding: 28px 32px;
-  background: var(--cream-2);
-  border: 1px solid var(--rule);
-  border-radius: 4px;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
-}
-.rp-glance .item{ min-width: 0; }
-.rp-glance .lbl{
-  font-family: 'Inter', sans-serif;
-  font-size: 10px;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  color: var(--sage);
-  margin-bottom: 8px;
-  font-weight: 500;
-}
-.rp-glance .val{
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 19px;
-  line-height: 1.4;
-  color: var(--ink);
-  text-wrap: pretty;
-}
-.rp-glance .val em{ color: var(--sage); font-style: italic; }
+/* An .rp-glance "at-a-glance" tile was styled here and never used by any page.
+   Removed rather than left dormant: this stylesheet is in _quarto.yml's global
+   `css:` list, so every rule in it downloads on every page of the site. Recover
+   from git if the tile is ever wanted — writing the three sets of summary
+   content is the real work, not the CSS. */
 
 /* ---- narrative body ----------------------------------- */
 .rp-body{
@@ -218,24 +236,37 @@
   color: var(--ink-3);
   margin-bottom: 8px;
 }
+/* No max-width here: a character cap forced every section heading onto two
+   lines even when it comfortably fits one. Headings wrap only when the column
+   itself is too narrow, and `balance` then splits them evenly. */
 .rp-body .section h2{
   font-family: 'Cormorant Garamond', serif;
   font-weight: 500;
   font-size: 30px;
-  line-height: 1.1;
+  line-height: 1.15;
   margin: 0;
   color: var(--ink);
   letter-spacing: .005em;
   text-wrap: balance;
-  max-width: 28ch;
 }
 .rp-body .section .text > *:first-child{ margin-top: 0; }
+/* The measure is capped on the paragraphs, not on `.text`: figures and the
+   pull-quote are siblings inside the same container, and a narrower parent
+   would shrink them too (max-width is a ceiling a child cannot exceed).
+
+   --rp-col rather than a `ch` figure, because the number that matters is the
+   figure width this has to line up with; a character cap would drift away from
+   it the moment the font-size moved. At 21px Cormorant (~0.39em average letter,
+   narrow for a serif) 820px runs about 100 characters, past the usual 90-odd
+   ceiling — carried by the 1.65 leading and by these sections being short.
+   Uncapped it would run the full 968px column, about 118. */
 .rp-body .section .text p{
   font-family: 'Cormorant Garamond', serif;
-  font-size: 19px;
-  line-height: 1.7;
+  font-size: 21px;
+  line-height: 1.65;
   color: var(--ink-2);
-  margin: 0 0 18px;
+  margin: 0 0 20px;
+  max-width: var(--rp-col);
   text-wrap: pretty;
 }
 .rp-body .section .text p:last-child{ margin-bottom: 0; }
@@ -253,8 +284,13 @@
 }
 
 /* ---- figures ------------------------------------------ */
+/* Every figure on every highlight page renders at one width, left-aligned with
+   the body text, so a column of figures reads as a single sequence rather than
+   as art of varying importance. The cap is on the <figure>, not the <img>, so
+   the caption's rule stays flush with the image edge. */
 .rp-fig{
   margin: 28px 0 8px;
+  max-width: var(--rp-col);
 }
 .rp-fig img{
   display: block;
@@ -264,14 +300,42 @@
   background: var(--cream-2);
   border-radius: 2px;
 }
+/* Every figure here is a plot exported on white, which glares against the
+   #0f1a1c ground in dark mode. Same idea as the poster thumbnails in talks.css,
+   but not the same numbers: those are decorative and get brightness(.82) with
+   hover to restore, while these are the content of the page and have to stay
+   readable at rest — there is no hover on touch.
+
+   brightness() and not opacity: brightness scales each channel, so white falls
+   to grey while black stays black and the contrast inside the plot survives.
+   Opacity blends toward the dark page instead, which darkens the whites AND
+   lifts the blacks, flattening the figure.
+
+   The sepia is the part doing the real work. This palette is warm throughout —
+   #0f1a1c ground, #e9e0c8 ivory text — so a plot's neutral white reads as
+   foreign even once it is dim. A tenth of a step pulls it into the ivory family.
+   It does tint the data colours slightly, so it is deliberately kept small. */
+:root[data-theme="dark"] .rp-fig img{
+  filter: brightness(.86) sepia(.10) saturate(.95);
+}
+/* The caption shares the column, so it ends flush with the figure it belongs to
+   instead of stopping ~330px short of it. It previously carried its own 62ch
+   measure on the argument that a caption running the figure's full width reads
+   badly — true in general, but these captions are 120-160 characters, which is
+   one or two lines at this width, and the cost of a long measure is losing your
+   place on the line return. The rule and the indent already mark them as
+   secondary, so they do not also need the lowest-contrast ink.
+
+   If a caption ever grows past a few lines, put a `ch` cap back. */
 .rp-fig figcaption{
   font-family: 'Inter', sans-serif;
-  font-size: 12px;
-  line-height: 1.55;
-  color: var(--ink-3);
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink-2);
   margin-top: 12px;
   padding-left: 14px;
   border-left: 2px solid var(--rule);
+  max-width: var(--rp-col);
 }
 .rp-fig figcaption .lbl{
   font-weight: 600;
@@ -279,28 +343,32 @@
   letter-spacing: .04em;
   margin-right: 8px;
 }
-.rp-fig.wide{ /* legacy class — figure already full width by default */
-  margin-left: 0;
-}
-.rp-fig.tight img{ max-width: 600px; margin: 0; }
 
 /* ---- pull-quote / highlight box ----------------------- */
+/* Shares the column too. Left at 66ch it would have been the one element
+   stopping short of the common right edge, and as a filled box with a border
+   that reads as ragged rather than as an inset. */
 .rp-pull{
   margin: 28px 0;
   padding: 22px 28px;
+  max-width: var(--rp-col);
   border-left: 3px solid var(--sage);
   background: linear-gradient(to right, var(--cream-2) 0%, transparent 100%);
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 22px;
+  font-size: 23px;
   line-height: 1.5;
   color: var(--ink-2);
 }
 .rp-pull strong{ color: var(--ink); font-style: normal; font-weight: 500; }
 
 /* ---- citation block ----------------------------------- */
+/* Capped like everything else in the narrative. Uncapped it filled the 968px
+   .rp-wrap and so ended 148px to the right of the last paragraph and figure
+   above it — most visible here because it is a bordered, filled panel. */
 .rp-cite{
   margin: 96px 0 0;
+  max-width: var(--rp-col);
   padding: 32px 36px;
   border: 1px solid var(--rule);
   border-radius: 4px;
@@ -354,6 +422,7 @@
 /* ---- sibling navigation ------------------------------- */
 .rp-siblings{
   margin: 80px 0 0;
+  max-width: var(--rp-col);
   padding: 32px 0 0;
   border-top: 1px solid var(--rule);
 }
@@ -416,16 +485,9 @@
   .rp-toc .list{ display: grid; grid-template-columns: 1fr; }
 }
 @media (max-width: 960px){
-  .rp-wrap{ padding: 0 32px; }
-  .rp-header{
-    padding-bottom: 28px;
-  }
+  .rp-wrap{ --rp-pad: 32px; padding: 0 var(--rp-pad); }
   .rp-header h1{ font-size: 42px; }
-  .rp-glance{
-    grid-template-columns: 1fr;
-    gap: 18px;
-    padding: 22px 24px;
-  }
+  .rp-meta{ padding-bottom: 24px; }
   .rp-body{ margin-top: 40px; gap: 48px; }
   .rp-body .section{
     grid-template-columns: 1fr;
@@ -433,12 +495,11 @@
   }
   .rp-body .section .head{ position: static; }
   .rp-body .section h2{ font-size: 26px; }
-  .rp-fig.wide{ margin-left: 0; }
   .rp-cite{ padding: 24px 22px; margin-top: 64px; }
   .rp-siblings .row{ grid-template-columns: 1fr; }
 }
 
 @media (max-width: 540px){
-  .rp-wrap{ padding: 0 22px; }
+  .rp-wrap{ --rp-pad: 22px; }
   .rp-header h1{ font-size: 36px; }
 }

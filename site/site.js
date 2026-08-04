@@ -3,13 +3,9 @@
    body[data-page]. What is left here genuinely needs a client: the dark-mode
    preference and the narrow-viewport drawer. */
 (function () {
-  // Apply persisted theme before render to avoid flash.
-  try {
-    const saved = localStorage.getItem('ud-theme');
-    if (saved === 'dark' || saved === 'light') {
-      document.documentElement.setAttribute('data-theme', saved);
-    }
-  } catch (e) {}
+  // The theme is resolved by an inline <head> script (see include-in-header in
+  // _quarto.yml) so it lands before first paint; doing it here would be too late,
+  // since this file loads at the end of <body>. Only the toggle below is left.
 
   // Hamburger toggle (narrow viewports).
   const toggle = document.querySelector('.nav-toggle');
@@ -33,6 +29,47 @@
     positionDrawer();
     window.addEventListener('resize', positionDrawer);
     window.addEventListener('scroll', positionDrawer);
+  }
+
+  // Section rail on Research & Publications. Guarded like the drawer above,
+  // since site.js is loaded on every page and the rail exists on one.
+  const rail = document.querySelector('.rs-toc');
+  if (rail) {
+    const links = Array.from(rail.querySelectorAll('a'));
+    // Deliberately unfiltered: a href with no matching section should throw on
+    // the first sync rather than quietly leave that entry inert forever.
+    const sections = links.map((a) => document.querySelector(a.getAttribute('href')));
+    let queued = false;
+
+    const syncRail = () => {
+      queued = false;
+      // The active section is the last one whose top has crossed the upper third
+      // of the viewport. At the very bottom of the page no further section can
+      // cross that line, so the final one is claimed explicitly — otherwise the
+      // short last section never lights up.
+      const line = window.innerHeight * 0.35;
+      let current = 0;
+      sections.forEach((section, i) => {
+        if (section.getBoundingClientRect().top <= line) current = i;
+      });
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+        current = sections.length - 1;
+      }
+      links.forEach((a, i) => {
+        if (i === current) a.setAttribute('aria-current', 'true');
+        else a.removeAttribute('aria-current');
+      });
+    };
+
+    const queueRail = () => {
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(syncRail);
+    };
+
+    syncRail();
+    window.addEventListener('scroll', queueRail, { passive: true });
+    window.addEventListener('resize', queueRail);
   }
 
   // Theme toggle (light/dark).

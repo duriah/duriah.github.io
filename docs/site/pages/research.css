@@ -2,19 +2,17 @@
    Loaded before styles.css / site.css (see research.qmd), so the
    shared stylesheets still win ties at equal specificity. */
 
+/* Title and lead stack rather than sitting side by side. The two-column version
+   needed `max-width:315px` on the H1 to force "Research & Publications" onto two
+   lines; unconstrained it sets in one line at 64px inside the 968px text column,
+   and only wraps once the viewport is too narrow to hold it. */
 .rs-header{
   max-width:1100px;margin:48px auto 0;padding:0 56px;
-  display:grid;grid-template-columns:max-content 1fr;
-  gap:96px;align-items:start;
 }
-.rs-header .titles{text-align:left;width:max-content}
-.rs-header .titles .page-title{max-width:315px}
 .rs-header .titles .page-title{margin:0;text-wrap:balance}
-.rs-header .titles .page-sub{margin-top:6px}
 .rs-header .lead{
-  font-family:'Cormorant Garamond',serif;font-size:23px;line-height:1.55;
-  color:var(--ink-2);margin:0;text-wrap:pretty;
-  padding-top:0.55em;justify-self:stretch;
+  font-family:'Cormorant Garamond',serif;font-size:24px;line-height:1.55;
+  color:var(--ink-2);margin:16px 0 0;max-width:66ch;text-wrap:pretty;
 }
 .rs-header .lead em{color:var(--sage);font-style:italic}
 
@@ -27,6 +25,10 @@
   font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;
   text-transform:uppercase;color:var(--sage);margin-bottom:24px;font-weight:500;
 }
+/* Closes a list with the external profile holding the same record. .pub carries
+   only a border-top, so the last row has no rule under it and the button does
+   the closing itself. */
+.rs-block .more{margin:28px 0 0}
 
 .rs-cards{
   max-width:1080px;margin:40px auto 0;padding:0 56px;
@@ -39,11 +41,28 @@
   font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;
   text-transform:uppercase;color:var(--sage);margin-bottom:28px;font-weight:500;
 }
+/* Same dark-mode treatment as the figures on the highlight pages themselves
+   (see .rp-fig img in research-page.css) — these thumbnails are crops of those
+   very figures, so they glare the same way. The filter goes on .thumb rather
+   than on an img because the image is a background here, not an element. Scoped
+   to .rs-cards so it does not reach the Lab demo cards, which share .card. */
+:root[data-theme="dark"] .rs-cards .card .thumb{
+  filter:brightness(.86) sepia(.10) saturate(.95);
+}
 
 .rs-review{
+  position:relative;
   max-width:1080px;margin:80px auto 0;padding:32px 56px 0;
-  border-top:1px solid var(--rule);
   display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:start;
+}
+/* Drawn inside the padding instead of as the block's border-top. As a border it
+   spanned the whole 1080px border-box, which made it 112px wider than every
+   other rule on the page (.pub hairlines sit inside the same 56px) and pushed
+   its right end under the section rail. Absolute rather than a ::before in flow,
+   so it does not become a third grid item. */
+.rs-review::before{
+  content:"";position:absolute;top:0;left:56px;right:56px;
+  height:1px;background:var(--rule);
 }
 .rs-review h2{
   font-family:'Cormorant Garamond',serif;font-weight:500;font-size:34px;
@@ -59,10 +78,69 @@
   font-size:14px;color:var(--ink-3);margin-top:8px;
 }
 
+/* ---- section rail -------------------------------------- */
+
+/* Fixed in the right gutter rather than sticky inside a column: the page is a
+   stack of independently centred blocks, so there is no grid column for a sticky
+   child to sit in. `right` is measured off the text edge (each block is 1080px
+   wide with 56px of padding, so 968px of text) instead of off the viewport, which
+   keeps the gap between rail and text constant at every width. Below 1300px the
+   gutter can no longer hold the labels clear of the text and the rail is dropped
+   rather than shrunk. */
+.rs-toc{display:none}
+
+@media (min-width:1300px){
+  /* `top` sits the rail level with the top of the page title: the sticky bar is
+     ~88px tall and .rs-header adds 48px above the H1. */
+  .rs-toc{
+    display:block;
+    position:fixed;
+    top:140px;
+    right:max(16px, calc((100vw - 968px)/2 - 148px));
+    width:124px;z-index:10;
+    font-family:'Inter',sans-serif;
+  }
+  .rs-toc ul{
+    list-style:none;margin:0;padding:0;
+    display:flex;flex-direction:column;gap:15px;
+  }
+  .rs-toc a{
+    display:grid;grid-template-columns:1fr 22px;align-items:center;gap:10px;
+    text-decoration:none;
+  }
+  /* The page title is the only entry that does not fit the 124px column on one
+     line. It is left to wrap and then separated by a hairline, so the rail reads
+     as "the page, then its sections" rather than as five ragged peers. */
+  .rs-toc li.top{padding-bottom:15px;border-bottom:1px solid var(--rule-2)}
+  .rs-toc .t{
+    font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;
+    line-height:1.45;text-align:right;text-wrap:balance;color:var(--ink-3);
+    transition:color .28s ease;
+  }
+  /* The tick is scaled rather than resized: animating width relayouts the grid
+     row on every frame, transform does not. */
+  .rs-toc .tick{
+    height:1px;background:var(--rule);
+    transform:scaleX(.5);transform-origin:right center;
+    transition:transform .28s cubic-bezier(.4,0,.2,1),background-color .28s ease;
+  }
+  .rs-toc a:hover .t{color:var(--ink-2)}
+  .rs-toc a:hover .tick{transform:scaleX(.8)}
+  .rs-toc a[aria-current="true"] .t{color:var(--sage)}
+  .rs-toc a[aria-current="true"] .tick{transform:scaleX(1);background:var(--sage)}
+}
+
+/* Anchor jumps otherwise land beneath the sticky top bar. Smooth scrolling is
+   scoped here because this stylesheet loads on this page only; the global
+   prefers-reduced-motion block in site.css overrides it back to auto. */
+html{scroll-behavior:smooth}
+#sec-header,#sec-highlights,#sec-peer-reviewed,#sec-preprints,#sec-review{scroll-margin-top:120px}
+
 @media (max-width:900px){
   .rs-header,.rs-block,.rs-cards,.rs-review{padding-left:24px;padding-right:24px}
-  .rs-header{grid-template-columns:1fr;gap:4px;margin-top:32px}
-  .rs-header .lead{font-size:21px;padding-top:0;margin-top:18px}
+  .rs-header{margin-top:32px}
+  .rs-header .lead{font-size:22px;margin-top:14px}
   .rs-block,.rs-cards,.rs-review{margin-top:48px}
   .rs-review{grid-template-columns:1fr;gap:24px}
+  .rs-review::before{left:24px;right:24px}
 }
