@@ -1,15 +1,6 @@
 project:
   type: website
   output-dir: docs
-  # Held back until it has more than one demo in it. Excluding it here rather
-  # than deleting lab.qmd keeps the source in the tree, and takes the page out of
-  # sitemap.xml and search.json as a side effect — neither is hand-maintained.
-  # The two nav entries and the Work page's wayfinder link come out with it; put
-  # all four back together.
-  render:
-    - "*.qmd"
-    - "ResearchPages/*.qmd"
-    - "!lab.qmd"
   resources:
     - "assets/**"
     - "site/**"

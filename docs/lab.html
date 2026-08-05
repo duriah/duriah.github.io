@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="As sampling frequency drops, plankton forecasts get worse and fewer species interactions are recovered. Forecast skill can be turned into a design tool for monitoring.">
+<meta name="description" content="Interactive demos of the methods behind the research: empirical dynamic modelling, forecasting and diversity analysis on public ecological datasets.">
 
-<title>Sampling frequency and forecast skill – Uriah Daugaard</title>
+<title>Lab – Uriah Daugaard</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,23 +24,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../assets/img/favicon.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-348bd123ba1540a0894cbf5241462af5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./assets/img/favicon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-348bd123ba1540a0894cbf5241462af5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -71,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Cookie&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-<link rel="apple-touch-icon" href="../assets/img/favicon.png">
+<link rel="apple-touch-icon" href="./assets/img/favicon.png">
 <meta property="og:type" content="website">
 <meta name="google-site-verification" content="US9UugOmq-GXdRt4_XqJtenD7bkmr-q2J2JQUu1q8Xk">
 <script>
@@ -92,22 +92,23 @@ ul.task-list li input[type="checkbox"] {
   }
 }catch(e){}})();
 </script>
-<link rel="canonical" href="https://duriah.github.io/ResearchPages/SamplingFreq.html">
-<meta property="og:url" content="https://duriah.github.io/ResearchPages/SamplingFreq.html">
-<script>document.documentElement.dataset.page='research';</script>
+<link rel="stylesheet" href="./site/pages/lab.css">
+<link rel="canonical" href="https://duriah.github.io/lab.html">
+<meta property="og:url" content="https://duriah.github.io/lab.html">
+<script>document.documentElement.dataset.page='lab';</script>
 
 
-<link rel="stylesheet" href="../site/site.css">
-<link rel="stylesheet" href="../site/research-page.css">
-<meta property="og:title" content="Sampling frequency and forecast skill – Uriah Daugaard">
-<meta property="og:description" content="As sampling frequency drops, plankton forecasts get worse and fewer species interactions are recovered. Forecast skill can be turned into a design tool for monitoring.">
-<meta property="og:image" content="https://duriah.github.io/assets/img/og-samplingfreq.png">
+<link rel="stylesheet" href="site/site.css">
+<link rel="stylesheet" href="site/research-page.css">
+<meta property="og:title" content="Lab – Uriah Daugaard">
+<meta property="og:description" content="Interactive demos of the methods behind the research: empirical dynamic modelling, forecasting and diversity analysis on public ecological datasets.">
+<meta property="og:image" content="https://duriah.github.io/assets/img/og-card.png">
 <meta property="og:site_name" content="Uriah Daugaard">
 <meta property="og:image:height" content="630">
 <meta property="og:image:width" content="1200">
-<meta name="twitter:title" content="Sampling frequency and forecast skill – Uriah Daugaard">
-<meta name="twitter:description" content="As sampling frequency drops, plankton forecasts get worse and fewer species interactions are recovered. Forecast skill can be turned into a design tool for monitoring.">
-<meta name="twitter:image" content="https://duriah.github.io/assets/img/og-samplingfreq.png">
+<meta name="twitter:title" content="Lab – Uriah Daugaard">
+<meta name="twitter:description" content="Interactive demos of the methods behind the research: empirical dynamic modelling, forecasting and diversity analysis on public ecological datasets.">
+<meta name="twitter:image" content="https://duriah.github.io/assets/img/og-card.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image-height" content="630">
 <meta name="twitter:image-width" content="1200">
@@ -134,18 +135,18 @@ ul.task-list li input[type="checkbox"] {
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-bar">
   <nav class="nav-l">
-    <a data-nav="home" href="../index.html">Home</a>
-    <a data-nav="projects" href="../projects.html">Work</a>
-    <a data-nav="research" href="../research.html">Publications</a>
+    <a data-nav="home" href="./index.html">Home</a>
+    <a data-nav="projects" href="./projects.html">Work</a>
+    <a data-nav="research" href="./research.html">Publications</a>
   </nav>
-  <a class="wordmark" href="../index.html">
+  <a class="wordmark" href="./index.html">
     Uriah Daugaard
     <span class="b">bioinformatics · ecology · pipelines</span>
   </a>
   <nav class="nav-r">
-    <a data-nav="lab" href="../lab.html">Lab</a>
-    <a data-nav="talks" href="../talks.html">Talks &amp; Teaching</a>
-    <a data-nav="contact" href="../contact.html">Contact</a>
+    <a data-nav="lab" href="./lab.html">Lab</a>
+    <a data-nav="talks" href="./talks.html">Talks &amp; Teaching</a>
+    <a data-nav="contact" href="./contact.html">Contact</a>
     <button class="theme-toggle" aria-label="Toggle dark mode" type="button"><span class="ico-light"><svg viewbox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M20.5 13.2A8.5 8.5 0 1 1 10.8 3.5a6.8 6.8 0 0 0 9.7 9.7z"></path></svg></span><span class="ico-dark"><svg viewbox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5 5l1.85 1.85M17.15 17.15 19 19M5 19l1.85-1.85M17.15 6.85 19 5"></path></svg></span></button>
   </nav>
   <div class="bar-tools">
@@ -157,23 +158,23 @@ ul.task-list li input[type="checkbox"] {
 </header>
 <div class="nav-drawer" hidden="">
   <nav>
-    <a data-nav="home" href="../index.html">Home</a>
-    <a data-nav="projects" href="../projects.html">Work</a>
-    <a data-nav="research" href="../research.html">Publications</a>
-    <a data-nav="lab" href="../lab.html">Lab</a>
-    <a data-nav="talks" href="../talks.html">Talks &amp; Teaching</a>
-    <a data-nav="contact" href="../contact.html">Contact</a>
+    <a data-nav="home" href="./index.html">Home</a>
+    <a data-nav="projects" href="./projects.html">Work</a>
+    <a data-nav="research" href="./research.html">Publications</a>
+    <a data-nav="lab" href="./lab.html">Lab</a>
+    <a data-nav="talks" href="./talks.html">Talks &amp; Teaching</a>
+    <a data-nav="contact" href="./contact.html">Contact</a>
   </nav>
 </div>
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Sampling frequency and forecast skill</h1>
+<h1 class="title">Lab</h1>
 </div>
 
 <div>
   <div class="description">
-    As sampling frequency drops, plankton forecasts get worse and fewer species interactions are recovered. Forecast skill can be turned into a design tool for monitoring.
+    Interactive demos of the methods behind the research: empirical dynamic modelling, forecasting and diversity analysis on public ecological datasets.
   </div>
 </div>
 
@@ -191,174 +192,191 @@ ul.task-list li input[type="checkbox"] {
 
 
 <main id="main">
-<div class="rp-wrap">
-<!-- Nav block stays raw HTML end to end. Quarto's bundled stylesheet styles the
-     bare `aside` tag (font-size:.825rem plus a colour that the borders inherit),
-     so this cannot become a fenced div; inside it, `.back` is inline-block and
-     `.list` is a flex column of display:block links wrapping inline spans, all
-     of which a <p> wrapper would break. -->
-<aside class="rp-toc" aria-label="Highlighted research">
-<a class="back" href="../research.html">← Publications</a>
-<div class="h">Highlighted research</div>
-<ul class="list">
-<li>
-<a href="warmingFRpage.html">
-<span class="meta">JAE 2019 · Elton Prize</span>
-<span class="ti">Warming can destabilise predator–prey interactions</span>
-</a>
-</li>
-<li>
-<a href="EcoComplexEcoForecast.html">
-<span class="meta">Ecology Letters 2022</span>
-<span class="ti">Forecasting in the face of ecological complexity</span>
-</a>
-</li>
-<li class="current">
-<a aria-current="page" href="SamplingFreq.html">
-<span class="meta">Ecosphere 2024</span>
-<span class="ti">Sampling frequency and forecast skill</span>
-</a>
-</li>
-</ul>
-</aside>
-<div class="rp-header">
+<div class="page-head">
 <div class="titles">
-<div class="eyebrow">
-<span>Ecosphere</span><span class="dot"></span>
-<span>2024</span><span class="dot"></span>
-<span>PhD chapter 2</span>
+<h1 class="page-title" id="lab">Lab</h1>
 </div>
-<h1 id="sampling-frequency-and-forecast-skill">Sampling frequency and forecast skill</h1>
-<p class="lede">
-As sampling frequency drops, forecasts get worse for almost every class of a
-long lake-plankton record, and fewer interactions are recovered among the
-phytoplankton. Turn that around, and forecast skill becomes a design tool for
-monitoring programmes.
+<p class="lead">
+A small workshop of <em>interactive demos</em>. Each one drops you straight into a method
+I use, on a public dataset, with controls that change the numbers in real time. Ships
+with one item now. Grows from there.
 </p>
 </div>
-</div>
-<div class="rp-meta">
-<div class="authors"><strong>Daugaard U.</strong>, Merkli S., Merz E., Pomati F. &amp; Petchey O.L.</div>
-<a class="doi-btn" href="https://doi.org/10.1002/ecs2.4786" target="_blank" rel="noopener">
-doi: 10.1002/ecs2.4786 <span class="arrow">↗</span>
-</a>
-</div>
-<div class="rp-body">
-<!-- The `<section class="section">` wrappers are opened and closed with raw
-     HTML: pandoc's html5 writer rewrites any div carrying the class `section`
-     into a bare <section> and drops the class, which would leave every
-     `.rp-body .section ...` rule unmatched. Their contents are markdown. -->
-<section class="section">
-<div class="head">
-<div class="num">01 · The question</div>
-<h2 id="how-often-is-often-enough">How often is often enough?</h2>
-</div>
-<div class="text">
-<p>Long-term monitoring programmes face a recurring choice: how often to sample. Sampling too rarely may miss the dynamics that matter; sampling too often is expensive. We asked whether forecast skill itself can guide that choice, both in a controlled simulation and on a real lake.</p>
-</div>
-</section>
-
-<section class="section">
-<div class="head">
-<div class="num">02 · What we did</div>
-<h2 id="a-simulated-baseline-and-a-real-high-frequency-lake">A simulated baseline and a real high-frequency lake</h2>
-</div>
-<div class="text">
-<p>We worked with two datasets. The first is a deliberately minimal baseline: a single simulated population following a delayed logistic equation, where the dynamics are known exactly and growth rate can be dialled up and down. The second is a high-frequency plankton record from Lake Greifensee, where an automated underwater camera images plankton every hour and neural-network classifiers sort the imaged individuals into phytoplankton and zooplankton. That gives six zooplankton classes; the phytoplankton we then split into six size bins.</p>
-<figure class="rp-fig figure">
-<img src="../assets/figures/Sampling_fig1.webp" alt="The Greifensee monitoring setup: the dual-magnification underwater camera, examples of the imaged plankton, and the specifics of the time series: twelve classes, 994 days, four sampling frequencies, 82 time points, twelve-day-ahead forecasts." width="1640" height="644" class="figure-img">
-<figcaption>
-<span class="lbl">Fig. 1</span>
-The field data. A dual-magnification underwater camera images plankton hourly in
-Lake Greifensee; classifiers sort them into six phytoplankton and six
-zooplankton classes over 994 days, April 2019 to December 2021.
-</figcaption>
-</figure>
-<p>From the daily record we built sparser versions along two axes we kept deliberately apart: lower sampling frequency at a fixed 82 time points, down to one sample every twelve days, and fewer time points at daily frequency. At every setting we refit the forecasts, then used convergent cross-mapping to re-detect which classes were causally linked and S-map to re-estimate how strongly.</p>
-</div>
-</section>
-
-<section class="section">
-<div class="head">
-<div class="num">03 · What we found</div>
-<h2 id="forecasts-decay-and-interaction-estimates-thin-out">Forecasts decay, and interaction estimates thin out</h2>
-</div>
-<div class="text">
-<p>Forecast error rose as sampling grew sparser, for eleven of the twelve plankton classes; only the ciliates were forecast best from the sparsest series. Phyto- and zooplankton lost skill at much the same rate. Faster-growing classes were harder to forecast overall, though the evidence for that was weak.</p>
-<figure class="rp-fig figure">
-<img src="../assets/figures/Sampling_fig2.webp" alt="Three panels: forecast error rising with maximum net growth rate in the lake data, forecast error rising as sampling frequency falls for lake phyto- and zooplankton, and optimal sampling frequency against growth rate for the simulation with the lake classes overlaid." width="1640" height="567" loading="lazy" decoding="async" class="figure-img">
-<figcaption>
-<span class="lbl">Fig. 2</span>
-Forecast error (RMSE, lower is better) against growth rate (left) and sampling
-frequency (centre). Right: optimal frequency rises with growth rate in the
-simulation, while eleven of the twelve lake classes sit at daily sampling and
-the ciliates alone at one sample every twelve days.
-</figcaption>
-</figure>
-<div class="rp-pull">
-<strong>Frequency is informative, not just operational.</strong> Growth rate
-predicted the right cadence in the single-species simulation. In the lake it
-predicted nothing: the densest sampling available was the best for eleven of
-twelve classes.
-</div>
-<p>Sampling design also changed what the models said about who interacts with whom. Coarser sampling left fewer interactions detected among the phytoplankton classes, while the zooplankton estimates held on average, and mean interaction strength moved for neither group. The true interactions are unknown, so the bias cannot be measured directly. But since the forecasts were best at the densest sampling, the counts are likely closest to right there, and undercounts elsewhere.</p>
-<figure class="rp-fig figure">
-<img src="../assets/figures/Sampling_fig3.webp" alt="Number of estimated interactions against sampling frequency in the lake data, in separate panels for phytoplankton and zooplankton; the phytoplankton trend rises with frequency while the zooplankton trend is flat." width="1640" height="713" loading="lazy" decoding="async" class="figure-img">
-<figcaption>
-<span class="lbl">Fig. 3</span>
-Interactions recovered against sampling frequency. Sampling less often costs the
-phytoplankton classes interactions; the zooplankton estimates are unmoved.
-</figcaption>
-</figure>
-<p>Natural communities therefore seem to need denser sampling than a target’s own growth rate would suggest, plausibly because the cadence has to track the fastest variable a target interacts with, not the target itself.</p>
-</div>
-</section>
-
-<section class="section">
-<div class="head">
-<div class="num">04 · Why it matters</div>
-<h2 id="forecast-skill-is-a-design-tool-not-just-an-outcome">Forecast skill is a design tool, not just an outcome</h2>
-</div>
-<div class="text">
-<p>Monitoring programmes can pilot their sampling cadence against forecast skill, choosing the lowest frequency that preserves both prediction and inference. That makes ecological monitoring cheaper to run, and the inferences drawn from it more honest: a programme that samples too rarely will not only forecast worse, it will also see a sparser interaction network than is really there.</p>
-</div>
-</section>
-</div>
-<!-- Citation block: `aside` again, plus `<p class="full">` (markdown cannot put
-     a class on a paragraph) and `.actions`, a flex row of inline links. -->
-<aside class="rp-cite" aria-label="Full citation">
-<div class="lbl">Cite this paper</div>
-<p class="full">
-<strong>Daugaard, U.</strong>, Merkli, S., Merz, E., Pomati, F. &amp; Petchey, O.L. (2024).
-The dependence of forecasts on sampling frequency as a guide to optimizing monitoring
-in community ecology. <em>Ecosphere</em>, 15, e4786.
+<div class="lab-note">
+<p class="note">
+<b style="color:var(--ink)">Build status.</b> The Lab page is new with this redesign.
+The first demo (EDM forecasting) is in design here, not yet wired to a live engine.
+The plot below uses placeholder data so the layout and interaction model can be
+reviewed before the maths goes in.
 </p>
-<div class="actions">
-<a class="primary" href="https://doi.org/10.1002/ecs2.4786" target="_blank" rel="noopener">Read paper (open access) ↗</a>
-<a href="https://doi.org/10.5281/zenodo.10066786" target="_blank" rel="noopener">Data + code ↗</a>
+</div>
+<!-- Demo 1 -->
+<section class="lab-demo">
+<div class="head">
+<div class="num">i</div>
+<div>
+<div class="kicker">demo one</div>
+<h2 id="edm-forecasting-on-a-public-time-series">EDM forecasting on a public time series</h2>
+</div>
+<div class="status">In design</div>
+</div>
+<div class="lab-grid">
+<div class="copy">
+<h3 id="what-it-is">What it is</h3>
+<p>Empirical Dynamic Modelling reconstructs the underlying state space of a system from a single observed time series. It does not assume a parametric model. That makes it useful for ecological data, where the dynamics are often nonlinear and the right functional form is rarely obvious in advance.</p>
+<h3 id="what-you-get-to-do">What you get to do</h3>
+<p>Pick a forecast horizon, an embedding dimension, and a train / test split. Watch the forecast track or fail to track the held out portion of the series, and read the skill metric update underneath.</p>
+</div>
+<aside class="lab-controls" aria-label="EDM forecast controls">
+<h3 id="controls">controls</h3>
+<div class="control">
+<span class="label">Forecast horizon</span>
+<span class="val" id="v-h">6 steps</span>
+<input type="range" min="1" max="24" value="6" id="c-h" aria-label="Forecast horizon">
+<span class="hint">how far ahead the model predicts</span>
+</div>
+<div class="control">
+<span class="label">Embedding dimension</span>
+<span class="val" id="v-e">3</span>
+<input type="range" min="2" max="10" value="3" id="c-e" aria-label="Embedding dimension">
+<span class="hint">number of lags used to reconstruct the attractor</span>
+</div>
+<div class="control">
+<span class="label">Train / test split</span>
+<span class="val" id="v-s">70 / 30</span>
+<input type="range" min="50" max="90" value="70" id="c-s" aria-label="Train fraction">
+<span class="hint">proportion of the series used to fit</span>
 </div>
 </aside>
-<!-- Sibling navigation. The .rp-toc at the top of the page is a float and scrolls
-     away, so without this the only route to the other two deep dives is back at
-     the very top of a long page. The styling for it already existed in
-     research-page.css (.rp-siblings); only the markup was missing. -->
-<nav class="rp-siblings" aria-label="Other highlighted research">
-<h3 class="h">Other highlighted research</h3>
-<div class="row">
-<a class="sib" href="warmingFRpage.html">
-<div class="meta">JAE 2019 · Elton Prize</div>
-<h4>Warming can destabilise predator–prey interactions</h4>
-<span class="chip">Read the deep dive →</span>
-</a>
-<a class="sib" href="EcoComplexEcoForecast.html">
-<div class="meta">Ecology Letters 2022</div>
-<h4>Forecasting in the face of ecological complexity</h4>
-<span class="chip">Read the deep dive →</span>
-</a>
 </div>
-</nav>
+<div class="lab-plot">
+<div class="title">
+<h4 id="observed-series-with-forecast-overlay">Observed series with forecast overlay</h4>
+<div class="skill">forecast skill (rho) <b id="v-rho" style="color:var(--ink)">0.84</b></div>
 </div>
+<svg id="lab-svg" viewbox="0 0 800 240" preserveaspectratio="none" aria-hidden="true">
+<!-- grid -->
+<g stroke="rgba(31,58,47,.08)" stroke-width="1">
+<line x1="0" y1="60" x2="800" y2="60"></line>
+<line x1="0" y1="120" x2="800" y2="120"></line>
+<line x1="0" y1="180" x2="800" y2="180"></line>
+</g>
+<!-- train/test divider -->
+<line id="lab-div" x1="560" y1="0" x2="560" y2="240" stroke="rgba(31,58,47,.25)" stroke-dasharray="4 4"></line>
+<text id="lab-div-l" x="568" y="18" font-family="Inter,sans-serif" font-size="10" fill="#3a6a52" letter-spacing=".12em">TEST →</text>
+<!-- observed -->
+<path id="lab-obs" fill="none" stroke="#1f3a2f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+<!-- forecast -->
+<path id="lab-fc" fill="none" stroke="#b34a3a" stroke-width="1.6" stroke-dasharray="3 4" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<div class="legend">
+<span><span class="sw"></span> observed</span>
+<span><span class="sw fc"></span> forecast</span>
+</div>
+</div>
+<div class="lab-meta">
+<div class="m">data
+<b>placeholder, public ecological time series</b>
+</div>
+<div class="m">method
+<b>simplex projection, S-map family</b>
+</div>
+<div class="m">behind the demo
+<b>ELE 2022 · Ecosphere 2024 · GCB 2025</b>
+</div>
+</div>
+</section>
+<!-- Backlog -->
+<section class="lab-back">
+<h2 id="on-the-bench-not-yet-shipped">On the bench, not yet shipped</h2>
+<div class="sub">next demos in the queue</div>
+<ul>
+<li><span class="tag">diversity</span><span>Alpha and beta diversity explorer on a public 16S dataset.</span></li>
+<li><span class="tag">functional resp.</span><span>Functional response fit, callback to JAE 2019.</span></li>
+<li><span class="tag">bayesian toy</span><span>Bayesian regression where you tune the prior and watch the posterior move.</span></li>
+<li><span class="tag">gallery</span><span>Static interactive figures from published work, embedded as widgets.</span></li>
+<li><span class="tag">code</span><span>Curated snippets: reproducible Quarto report, tidy R package skeleton, parallel pipeline scaffold.</span></li>
+</ul>
+</section>
 </main>
+
+<script>
+// Tiny reactive demo: regenerate a synthetic ecological-looking series + forecast
+// when the user moves any slider. Pure decoration; not real EDM.
+(function () {
+const W = 800, H = 240, N = 96;
+const obs = document.getElementById('lab-obs');
+const fc  = document.getElementById('lab-fc');
+const div = document.getElementById('lab-div');
+const divL= document.getElementById('lab-div-l');
+const cH = document.getElementById('c-h'), vH = document.getElementById('v-h');
+const cE = document.getElementById('c-e'), vE = document.getElementById('v-e');
+const cS = document.getElementById('c-s'), vS = document.getElementById('v-s');
+const vRho = document.getElementById('v-rho');
+
+// Deterministic-ish "ecological" series: damped wobble + noise.
+function genSeries(n, seed) {
+const xs = [];
+let r = seed;
+for (let i = 0; i < n; i++) {
+r = (r * 9301 + 49297) % 233280;
+const noise = (r / 233280 - 0.5) * 0.35;
+const v = 0.55
++ 0.30 * Math.sin(i * 0.32)
++ 0.15 * Math.sin(i * 0.11 + 1.3)
++ 0.10 * Math.cos(i * 0.55 + 0.7)
++ noise * 0.5;
+xs.push(Math.max(0, Math.min(1, v)));
+}
+return xs;
+}
+const series = genSeries(N, 7);
+
+function pathFor(arr, x0, x1) {
+const n = arr.length;
+let d = '';
+for (let i = 0; i < n; i++) {
+const x = x0 + (i / (n - 1)) * (x1 - x0);
+const y = 220 - arr[i] * 180;
+d += (i === 0 ? 'M' : 'L') + x.toFixed(1) + ',' + y.toFixed(1) + ' ';
+}
+return d;
+}
+
+function update() {
+const horizon = +cH.value;          // 1..24
+const embed   = +cE.value;           // 2..10
+const split   = +cS.value;           // 50..90 percent train
+vH.textContent = horizon + ' steps';
+vE.textContent = embed;
+vS.textContent = split + ' / ' + (100 - split);
+
+const cut = Math.round(N * split / 100);
+const xCut = (cut / (N - 1)) * W;
+div.setAttribute('x1', xCut);
+div.setAttribute('x2', xCut);
+divL.setAttribute('x', xCut + 8);
+
+// Observed = full series, but we only draw up to test region with smooth path.
+obs.setAttribute('d', pathFor(series, 0, W));
+
+// Forecast = noisy copy of test segment, "skill" depends on horizon + embed.
+const skill = Math.max(0.05, Math.min(0.96,
+0.95 - 0.018 * (horizon - 1) - 0.04 * Math.abs(embed - 4) - (1 - split / 100) * 0.6
+));
+const tail = series.slice(cut);
+const noisy = tail.map((v, i) => {
+const drift = (1 - skill) * 0.5 * Math.sin(i * 0.7 + embed);
+return Math.max(0, Math.min(1, v + drift + (Math.random() - 0.5) * (1 - skill) * 0.3));
+});
+fc.setAttribute('d', pathFor(noisy, xCut, W));
+
+vRho.textContent = skill.toFixed(2);
+}
+[cH, cE, cS].forEach(el => el.addEventListener('input', update));
+update();
+})();
+</script>
 
 
 
@@ -772,7 +790,7 @@ in community ecology. <em>Ecosphere</em>, 15, e4786.
   });
   </script>
 </div> <!-- /content -->
-<script src="../site/site.js"></script>
+<script src="./site/site.js"></script>
 
 
 
