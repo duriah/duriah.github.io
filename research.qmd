@@ -1,5 +1,5 @@
 ---
-title: "Research & Publications"
+title: "Publications"
 description: "Peer-reviewed publications, preprints and peer-review record of Uriah Daugaard, on ecological forecasting, species interactions, plankton time series and microbial communities."
 page-layout: custom
 format:
@@ -23,7 +23,7 @@ format:
 ```{=html}
 <nav class="rs-toc" aria-label="On this page">
 <ul>
-<li class="top"><a href="#sec-header"><span class="t">Research &amp; Publications</span><span class="tick"></span></a></li>
+<li class="top"><a href="#sec-header"><span class="t">Publications</span><span class="tick"></span></a></li>
 <li><a href="#sec-highlights"><span class="t">Highlighted</span><span class="tick"></span></a></li>
 <li><a href="#sec-peer-reviewed"><span class="t">Peer reviewed</span><span class="tick"></span></a></li>
 <li><a href="#sec-preprints"><span class="t">Preprints</span><span class="tick"></span></a></li>
@@ -37,7 +37,7 @@ format:
 <div class="titles">
 ```
 
-# Research & Publications {.page-title}
+# Publications {.page-title}
 
 ```{=html}
 </div>
@@ -264,7 +264,6 @@ and species dynamics.
 <span class="vn"> University of Zurich, PhD thesis chapter.</span>
 <div class="links">
 <a href="https://www.zora.uzh.ch/entities/publication/b16cdb46-a515-41ab-b456-134268d18665" target="_blank" rel="noopener">zora</a>
-<a href="https://www.zora.uzh.ch/server/api/core/bitstreams/4a890ec1-b7d4-420d-91c7-d1f30e3c534f/content#page=179" target="_blank" rel="noopener">chapter pdf</a>
 </div>
 </div>
 </article>

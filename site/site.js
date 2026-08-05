@@ -31,10 +31,22 @@
     window.addEventListener('scroll', positionDrawer);
   }
 
-  // Section rail on Research & Publications. Guarded like the drawer above,
-  // since site.js is loaded on every page and the rail exists on one.
+  // Section rail, used by Publications and Work. Guarded like the drawer
+  // above, since site.js is loaded on every page and the rail exists on two.
   const rail = document.querySelector('.rs-toc');
   if (rail) {
+    // Below 1240px the rail is a strip stuck under the site bar, so it needs the
+    // bar's height. That height is not one number: the wordmark tagline is
+    // dropped between 901 and 1120px, and it changes again when the webfont
+    // swaps in. Publish the measured value instead of hard-coding one per
+    // breakpoint. ResizeObserver catches the font swap, which `resize` misses.
+    const bar = document.querySelector('.site-bar');
+    if (bar && 'ResizeObserver' in window) {
+      new ResizeObserver(() => {
+        document.documentElement.style.setProperty('--bar-h', bar.offsetHeight + 'px');
+      }).observe(bar);
+    }
+
     const links = Array.from(rail.querySelectorAll('a'));
     // Deliberately unfiltered: a href with no matching section should throw on
     // the first sync rather than quietly leave that entry inert forever.
@@ -54,6 +66,14 @@
       });
       if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
         current = sections.length - 1;
+      }
+      // The strip form hides the page-title entry, since it sits directly above
+      // the H1 it would name. At the top of the page that entry is the active
+      // one, so without this nothing at all reads as selected. offsetParent is
+      // null exactly when an ancestor is display:none, so this asks the layout
+      // rather than duplicating the breakpoint here.
+      while (current < links.length - 1 && links[current].offsetParent === null) {
+        current += 1;
       }
       links.forEach((a, i) => {
         if (i === current) a.setAttribute('aria-current', 'true');

@@ -24,9 +24,18 @@
      is not a legibility question), --gold-text carries the lettering at
      4.97:1 / 4.55:1. Dark mode needs no split; #d4af52 is 8.5:1 there. */
   --gold-text:    #86652b;
+  /* Deliberately not rebound in dark mode. Artwork authored against a light page
+     (the pipeline schematic) is laid on this, so it keeps the background it was
+     drawn for instead of losing its black linework into the dark one. */
+  --plate:        #fbf6e8;
   --rule:         rgba(31,58,47,.18);
   --rule-2:       rgba(31,58,47,.08);
-  --max:          1080px;
+  /* Page width, single source of truth. Every block container on every page
+     resolves its own max-width from this, so the whole site narrows or widens
+     from one line. The text column inside it is --max minus the 56px gutters on
+     each side; the section rail measures its gutter position off that. */
+  --max:          1020px;
+  --text:         calc(var(--max) - 112px);
 }
 
 :root[data-theme="dark"]{
@@ -229,9 +238,9 @@ body{
 
    Research still has its own copy of this (.rs-header), which already matches
    these metrics; this is the shared version they should all converge on.
-   Projects used to have one too (.pj-header) and now uses this directly. */
+   Work used to have one too (.pj-header) and now uses this directly. */
 .page-head{
-  max-width:1100px;margin:48px auto 0;padding:0 56px;
+  max-width:var(--max);margin:48px auto 0;padding:0 56px;
 }
 .page-head .titles .page-title{margin:0;text-wrap:balance}
 /* 66ch ≈ 750px ≈ 81 characters. `ch` is the width of "0", 0.477em in Cormorant
@@ -246,6 +255,135 @@ body{
   .page-head{margin-top:32px;padding:0 24px}
   .page-head .lead{font-size:22px;margin-top:14px}
 }
+
+/* ---- section rail --------------------------------------- */
+
+/* The "on this page" rail, used by Publications and Work. It lived in
+   research.css while it had one caller; it is shared now, and the scrollspy that
+   drives it (site.js) was always generic: it binds to `.rs-toc`, reads that
+   rail's own hrefs, and throws on a href with no matching section rather than
+   leaving the entry inert. A third page needs markup and nothing else.
+
+   Two forms, same markup. Wide viewports get the vertical rail in the right
+   gutter. Everything narrower gets a horizontal strip stuck under the site bar,
+   which is the form defined here as the base: the gutter needs
+   (100vw - 908)/2 >= 164px to hold the labels clear of the text, i.e. a 1240px
+   viewport, and hiding the rail below that left every window between the mobile
+   breakpoint and 1240px with no wayfinding at all. */
+.rs-toc{
+  /* Minus 1px, and a deliberately low fallback: the strip must never leave a gap
+     under the bar, because page content scrolls through one. Erring towards a
+     1px overlap is invisible, and the fallback applies only for the frames
+     before site.js publishes the measured height, where too small hides the
+     strip briefly rather than showing text sliding through a slot. */
+  position:sticky;top:calc(var(--bar-h,56px) - 1px);z-index:15;
+  background:var(--cream);border-bottom:1px solid var(--rule);
+  font-family:'Inter',sans-serif;
+}
+/* Quarto's layout stylesheet gives every direct child of #quarto-content
+   `padding-top:14px`, and its bundle a further `margin-top:20px` on <main>.
+   Both sit above the strip while it is in flow and neither is there once it
+   sticks, so the band between bar and strip measured 20px taller at the top of
+   the page than anywhere else, with page content sliding through the gap.
+   Zeroed for the rail pages only; the 48px on `.page-head` below more than
+   covers the loss. */
+:root[data-page="research"] #quarto-content > main,
+:root[data-page="projects"] #quarto-content > main{padding-top:0;margin-top:0}
+/* `--bar-h` is published by site.js off the bar's measured height: it changes
+   with breakpoint (the wordmark tagline is dropped between 901 and 1120px) and
+   again when the webfont swaps in, so a hard-coded value per breakpoint would be
+   wrong for the first paint on every one of them. The fallback is the bar at its
+   shortest, so an unstyled first frame errs towards overlap rather than a gap. */
+.rs-toc ul{
+  list-style:none;margin:0 auto;padding:9px 56px;max-width:var(--max);
+  display:flex;gap:24px;
+  /* Narrow viewports scroll the strip sideways rather than wrapping it onto a
+     second line and doubling the height of a sticky element. */
+  overflow-x:auto;scrollbar-width:none;
+}
+.rs-toc ul::-webkit-scrollbar{display:none}
+/* The page title, which the rail carries as its first entry, is redundant here:
+   the strip sits directly above the H1 it would name. */
+.rs-toc li.top{display:none}
+/* The type metrics belong on the anchor, not only on `.t` inside it. `.rs-toc`
+   sets no font-size, so the anchor's strut was inheriting the body's 20px/1.55
+   and giving every row a 31px line box no matter how small the label was set.
+   That made the strip nearly twice its intended height. */
+.rs-toc a{
+  position:relative;display:block;padding:4px 0 7px;
+  font-size:10px;line-height:1;
+  text-decoration:none;white-space:nowrap;
+}
+.rs-toc .t{
+  font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;
+  line-height:1;color:var(--ink-3);transition:color .28s ease;
+}
+/* The tick becomes the underline under the active label. Colour alone did not
+   carry it in light mode: --sage against --ink-3 is a small enough step at 10px
+   that no entry read as selected. */
+.rs-toc .tick{
+  display:block;position:absolute;left:0;right:0;bottom:0;height:2px;
+  background:var(--sage);
+  transform:scaleX(0);transform-origin:left center;
+  transition:transform .28s cubic-bezier(.4,0,.2,1);
+}
+.rs-toc a:hover .t{color:var(--ink-2)}
+.rs-toc a:hover .tick{transform:scaleX(.35)}
+.rs-toc a[aria-current="true"] .t{color:var(--sage);font-weight:600}
+.rs-toc a[aria-current="true"] .tick{transform:scaleX(1)}
+
+@media (min-width:1240px){
+  /* Fixed in the gutter rather than sticky in a column: these pages are a stack
+     of independently centred blocks, so there is no grid column for a sticky
+     child to sit in. `right` is measured off the text edge, not the viewport,
+     which keeps the gap between rail and text constant at every width. `top`
+     sits the rail level with the top of the page title; `.rs-header` and
+     `.page-head` carry identical metrics, so one value serves both. */
+  .rs-toc{
+    position:fixed;top:140px;
+    right:max(16px, calc((100vw - var(--text))/2 - 148px));
+    width:124px;z-index:10;
+    background:none;border-bottom:none;
+  }
+  .rs-toc ul{
+    padding:0;max-width:none;overflow:visible;
+    flex-direction:column;gap:15px;
+  }
+  /* The page title is separated from the sections by a hairline, so the rail
+     reads as "the page, then its sections" rather than as a flat list of peers.
+     It is also the one entry allowed to wrap inside the 124px column. */
+  .rs-toc li.top{display:block;padding-bottom:15px;border-bottom:1px solid var(--rule-2)}
+  .rs-toc a{
+    display:grid;grid-template-columns:1fr 22px;align-items:center;gap:10px;
+    padding:0;
+  }
+  .rs-toc .t{line-height:1.45;text-align:right;text-wrap:balance;font-weight:500}
+  .rs-toc a[aria-current="true"] .t{font-weight:500}
+  /* The tick is scaled rather than resized: animating width relayouts the grid
+     row on every frame, transform does not. */
+  .rs-toc .tick{
+    position:static;height:1px;background:var(--rule);
+    transform:scaleX(.5);transform-origin:right center;
+    transition:transform .28s cubic-bezier(.4,0,.2,1),background-color .28s ease;
+  }
+  .rs-toc a:hover .tick{transform:scaleX(.8)}
+  .rs-toc a[aria-current="true"] .tick{transform:scaleX(1);background:var(--sage)}
+}
+
+/* Jump targets on both rail pages. Shared here rather than repeated as an id
+   list in each page stylesheet. The offset has to clear whichever form of the
+   rail is on screen: bar plus strip below 1240px, bar alone above it. */
+[id^="sec-"]{scroll-margin-top:calc(var(--bar-h,64px) + 58px)}
+@media (min-width:1240px){
+  [id^="sec-"]{scroll-margin-top:120px}
+}
+
+/* Anchor jumps otherwise land beneath the sticky bar. Listed per page rather
+   than set on `html`, because this file loads everywhere and only these two
+   pages have anchors to jump to. The prefers-reduced-motion block above
+   overrides it back to auto with !important. */
+:root[data-page="research"],
+:root[data-page="projects"]{scroll-behavior:smooth}
 
 .eyebrow{
   font-family:'Inter',sans-serif;

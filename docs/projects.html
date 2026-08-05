@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Microbiome bioinformatics: amplicon and whole-genome sequencing pipelines, and the predictive, mechanistic and time-series models that run on top of them. Production work built at Cybiome, Basel, 2025 to 2027.">
+<meta name="description" content="Bodies of work by Uriah Daugaard: ecological forecasting at scale during a PhD at UZH, a production microbiome bioinformatics platform built as sole developer, and the statistical and predictive modelling that runs across both.">
 
-<title>Projects – Uriah Daugaard</title>
+<title>Work – Uriah Daugaard</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -98,14 +98,14 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="site/site.css">
 <link rel="stylesheet" href="site/research-page.css">
-<meta property="og:title" content="Projects – Uriah Daugaard">
-<meta property="og:description" content="Microbiome bioinformatics: amplicon and whole-genome sequencing pipelines, and the predictive, mechanistic and time-series models that run on top of them. Production work built at Cybiome, Basel, 2025 to 2027.">
+<meta property="og:title" content="Work – Uriah Daugaard">
+<meta property="og:description" content="Bodies of work by Uriah Daugaard: ecological forecasting at scale during a PhD at UZH, a production microbiome bioinformatics platform built as sole developer, and the statistical and predictive modelling that runs across both.">
 <meta property="og:image" content="https://duriah.github.io/assets/img/og-card.png">
 <meta property="og:site_name" content="Uriah Daugaard">
 <meta property="og:image:height" content="630">
 <meta property="og:image:width" content="1200">
-<meta name="twitter:title" content="Projects – Uriah Daugaard">
-<meta name="twitter:description" content="Microbiome bioinformatics: amplicon and whole-genome sequencing pipelines, and the predictive, mechanistic and time-series models that run on top of them. Production work built at Cybiome, Basel, 2025 to 2027.">
+<meta name="twitter:title" content="Work – Uriah Daugaard">
+<meta name="twitter:description" content="Bodies of work by Uriah Daugaard: ecological forecasting at scale during a PhD at UZH, a production microbiome bioinformatics platform built as sole developer, and the statistical and predictive modelling that runs across both.">
 <meta name="twitter:image" content="https://duriah.github.io/assets/img/og-card.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image-height" content="630">
@@ -133,8 +133,8 @@ ul.task-list li input[type="checkbox"] {
 <header class="site-bar">
   <nav class="nav-l">
     <a data-nav="home" href="./index.html">Home</a>
-    <a data-nav="projects" href="./projects.html">Projects</a>
-    <a data-nav="research" href="./research.html">Research &amp; Publications</a>
+    <a data-nav="projects" href="./projects.html">Work</a>
+    <a data-nav="research" href="./research.html">Publications</a>
   </nav>
   <a class="wordmark" href="./index.html">
     Uriah Daugaard
@@ -156,8 +156,8 @@ ul.task-list li input[type="checkbox"] {
 <div class="nav-drawer" hidden="">
   <nav>
     <a data-nav="home" href="./index.html">Home</a>
-    <a data-nav="projects" href="./projects.html">Projects</a>
-    <a data-nav="research" href="./research.html">Research &amp; Publications</a>
+    <a data-nav="projects" href="./projects.html">Work</a>
+    <a data-nav="research" href="./research.html">Publications</a>
     <a data-nav="lab" href="./lab.html">Lab</a>
     <a data-nav="talks" href="./talks.html">Talks &amp; Teaching</a>
     <a data-nav="contact" href="./contact.html">Contact</a>
@@ -166,12 +166,12 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Projects</h1>
+<h1 class="title">Work</h1>
 </div>
 
 <div>
   <div class="description">
-    Microbiome bioinformatics: amplicon and whole-genome sequencing pipelines, and the predictive, mechanistic and time-series models that run on top of them. Production work built at Cybiome, Basel, 2025 to 2027.
+    Bodies of work by Uriah Daugaard: ecological forecasting at scale during a PhD at UZH, a production microbiome bioinformatics platform built as sole developer, and the statistical and predictive modelling that runs across both.
   </div>
 </div>
 
@@ -189,44 +189,112 @@ ul.task-list li input[type="checkbox"] {
 
 
 <main>
-<div class="page-head">
+<!-- Section rail. Shared with Research: the styles live in site.css and the
+     scrollspy in site.js, which binds to `.rs-toc` and reads these hrefs. The ids
+     are `sec-`-prefixed because Quarto also derives an id from each H2
+     ("ecological-forecasting", …) and the two would collide. It is
+     position:fixed, so its place in the DOM is a reading-order choice only. -->
+<nav class="rs-toc" aria-label="On this page">
+<ul>
+<li class="top"><a href="#sec-header"><span class="t">Work</span><span class="tick"></span></a></li>
+<li><a href="#sec-forecasting"><span class="t">Forecasting</span><span class="tick"></span></a></li>
+<li><a href="#sec-microbiome"><span class="t">Microbiome</span><span class="tick"></span></a></li>
+<li><a href="#sec-modelling"><span class="t">Modelling</span><span class="tick"></span></a></li>
+</ul>
+</nav>
+<div id="sec-header" class="page-head">
 <div class="titles">
-<h1 class="page-title" id="projects">Projects</h1>
+<h1 class="page-title" id="work">Work</h1>
 </div>
 <!-- `.lead` below stays raw: a fenced div would wrap its bare text in a <p>,
      and site.css styles bare <p> (19px/1.6 + 14px margin). Pandoc also cannot
      put a class on a markdown paragraph, so `.lead` has to keep its own
      <p class="lead"> tag. -->
 <p class="lead">
-As a bioinformatician and computational ecologist I build pipelines that take raw sequencing data and turn it into a structured view of a biological community, and models that run on that view to answer ecological questions.
+As a bioinformatician and computational ecologist I build the pipelines that turn raw
+sequencing data into a structured view of a biological community, and the models that run
+on that view. The questions at the other end are ecological and mostly applied: how a
+community is assembled, how it responds to stress, and how far ahead its behaviour can be
+predicted.
 </p>
 </div>
-<!-- Half 1: Pipelines -->
+<!-- i · Ecological forecasting -->
 <!-- The leading `.section` class is not styling: it tells pandoc's HTML5 writer
      to emit this div as a real <section> (and is then dropped from the class
-     list, so the element renders as <section class="pj-section">). It has to
-     stay a <section>, because Quarto's bootstrap bundle carries
-     `#quarto-content section:first-of-type h2:first-of-type{margin-top:1rem}`,
-     which outranks `.pj-section .head h2{margin:0}` on the first section's
-     heading. Turning this into a plain <div> drops that 1rem and moves the
-     whole page up by 12px. -->
-<section class="pj-section">
+     list, so the element renders as <section class="pj-section">). Every block
+     below is a <section> for the same reason, which is also what makes
+     `.pj-section + .pj-section` draw the dividers between them. -->
+<section id="sec-forecasting" class="pj-section">
 <div class="head">
 <div class="num">i</div>
-<h2 id="pipelines" class="anchored">Pipelines</h2>
+<div>
+<div class="kicker">phd · uzh, petchey lab · 2020 to 2024</div>
+<h2 id="ecological-forecasting" class="anchored">Ecological forecasting</h2>
+</div>
 </div>
 <div class="pj-intro">
-<p>Two pipelines: one for amplicon sequencing, one for whole-genome bacterial sequencing. They produce structurally different data, broad and shallow on one side, deep and per-strain on the other, but they are linked. Amplicon ASVs can be matched back to genomes from the genome pipeline, so an amplicon survey can pull down the genome-derived traits of the organisms it found.</p>
+<p>Ecology is often treated as a field that cannot be forecasted, and the complexity of natural systems is the usual reason given. Across four chapters I tested which properties of a community and its environment actually set the ceiling on forecast skill: the number and strength of species interactions, growth rates and body sizes, diversity, sampling design, and environmental stress. Most of them mattered, and complexity did not always hurt.</p>
 <figure class="figure">
-<img src="assets/img/schema_pipelines.webp" alt="" width="1640" height="477" class="figure-img">
-<figcaption>fig. i · from soil to community view</figcaption>
+<img class="drawing figure-img" src="assets/img/copepod_dark.svg" alt="Drawing of a copepod." width="293" height="290" loading="lazy" decoding="async">
+<figcaption>copepod · one of twelve plankton classes forecast in the greifensee record, ecosphere 2024</figcaption>
+</figure>
+</div>
+<div class="pj-method">
+<section id="experiments" class="col">
+<h3 class="anchored">Experiments</h3>
+<div class="tag">microcosms · up to nine months</div>
+<p>Microbial communities under manipulated environmental conditions (temperature, light, etc.) and species richness. Run for hundreds of microbial generations (up to nine months) and sampled at high frequency. Additionally, a high-frequency lake plankton record.</p>
+</section>
+<section id="forecasting" class="col">
+<h3 class="anchored">Forecasting</h3>
+<div class="tag">edm · arima · rf · rnn</div>
+<p>Empirical dynamic modelling as the main approach, with ARIMA, random forests and recurrent networks as comparators, so a result about forecast skill was never a result about one method. At 7.4 million models fitted in a single parameter sweep, run tracking became part of the method.</p>
+</section>
+<section id="interactions" class="col">
+<h3 class="anchored">Interactions</h3>
+<div class="tag">ccm · marss</div>
+<p>Convergent cross mapping and multivariate autoregressive state-space models to estimate which species affect which, and how strongly. Those counts and strengths then became predictors of forecast skill in their own right.</p>
+</section>
+</div>
+<div class="pj-lbl">deeper dives</div>
+<div class="pj-deep">
+<a href="ResearchPages/EcoComplexEcoForecast.html">
+<div class="thumb" style="background-image:url('assets/img/PhdChp1Fig1.jpg')"></div>
+<div>
+<div class="meta">Ecology Letters 2022</div>
+<div class="ti">Forecasting in the face of ecological complexity</div>
+</div>
+</a>
+<a href="ResearchPages/SamplingFreq.html">
+<div class="thumb" style="background-image:url('assets/img/SamplingFreqPic.jpg')"></div>
+<div>
+<div class="meta">Ecosphere 2024</div>
+<div class="ti">Sampling frequency and forecast skill</div>
+</div>
+</a>
+</div>
+</section>
+<!-- ii · Microbiome platform -->
+<section id="sec-microbiome" class="pj-section">
+<div class="head">
+<div class="num">ii</div>
+<div>
+<div class="kicker">cybiome, basel · 2025 to 2027 · sole developer</div>
+<h2 id="microbiome-platform" class="anchored">Microbiome platform</h2>
+</div>
+</div>
+<div class="pj-intro solo figfull">
+<p>Two production pipelines and the models that run on their output, built as sole developer: one for amplicon sequencing, one for whole-genome bacterial sequencing. They produce structurally different data: broad and shallow on one side, deep and per-strain on the other. They are linked, so that an amplicon survey can pull down the genome-derived traits of the organisms it identifies. The questions downstream are applied ones: disease pressure on a crop, soil health under different management, how a community assembles over time.</p>
+<figure class="figure">
+<img src="assets/img/schema_pipelines.webp" alt="Schematic: a soil sample is sequenced by the amplicon and whole-genome routes, traits are inferred per organism, and the result is a community view." width="1640" height="477" class="figure-img">
+<figcaption>from a soil sample to a community view carrying per-organism traits</figcaption>
 </figure>
 </div>
 <div class="pj-grid">
-<section id="amplicon" class="pj-card">
-<h3 class="anchored">Amplicon</h3>
+<section id="amplicon-pipeline" class="pj-card">
+<h3 class="anchored">Amplicon pipeline</h3>
 <div class="tag">marker gene · 16S &amp; ITS</div>
-<p>Marker-gene reads from soil, root, gut and water samples. Bacterial 16S and fungal ITS, with hash-based deterministic ASV identifiers so the same microbe carries the same ID across projects.</p>
+<p>Marker-gene reads from soil, root, gut and water. 16S and ITS, with hash-based ASV identifiers so the same microbe carries the same ID across projects.</p>
 <ul>
 <li><span class="k">Quality</span><span>DADA2 with automated denoising parameter selection</span></li>
 <li><span class="k">Taxonomy</span><span>community structure, abundance, predicted function</span></li>
@@ -235,10 +303,10 @@ As a bioinformatician and computational ecologist I build pipelines that take ra
 <li><span class="k">Interop</span><span>BIOM exchange with QIIME2 and mothur</span></li>
 </ul>
 </section>
-<section id="whole-genome" class="pj-card">
-<h3 class="anchored">Whole genome</h3>
+<section id="whole-genome-pipeline" class="pj-card">
+<h3 class="anchored">Whole genome pipeline</h3>
 <div class="tag">per strain · bacterial</div>
-<p>Bacterial genomes from raw reads, pre-assembled contigs, or pre-annotated genomes. The pipeline returns a multi-faceted trait profile per strain, plus a standalone HTML report including a circular genome map. 16S is extracted and fed back into the amplicon pipeline.</p>
+<p>From raw reads, contigs or annotated genomes. Returns a trait profile per strain plus a standalone HTML report with a circular genome map. 16S feeds back to the amplicon pipeline.</p>
 <ul>
 <li><span class="k">Phylogeny</span><span>BLAST against curated 16S references</span></li>
 <li><span class="k">Niche</span><span>GenomeSPOT physiology, gRodon2 growth rate</span></li>
@@ -248,81 +316,95 @@ As a bioinformatician and computational ecologist I build pipelines that take ra
 </ul>
 </section>
 </div>
-</section>
-<!-- Half 2: Models -->
-<!-- `.section` here for the same reason as above: keep the element a <section>
-     so the two halves stay `section:first-of-type` / `:nth-of-type(2)`. -->
-<section class="pj-section">
-<div class="head">
-<div class="num">ii</div>
-<h2 id="models" class="anchored">Models</h2>
-</div>
-<div class="pj-intro">
-<p>The questions sit downstream of the pipeline output, and the framing is ecological: disease pressure on a crop, soil health under different management, how a community assembles over time, and how well any of that predicts the outcome being measured. The methods run from statistical machine learning to community-level mechanistic modelling, mostly in an agricultural context.</p>
-<figure class="figure">
-<svg viewbox="0 0 360 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-<defs>
-<marker id="arr-md" viewbox="0 0 10 10" refx="9" refy="5" markerwidth="6" markerheight="6" orient="auto">
-<path d="M0,0 L10,5 L0,10" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
-</marker>
-</defs>
-<g fill="none" stroke="currentColor" stroke-width="1.2" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="10">
-<rect x="95" y="6" width="170" height="28" rx="4"></rect>
-<text x="180" y="24" text-anchor="middle" fill="var(--ink)" stroke="none">community view</text>
-<path d="M150 34 Q 70 50 65 86" marker-end="url(#arr-md)"></path>
-<line x1="180" y1="34" x2="180" y2="86" marker-end="url(#arr-md)"></line>
-<path d="M210 34 Q 290 50 295 86" marker-end="url(#arr-md)"></path>
-<rect x="15" y="90" width="100" height="40" rx="4"></rect>
-<text x="65" y="108" text-anchor="middle" fill="var(--ink)" stroke="none">predictive</text>
-<text x="65" y="122" text-anchor="middle" fill="currentColor" stroke="none" font-size="9" opacity=".7">XGBoost · RF</text>
-<rect x="130" y="90" width="100" height="40" rx="4"></rect>
-<text x="180" y="108" text-anchor="middle" fill="var(--ink)" stroke="none">mechanistic</text>
-<text x="180" y="122" text-anchor="middle" fill="currentColor" stroke="none" font-size="9" opacity=".7">GSMM · FBA</text>
-<rect x="245" y="90" width="100" height="40" rx="4"></rect>
-<text x="295" y="108" text-anchor="middle" fill="var(--ink)" stroke="none">time series</text>
-<text x="295" y="122" text-anchor="middle" fill="currentColor" stroke="none" font-size="9" opacity=".7">EDM · state-space</text>
-<path d="M65 130 Q 65 170 150 184" marker-end="url(#arr-md)"></path>
-<line x1="180" y1="130" x2="180" y2="184" marker-end="url(#arr-md)"></line>
-<path d="M295 130 Q 295 170 210 184" marker-end="url(#arr-md)"></path>
-<rect x="95" y="188" width="170" height="28" rx="4"></rect>
-<text x="180" y="206" text-anchor="middle" fill="var(--ink)" stroke="none">reports + figures</text>
-</g>
-</svg>
-<figcaption>fig. placeholder · methods schema</figcaption>
-</figure>
-</div>
-<div class="pj-method">
-<section id="predictive" class="col">
-<h3 class="anchored">Predictive</h3>
-<div class="tag">gradient boosting · ensembles</div>
-<p>XGBoost, random forest, regularised regression, stacked ensembles. The core feature engineering choice is trait-based versus OTU-based: instead of taxa as features, the community is collapsed into functional, metabolic and ecological profiles built from genome-derived traits. Trait-based features have the potential to generalise better to the realistic case where the test set contains microbes the training set has not seen. Interpretation through SHAP.</p>
-</section>
-<section id="mechanistic" class="col">
-<h3 class="anchored">Mechanistic</h3>
-<div class="tag">GSMM · community FBA</div>
-<p>Genome-scale metabolic models for individual strains, reconstructed from annotated genomes. Community-level metabolic modelling (SMETANA, MICOM) for how strains interact through their shared and exchanged metabolites. Per-organism flux similarity networks give a graph view of metabolic relationships within a community.</p>
-</section>
-<section id="time-series" class="col">
-<h3 class="anchored">Time series</h3>
-<div class="tag">EDM · Bayesian state-space</div>
-<p>Empirical dynamic modelling for nonparametric forecasting and attractor reconstruction. Bayesian state-space models where a noisy series needs an explicit generative structure on top. Carried over from my PhD work, still in active use.</p>
-</section>
-</div>
-<section id="outputs" class="pj-out">
-<h4 class="anchored">outputs</h4>
-<!-- <b> is kept literally: `**x**` renders as <strong>, and the rule that
-     styles these labels is `.pj-out ul li b`. -->
+<div class="pj-foot">
+<section id="stack" class="pj-out">
+<h4 class="anchored">stack</h4>
 <ul>
-<li><b>Quarto reports.</b> HTML and PDF, reproducible end-to-end.</li>
-<li><b>Interactive figures.</b> embedded htmlwidgets, Observable.</li>
-<li><b>Technical microbiome reports.</b> English and German, audience-tuned.</li>
+<li><b>Languages.</b> Python and R, packaged per module.</li>
+<li><b>Data.</b> one hierarchical HDF5 store, and a curated reference collection of 20,000 complete NCBI RefSeq genomes carried through the pipeline.</li>
+<li><b>Build.</b> Docker, Git, Quarto.</li>
+<li><b>Principles.</b> containerised modules with resolved dependencies, versioning and provenance on every result, an evolving schema, reproducible reruns.</li>
 </ul>
 </section>
+<div>
+<div class="pj-lbl">poster</div>
+<div class="pj-deep tall">
+<a href="assets/docs/COUSIN_Poster_Cybiome_LLD_Italy_2026.pdf" target="_blank" rel="noopener">
+<div class="thumb" style="background-image:url('assets/img/poster-cousin-2026.png');background-position:top center"></div>
+<div>
+<div class="meta">LLD Italy · 2026</div>
+<div class="ti">COUSIN: plant-microbiome contributions to crop resilience</div>
+<span class="chip">Read the poster ↗</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- iii · Modelling and inference -->
+<section id="sec-modelling" class="pj-section">
+<div class="head">
+<div class="num">iii</div>
+<div>
+<div class="kicker">across the work</div>
+<h2 id="modelling-and-inference" class="anchored">Modelling and inference</h2>
+</div>
+</div>
+<div class="pj-intro solo">
+<p>The systems change, but the questions repeat: how to design a study so the effect is estimable, and how much of what a model explains survives out of sample.</p>
+</div>
+<div class="pj-method pairs">
+<section id="design-and-inference" class="col">
+<h3 class="anchored">Design and inference</h3>
+<div class="tag">experimental design · mixed models · glms</div>
+<p>Factorial designs and power analyses, then linear, generalised linear and mixed models, with validation and uncertainty part of the answer. Applied, it becomes monitoring design: how much sampling a programme needs.</p>
+</section>
+<section id="bayesian" class="col">
+<h3 class="anchored">Bayesian</h3>
+<div class="tag">brms · stan</div>
+<p>Bayesian inference for the cases where a point estimate is not the answer: hierarchical models over grouped and repeated measures, priors that carry what is already known, and posterior predictive checks to find where a model fails.</p>
+</section>
+<section id="predictive" class="col">
+<h3 class="anchored">Predictive</h3>
+<div class="tag">feature engineering · ensembles · neural nets</div>
+<p>Feature engineering, gradient boosting, stacked ensembles and neural networks, tuned and validated out of sample, interpreted with SHAP.</p>
+</section>
+<section id="metabolic-models" class="col">
+<h3 class="anchored">Metabolic models</h3>
+<div class="tag">carveme · memote · smetana · micom</div>
+<p>Genome-scale reconstructions per strain, quality checked, then community flux balance analysis for what strains exchange. Open-source solvers when needed.</p>
+</section>
+</div>
+<!-- Same foot as the microbiome section: the section's ledger on the left, a single
+     pointer on the right. This one used to be an unnumbered coda of its own, which
+     left the page with three sections and a headingless block hanging off the end. -->
+<div class="pj-foot">
+<section id="how-the-work-is-built" class="pj-out">
+<h4 class="anchored">how the work is built</h4>
+<ul>
+<li><b>Reproducible by default.</b> version control in, Quarto out, end to end.</li>
+<li><b>Data and code published.</b> archived alongside the first-author papers.</li>
+<li><b>Built to be handed over.</b> containers, pinned versions, written protocols.</li>
+</ul>
+</section>
+<div>
+<div class="pj-lbl">worked example</div>
+<div class="pj-deep aside">
+<a href="ResearchPages/warmingFRpage.html">
+<div class="thumb" style="background-image:url('assets/img/warmingfig1.jpg')"></div>
+<div>
+<div class="meta">JAE 2019 · Elton Prize</div>
+<div class="ti">Fitting a functional response, and what warming does to it</div>
+</div>
+</a>
+</div>
+</div>
+</div>
 </section>
 <div class="pj-wayfind">
-The peer-reviewed work behind some of this lives on
-<a href="research.html">Research &amp; Publications</a>.
-Method demos you can poke at live on <a href="lab.html">Lab</a>.
+Papers and abstracts are on <a href="research.html">Publications</a>.
+Talks, posters and teaching on <a href="talks.html">Talks &amp; Teaching</a>.
+Method demos on <a href="lab.html">Lab</a>.
 </div>
 </main>
 

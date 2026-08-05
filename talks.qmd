@@ -95,7 +95,7 @@ undergraduate statistics teaching at the University of Zurich.
 <!-- Authorship is stated once for the section rather than per card. A `chip gold`
      on one poster and not the other read as a contrast between them, when the
      only real difference is which distinction each carries. The chip is left to
-     mean "distinction" alone, as it does on Research & Publications. -->
+     mean "distinction" alone, as it does on Publications. -->
 
 ```{=html}
 <div class="sub">first author</div>

@@ -28,8 +28,8 @@
    with the header for the same column.
 
    It stays a float rather than becoming a positioned rail like .rs-toc on
-   Research & Publications. That one is pure convenience over a short page; this
-   one carries the only "back to Research & Publications" link at the top of the
+   Publications. That one is pure convenience over a short page; this
+   one carries the only "back to Publications" link at the top of the
    page, and a positioned version would need ~1424px of viewport and vanish
    below it. In flow it survives every width. */
 .rp-toc{

@@ -122,7 +122,7 @@ an MSc in Biostatistics at UZH, and a BSc in Biology and Environmental Sciences.
 </div>
 </div>
 </div>
-<div class="more"><a href="projects.html">read more on the Projects page →</a></div>
+<div class="more"><a href="projects.html">read more on the Work page →</a></div>
 </div>
 ```
 

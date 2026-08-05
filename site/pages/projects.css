@@ -1,4 +1,4 @@
-/* Projects page — layout only.
+/* Work page (projects.html) — layout only.
    Loaded before styles.css / site.css (see projects.qmd), so the
    shared stylesheets still win ties at equal specificity. */
 
@@ -8,7 +8,7 @@
    restyled, so there is one header implementation to maintain.
 
    The one deviation: site.css caps `.page-head .lead` at 66ch (~755px), which
-   leaves the lead visibly narrower than the 968px text column of the sections
+   leaves the lead visibly narrower than the text column of the sections
    below it. Released here so the lead runs the full header width and its left
    and right edges line up with the rest of the page. Scoped to this page via
    the `data-page` key on <html> so Lab and Talks keep the 66ch measure — and
@@ -18,7 +18,30 @@
 :root[data-page="projects"] .page-head .lead{max-width:none}
 
 .pj-section{
-  max-width:1080px;margin:60px auto 0;padding:0 56px;
+  max-width:var(--max);margin:60px auto 0;padding:0 56px;
+}
+
+/* The page is a series of separate bodies of work rather than one argument, so
+   each one gets a rule and a wide gap instead of only the `.head` underline.
+
+   Drawn as a pseudo-element inset to the text column, not as `border-top` on the
+   section. A border spans the padding box, i.e. the whole block, while the fixed
+   `.rs-toc` rail is positioned off the narrower text edge, so a full-width rule
+   ran under the rail at every width where the rail is shown. Inset by the
+   section's own 56px it clears the rail, and it lines the divider up with
+   `.head`'s underline and `.pj-out`'s rule, which are both on the text column. */
+.pj-section + .pj-section{
+  margin-top:110px;padding-top:72px;position:relative;
+}
+.pj-section + .pj-section::before{
+  content:"";position:absolute;top:0;left:56px;right:56px;
+  border-top:1px solid var(--rule);
+}
+/* The closing "how the work is built" section is a bare `.pj-out` with no `.head`
+   above it. `.pj-out` draws its own top rule, which directly under the divider
+   would stack two hairlines 72px apart. */
+.pj-section > .pj-out:first-child{
+  margin-top:0;padding-top:0;border-top:none;
 }
 .pj-intro{
   display:grid;
@@ -40,10 +63,128 @@
 .pj-intro figure img{
   width:100%;height:auto;display:block;
 }
+/* A drawing rather than a data figure: capped so it reads as an illustration in
+   the corner of the section, at the same measure the other pen drawings on the
+   site use (talks.css caps at 240px, research.css at 200px). */
+.pj-intro figure img.drawing{max-width:210px}
 .pj-intro figcaption{
   font-family:'JetBrains Mono',monospace;font-size:10px;
   letter-spacing:.14em;text-transform:uppercase;
   color:var(--sage);opacity:.55;text-align:center;
+}
+/* `.pj-intro` auto-places its children into the two columns. `.solo` collapses it
+   to one, which serves two cases: prose on its own, and prose above a figure that
+   needs the full text column rather than the ~425px second cell. `.pj-intro p`
+   already caps the measure at 60ch, so the prose does not stretch. */
+.pj-intro.solo{grid-template-columns:minmax(0,1fr)}
+/* The 60ch cap exists to hold a measure beside a figure. In a one-column intro
+   nothing sits beside the prose, and the cap only left half the row empty. */
+.pj-intro.solo > p{max-width:none}
+/* The pipeline schematic is 3.4:1 with type inside it, so it gets `.solo` and its
+   own row; beside the prose it was unreadable at any share of a column.
+
+   `.figfull` holds the figure to 80% and centres it, because at the full width the
+   schematic's own labels set larger than the body text under them. The prose is
+   already released by `.solo` above. */
+.pj-intro.figfull > figure{max-width:calc(var(--text) * .8);margin-inline:auto}
+/* The schematic has an alpha channel and was drawn for a light page: its outlines
+   and monitor are black, and its callout boxes are filled white. On the dark theme
+   the linework disappears into the background while the fills glare. Dimming it
+   cannot fix both at once, so it keeps its own light plate instead. */
+:root[data-theme="dark"] .pj-intro.figfull > figure img{
+  background:var(--plate);padding:20px;border-radius:6px;
+}
+
+/* Closes a section with its ledger and a single pointer side by side. Stacked,
+   the lone card sat on its own row under a full-width list with the whole left
+   gutter empty either side of it. */
+.pj-foot{
+  margin-top:56px;padding-top:28px;border-top:1px solid var(--rule);
+  display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:48px;align-items:start;
+}
+/* The ledger keeps its own rule and spacing when it stands alone; inside the foot
+   the foot draws those, and the 140px label gutter costs more than it gives in
+   the narrower column, so the label sits above its list instead. */
+.pj-foot .pj-out{
+  margin-top:0;padding-top:0;border-top:none;
+  grid-template-columns:minmax(0,1fr);gap:12px;
+}
+
+.pj-foot .pj-lbl{margin-top:0}
+
+/* Small label introducing a `.pj-deep` group, so the cards are announced rather
+   than appearing as bare links. Same metrics as `.head .kicker`. */
+.pj-lbl{
+  margin-top:40px;
+  font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--sage);font-weight:500;
+}
+.pj-lbl + .pj-deep{margin-top:14px}
+
+/* Compact pointer to a longer write-up. A smaller relative of `.card` on
+   Research, which carries a summary paragraph under a large 4:3 thumbnail: here
+   the write-up is a footnote to the section it sits under rather than the thing
+   being read, so the card is one row high and says only where it goes. `auto-fit`
+   lets a lone card fill the column and a pair split it, with no modifier class. */
+.pj-deep{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:20px;margin-top:40px;
+}
+.pj-deep a{
+  display:grid;grid-template-columns:88px 1fr;gap:16px;align-items:center;
+  padding:12px 18px 12px 12px;text-decoration:none;
+  background:var(--cream-2);border:1px solid var(--rule);border-radius:6px;
+  transition:border-color .2s ease, transform .2s ease;
+}
+.pj-deep a:hover{border-color:var(--sage);transform:translateY(-2px)}
+/* A lone card has no sibling to share the row with, and stretched to the full
+   text column it read as a banner rather than as a pointer. */
+.pj-deep a:only-child{max-width:560px}
+/* Two `.pj-foot` variants, because the two sources crop differently.
+
+   `.tall` stacks a wide crop of a portrait poster over the title. `cover` is right
+   there: the poster's header is the part worth showing and the rest is body copy
+   too small to read at any size that fits.
+
+   `.aside` sets the preview beside the title and uses `contain`, so the whole
+   figure shows small rather than one magnified corner of it. That suits a
+   multi-panel figure, where a crop shows nothing legible. */
+.pj-deep.tall{grid-template-columns:minmax(0,1fr);margin-top:14px}
+.pj-deep.tall a{grid-template-columns:minmax(0,1fr);gap:12px;padding:12px;align-items:stretch}
+.pj-deep.tall a:only-child{max-width:none}
+.pj-deep.tall .thumb{width:100%;height:116px}
+
+.pj-deep.aside{grid-template-columns:minmax(0,1fr);margin-top:14px}
+.pj-deep.aside a{grid-template-columns:104px 1fr;gap:16px;padding:14px 16px 14px 14px}
+.pj-deep.aside a:only-child{max-width:none}
+.pj-deep.aside .thumb{
+  width:104px;height:88px;border-radius:2px;
+  background-size:contain;background-repeat:no-repeat;background-position:center;
+}
+.pj-deep.aside .ti{font-size:17px}
+.pj-deep .chip{margin-top:10px}
+/* Centred by default, which is where the subject of a figure sits. A portrait
+   source (a poster) overrides to `top` inline, since cropping a poster to 4:3
+   from the middle loses its title. */
+.pj-deep .thumb{
+  width:88px;height:66px;border-radius:4px;
+  background-size:cover;background-position:center;
+}
+/* Same treatment as the highlight thumbnails on Publications (research.css): these
+   are crops of figures on white, and they glare on a dark page. */
+:root[data-theme="dark"] .pj-deep .thumb{
+  filter:brightness(.86) sepia(.10) saturate(.95);
+}
+.pj-deep .meta{
+  font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--sage);font-weight:500;
+}
+/* A div, not a heading: Quarto loads anchor.min.js, which decorates every heading
+   in the content with a link. Inside this card the heading already sits within an
+   <a>, and the injected anchor rendered as a nested, bordered link box on hover. */
+.pj-deep .ti{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;
+  font-size:19px;line-height:1.3;margin-top:3px;color:var(--ink);
 }
 .pj-section .head{
   display:grid;
@@ -58,6 +199,21 @@
   font-family:'Cormorant Garamond',serif;font-weight:500;font-size:48px;
   margin:0;color:var(--ink);letter-spacing:.005em;
 }
+/* Dateline above the heading, so a section is named by what the work is and only
+   then by where and when it was done. Same metrics as `.lab-demo .head .kicker`,
+   which is the same element in the same position. */
+.pj-section .head .kicker{
+  font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--sage);font-weight:500;margin-bottom:8px;
+}
+/* Quarto's bootstrap bundle carries
+   `#quarto-content section:first-of-type h2:first-of-type{margin-top:1rem}`
+   (verified in the built bundle; specificity 1,2,2), which outranks
+   `.pj-section .head h2{margin:0}` above. With a kicker present that 1rem lands
+   *between* the kicker and the heading of section i and of no other section.
+   Matched here at the same specificity and won on load order:
+   projects.css is linked after the bootstrap bundle (and before site.css). */
+#quarto-content section.pj-section .head h2{margin-top:0}
 
 .pj-grid{
   display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:36px;
@@ -90,6 +246,8 @@
 .pj-method{
   display:grid;grid-template-columns:1fr 1fr 1fr;gap:36px;margin-top:36px;
 }
+/* Four columns read better as a 2x2 than as a four-up row at this width. */
+.pj-method.pairs{grid-template-columns:1fr 1fr;row-gap:30px}
 .pj-method .col h3{
   font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;
   font-size:24px;margin:0 0 6px;color:var(--ink);
@@ -101,8 +259,8 @@
 .pj-method .col p{font-size:17px;line-height:1.6;color:var(--ink-2)}
 
 .pj-out{
-  margin-top:64px;padding-top:32px;border-top:1px solid var(--rule);
-  display:grid;grid-template-columns:200px 1fr;gap:48px;align-items:start;
+  margin-top:56px;padding-top:28px;border-top:1px solid var(--rule);
+  display:grid;grid-template-columns:140px 1fr;gap:32px;align-items:start;
 }
 .pj-out h4{
   font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.18em;
@@ -110,7 +268,7 @@
 }
 .pj-out ul{list-style:none;margin:0;padding:0}
 .pj-out ul li{
-  padding:10px 0;font-family:'Cormorant Garamond',serif;font-size:18px;
+  padding:8px 0;font-family:'Cormorant Garamond',serif;font-size:18px;
   color:var(--ink-2);border-top:1px solid var(--rule-2);line-height:1.5;
 }
 .pj-out ul li:first-child{border-top:none}
@@ -128,10 +286,27 @@
   .pj-intro{grid-template-columns:1fr;gap:24px}
   .pj-intro figure svg{max-height:220px}
   .pj-section{padding:0 24px;margin-top:36px}
-  .pj-section .head{grid-template-columns:auto 1fr;gap:18px;align-items:baseline}
+  .pj-section + .pj-section{margin-top:56px;padding-top:40px}
+  .pj-section + .pj-section::before{left:24px;right:24px}
+  /* Stacked, not `align-items:baseline` as before. Baseline resolves against the
+     wrapper's first line box, which is the 11px kicker now, so the 56px Cookie
+     numeral would float well above the heading it belongs to. Same resolution as
+     `.lab-demo .head` at this width. */
+  .pj-section .head{grid-template-columns:1fr;gap:6px}
   .pj-section .head .num{font-size:56px}
   .pj-section .head h2{font-size:32px}
-  .pj-grid,.pj-method{grid-template-columns:1fr;gap:24px}
+  /* `.pj-method.pairs` is listed explicitly: media queries add no specificity, so
+     (0,2,0) would otherwise keep it two-column all the way down. */
+  .pj-grid,.pj-method,.pj-method.pairs{grid-template-columns:1fr;gap:24px}
   .pj-out{grid-template-columns:1fr;gap:14px}
+  .pj-foot{grid-template-columns:1fr;gap:28px}
+  /* Once the foot stacks, its column is the full text width. `cover` on a portrait
+     source blows the poster's header into a banner, so both variants go back to the
+     horizontal card the rest of the page uses. */
+  .pj-deep.tall a,
+  .pj-deep.aside a{grid-template-columns:96px 1fr;gap:16px;padding:12px 18px 12px 12px;align-items:center}
+  .pj-deep.tall .thumb{width:96px;height:72px}
+  .pj-deep.aside .thumb{width:96px;height:80px}
+  .pj-deep .chip{margin-top:8px}
   .pj-card ul li{grid-template-columns:1fr;gap:2px}
 }

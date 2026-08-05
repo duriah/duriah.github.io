@@ -2,7 +2,7 @@
    Loaded before styles.css / site.css (see talks.qmd), so the
    shared stylesheets still win ties at equal specificity. */
 
-.tt-block{max-width:1080px;margin:80px auto 0;padding:0 56px}
+.tt-block{max-width:var(--max);margin:80px auto 0;padding:0 56px}
 .tt-block h2{
   font-family:'Cormorant Garamond',serif;font-weight:500;font-size:38px;
   margin:0 0 4px;color:var(--ink);
@@ -16,7 +16,7 @@
   font-size:24px;margin:32px 0 10px;color:var(--ink);
 }
 .tt-illu{
-  max-width:1080px;margin:64px auto 0;padding:0 56px;
+  max-width:var(--max);margin:64px auto 0;padding:0 56px;
   display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;
 }
 .tt-illu img{display:block;width:100%;max-width:240px;margin:0 auto;height:auto}
@@ -24,7 +24,7 @@
   font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;
   color:var(--ink-3);text-align:center;margin-top:8px;
 }
-.tt-teach{max-width:1080px;margin:80px auto 0;padding:0 56px}
+.tt-teach{max-width:var(--max);margin:80px auto 0;padding:0 56px}
 /* Teaching entries follow the same record idiom as the talks and publication
    lists: a quiet label, the course as the thing that carries the row, mono for
    the run dates, and a hover band over the whole entry. */

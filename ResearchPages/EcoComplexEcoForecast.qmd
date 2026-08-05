@@ -21,7 +21,7 @@ format:
      `display:block` links wrapping inline spans, so it stays raw HTML. -->
 ```{=html}
 <aside class="rp-toc" aria-label="Highlighted research">
-<a class="back" href="../research.html">← Research &amp; Publications</a>
+<a class="back" href="../research.html">← Publications</a>
 <div class="h">Highlighted research</div>
 <ul class="list">
 <li>
