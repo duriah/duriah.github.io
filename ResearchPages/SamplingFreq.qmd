@@ -1,18 +1,20 @@
 ---
 title: "Sampling frequency and forecast skill"
 description: "As sampling frequency drops, plankton forecasts get worse and fewer species interactions are recovered. Forecast skill can be turned into a design tool for monitoring."
-image: ../assets/img/SamplingFreqPic.jpg
+image: ../assets/img/og-samplingfreq.png
 page-layout: custom
 format:
   html:
     theme: none
     include-in-header:
       - text: |
+          <link rel="canonical" href="https://duriah.github.io/ResearchPages/SamplingFreq.html">
+          <meta property="og:url" content="https://duriah.github.io/ResearchPages/SamplingFreq.html">
           <script>document.documentElement.dataset.page='research';</script>
 ---
 
 ```{=html}
-<main>
+<main id="main">
 ```
 
 :::::::: {.rp-wrap}
@@ -59,7 +61,7 @@ format:
 </div>
 ```
 
-# Using forecasts to improve monitoring in community ecology
+# Sampling frequency and forecast skill
 
 ```{=html}
 <p class="lede">
@@ -251,7 +253,7 @@ in community ecology. <em>Ecosphere</em>, 15, e4786.
 
 ```{=html}
 <nav class="rp-siblings" aria-label="Other highlighted research">
-<div class="h">Other highlighted research</div>
+<h3 class="h">Other highlighted research</h3>
 <div class="row">
 <a class="sib" href="warmingFRpage.html">
 <div class="meta">JAE 2019 · Elton Prize</div>

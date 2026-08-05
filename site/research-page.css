@@ -103,8 +103,12 @@
   border-color: var(--sage);
   cursor: default;
 }
+/* The fill below is var(--sage), which dark mode rebinds from green to gold, so
+   a hardcoded rgba(247,243,232,.7) left this label at 1.6:1 there. Off the theme
+   token instead, and at .85 rather than .7: composited on the fill that measures
+   4.7:1 in light and 6.4:1 in dark, where .7 stayed under AA in both. */
 .rp-toc .list .current .meta,
-.rp-toc .list a[aria-current="page"] .meta{ color: rgba(247,243,232,.7); }
+.rp-toc .list a[aria-current="page"] .meta{ color: rgba(var(--cream-rgb),.85); }
 .rp-toc .list .current .ti,
 .rp-toc .list a[aria-current="page"] .ti{ color: var(--cream); }
 
@@ -426,13 +430,16 @@
   padding: 32px 0 0;
   border-top: 1px solid var(--rule);
 }
+/* An h3 rather than a div so the h4 card titles below it do not jump a level
+   from the last section h2. The margin is set on both sides because the heading
+   tag brings its own from the Bootstrap bundle. */
 .rp-siblings .h{
   font-family: 'Inter', sans-serif;
   font-size: 11px;
   letter-spacing: .2em;
   text-transform: uppercase;
   color: var(--sage);
-  margin-bottom: 20px;
+  margin: 0 0 20px;
   font-weight: 500;
 }
 .rp-siblings .row{
@@ -485,7 +492,10 @@
   .rp-toc .list{ display: grid; grid-template-columns: 1fr; }
 }
 @media (max-width: 960px){
-  .rp-wrap{ --rp-pad: 32px; padding: 0 var(--rp-pad); }
+  /* Keeps the 24px of the base rule above: dropping it left the page flush
+     against the site bar between 721 and 960px, because these pages have no
+     .page-head and site.css zeroes main's padding for data-page="research". */
+  .rp-wrap{ --rp-pad: 32px; padding: 24px var(--rp-pad) 0; }
   .rp-header h1{ font-size: 42px; }
   .rp-meta{ padding-bottom: 24px; }
   .rp-body{ margin-top: 40px; gap: 48px; }

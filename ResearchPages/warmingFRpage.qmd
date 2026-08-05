@@ -1,18 +1,20 @@
 ---
 title: "Warming can destabilise predator–prey interactions"
 description: "Warming flips a ciliate predator’s functional response from Type III to Type II, and simulations show that one change of shape drives the prey extinct. Winner of the 2019 Elton Prize."
-image: ../assets/img/warmingfig1.jpg
+image: ../assets/img/og-warmingfr.png
 page-layout: custom
 format:
   html:
     theme: none
     include-in-header:
       - text: |
+          <link rel="canonical" href="https://duriah.github.io/ResearchPages/warmingFRpage.html">
+          <meta property="og:url" content="https://duriah.github.io/ResearchPages/warmingFRpage.html">
           <script>document.documentElement.dataset.page='research';</script>
 ---
 
 ```{=html}
-<main>
+<main id="main">
 ```
 
 ::: {.rp-wrap}
@@ -285,7 +287,7 @@ from Type III to Type II. <em>Journal of Animal Ecology</em>, 88, 1575–1586.
 
 ```{=html}
 <nav class="rp-siblings" aria-label="Other highlighted research">
-<div class="h">Other highlighted research</div>
+<h3 class="h">Other highlighted research</h3>
 <div class="row">
 <a class="sib" href="EcoComplexEcoForecast.html">
 <div class="meta">Ecology Letters 2022</div>

@@ -1,6 +1,6 @@
 /* Behaviour only. The top bar and footer are static HTML injected at build time
-   (site/_nav.html, site/_foot.html); the active nav item is chosen by CSS from
-   body[data-page]. What is left here genuinely needs a client: the dark-mode
+   (_partials/nav.html, _partials/foot.html); the active nav item is chosen by CSS
+   from :root[data-page]. What is left here genuinely needs a client: the dark-mode
    preference and the narrow-viewport drawer. */
 (function () {
   // The theme is resolved by an inline <head> script (see include-in-header in
@@ -15,11 +15,16 @@
       drawer.hidden = !open;
       toggle.setAttribute('aria-expanded', String(open));
       toggle.classList.toggle('is-open', open);
-      document.body.classList.toggle('nav-open', open);
     };
     toggle.addEventListener('click', () => setOpen(drawer.hidden));
     drawer.addEventListener('click', (e) => { if (e.target.tagName === 'A') setOpen(false); });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
+
+    // The hamburger only exists below 900px (site.css), so widening the window
+    // with the drawer open left it painted with nothing left to close it.
+    window.matchMedia('(min-width: 901px)').addEventListener('change', (e) => {
+      if (e.matches) setOpen(false);
+    });
 
     // Position drawer right under the bar.
     const positionDrawer = () => {
@@ -92,12 +97,23 @@
     window.addEventListener('resize', queueRail);
   }
 
-  // Theme toggle (light/dark).
-  document.querySelectorAll('.theme-toggle').forEach((btn) => {
+  // Theme toggle (light/dark). The swapped sun/moon icon is the only cue a
+  // sighted user needs, but it says nothing to a screen reader, so the buttons
+  // also carry aria-pressed — set here rather than in the boot script in
+  // _quarto.yml, which runs in <head> before either button exists.
+  const themeToggles = document.querySelectorAll('.theme-toggle');
+  const syncPressed = (theme) => {
+    themeToggles.forEach((btn) => {
+      btn.setAttribute('aria-pressed', String(theme === 'dark'));
+    });
+  };
+  syncPressed(document.documentElement.getAttribute('data-theme'));
+  themeToggles.forEach((btn) => {
     btn.addEventListener('click', () => {
       const cur = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
       const next = cur === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', next);
+      syncPressed(next);
       try { localStorage.setItem('ud-theme', next); } catch (e) {}
     });
   });

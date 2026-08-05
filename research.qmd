@@ -8,11 +8,13 @@ format:
     include-in-header:
       - text: |
           <link rel="stylesheet" href="/site/pages/research.css">
+          <link rel="canonical" href="https://duriah.github.io/research.html">
+          <meta property="og:url" content="https://duriah.github.io/research.html">
           <script>document.documentElement.dataset.page='research';</script>
 ---
 
 ```{=html}
-<main>
+<main id="main">
 ```
 
 <!-- Section rail. The ids below are `sec-`-prefixed because Quarto also derives
@@ -164,7 +166,7 @@ and species dynamics.
 <article class="pub">
 <div class="yr">2022</div>
 <div class="body">
-<span class="au"><strong>Daugaard U.</strong>, Munch S., Inauen D., Pennekamp F. &amp; Petchey O.</span>
+<span class="au"><strong>Daugaard U.</strong>, Munch S., Inauen D., Pennekamp F. &amp; Petchey O.L.</span>
 <span class="ti"> Forecasting in the face of ecological complexity: number and strength of species interactions determine forecast skill in ecological communities.</span>
 <span class="vn"> Ecology Letters, 25, 1974-1985.</span>
 <div class="links">
@@ -228,7 +230,7 @@ and species dynamics.
 <div class="links">
 <a class="deep" href="ResearchPages/warmingFRpage.html">deep dive →</a>
 <a href="https://doi.org/10.1111/1365-2656.13053" target="_blank" rel="noopener">doi</a>
-<a href="https://zenodo.org/badge/latestdoi/186978107" target="_blank" rel="noopener">data + code</a>
+<a href="https://doi.org/10.5281/zenodo.2864317" target="_blank" rel="noopener">data + code</a>
 </div>
 <details class="abs">
 <summary>abstract</summary>

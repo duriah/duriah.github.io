@@ -1,6 +1,6 @@
 ---
-title: "Uriah Daugaard · bioinformatics, ecology, pipelines"
-description: "Uriah Daugaard — computational ecologist and bioinformatician at Cybiome, Basel. PhD in ecology (UZH), MSc in biostatistics. Microbiome pipelines, modelling and forecasting."
+title: "Bioinformatics, ecology, pipelines"
+description: "Uriah Daugaard — computational ecologist and bioinformatician. PhD in ecology (UZH), MSc in biostatistics. Microbiome pipelines, modelling and forecasting."
 page-layout: custom
 format:
   html:
@@ -8,11 +8,13 @@ format:
     include-in-header:
       - text: |
           <link rel="stylesheet" href="/site/pages/index.css">
+          <link rel="canonical" href="https://duriah.github.io/">
+          <meta property="og:url" content="https://duriah.github.io/">
           <script>document.documentElement.dataset.page='home';</script>
 ---
 
 ```{=html}
-<main>
+<main id="main">
 ```
 
 <!-- Hero -->
@@ -165,7 +167,7 @@ an MSc in Biostatistics at UZH, and a BSc in Biology and Environmental Sciences.
 <article class="pub">
 <div class="yr">2022</div>
 <div class="body">
-<span class="au"><strong>Daugaard U.</strong>, Munch S., Inauen D., Pennekamp F. &amp; Petchey O.</span>
+<span class="au"><strong>Daugaard U.</strong>, Munch S., Inauen D., Pennekamp F. &amp; Petchey O.L.</span>
 <span class="ti"> Forecasting in the face of ecological complexity: number and strength of species interactions determine forecast skill in ecological communities.</span>
 <span class="vn"> Ecology Letters, 25, 1974-1985.</span>
 <div class="links">

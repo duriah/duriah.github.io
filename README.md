@@ -97,8 +97,8 @@ narrow-viewport drawer.
 | `site/pages/<page>.css` | layout for one page only |
 
 Page stylesheets are linked from the page's YAML header, which places them
-*before* `styles.css` and `site/site.css` in `<head>`. That ordering is
-intentional: the shared stylesheets win ties at equal specificity.
+*before* `site/site.css` and `site/research-page.css` in `<head>`. That ordering
+is intentional: the shared stylesheets win ties at equal specificity.
 
 ## Posters
 

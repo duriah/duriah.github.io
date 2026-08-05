@@ -36,7 +36,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
@@ -73,6 +72,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Cookie&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <link rel="apple-touch-icon" href="../assets/img/favicon.png">
+<meta property="og:type" content="website">
 <meta name="google-site-verification" content="US9UugOmq-GXdRt4_XqJtenD7bkmr-q2J2JQUu1q8Xk">
 <script>
 /* Theme boot. Inline and in <head> on purpose: site.js runs at the end
@@ -92,6 +92,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }catch(e){}})();
 </script>
+<link rel="canonical" href="https://duriah.github.io/ResearchPages/SamplingFreq.html">
+<meta property="og:url" content="https://duriah.github.io/ResearchPages/SamplingFreq.html">
 <script>document.documentElement.dataset.page='research';</script>
 
 
@@ -99,12 +101,16 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../site/research-page.css">
 <meta property="og:title" content="Sampling frequency and forecast skill – Uriah Daugaard">
 <meta property="og:description" content="As sampling frequency drops, plankton forecasts get worse and fewer species interactions are recovered. Forecast skill can be turned into a design tool for monitoring.">
-<meta property="og:image" content="https://duriah.github.io/assets/img/SamplingFreqPic.jpg">
+<meta property="og:image" content="https://duriah.github.io/assets/img/og-samplingfreq.png">
 <meta property="og:site_name" content="Uriah Daugaard">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
 <meta name="twitter:title" content="Sampling frequency and forecast skill – Uriah Daugaard">
 <meta name="twitter:description" content="As sampling frequency drops, plankton forecasts get worse and fewer species interactions are recovered. Forecast skill can be turned into a design tool for monitoring.">
-<meta name="twitter:image" content="https://duriah.github.io/assets/img/SamplingFreqPic.jpg">
+<meta name="twitter:image" content="https://duriah.github.io/assets/img/og-samplingfreq.png">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="630">
+<meta name="twitter:image-width" content="1200">
 </head>
 
 <body class="fullcontent quarto-light">
@@ -125,6 +131,7 @@ ul.task-list li input[type="checkbox"] {
   from the second. The active item is highlighted by CSS off the page key on <html>
   (see "active nav item" in site/site.css) so this file stays identical everywhere.
 -->
+<a class="skip" href="#main">Skip to content</a>
 <header class="site-bar">
   <nav class="nav-l">
     <a data-nav="home" href="../index.html">Home</a>
@@ -183,7 +190,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<main>
+<main id="main">
 <div class="rp-wrap">
 <!-- Nav block stays raw HTML end to end. Quarto's bundled stylesheet styles the
      bare `aside` tag (font-size:.825rem plus a colour that the borders inherit),
@@ -221,7 +228,7 @@ ul.task-list li input[type="checkbox"] {
 <span>2024</span><span class="dot"></span>
 <span>PhD chapter 2</span>
 </div>
-<h1 id="using-forecasts-to-improve-monitoring-in-community-ecology">Using forecasts to improve monitoring in community ecology</h1>
+<h1 id="sampling-frequency-and-forecast-skill">Sampling frequency and forecast skill</h1>
 <p class="lede">
 As sampling frequency drops, forecasts get worse for almost every class of a
 long lake-plankton record, and fewer interactions are recovered among the
@@ -244,7 +251,7 @@ doi: 10.1002/ecs2.4786 <span class="arrow">↗</span>
 <section class="section">
 <div class="head">
 <div class="num">01 · The question</div>
-<h2 id="how-often-is-often-enough" class="anchored">How often is often enough?</h2>
+<h2 id="how-often-is-often-enough">How often is often enough?</h2>
 </div>
 <div class="text">
 <p>Long-term monitoring programmes face a recurring choice: how often to sample. Sampling too rarely may miss the dynamics that matter; sampling too often is expensive. We asked whether forecast skill itself can guide that choice, both in a controlled simulation and on a real lake.</p>
@@ -254,7 +261,7 @@ doi: 10.1002/ecs2.4786 <span class="arrow">↗</span>
 <section class="section">
 <div class="head">
 <div class="num">02 · What we did</div>
-<h2 id="a-simulated-baseline-and-a-real-high-frequency-lake" class="anchored">A simulated baseline and a real high-frequency lake</h2>
+<h2 id="a-simulated-baseline-and-a-real-high-frequency-lake">A simulated baseline and a real high-frequency lake</h2>
 </div>
 <div class="text">
 <p>We worked with two datasets. The first is a deliberately minimal baseline: a single simulated population following a delayed logistic equation, where the dynamics are known exactly and growth rate can be dialled up and down. The second is a high-frequency plankton record from Lake Greifensee, where an automated underwater camera images plankton every hour and neural-network classifiers sort the imaged individuals into phytoplankton and zooplankton. That gives six zooplankton classes; the phytoplankton we then split into six size bins.</p>
@@ -274,7 +281,7 @@ zooplankton classes over 994 days, April 2019 to December 2021.
 <section class="section">
 <div class="head">
 <div class="num">03 · What we found</div>
-<h2 id="forecasts-decay-and-interaction-estimates-thin-out" class="anchored">Forecasts decay, and interaction estimates thin out</h2>
+<h2 id="forecasts-decay-and-interaction-estimates-thin-out">Forecasts decay, and interaction estimates thin out</h2>
 </div>
 <div class="text">
 <p>Forecast error rose as sampling grew sparser, for eleven of the twelve plankton classes; only the ciliates were forecast best from the sparsest series. Phyto- and zooplankton lost skill at much the same rate. Faster-growing classes were harder to forecast overall, though the evidence for that was weak.</p>
@@ -310,7 +317,7 @@ phytoplankton classes interactions; the zooplankton estimates are unmoved.
 <section class="section">
 <div class="head">
 <div class="num">04 · Why it matters</div>
-<h2 id="forecast-skill-is-a-design-tool-not-just-an-outcome" class="anchored">Forecast skill is a design tool, not just an outcome</h2>
+<h2 id="forecast-skill-is-a-design-tool-not-just-an-outcome">Forecast skill is a design tool, not just an outcome</h2>
 </div>
 <div class="text">
 <p>Monitoring programmes can pilot their sampling cadence against forecast skill, choosing the lowest frequency that preserves both prediction and inference. That makes ecological monitoring cheaper to run, and the inferences drawn from it more honest: a programme that samples too rarely will not only forecast worse, it will also see a sparser interaction network than is really there.</p>
@@ -336,16 +343,16 @@ in community ecology. <em>Ecosphere</em>, 15, e4786.
      the very top of a long page. The styling for it already existed in
      research-page.css (.rp-siblings); only the markup was missing. -->
 <nav class="rp-siblings" aria-label="Other highlighted research">
-<div class="h">Other highlighted research</div>
+<h3 class="h">Other highlighted research</h3>
 <div class="row">
 <a class="sib" href="warmingFRpage.html">
 <div class="meta">JAE 2019 · Elton Prize</div>
-<h4 class="anchored">Warming can destabilise predator–prey interactions</h4>
+<h4>Warming can destabilise predator–prey interactions</h4>
 <span class="chip">Read the deep dive →</span>
 </a>
 <a class="sib" href="EcoComplexEcoForecast.html">
 <div class="meta">Ecology Letters 2022</div>
-<h4 class="anchored">Forecasting in the face of ecological complexity</h4>
+<h4>Forecasting in the face of ecological complexity</h4>
 <span class="chip">Read the deep dive →</span>
 </a>
 </div>
@@ -358,7 +365,7 @@ in community ecology. <em>Ecosphere</em>, 15, e4786.
 
 <!--
   Shared page footer. Injected into every page at build time via
-  `include-after-body` in _quarto.yml. See site/_nav.html for why the hrefs
+  `include-after-body` in _quarto.yml. See _partials/nav.html for why the hrefs
   here are root-relative.
 -->
 <footer class="site-foot">
@@ -373,13 +380,6 @@ in community ecology. <em>Ecosphere</em>, 15, e4786.
 </footer>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

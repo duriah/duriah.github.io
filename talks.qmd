@@ -8,11 +8,13 @@ format:
     include-in-header:
       - text: |
           <link rel="stylesheet" href="/site/pages/talks.css">
+          <link rel="canonical" href="https://duriah.github.io/talks.html">
+          <meta property="og:url" content="https://duriah.github.io/talks.html">
           <script>document.documentElement.dataset.page='talks';</script>
 ---
 
 ```{=html}
-<main>
+<main id="main">
 ```
 
 ::: {.page-head}
@@ -63,14 +65,14 @@ undergraduate statistics teaching at the University of Zurich.
 <div class="when">2022</div>
 <div class="what">
 <em>Forecasting in the face of ecological complexity: number and strength of species interactions determine forecast skill in ecological communities.</em>
-<span class="where"><strong>Biology 2022</strong> &middot; Swiss conference on organismic biology &middot; Basel &middot; Feb 17-18 2022.</span>
+<span class="where"><strong>SFE² GfÖ EEF</strong> &middot; International Conference on Ecological Sciences &middot; Metz, France &middot; Nov 21-25 2022.</span>
 </div>
 </div>
 <div class="item">
 <div class="when">2022</div>
 <div class="what">
 <em>Forecasting in the face of ecological complexity: number and strength of species interactions determine forecast skill in ecological communities.</em>
-<span class="where"><strong>SFE² GfÖ EEF</strong> &middot; International Conference on Ecological Sciences &middot; Metz, France &middot; Nov 21-25 2022.</span>
+<span class="where"><strong>Biology 2022</strong> &middot; Swiss conference on organismic biology &middot; Basel &middot; Feb 17-18 2022.</span>
 </div>
 </div>
 <div class="item">
@@ -109,7 +111,7 @@ undergraduate statistics teaching at the University of Zurich.
 </div>
 <div class="body">
 <div class="meta">2026</div>
-<h4>COUSIN poster.</h4>
+<h4>COUSIN: plant-microbiome contributions to crop resilience.</h4>
 <p class="where"><strong>Let's Liberate Diversity (LLD)</strong> &middot; Scandicci (Florence) &middot; Italy &middot; May 2026 &middot; with Alexandre Jousset &middot; Cybiome / EU Horizon Europe COUSIN consortium.</p>
 <span class="chip open">Poster pdf <span class="arrow">↗</span></span>
 </div>

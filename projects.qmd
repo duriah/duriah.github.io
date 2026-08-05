@@ -1,6 +1,6 @@
 ---
 title: "Work"
-description: "Bodies of work by Uriah Daugaard: ecological forecasting at scale during a PhD at UZH, a production microbiome bioinformatics platform built as sole developer, and the statistical and predictive modelling that runs across both."
+description: "Work by Uriah Daugaard: ecological forecasting at scale during a PhD at UZH, and a production microbiome bioinformatics platform built as sole developer."
 page-layout: custom
 format:
   html:
@@ -8,11 +8,13 @@ format:
     include-in-header:
       - text: |
           <link rel="stylesheet" href="/site/pages/projects.css">
+          <link rel="canonical" href="https://duriah.github.io/projects.html">
+          <meta property="og:url" content="https://duriah.github.io/projects.html">
           <script>document.documentElement.dataset.page='projects';</script>
 ---
 
 ```{=html}
-<main>
+<main id="main">
 ```
 
 <!-- Section rail. Shared with Research: the styles live in site.css and the

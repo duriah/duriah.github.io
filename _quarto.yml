@@ -36,6 +36,12 @@ format:
       - site/site.css
       - site/research-page.css
     toc: false
+    # AnchorJS otherwise appends an empty, focusable <a class="anchorjs-link"> to
+    # every heading. On Publications those headings sit inside the <a class="card">
+    # highlight links, which makes an anchor nested in an anchor, and the icon is
+    # configured empty anyway — so it is a tab stop announced as "Anchor" that
+    # draws nothing.
+    anchor-sections: false
     # Pages are laid out with CSS grid and flex, so their structure has to be
     # exactly the divs written in the source. Quarto's default heading wrapper
     # would insert a <section> around every heading — and move the heading's own
@@ -49,6 +55,7 @@ format:
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
           <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cookie&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
           <link rel="apple-touch-icon" href="/assets/img/favicon.png">
+          <meta property="og:type" content="website">
           <meta name="google-site-verification" content="US9UugOmq-GXdRt4_XqJtenD7bkmr-q2J2JQUu1q8Xk" />
           <script>
           /* Theme boot. Inline and in <head> on purpose: site.js runs at the end

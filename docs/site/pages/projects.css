@@ -37,12 +37,6 @@
   content:"";position:absolute;top:0;left:56px;right:56px;
   border-top:1px solid var(--rule);
 }
-/* The closing "how the work is built" section is a bare `.pj-out` with no `.head`
-   above it. `.pj-out` draws its own top rule, which directly under the divider
-   would stack two hairlines 72px apart. */
-.pj-section > .pj-out:first-child{
-  margin-top:0;padding-top:0;border-top:none;
-}
 .pj-intro{
   display:grid;
   grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);
@@ -55,10 +49,6 @@
 .pj-intro figure{
   margin:0;display:flex;flex-direction:column;align-items:center;
   gap:8px;
-}
-.pj-intro figure svg{
-  width:100%;height:auto;max-height:280px;display:block;
-  color:var(--sage);
 }
 .pj-intro figure img{
   width:100%;height:auto;display:block;
@@ -279,12 +269,16 @@
   border-top:1px solid var(--rule);text-align:center;
   font-family:'Cormorant Garamond',serif;font-size:21px;color:var(--ink-2);
 }
-.pj-wayfind a{color:var(--sage);text-decoration:none;border-bottom:1px solid rgba(58,106,82,.4)}
+/* See the matching note on `.home-grid .more a`: off --sage-rgb so the underline
+   survives the dark-mode rebind to gold. */
+.pj-wayfind a{
+  color:var(--sage);text-decoration:none;
+  border-bottom:1px solid rgba(var(--sage-rgb),.4);
+}
 .pj-wayfind a:hover{color:var(--terracotta);border-bottom-color:var(--terracotta)}
 
 @media (max-width:900px){
   .pj-intro{grid-template-columns:1fr;gap:24px}
-  .pj-intro figure svg{max-height:220px}
   .pj-section{padding:0 24px;margin-top:36px}
   .pj-section + .pj-section{margin-top:56px;padding-top:40px}
   .pj-section + .pj-section::before{left:24px;right:24px}

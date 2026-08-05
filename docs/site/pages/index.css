@@ -101,7 +101,13 @@
   margin-top:20px;font-family:'Inter',sans-serif;font-size:12px;
   letter-spacing:.04em;
 }
-.home-grid .more a{color:var(--sage);text-decoration:none;border-bottom:1px solid rgba(58,106,82,.4)}
+/* Off the channel token, not the literal light-mode sage: dark mode rebinds
+   --sage to gold, and the hardcoded green underline disappeared into the page
+   there. Same pattern as --gold-rgb in site.css. */
+.home-grid .more a{
+  color:var(--sage);text-decoration:none;
+  border-bottom:1px solid rgba(var(--sage-rgb),.4);
+}
 .home-grid .more a:hover{color:var(--terracotta);border-bottom-color:var(--terracotta)}
 
 .home-links{

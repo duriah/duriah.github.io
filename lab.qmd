@@ -8,11 +8,13 @@ format:
     include-in-header:
       - text: |
           <link rel="stylesheet" href="/site/pages/lab.css">
+          <link rel="canonical" href="https://duriah.github.io/lab.html">
+          <meta property="og:url" content="https://duriah.github.io/lab.html">
           <script>document.documentElement.dataset.page='lab';</script>
 ---
 
 ```{=html}
-<main>
+<main id="main">
 ```
 
 ::: {.page-head}

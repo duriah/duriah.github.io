@@ -8,11 +8,13 @@ format:
     include-in-header:
       - text: |
           <link rel="stylesheet" href="/site/pages/contact.css">
+          <link rel="canonical" href="https://duriah.github.io/contact.html">
+          <meta property="og:url" content="https://duriah.github.io/contact.html">
           <script>document.documentElement.dataset.page='contact';</script>
 ---
 
 ```{=html}
-<main>
+<main id="main">
 ```
 
 ::: ct-layout
@@ -72,8 +74,6 @@ format:
 :::
 
 ::: ct-body
-
-<!-- ## open to -->
 
 ```{=html}
 <p class="ct-open">

@@ -1,18 +1,20 @@
 ---
 title: "Forecasting in the face of ecological complexity"
 description: "In a microbial community, species with many but weak interactions are easier to forecast than specialists. How connected a species is turns out to be a forecasting trait."
-image: ../assets/img/PhdChp1Fig1.jpg
+image: ../assets/img/og-ecocomplex.png
 page-layout: custom
 format:
   html:
     theme: none
     include-in-header:
       - text: |
+          <link rel="canonical" href="https://duriah.github.io/ResearchPages/EcoComplexEcoForecast.html">
+          <meta property="og:url" content="https://duriah.github.io/ResearchPages/EcoComplexEcoForecast.html">
           <script>document.documentElement.dataset.page='research';</script>
 ---
 
 ```{=html}
-<main>
+<main id="main">
 ```
 
 ::: {.rp-wrap}
@@ -79,7 +81,7 @@ turns out to be a forecasting trait in its own right.
 <!-- `.rp-meta` is a flex row; its DOI link is a flex item styled as a button. -->
 ```{=html}
 <div class="rp-meta">
-<div class="authors"><strong>Daugaard U.</strong>, Munch S., Inauen D., Pennekamp F. &amp; Petchey O.</div>
+<div class="authors"><strong>Daugaard U.</strong>, Munch S., Inauen D., Pennekamp F. &amp; Petchey O.L.</div>
 <a class="doi-btn" href="https://doi.org/10.1111/ele.14070" target="_blank" rel="noopener">
 doi: 10.1111/ele.14070 <span class="arrow">↗</span>
 </a>
@@ -308,7 +310,7 @@ interactions determine forecast skill in ecological communities.
 
 ```{=html}
 <nav class="rp-siblings" aria-label="Other highlighted research">
-<div class="h">Other highlighted research</div>
+<h3 class="h">Other highlighted research</h3>
 <div class="row">
 <a class="sib" href="warmingFRpage.html">
 <div class="meta">JAE 2019 · Elton Prize</div>
