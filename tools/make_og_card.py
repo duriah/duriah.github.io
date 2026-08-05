@@ -45,11 +45,11 @@ CARD_WIDTH = 1200
 CARD_HEIGHT = 630
 # Chosen so the hero is wide enough to carry the card without overflowing it;
 # the assertions below fail loudly if a design change breaks that.
-ZOOM = 1.7
+ZOOM = 1.5
 CAPTURE_WIDTH = 2100
 CAPTURE_HEIGHT = 1400
-# The drawings, the name, and the script line.
-HERO_BAND_COUNT = 3
+# The drawings, the name, the script line, and the degrees line.
+HERO_BAND_COUNT = 4
 # Keeps the degrees line from creeping into the bottom edge of the crop.
 CLEARANCE = 5
 
