@@ -378,7 +378,6 @@ balance analysis for what strains exchange. Open-source solvers when needed.
 <div class="pj-wayfind">
 Papers and abstracts are on <a href="research.html">Publications</a>.
 Talks, posters and teaching on <a href="talks.html">Talks &amp; Teaching</a>.
-Method demos on <a href="lab.html">Lab</a>.
 </div>
 ```
 
