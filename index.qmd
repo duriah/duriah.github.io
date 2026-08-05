@@ -24,15 +24,15 @@ format:
 ```{=html}
 <div class="plates plates-tight">
 <figure class="plate">
-<img src="assets/img/aggregates.webp" alt="Drawing of a Chlamydomonas reinhardtii aggregate." width="320" height="297" />
+<img src="assets/img/aggregates.svg" alt="Drawing of a Chlamydomonas reinhardtii aggregate." width="320" height="297" />
 <figcaption class="lbl" aria-hidden="true"><b>C. reinhardtii aggregate</b></figcaption>
 </figure>
 <figure class="plate">
-<img src="assets/img/protists2.webp" alt="Drawing of D. nasutum, D. campylum and C. striatum (ciliates)." width="320" height="341" loading="lazy" decoding="async" />
+<img src="assets/img/protists2.svg" alt="Drawing of D. nasutum, D. campylum and C. striatum (ciliates)." width="320" height="341" loading="lazy" decoding="async" />
 <figcaption class="lbl" aria-hidden="true"><b>D. nasutum &middot; D. campylum &middot; C. striatum</b></figcaption>
 </figure>
 <figure class="plate">
-<img src="assets/img/bacteria13.webp" alt="Drawing of a bacterial community." width="320" height="289" loading="lazy" decoding="async" />
+<img src="assets/img/bacteria13.svg" alt="Drawing of a bacterial community." width="320" height="289" loading="lazy" decoding="async" />
 <figcaption class="lbl" aria-hidden="true"><b>Bacterial community</b></figcaption>
 </figure>
 </div>
