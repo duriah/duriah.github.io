@@ -192,7 +192,7 @@ management, how a community assembles over time.
 
 ```{=html}
 <figure>
-<img src="assets/img/schema_pipelines.webp" alt="Schematic: a soil sample is sequenced by the amplicon and whole-genome routes, traits are inferred per organism, and the result is a community view." width="1640" height="477" />
+<img src="assets/img/schema_pipelines.svg" alt="Schematic: a soil sample is sequenced by the amplicon and whole-genome routes, traits are inferred per organism, and the result is a community view." width="1640" height="477" />
 <figcaption>from a soil sample to a community view carrying per-organism traits</figcaption>
 </figure>
 ```
@@ -378,6 +378,7 @@ balance analysis for what strains exchange. Open-source solvers when needed.
 <div class="pj-wayfind">
 Papers and abstracts are on <a href="research.html">Publications</a>.
 Talks, posters and teaching on <a href="talks.html">Talks &amp; Teaching</a>.
+Method demos on <a href="lab.html">Lab</a>.
 </div>
 ```
 
