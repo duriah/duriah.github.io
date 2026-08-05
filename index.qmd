@@ -56,7 +56,7 @@ data into models of how living systems behave.
 ```
 
 I work as a computational ecologist at [**Cybiome**](https://cybiome.com){.inline target="_blank" rel="noopener"}
-(Basel, Switzerland), where I build bioinformatics pipelines and predictive models for microbiome questions.
+(Basel, Switzerland, 2025 to 2027), where I build bioinformatics pipelines and predictive models for microbiome questions.
 
 Before that I did a PhD in ecology at the University of Zurich
 (Petchey lab, 2020 to 2024) with a thesis on ecological forecasting,

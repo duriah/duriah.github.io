@@ -1,6 +1,6 @@
 ---
 title: "Projects"
-description: "Microbiome bioinformatics at Cybiome: amplicon and whole-genome sequencing pipelines, and the predictive, mechanistic and time-series models that run on top of them."
+description: "Microbiome bioinformatics: amplicon and whole-genome sequencing pipelines, and the predictive, mechanistic and time-series models that run on top of them. Production work built at Cybiome, Basel, 2025 to 2027."
 page-layout: custom
 format:
   html:
@@ -15,7 +15,7 @@ format:
 <main>
 ```
 
-::: {.pj-header}
+::: {.page-head}
 ```{=html}
 <div class="titles">
 ```
@@ -33,10 +33,7 @@ format:
 
 ```{=html}
 <p class="lead">
-My work at Cybiome has two halves. First, the <em>pipelines</em> that take raw sequencing data
-and turn it into a structured view of a microbial community. Second, the <em>models</em>
-that run on that view and answer ecological questions about it. I join the two halves into
-an integrated workflow (R, Python, containers), so that one piece flows into the&nbsp;next.
+As a bioinformatician and computational ecologist I build pipelines that take raw sequencing data and turn it into a structured view of a biological community, and models that run on that view to answer ecological questions.
 </p>
 ```
 :::
@@ -63,14 +60,14 @@ an integrated workflow (R, Python, containers), so that one piece flows into the
 :::
 
 ::: {.pj-intro}
-Two pipelines: one for amplicon sequencing, one for whole genome bacterial sequencing.
-They produce structurally different data, broad and shallow on one side, deep and per
-strain on the other, but they are linked. Amplicon ASVs can be matched back to genomes
-from the genome pipeline, so an amplicon survey can pull down the genome derived traits
+Two pipelines: one for amplicon sequencing, one for whole-genome bacterial sequencing.
+They produce structurally different data, broad and shallow on one side, deep and
+per-strain on the other, but they are linked. Amplicon ASVs can be matched back to genomes
+from the genome pipeline, so an amplicon survey can pull down the genome-derived traits
 of the organisms it found.
 
 ```{=html}
-<figure aria-hidden="true">
+<figure>
 <img src="assets/img/schema_pipelines.webp" alt="" width="1640" height="477" />
 <figcaption>fig. i &middot; from soil to community view</figcaption>
 </figure>
@@ -86,8 +83,8 @@ of the organisms it found.
 <div class="tag">marker gene · 16S &amp; ITS</div>
 ```
 
-Marker gene reads from soil, root, gut and water samples. Bacterial 16S
-and fungal ITS, with hash based deterministic ASV identifiers so the same
+Marker-gene reads from soil, root, gut and water samples. Bacterial 16S
+and fungal ITS, with hash-based deterministic ASV identifiers so the same
 microbe carries the same ID across projects.
 
 - [Quality]{.k}[DADA2 with automated denoising parameter selection]{}
@@ -104,15 +101,15 @@ microbe carries the same ID across projects.
 <div class="tag">per strain · bacterial</div>
 ```
 
-Bacterial genomes from raw reads, pre assembled contigs, or pre annotated genomes.
-Each strain leaves the pipeline with a multi facet trait profile and a standalone
-HTML report including a circular genome map. 16S extracted out, feeding the
-amplicon pipeline back.
+Bacterial genomes from raw reads, pre-assembled contigs, or pre-annotated genomes.
+The pipeline returns a multi-faceted trait profile per strain, plus a standalone
+HTML report including a circular genome map. 16S is extracted and fed back into
+the amplicon pipeline.
 
 - [Phylogeny]{.k}[BLAST against curated 16S references]{}
 - [Niche]{.k}[GenomeSPOT physiology, gRodon2 growth rate]{}
-- [Metabolism]{.k}[genome scale metabolic models, MEMOTE checked]{}
-- [Sec. metabolites]{.k}[antiSMASH biosynthetic gene clusters]{}
+- [Metabolism]{.k}[genome-scale metabolic models, MEMOTE checked]{}
+- [Metabolites]{.k}[antiSMASH biosynthetic gene clusters]{}
 - [Biosafety]{.k}[StarAMR, VFDB, MBPD, k-mer ML]{}
 :::
 
@@ -132,19 +129,19 @@ amplicon pipeline back.
 <div class="num">ii</div>
 ```
 
-## Models on top
+## Models
 :::
 
 ::: {.pj-intro}
-The questions sit downstream of the pipeline output. The application is agriculture and
-microbiome biology: disease pressure on a crop, soil health under different management,
-what assembles when, how strongly any of it predicts the outcome we care about. The
-unifying frame is ecological. The methods range from statistical machine learning to
-community level mechanistic modelling.
+The questions sit downstream of the pipeline output, and the framing is ecological:
+disease pressure on a crop, soil health under different management, how a community
+assembles over time, and how well any of that predicts the outcome being measured.
+The methods run from statistical machine learning to community-level mechanistic
+modelling, mostly in an agricultural context.
 
 ```{=html}
-<figure aria-hidden="true">
-<svg viewBox="0 0 360 260" xmlns="http://www.w3.org/2000/svg">
+<figure>
+<svg viewBox="0 0 360 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 <defs>
 <marker id="arr-md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
 <path d="M0,0 L10,5 L0,10" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -152,24 +149,24 @@ community level mechanistic modelling.
 </defs>
 <g fill="none" stroke="currentColor" stroke-width="1.2" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="10">
 <rect x="95" y="6" width="170" height="28" rx="4"/>
-<text x="180" y="24" text-anchor="middle" fill="#1f3a2f" stroke="none">community view</text>
+<text x="180" y="24" text-anchor="middle" fill="var(--ink)" stroke="none">community view</text>
 <path d="M150 34 Q 70 50 65 86" marker-end="url(#arr-md)"/>
 <line x1="180" y1="34" x2="180" y2="86" marker-end="url(#arr-md)"/>
 <path d="M210 34 Q 290 50 295 86" marker-end="url(#arr-md)"/>
 <rect x="15" y="90" width="100" height="40" rx="4"/>
-<text x="65" y="108" text-anchor="middle" fill="#1f3a2f" stroke="none">predictive</text>
+<text x="65" y="108" text-anchor="middle" fill="var(--ink)" stroke="none">predictive</text>
 <text x="65" y="122" text-anchor="middle" fill="currentColor" stroke="none" font-size="9" opacity=".7">XGBoost · RF</text>
 <rect x="130" y="90" width="100" height="40" rx="4"/>
-<text x="180" y="108" text-anchor="middle" fill="#1f3a2f" stroke="none">mechanistic</text>
+<text x="180" y="108" text-anchor="middle" fill="var(--ink)" stroke="none">mechanistic</text>
 <text x="180" y="122" text-anchor="middle" fill="currentColor" stroke="none" font-size="9" opacity=".7">GSMM · FBA</text>
 <rect x="245" y="90" width="100" height="40" rx="4"/>
-<text x="295" y="108" text-anchor="middle" fill="#1f3a2f" stroke="none">time series</text>
+<text x="295" y="108" text-anchor="middle" fill="var(--ink)" stroke="none">time series</text>
 <text x="295" y="122" text-anchor="middle" fill="currentColor" stroke="none" font-size="9" opacity=".7">EDM · state-space</text>
 <path d="M65 130 Q 65 170 150 184" marker-end="url(#arr-md)"/>
 <line x1="180" y1="130" x2="180" y2="184" marker-end="url(#arr-md)"/>
 <path d="M295 130 Q 295 170 210 184" marker-end="url(#arr-md)"/>
 <rect x="95" y="188" width="170" height="28" rx="4"/>
-<text x="180" y="206" text-anchor="middle" fill="#1f3a2f" stroke="none">reports + figures</text>
+<text x="180" y="206" text-anchor="middle" fill="var(--ink)" stroke="none">reports + figures</text>
 </g>
 </svg>
 <figcaption>fig. placeholder &middot; methods schema</figcaption>
@@ -186,12 +183,12 @@ community level mechanistic modelling.
 <div class="tag">gradient boosting · ensembles</div>
 ```
 
-XGBoost, random forest, regularised regression, stacked ensembles. The
-interesting feature engineering question is trait based versus OTU based:
-collapse the community into functional, metabolic and ecological trait
-profiles built from genome derived traits. Trait based generalises better
-to the realistic case where the test set contains microbes the training
-set has not seen. Interpretation through SHAP.
+XGBoost, random forest, regularised regression, stacked ensembles. The core
+feature engineering choice is trait-based versus OTU-based: instead of taxa as
+features, the community is collapsed into functional, metabolic and ecological
+profiles built from genome-derived traits. Trait-based features have the
+potential to generalise better to the realistic case where the test set
+contains microbes the training set has not seen. Interpretation through SHAP.
 :::
 
 ::: {.col}
@@ -201,10 +198,10 @@ set has not seen. Interpretation through SHAP.
 <div class="tag">GSMM · community FBA</div>
 ```
 
-Genome scale metabolic models for individual strains, reconstructed
-from annotated genomes. Community level metabolic modelling
+Genome-scale metabolic models for individual strains, reconstructed
+from annotated genomes. Community-level metabolic modelling
 (SMETANA, MICOM) for how strains interact through their shared and
-exchanged metabolites. Per organism flux similarity networks give
+exchanged metabolites. Per-organism flux similarity networks give
 a graph view of metabolic relationships within a community.
 :::
 
@@ -216,9 +213,9 @@ a graph view of metabolic relationships within a community.
 ```
 
 Empirical dynamic modelling for nonparametric forecasting and
-attractor reconstruction. Bayesian state space models when we want
-to put a generative story on top of a noisy series. The signature
-from the PhD years, still in active use here.
+attractor reconstruction. Bayesian state-space models where a noisy
+series needs an explicit generative structure on top. Carried over
+from my PhD work, still in active use.
 :::
 
 :::
@@ -229,20 +226,20 @@ from the PhD years, still in active use here.
 <!-- <b> is kept literally: `**x**` renders as <strong>, and the rule that
      styles these labels is `.pj-out ul li b`. -->
 
-- <b>Quarto reports.</b> HTML and PDF, reproducible end to end.
+- <b>Quarto reports.</b> HTML and PDF, reproducible end-to-end.
 - <b>Interactive figures.</b> embedded htmlwidgets, Observable.
-- <b>Technical microbiome reports.</b> English and German, audience tuned.
+- <b>Technical microbiome reports.</b> English and German, audience-tuned.
 :::
 
 :::
 
-<!-- ```{=html} -->
-<!-- <div class="pj-wayfind"> -->
-<!-- The peer reviewed work behind some of this lives on -->
-<!-- <a href="research.html">Research &amp; Publications</a>. -->
-<!-- Method demos you can poke at live on <a href="lab.html">Lab</a>. -->
-<!-- </div> -->
-<!-- ``` -->
+```{=html}
+<div class="pj-wayfind">
+The peer-reviewed work behind some of this lives on
+<a href="research.html">Research &amp; Publications</a>.
+Method demos you can poke at live on <a href="lab.html">Lab</a>.
+</div>
+```
 
 ```{=html}
 </main>

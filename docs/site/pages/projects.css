@@ -2,25 +2,20 @@
    Loaded before styles.css / site.css (see projects.qmd), so the
    shared stylesheets still win ties at equal specificity. */
 
-.pj-header{
-  max-width:1100px;margin:48px auto 0;padding:0 56px;
-  display:grid;grid-template-columns:auto 1fr;
-  gap:96px;align-items:start;
-}
-.pj-header .titles{text-align:left}
-.pj-header .titles .page-title{margin:0}
-.pj-header .lead{
-  font-family:'Cormorant Garamond',serif;font-size:24px;line-height:1.55;
-  color:var(--ink-2);margin:0;text-wrap:pretty;
-  padding-top:0.55em;justify-self:stretch;
-}
-.pj-header .lead em{color:var(--sage);font-style:italic}
-@media (max-width:900px){
-  .pj-header{grid-template-columns:1fr;gap:4px;align-items:start;text-align:left;padding:0 24px}
-  .pj-header .titles{margin:0}
-  .pj-header .titles .page-title{margin:0}
-  .pj-header .lead{font-size:22px;padding-top:0;margin-top:18px}
-}
+/* The page header is the shared `.page-head` from site.css (as Lab and Talks
+   already use): title on its own line, lead stacked below it. The old
+   `.pj-header` two-column grid lived here and has been removed rather than
+   restyled, so there is one header implementation to maintain.
+
+   The one deviation: site.css caps `.page-head .lead` at 66ch (~755px), which
+   leaves the lead visibly narrower than the 968px text column of the sections
+   below it. Released here so the lead runs the full header width and its left
+   and right edges line up with the rest of the page. Scoped to this page via
+   the `data-page` key on <html> so Lab and Talks keep the 66ch measure — and
+   written without `:where()` (unlike the nav rules at site.css:143) precisely
+   because it needs the specificity: projects.css loads *before* site.css, so a
+   plain `.page-head .lead` here would lose the tie. */
+:root[data-page="projects"] .page-head .lead{max-width:none}
 
 .pj-section{
   max-width:1080px;margin:60px auto 0;padding:0 56px;

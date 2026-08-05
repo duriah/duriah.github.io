@@ -227,9 +227,9 @@ body{
    column and the lede gets a measure chosen for reading rather than for what was
    left over.
 
-   Projects and Research grew their own copies of this (.pj-header, .rs-header);
-   this is the shared version they should all converge on. .rs-header already
-   matches these metrics. */
+   Research still has its own copy of this (.rs-header), which already matches
+   these metrics; this is the shared version they should all converge on.
+   Projects used to have one too (.pj-header) and now uses this directly. */
 .page-head{
   max-width:1100px;margin:48px auto 0;padding:0 56px;
 }
